@@ -13,6 +13,8 @@ copyright: 'Copyright &copy; 2026 Mike Jovanovich. Licensed under <a href="https
 # ##########################################
 # Theme
 # ##########################################
+extra_css:
+  - css/custom.css
 theme:
   name: "material"
   palette:
@@ -42,7 +44,7 @@ theme:
 markdown_extensions:
   - toc:
       permalink: true
-      toc_depth: 0 # This will hide the intrapage TOC that normally appears on the right of the page.
+      # toc_depth: 0 # This will hide the intrapage TOC that normally appears on the right of the page.
 
 # ##########################################
 # Navigation

@@ -1,0 +1,15 @@
+/*
+Custom styles and overrides for the Material theme can go here.
+*/
+
+/* Hide the right sidebar on wide screens. */
+.md-sidebar--secondary {
+  display: none !important;
+}
+
+/* Match the left sidebar width for the content since we removed the right sidebar. */
+@media screen and (min-width: 76.25em) {
+  .md-content {
+    margin-right: 12.1rem;
+  }
+}
