@@ -4,9 +4,8 @@
 # Site
 # ##########################################
 site_name: "Software Resilience and Reliability"
-# site_url: "" # TODO: GH Pages URL
+site_url: "https://software-resilience-reliability-book.github.io/srr-book/"
 site_author: "Mike Jovanovich"
-# repo_name: "GitHub" # Not sure if I need this?
 repo_url: "https://github.com/software-resilience-reliability-book/srr-book"
 copyright: 'Copyright &copy; 2026 Mike Jovanovich. Licensed under <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a>'
 
