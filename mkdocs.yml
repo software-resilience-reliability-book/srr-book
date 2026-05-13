@@ -17,18 +17,15 @@ theme:
   name: "material"
   palette:
     - light
-    - primary: "red" # TODO: replace with less "default material" colors
-    - accent: "red" # TODO: replace with less "default material" colors
+    - primary: "red" # TODO: not working? this was a test value
+    - accent: "red" # TODO: not working? this was a test value
   # logo: "logo.png" # TODO: add logo?
   # favicon: "favicon.ico" # TODO: add favicon
   features:
     - navigation.instant # no page flash between chapters
     - navigation.footer # prev/next at bottom
-    # - navigation.sections # sidebar section headers, not toggles
     - navigation.indexes # section names link to index.md chapter intros
-    # - navigation.expand # full outline always visible in sidebar
-    - navigation.top # back-to-top on long pages
-    - toc.follow # right TOC tracks scroll position
+    - navigation.top # show back-to-top on long pages
 
 # ##########################################
 # Markdown Extensions
@@ -36,6 +33,7 @@ theme:
 markdown_extensions:
   - toc:
       permalink: true
+      toc_depth: 0 # This will hide the intrapage TOC that normally appears on the right of the page.
 
 # ##########################################
 # Navigation
