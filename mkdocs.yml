@@ -16,9 +16,18 @@ copyright: 'Copyright &copy; 2026 Mike Jovanovich. Licensed under <a href="https
 theme:
   name: "material"
   palette:
-    - light
-    - primary: "red" # TODO: not working? this was a test value
-    - accent: "red" # TODO: not working? this was a test value
+    - scheme: default
+      primary: teal
+      accent: teal
+      toggle:
+        icon: material/brightness-7
+        name: Switch to dark mode
+    - scheme: slate
+      primary: teal
+      accent: teal
+      toggle:
+        icon: material/brightness-4
+        name: Switch to light mode
   # logo: "logo.png" # TODO: add logo?
   # favicon: "favicon.ico" # TODO: add favicon
   features:
