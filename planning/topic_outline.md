@@ -1,6 +1,6 @@
 ## Module 0: Course Resources
 
-- "Course Guide" document, as was done with other courses. This shows expected prerequisite knowledge, intended way to move through modules, where to find resources and common FAQ info. 
+- "Course Guide" document, as was done with other courses. This shows expected prerequisite knowledge, intended way to move through modules, where to find resources and common FAQ info.
 - C# survival doc, mostly pointing to external resources
 
 ## Module 1: Understanding Build Systems
@@ -15,7 +15,10 @@
 
 - Why tests exist: regression detection, documentation of intent, requirements verification
 - Unit, integration, end-to-end — definitions and tradeoffs
-- Arrange-Act-Assert; red green refactor
+- How to write tests
+- Arrange-Act-Assert pattern for the test itself
+- Red green refactor pattern for the system under test (SUT)
+  - Importantly note that _a failing test must be written to verify that the actual test worked_.
 - What makes a test valuable (verifies outcomes, not implementation)
 - note: keep this very introductory
 
@@ -25,7 +28,7 @@
 - Exception bubbling and best practices for handling
 - Reading stack traces
 - Silent failures?
-- Errors form part of the contract (expected behavior) of the application and should be included in tests. 
+- Errors form part of the contract (expected behavior) of the application and should be included in tests.
 
 ## Module : Leveraging the Type System to Strengthen Software
 
@@ -38,15 +41,15 @@
 
 - Why externalize: deployment flexibility, the image server / file path example
 - `appsettings.json`
-- Strongly-typed configuration, noting that configuration failures are typically critical and should be handled with a "fail fast" approach. 
+- Strongly-typed configuration, noting that configuration failures are typically critical and should be handled with a "fail fast" approach.
 - What belongs in config vs code
 
 ## Module : Environment Management
 
 - What "environment" means: Development, Staging, Production
--  rephrase the below behavior
-  - `ASPNETCORE_ENVIRONMENT`
-  - `appsettings.{Environment}.json` override behaviors
+- rephrase the below behavior
+- `ASPNETCORE_ENVIRONMENT`
+- `appsettings.{Environment}.json` override behaviors
 - Debug vs Release builds (eg what is excluded from prod build)
 - Environment-specific settings, such as pointing to a development data store instead of prod
 
@@ -55,9 +58,13 @@
 - Single Responsibility Principle applied at the project level
 - Choosing a project structure that promotes modularity and decoupling
 - Internal vs external dependencies (project reference vs package reference)
+- Transitive dependencies? This or next chapter.
 
 ## Module : Dependency Management
 
 - Package managers
 - Semantic versioning: what major/minor/patch imply
 - What constitutes a breaking change
+- Version pinning example as a good "aside" case study blurb:
+  - This course textbook has pinned version because of upcoming breaking change: https://squidfunk.github.io/mkdocs-material/blog/2026/02/18/mkdocs-2.0/. Note that we pinned this because we don't want a surprise breaking change mid-course if they release v2.0.
+- Transitive dependencies as a liability: supply chain attacks.

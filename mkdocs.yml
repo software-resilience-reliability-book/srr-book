@@ -17,20 +17,33 @@ theme:
   name: "material"
   palette:
     - light
-    - primary: "indigo" # TODO: replace with less "default material" colors
-    - accent: "indigo" # TODO: replace with less "default material" colors
+    - primary: "red" # TODO: replace with less "default material" colors
+    - accent: "red" # TODO: replace with less "default material" colors
   # logo: "logo.png" # TODO: add logo?
   # favicon: "favicon.ico" # TODO: add favicon
   features:
-    - navigation.footer # previous/next page arrows at bottom
-    - navigation.tabs # top-level chapters as tabs
-    - navigation.sections # expands sections in sidebar
-    - navigation.indexes # chapter index pages
-    - toc.follow # TOC highlights as you scroll
+    - navigation.instant # no page flash between chapters
+    - navigation.footer # prev/next at bottom
+    # - navigation.sections # sidebar section headers, not toggles
+    - navigation.indexes # section names link to index.md chapter intros
+    # - navigation.expand # full outline always visible in sidebar
+    - navigation.top # back-to-top on long pages
+    - toc.follow # right TOC tracks scroll position
+
+# ##########################################
+# Markdown Extensions
+# ##########################################
+markdown_extensions:
+  - toc:
+      permalink: true
 
 # ##########################################
 # Navigation
 # ##########################################
 nav:
-  - Home: index.md
-  - Living Software: living-software/index.md
+  - Preface: index.md
+  - Living Software:
+      - living-software/index.md
+      - living-software/another-page.md
+  - Other Stuff:
+      - other-stuff/index.md
