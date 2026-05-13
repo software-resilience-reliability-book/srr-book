@@ -1,0 +1,36 @@
+# Docs are at: https://www.mkdocs.org/user-guide/configuration/
+
+# ##########################################
+# Site
+# ##########################################
+site_name: "Software Resilience and Reliability"
+# site_url: "" # TODO: GH Pages URL
+site_author: "Mike Jovanovich"
+# repo_name: "GitHub" # Not sure if I need this?
+repo_url: "https://github.com/software-resilience-reliability-book/srr-book"
+copyright: 'Copyright &copy; 2026 Mike Jovanovich. Licensed under <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a>'
+
+# ##########################################
+# Theme
+# ##########################################
+theme:
+  name: "material"
+  palette:
+    - light
+    - primary: "indigo" # TODO: replace with less "default material" colors
+    - accent: "indigo" # TODO: replace with less "default material" colors
+  # logo: "logo.png" # TODO: add logo?
+  # favicon: "favicon.ico" # TODO: add favicon
+  features:
+    - navigation.footer # previous/next page arrows at bottom
+    - navigation.tabs # top-level chapters as tabs
+    - navigation.sections # expands sections in sidebar
+    - navigation.indexes # chapter index pages
+    - toc.follow # TOC highlights as you scroll
+
+# ##########################################
+# Navigation
+# ##########################################
+nav:
+  - Home: index.md
+  - Living Software: living-software/index.md
