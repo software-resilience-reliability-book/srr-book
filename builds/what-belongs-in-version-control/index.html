@@ -13,7 +13,7 @@
         <link rel="canonical" href="https://software-resilience-reliability-book.github.io/srr-book/builds/what-belongs-in-version-control/">
       
       
-        <link rel="prev" href="../publishing-the-application/">
+        <link rel="prev" href="../adding-a-package/">
       
       
       
@@ -659,8 +659,6 @@
       
         
       
-        
-      
     
     
     
@@ -910,34 +908,6 @@
                 
   
   
-  
-  
-    <li class="md-nav__item">
-      <a href="../publishing-the-application/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Publishing the Application
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
     
   
   
@@ -1075,7 +1045,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../errors/compile-time.md" class="md-nav__link">
+      <a href="../../diagnosing-errors/compile-time.md" class="md-nav__link">
         
   
   
@@ -1103,7 +1073,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../error-output.md" class="md-nav__link">
+      <a href="../../diagnosing-errors/error-output.md" class="md-nav__link">
         
   
   
@@ -1131,7 +1101,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../errors/runtime.md" class="md-nav__link">
+      <a href="../../diagnosing-errors/runtime.md" class="md-nav__link">
         
   
   
@@ -1159,7 +1129,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../errors/logic.md" class="md-nav__link">
+      <a href="../../diagnosing-errors/logic.md" class="md-nav__link">
         
   
   
@@ -1187,7 +1157,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../stack-traces.md" class="md-nav__link">
+      <a href="../../diagnosing-errors/stack-traces.md" class="md-nav__link">
         
   
   
@@ -2666,10 +2636,25 @@
 
 
 <h1 id="what-belongs-in-version-control">What Belongs in Version Control?<a class="headerlink" href="#what-belongs-in-version-control" title="Permanent link">&para;</a></h1>
-<hr />
-<p>Note that artifacts that can be rebuilt (e.g. <code>bin</code> and <code>obj</code> directories) should not be tracked in version control.</p>
-<p>Before gitignore:</p>
+<p>Artifacts that can be rebuilt (e.g. <code>bin</code> and <code>obj</code> directories) should not be tracked in version control. The source code contains all of the information needed to build the application.</p>
+<p>Unless we remove these unneeded files, the repository will quickly become cluttered.</p>
 <p><img alt="explorer pane before gitignore" src="../../images/source-control-mess.png" /></p>
+<p>The way to prevent this is to create a <code>.gitignore</code> file in the root of the repository. This file contains a list of files and directories that should not be tracked in version control. It can use patterns to match multiple files and directories at once.</p>
+<p>In .NET, the easiest way to create a <code>.gitignore</code> with proper defaults is to use the terminal command:</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>dotnet<span class="w"> </span>new<span class="w"> </span>gitignore
+</span></code></pre></div>
+<p>Our <code>bin</code> and <code>obj</code> directories are now ghosted in the explorer pane, and the source control pane shows only four pending changes - one for each file that we want to track.</p>
+<p><img alt="explorer pane after gitignore" src="../../images/source-control-good.png" /></p>
+<!-- prettier-ignore -->
+<div class="admonition info">
+<p class="admonition-title">Track your <code>.gitignore</code> file</p>
+<p>Your <code>.gitignore</code> file does belong in version control. It contains valuable configuration information about what belongs with the application.</p>
+</div>
+<!-- prettier-ignore -->
+<div class="admonition success">
+<p class="admonition-title">Prove it to Yourself</p>
+<p>Try deleting the <code>bin</code> and <code>obj</code> directories then rebuilding the application to see them come back. This will help you trust that these can safely be discarded without losing information.</p>
+</div>
 
 
 
@@ -2705,7 +2690,7 @@
       <nav class="md-footer__inner md-grid" aria-label="Footer" >
         
           
-          <a href="../publishing-the-application/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Publishing the Application">
+          <a href="../adding-a-package/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Adding a Package">
             <div class="md-footer__button md-icon">
               
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
@@ -2715,7 +2700,7 @@
                 Previous
               </span>
               <div class="md-ellipsis">
-                Publishing the Application
+                Adding a Package
               </div>
             </div>
           </a>
