@@ -68,10 +68,13 @@ nav:
       - complexity-debt/refactoring.md
 
   - The Build System:
-      - builds/index.md # probably no repo - examples are standalone snippets
-      - builds/what-a-build-does.md
+      - builds/index.md # probably no repo - example is threaded through the lesson
+      - builds/creating-dotnet-project.md # create and build console app
+      - builds/adding-a-package.md # add cli color library
       - builds/build-artifacts.md # note intermediate files, and that one of final steps of build process is usually to copy the actual compiled files
-      - builds/running-the-program.md # running via debugger (a tool to step through code) vs CLI (the actual program)
+      - builds/running-the-program.md # aside: running via debugger (a tool to step through code) vs CLI dotnet run (the actual program)
+      - builds/packaging-the-application.md # note that users will never see IDE
+      - builds/what-belongs-in-version-control.md # intro .gitignore file. note that we can safely delete artifacts without losing information. we can always build again
 
   - Diagnosing Errors:
       - diagnosing-errors/index.md # basic app with errors
