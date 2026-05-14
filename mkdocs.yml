@@ -32,6 +32,7 @@ theme:
   # logo: "logo.png" # TODO: add logo?
   # favicon: "favicon.ico" # TODO: add favicon
   features:
+    - content.code.copy # Show code copy button
     - navigation.instant # no page flash between chapters
     - navigation.footer # prev/next at bottom
     - navigation.indexes # section names link to index.md chapter intros
@@ -43,9 +44,15 @@ theme:
 markdown_extensions:
   - admonition
   - attr_list
+  - pymdownx.highlight:
+      anchor_linenums: true
+      line_spans: __span
+      pygments_lang_class: true
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - pymdownx.superfences
   - toc:
       permalink: true
-      # toc_depth: 0 # This will hide the intrapage TOC that normally appears on the right of the page.
 
 # ##########################################
 # Navigation
@@ -68,13 +75,15 @@ nav:
       - complexity-debt/refactoring.md
 
   - The Build System:
-      - builds/index.md # probably no repo - example is threaded through the lesson
-      - builds/creating-empty-project-shell.md # create and build console app
-      - builds/creating-dotnet-project.md # create and build console app
+      - builds/index.md
+      - builds/creating-empty-project-shell.md
+      - builds/creating-dotnet-project.md
+      - builds/compiling.md
+      - builds/build-artifacts.md
+      - builds/running-the-program.md
+      - builds/understanding-the-debugger.md
       - builds/adding-a-package.md # add cli color library
-      - builds/build-artifacts.md # note intermediate files, and that one of final steps of build process is usually to copy the actual compiled files
-      - builds/running-the-program.md # aside: running via debugger (a tool to step through code) vs CLI dotnet run (the actual program)
-      - builds/packaging-the-application.md # note that users will never see IDE
+      - builds/publishing-the-application.md # note that users will never see IDE
       - builds/what-belongs-in-version-control.md # intro .gitignore file. note that we can safely delete artifacts without losing information. we can always build again
 
   - Diagnosing Errors:
@@ -117,7 +126,9 @@ nav:
       - environment-management/staging-environment.md
       - environment-management/production-environment.md
       # appsettings overrides for environments, and why use them
-      - environment-management/configuring-the-environment.md
+      - environment-management/configuring-development-environment.md
+      # Only include if time. This isn't really an ops focused course.
+      - environment-management/configuring-production-build.md
 
   - Codebase Organization and Project Structure:
       - codebase-organization/index.md # link to color picker repo with codebase organization concepts; e.g. some data store?

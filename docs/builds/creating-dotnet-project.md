@@ -21,3 +21,7 @@ The `dotnet new` command creates a new project in the current directory. We will
 ```bash
 dotnet new console
 ```
+
+This will create several files in the current directory. Open the `Program.cs` file and you will see a basic "Hello, World!" program.
+
+This is currently the only **source code** in the project. Our next step is to turn this code into something that the computer can execute.

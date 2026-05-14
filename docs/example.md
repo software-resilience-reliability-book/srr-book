@@ -52,3 +52,32 @@ Available icons:
 | `bug`      |                        | red        | bug            |
 | `example`  |                        | purple     | list           |
 | `quote`    | `cite`                 | grey       | quote marks    |
+
+---
+
+Code
+
+"linenums" will make it show line numbers.
+
+"hl_lines" will highlight the specified lines if needed.
+
+```csharp linenums="1" hl_lines="9 10"
+using System;
+
+namespace HelloWorld
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            if (args.Length != 1)
+                throw new ArgumentException("A single argument is required.");
+
+            for (int i = 0; i < 10; i++)
+            {
+                Console.WriteLine(i);
+            }
+        }
+    }
+}
+```
