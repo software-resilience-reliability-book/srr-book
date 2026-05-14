@@ -53,15 +53,82 @@ markdown_extensions:
 nav:
   # - Example: example.md
   - Preface: index.md
+
   - Living Software:
       - living-software/index.md
       - living-software/why-software-changes.md
       - living-software/reliability.md
       - living-software/resiliency.md
-  - Complexity and Technical Debt:
-      - complexity-technical-debt/index.md
-      - complexity-technical-debt/managing-complexity.md
-      - complexity-technical-debt/technical-debt-defiinition.md
-      - complexity-technical-debt/technical-debt-cost.md
 
-  # refactoring
+  - Complexity and Technical Debt:
+      - complexity-debt/index.md
+      - complexity-debt/managing-complexity.md
+      - complexity-debt/technical-debt-defiinition.md
+      - complexity-debt/technical-debt-cost.md
+      - complexity-debt/refactoring.md
+
+  - The Build System:
+      - builds/index.md # probably no repo - examples are standalone snippets
+      - builds/what-a-build-does.md
+      - builds/build-output.md
+      - builds/errors/index.md
+      - builds/errors/compile-time.md
+      - builds/errors/runtime.md
+      - builds/errors/logic.md
+      - builds/stack-traces.md
+      - builds/running-the-program.md # running via debugger (a tool to step through code) vs CLI (the actual program)
+
+  # This has its own chapter early; we don't want to overwhelm students with too
+  # many concepts at once so don't cover other test types yet
+  - Unit Testing:
+      - unit-testing/index.md # link to color picker repo with basic test suite
+      - unit-testing/arrange-act-assert.md
+      - unit-testing/red-green-refactor.md
+      - unit-testing/naming-tests.md #
+      # how to appropriately scope tests; don't need one to one match with implementation
+      # golden path, edge cases and boundary conditions
+      - unit-testing/what-to-test.md
+
+  - Leveraging the Type System:
+      - type-system/index.md # link to color picker repo with type enhancements
+      - type-system/types-as-contracts.md # More focused on "what can I expect to be on this?"
+      - type-system/enums-and-fixed-sets.md # Enums protect your code from developers using it incorrectly
+      - type-system/protecting-invariants.md # Focused on guaranteeing valid state; e.g. a "HexColor" class that only allows valid hex colors
+      - type-system/custom-exception-types.md
+
+  - Configuration and Externalized Settings:
+      - configuration/index.md # link to color picker repo with configuration concepts
+      - configuration/why-externalize.md
+      - configuration/configuration-by-example.md
+      # Introduce "fail fast" concept here
+      - configuration/strongly-typed-configuration.md
+
+  - Environment Management:
+      - environment-management/index.md # link to color picker repo with environment management concepts; e.g. some data store?
+      # For below focus on what they are, not implementation
+      - environment-management/development-environment.md
+      - environment-management/staging-environment.md
+      - environment-management/production-environment.md
+      # appsettings overrides for environments, and why use them
+      - environment-management/configuring-the-environment.md
+
+  - Codebase Organization and Project Structure:
+      - codebase-organization/index.md # link to color picker repo with codebase organization concepts; e.g. some data store?
+      - codebase-organization/single-responsibility-principle.md
+      - codebase-organization/modularity.md
+      - codebase-organization/decoupling.md
+      - codebase-organization/internal-vs-external-dependencies.md # basically a quick note explaining that they'll have to add references to make it work when they refactor
+
+  - Dependency Management:
+      - dependency-management/index.md # link to color picker repo with dependency management concepts; e.g. some data store?
+      - dependency-management/semantic-versioning.md
+      - dependency-management/breaking-changes.md
+      - dependency-management/version-pinning.md
+      # Probably doesn't warrant its own page; just incorporate it into the other pages that talk about dependencies
+      - dependency-management/package-managers.md
+
+  - Testing a Full Software Solution:
+      - full-testing/index.md # link to color picker repo with all three test types; can I do this? May have to add web API consumer?
+      - full-testing/test-types.md # what the three types are for; why use each
+      - full-testing/integration-testing.md
+      - full-testing/end-to-end-testing.md

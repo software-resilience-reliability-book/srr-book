@@ -5,11 +5,13 @@
 
 ## Module 1: Understanding Build Systems
 
+- Basic "can you run a .NET program" starter module
 - What a build does (compile, resolve references, produce artifacts)
 - The .NET build pipeline: `dotnet restore`, `build`, `publish`
 - Reading build output: warnings vs errors
 - Common build failures: missing packages, version conflicts, missing references
 - Understanding that the IDE debugger is its own program separate from the (usually CLI driven) build process
+- Compile-time vs runtime vs logic errors, and how these manifest
 
 ## Module 2: Testing Fundamentals and Test Types
 
@@ -24,10 +26,8 @@
 
 ## Module 3: Recognizing and Diagnosing Common Errors
 
-- Compile-time vs runtime vs logic errors, and how these manifest
 - Exception bubbling and best practices for handling
 - Reading stack traces
-- Silent failures?
 - Errors form part of the contract (expected behavior) of the application and should be included in tests.
 
 ## Module : Leveraging the Type System to Strengthen Software
@@ -57,6 +57,7 @@
 
 - Single Responsibility Principle applied at the project level
 - Choosing a project structure that promotes modularity and decoupling
+  - Don't think we can get very deep at this elementary level
 - Internal vs external dependencies (project reference vs package reference)
 - Transitive dependencies? This or next chapter.
 
