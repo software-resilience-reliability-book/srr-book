@@ -2706,8 +2706,8 @@
 
 <h1 id="understanding-the-debugger">Understanding the Debugger<a class="headerlink" href="#understanding-the-debugger" title="Permanent link">&para;</a></h1>
 <h2 id="what-is-the-debugger">What is the Debugger?<a class="headerlink" href="#what-is-the-debugger" title="Permanent link">&para;</a></h2>
-<p>The <strong>debugger</strong> is its own program that is <strong>attached</strong> to a running target program in order to track the state of the program as it executes. This is a large part of what an IDE offers over a simple text editor.</p>
-<p>The debugger uses the debugging information from the <code>.pdb</code> files that was generated during the build process to map the compiled IL code to source code. Since it is the IL code that is actually running, the debugger uses the mapping to show, for example, which line of source code is currently executing.</p>
+<p>The <strong>debugger</strong> is its own program that is <strong>attached</strong> to a running target program in order to track its state as it executes. This is one of the major advantages that an IDE offers over a simple text editor.</p>
+<p>The debugger uses the debugging information from the <code>.pdb</code> files that were generated during the build process to map the compiled IL code to source code. As the IL code runs, the debugger acts as a "bridge" that can point to the corresponding source code line. The debugger also keeps track of values that are on the <strong>call stack</strong> - the methods that are currently being executed.</p>
 <p>When we used the <code>dotnet run</code> command to run the program no debugger was attached. For quick changes, this is often sufficient. If we need to examine the program's runtime state in more detail, we can launch the program and then attach the debugger.</p>
 <p>This is what the IDE does for you when you select the "Run and Debug" button from the "Run and Debug" pane or use the <code>F5</code> shortcut key.</p>
 <p><img alt="run and debug button" src="../../images/run-and-debug.png" /></p>
