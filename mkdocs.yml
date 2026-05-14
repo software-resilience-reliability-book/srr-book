@@ -55,8 +55,13 @@ nav:
   - Preface: index.md
   - Living Software:
       - living-software/index.md
-      - living-software/technical-debt-defiinition.md
-      - living-software/technical-debt-cost.md
-      - living-software/managing-complexity.md
-  - Other Stuff:
-      - other-stuff/index.md
+      - living-software/why-software-changes.md
+      - living-software/reliability.md
+      - living-software/resiliency.md
+  - Complexity and Technical Debt:
+      - complexity-technical-debt/index.md
+      - complexity-technical-debt/managing-complexity.md
+      - complexity-technical-debt/technical-debt-defiinition.md
+      - complexity-technical-debt/technical-debt-cost.md
+
+  # refactoring

@@ -4,9 +4,9 @@
 >
 > -- [DORA / Google Cloud, 2026](https://dora.dev/ai/roi/report/)
 
-## Target Audience and Technology Rationale
+## Who this Book is For, and What You Need to Know
 
-This book was written for new developers who have had some experience with programming, but may lack experience working in larger projects with larger codebases.
+This book was written for new developers who have had some experience with programming, but may lack experience working on large or complex software projects.
 
 This book uses **.NET** and the **C#** programming language to illustrate concepts. These were chosen because:
 
