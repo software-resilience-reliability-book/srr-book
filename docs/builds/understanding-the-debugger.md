@@ -2,9 +2,9 @@
 
 ## What is the Debugger?
 
-The **debugger** is its own program that is **attached** to a running target program in order to track the state of the program as it executes. This is a large part of what an IDE offers over a simple text editor.
+The **debugger** is its own program that is **attached** to a running target program in order to track its state as it executes. This is one of the major advantages that an IDE offers over a simple text editor.
 
-The debugger uses the debugging information from the `.pdb` files that was generated during the build process to map the compiled IL code to source code. Since it is the IL code that is actually running, the debugger uses the mapping to show, for example, which line of source code is currently executing.
+The debugger uses the debugging information from the `.pdb` files that were generated during the build process to map the compiled IL code to source code. As the IL code runs, the debugger acts as a "bridge" that can point to the corresponding source code line. The debugger also keeps track of values that are on the **call stack** - the methods that are currently being executed.
 
 When we used the `dotnet run` command to run the program no debugger was attached. For quick changes, this is often sufficient. If we need to examine the program's runtime state in more detail, we can launch the program and then attach the debugger.
 
