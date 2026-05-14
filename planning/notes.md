@@ -14,6 +14,16 @@ Book is compiled with mkdocs.
 
 Find out if there's a neat way to do "aside" content blurbs or custom formatting? May need to switch to HTML, but I really want to stick with material theme.
 
+This belongs somewhere, but I don't know where:
+
+<!-- prettier-ignore -->
+!!! info "A New Age for Developers"
+    As of this writing, AI is rapidly changing the role of the software developer - especially in entry level positions. The "programmer" role is largely being replaced, but not the "software developer" role.
+
+    In the past engineers, architects, and more senior developers would make decisions about how to accomplish project goals while delegating low-risk "automatable" tasks to junior developers, who would use existing coding solutions to translate similar requirements into code.
+
+    Practical fluency with at least one programming language is still a critical and required skill, but software developers now must be able to take a much more holistic role in forming solutions. Understanding proper system design is more important than ever!
+
 ## Chapters
 
 These do not need to be (and should not be) a one to one mapping with the course modules.

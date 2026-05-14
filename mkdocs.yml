@@ -41,6 +41,8 @@ theme:
 # Markdown Extensions
 # ##########################################
 markdown_extensions:
+  - admonition
+  - attr_list
   - toc:
       permalink: true
       # toc_depth: 0 # This will hide the intrapage TOC that normally appears on the right of the page.
@@ -49,9 +51,12 @@ markdown_extensions:
 # Navigation
 # ##########################################
 nav:
+  # - Example: example.md
   - Preface: index.md
   - Living Software:
       - living-software/index.md
-      - living-software/technical-debt.md
+      - living-software/technical-debt-defiinition.md
+      - living-software/technical-debt-cost.md
+      - living-software/managing-complexity.md
   - Other Stuff:
       - other-stuff/index.md
