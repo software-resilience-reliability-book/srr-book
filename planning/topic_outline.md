@@ -1,7 +1,11 @@
 ## Module 0: Course Resources
 
 - "Course Guide" document, as was done with other courses. This shows expected prerequisite knowledge, intended way to move through modules, where to find resources and common FAQ info.
-- C# survival doc, mostly pointing to external resources
+- C# quick reference
+  - dotnet cli commands
+  - python to c# translation
+    - built in functions
+    - single function program with if and for loop as "side by side" syntax comparison
 
 ## Module 1: Understanding Build Systems
 
