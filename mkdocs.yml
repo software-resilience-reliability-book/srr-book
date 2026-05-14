@@ -52,6 +52,6 @@ nav:
   - Preface: index.md
   - Living Software:
       - living-software/index.md
-      - living-software/another-page.md
+      - living-software/technical-debt.md
   - Other Stuff:
       - other-stuff/index.md

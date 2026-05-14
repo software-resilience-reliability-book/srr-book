@@ -1,5 +1,11 @@
 # Content Planning
 
+mkdocs preview command:
+
+```
+mkdocs serve --livereload
+```
+
 ## Format
 
 Book is compiled with mkdocs.

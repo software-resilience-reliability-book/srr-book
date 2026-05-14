@@ -67,4 +67,7 @@
 - What constitutes a breaking change
 - Version pinning example as a good "aside" case study blurb:
   - This course textbook has pinned version because of upcoming breaking change: https://squidfunk.github.io/mkdocs-material/blog/2026/02/18/mkdocs-2.0/. Note that we pinned this because we don't want a surprise breaking change mid-course if they release v2.0.
-- Transitive dependencies as a liability: supply chain attacks.
+- When and why should we update a dependency?
+  - All code, including dependencies, is a liability
+  - Note that there are reasons to "lock" a dependency version: security, stability, performance, etc.
+  - Transitive dependencies as a liability: supply chain attacks
