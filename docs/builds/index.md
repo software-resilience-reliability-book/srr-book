@@ -16,10 +16,6 @@ It is recommended that you also install the Git version control system to manage
 
 GitHub does offer a desktop application. However, the preferred method of working with Git is to use the **command line interface (CLI)** in your terminal.
 
-There are many high-quality resources available to help you install and learn Git. We recommend the following to get started:
-
-<mark>TODO: get Git recommended install video link from Chris</mark>
-
 We do not link to a repository in this chapter, but will in future chapters.
 
 <!-- prettier-ignore -->
