@@ -10,11 +10,13 @@
         <meta name="author" content="Mike Jovanovich">
       
       
-        <link rel="canonical" href="https://software-resilience-reliability-book.github.io/srr-book/living-software/managing-complexity/">
+        <link rel="canonical" href="https://software-resilience-reliability-book.github.io/srr-book/living-software/why-software-changes/">
       
       
-        <link rel="prev" href="../technical-debt-cost/">
+        <link rel="prev" href="../">
       
+      
+        <link rel="next" href="../reliability/">
       
       
         
@@ -25,7 +27,7 @@
     
     
       
-        <title>Managing Complexity - Software Resilience and Reliability</title>
+        <title>Why Software Changes - Software Resilience and Reliability</title>
       
     
     
@@ -78,7 +80,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#managing-complexity" class="md-skip">
+        <a href="#why-software-changes" class="md-skip">
           Skip to content
         </a>
       
@@ -114,7 +116,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Managing Complexity
+              Why Software Changes
             
           </span>
         </div>
@@ -354,10 +356,299 @@
                 
   
   
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Why Software Changes
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Why Software Changes
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#adding-new-features" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Adding new features
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#removing-low-value-features" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Removing low-value features
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#fixing-bugs" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Fixing bugs
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#changing-a-technology-implementation-detail" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Changing a technology implementation detail
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#removing-technical-debt" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Removing technical debt
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
   
   
     <li class="md-nav__item">
-      <a href="../technical-debt-defiinition/" class="md-nav__link">
+      <a href="../reliability/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Reliabile Software
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../resiliency/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Resilient Software
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../complexity-technical-debt/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Complexity and Technical Debt
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_3" id="__nav_3_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Complexity and Technical Debt
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../complexity-technical-debt/managing-complexity/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Managing Complexity
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../complexity-technical-debt/technical-debt-defiinition/" class="md-nav__link">
         
   
   
@@ -385,7 +676,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../technical-debt-cost/" class="md-nav__link">
+      <a href="../../complexity-technical-debt/technical-debt-cost/" class="md-nav__link">
         
   
   
@@ -393,178 +684,6 @@
     
   
     Costs Associated with Technical Debt
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-    
-  
-  
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Managing Complexity
-  
-
-    
-  </span>
-  
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Managing Complexity
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#design-tradeoffs" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Design Tradeoffs
-      
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
-    </li>
-  
-
-              
-            
-          </ul>
-        </nav>
-      
-    </li>
-  
-
-    
-      
-      
-  
-  
-  
-  
-    
-    
-      
-        
-      
-    
-    
-    
-    
-    <li class="md-nav__item md-nav__item--nested">
-      
-        
-        
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
-        
-          
-          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
-            
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Other Stuff
-  
-
-    
-  </span>
-  
-  
-
-            <span class="md-nav__icon md-icon"></span>
-          </label>
-        
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_3">
-            <span class="md-nav__icon md-icon"></span>
-            
-  
-    Other Stuff
-  
-
-          </label>
-          <ul class="md-nav__list" data-md-scrollfix>
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../other-stuff/index.md" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    None
   
 
     
@@ -612,10 +731,54 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#design-tradeoffs" class="md-nav__link">
+  <a href="#adding-new-features" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Design Tradeoffs
+        Adding new features
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#removing-low-value-features" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Removing low-value features
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#fixing-bugs" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Fixing bugs
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#changing-a-technology-implementation-detail" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Changing a technology implementation detail
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#removing-technical-debt" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Removing technical debt
       
     </span>
   </a>
@@ -642,33 +805,19 @@
   
 
 
-<h1 id="managing-complexity">Managing Complexity<a class="headerlink" href="#managing-complexity" title="Permanent link">&para;</a></h1>
-<p>Arguably, the most difficult part of building software is <strong>managing complexity</strong>. For a given software problem there may be hundreds of ways to implement a solution. Dozens of these may be practical and effective. How do we know which to choose?</p>
-<h2 id="design-tradeoffs">Design Tradeoffs<a class="headerlink" href="#design-tradeoffs" title="Permanent link">&para;</a></h2>
-<p>In the world of software, there is no "best" solution. Each solution will involve <strong>tradeoffs</strong>. By understanding what is most important to our clients and the consumers of our software, we can adjust the development approaches that we take and get as close as possible.</p>
-<p>As an example, when you were first learning to program you probably wrote mostly <strong>procedural</strong> code, with all of your code in one file.</p>
-<p>You may later have learned some <strong>object oriented programming (OOP)</strong>, where code is grouped into classes, usually with one file per class. OOP is not inherently better than procedural programming. It offers a tradeoff. There is a reason that small scripts are procedural whereas larger full scale applications tend to be object oriented:</p>
-<p><em>Procedural</em></p>
-<ul>
-<li>Quick initial development</li>
-<li>Code "reads" sequentially so can be easier to understand</li>
-<li>Difficult to maintain in large project</li>
-<li>Poor modularity and code reuse</li>
-</ul>
-<p><em>Object Oriented</em></p>
-<ul>
-<li>Requires planning up front</li>
-<li>Scattered files and extra "boilerplate code" can make it difficult ot understand</li>
-<li>Isolated functionality makes maintence easy in large projects</li>
-<li>Excellent modularity and code reuse</li>
-</ul>
-<!-- prettier-ignore -->
-<div class="admonition warning">
-<p class="admonition-title">Right Tool for the Job</p>
-<p>With the broad range of available options, simply choosing an appropriate technology can be a daunting task. It may be tempting to stick with a technology because you're familiar with it or because it's currently trendy. Some up front research into the pros and cons of each technology can help you make a more informed decision.</p>
-<p>If all you need to do is read a CSV file and create a graph image from the contents, a procedural script written in a language like Python is a good choice.</p>
-<p>If you need a full web application with complex user interactions and domain logic, object oriented programming written in a language like C# is a good choice.</p>
-</div>
+<h1 id="why-software-changes">Why Software Changes<a class="headerlink" href="#why-software-changes" title="Permanent link">&para;</a></h1>
+<h2 id="adding-new-features">Adding new features<a class="headerlink" href="#adding-new-features" title="Permanent link">&para;</a></h2>
+<p>Software solves dynamic and complex problems. To meet the changing needs of users, new features are added and existing features are continuously improved.</p>
+<h2 id="removing-low-value-features">Removing low-value features<a class="headerlink" href="#removing-low-value-features" title="Permanent link">&para;</a></h2>
+<p>Each line of code adds complexity, and possibly additional resource burden, to the application. Parts of an application that no longer add significant value should be removed.</p>
+<h2 id="fixing-bugs">Fixing bugs<a class="headerlink" href="#fixing-bugs" title="Permanent link">&para;</a></h2>
+<p>Even the best systems have unexpected bugs that need to be fixed.</p>
+<h2 id="changing-a-technology-implementation-detail">Changing a technology implementation detail<a class="headerlink" href="#changing-a-technology-implementation-detail" title="Permanent link">&para;</a></h2>
+<p>Applications grow over time, and may need changes in hardware.</p>
+<p><strong>Third-party</strong> vendors (those providing software or hardward that don't directly work for your organization) may change terms, adjust prices, or go out of business.</p>
+<p>Very often, technologies simply "age out". This may leave the system in a state where components are incompatible; part of the solution can no longer work well with another part.</p>
+<h2 id="removing-technical-debt">Removing technical debt<a class="headerlink" href="#removing-technical-debt" title="Permanent link">&para;</a></h2>
+<p><strong>Technical debt</strong> is the future costs associated with relying on shortcuts or suboptimal decisions made during software development. We will spend most of this book learning how to mitigate (prevent) and remediate (fix) techinical debt.</p>
 
 
 
@@ -704,7 +853,7 @@
       <nav class="md-footer__inner md-grid" aria-label="Footer" >
         
           
-          <a href="../technical-debt-cost/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Costs Associated with Technical Debt">
+          <a href="../" class="md-footer__link md-footer__link--prev" aria-label="Previous: Living Software">
             <div class="md-footer__button md-icon">
               
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
@@ -714,11 +863,27 @@
                 Previous
               </span>
               <div class="md-ellipsis">
-                Costs Associated with Technical Debt
+                Living Software
               </div>
             </div>
           </a>
         
+        
+          
+          <a href="../reliability/" class="md-footer__link md-footer__link--next" aria-label="Next: Reliabile Software">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              <div class="md-ellipsis">
+                Reliabile Software
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"/></svg>
+            </div>
+          </a>
         
       </nav>
     
