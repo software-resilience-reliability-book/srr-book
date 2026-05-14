@@ -16,7 +16,7 @@
         <link rel="prev" href="..">
       
       
-        <link rel="next" href="another-page/">
+        <link rel="next" href="technical-debt/">
       
       
         
@@ -355,14 +355,14 @@
   
   
     <li class="md-nav__item">
-      <a href="another-page/" class="md-nav__link">
+      <a href="technical-debt/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    Another Page
+    Technical Debt
   
 
     
@@ -496,30 +496,57 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#h2-topic" class="md-nav__link">
+  <a href="#adding-new-features" class="md-nav__link">
     <span class="md-ellipsis">
       
-        H2 Topic
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="H2 Topic">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#h3-topic" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        H3 Topic
+        Adding new features
       
     </span>
   </a>
   
 </li>
-        
-      </ul>
-    </nav>
+      
+        <li class="md-nav__item">
+  <a href="#removing-low-value-features" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Removing low-value features
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#fixing-bugs" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Fixing bugs
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#changing-a-technology-implementation-detail" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Changing a technology implementation detail
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#removing-technical-debt" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Removing technical debt
+      
+    </span>
+  </a>
   
 </li>
       
@@ -544,11 +571,27 @@
 
 
 <h1 id="living-software">Living Software<a class="headerlink" href="#living-software" title="Permanent link">&para;</a></h1>
-<p>... TODO - the introduction and motivation for the book ..... TODO - the introduction and motivation for the book ..... TODO - the introduction and motivation for the book ..... TODO - the introduction and motivation for the book ..... TODO - the introduction and motivation for the book ..... TODO - the introduction and motivation for the book ..... TODO - the introduction and motivation for the book ..... TODO - the introduction and motivation for the book ..... TODO - the introduction and motivation for the book ..... TODO - the introduction and motivation for the book ..... TODO - the introduction and motivation for the book ..... TODO - the introduction and motivation for the book ..... TODO - the introduction and motivation for the book ..... TODO - the introduction and motivation for the book ................... TODO - the introduction and motivation for the book ...</p>
-<h2 id="h2-topic">H2 Topic<a class="headerlink" href="#h2-topic" title="Permanent link">&para;</a></h2>
-<p>I am a second-level topic.</p>
-<h3 id="h3-topic">H3 Topic<a class="headerlink" href="#h3-topic" title="Permanent link">&para;</a></h3>
-<p>I am a third-level topic.</p>
+<p>When describing a piece of software, we often use the word <strong>solution</strong>. Software primarily exists to solve problems that users are experiencing. These problems span a broad range of <strong>domains</strong>, or areas of application.</p>
+<p>For example:</p>
+<ul>
+<li>Our airline passengers need to browse flights and purchase tickets.</li>
+<li>Our homeowners need to save energy by adjusting temperature when the house is empty.</li>
+<li>Our retail suppliers need to forecast holiday demand and place inventory orders.</li>
+<li>Our accountants need to enter spreadsheet data into the new accounting system.</li>
+</ul>
+<p>Once a software solution is built, however, the problem isn't "solved". Software systems evolve to meet the changing needs of the users.</p>
+<h2 id="adding-new-features">Adding new features<a class="headerlink" href="#adding-new-features" title="Permanent link">&para;</a></h2>
+<p>Software solves dynamic and complex problems. To meet the changing needs of users, new features are added and existing features are continuously improved.</p>
+<h2 id="removing-low-value-features">Removing low-value features<a class="headerlink" href="#removing-low-value-features" title="Permanent link">&para;</a></h2>
+<p>Code is a liability because it must be maintained and it adds complexity to the codebase. Parts of an application that no longer add significant value should be removed.</p>
+<h2 id="fixing-bugs">Fixing bugs<a class="headerlink" href="#fixing-bugs" title="Permanent link">&para;</a></h2>
+<p>Even the best systems have unexpected bugs that need to be fixed.</p>
+<h2 id="changing-a-technology-implementation-detail">Changing a technology implementation detail<a class="headerlink" href="#changing-a-technology-implementation-detail" title="Permanent link">&para;</a></h2>
+<p>Applications grow over time, and may need changes in hardware.</p>
+<p><strong>Third-party</strong> vendors (those providing software or hardward that don't directly work for your organization) may change terms, adjust prices, or go out of business.</p>
+<p>Very often, technologies simply "age out". This may leave the system in a state where components are incompatible; part of the solution can no longer work well with another part.</p>
+<h2 id="removing-technical-debt">Removing technical debt<a class="headerlink" href="#removing-technical-debt" title="Permanent link">&para;</a></h2>
+<p><strong>Technical debt</strong> is the future costs associated with relying on shortcuts or suboptimal decisions made during software development. We will spend most of this book learning how to mitigate (prevent) and remediate (fix) techinical debt.</p>
 
 
 
@@ -601,13 +644,13 @@
         
         
           
-          <a href="another-page/" class="md-footer__link md-footer__link--next" aria-label="Next: Another Page">
+          <a href="technical-debt/" class="md-footer__link md-footer__link--next" aria-label="Next: Technical Debt">
             <div class="md-footer__title">
               <span class="md-footer__direction">
                 Next
               </span>
               <div class="md-ellipsis">
-                Another Page
+                Technical Debt
               </div>
             </div>
             <div class="md-footer__button md-icon">

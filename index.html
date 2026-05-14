@@ -269,6 +269,24 @@
         
       
       
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Preface
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
       <a href="." class="md-nav__link md-nav__link--active">
         
   
@@ -285,6 +303,47 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#target-audience-and-technology-rationale" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Target Audience and Technology Rationale
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#companion-code" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Companion Code
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -361,14 +420,14 @@
   
   
     <li class="md-nav__item">
-      <a href="living-software/another-page/" class="md-nav__link">
+      <a href="living-software/technical-debt/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    Another Page
+    Technical Debt
   
 
     
@@ -495,6 +554,36 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#target-audience-and-technology-rationale" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Target Audience and Technology Rationale
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#companion-code" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Companion Code
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -516,9 +605,23 @@
 <h1 id="software-resilience-and-reliability">Software Resilience and Reliability<a class="headerlink" href="#software-resilience-and-reliability" title="Permanent link">&para;</a></h1>
 <blockquote>
 <p>Technology is the primary engine for value creation, innovation, and organizational performance. Unlike physical assets, software is not static. Its power lies in its ability to incorporate user feedback and evolve to meet changing needs. Consequently, one of the most critical indicators of a software application’s health is how easily, safely, and quickly it can be modified.</p>
-<p>-- <a href="https://cloud.google.com/blog/products/devops-sre/dora-state-of-devops-2025-results">DORA State of DevOps 2025</a></p>
+<p>-- <a href="https://dora.dev/ai/roi/report/">DORA / Google Cloud, 2026</a></p>
 </blockquote>
-<p>TODO: the citation above is not correct; need to find the actual citation.</p>
+<h2 id="target-audience-and-technology-rationale">Target Audience and Technology Rationale<a class="headerlink" href="#target-audience-and-technology-rationale" title="Permanent link">&para;</a></h2>
+<p>This book was written for new developers who have had some experience with programming, but may lack experience working in larger projects with larger codebases.</p>
+<p>This book uses <strong>.NET</strong> and the <strong>C#</strong> programming language to illustrate concepts. These were chosen because:</p>
+<ul>
+<li>The .NET runtime is cross-platform.</li>
+<li>The language and platform afford the ability to demonstrate the concepts for this book.</li>
+<li>The .NET ecosystem tends toward a "one right way to do it" philosophy than other more divergent technologies.</li>
+</ul>
+<p>It is not expected that the reader have any C# experience. With the volume of high-quality, low-cost, accessible resources available at our disposible - it has never been easier to learn new programming languages and technologies.</p>
+<p>This book uses <strong>application software</strong> as opposed to <strong>system software</strong> do demonstrate concepts. Application software is typically more accessible for new learners, and examples are easier to understand.</p>
+<p>All of the topics in this book may be applied to software generally, regardless of which technology a solution is implemented in.</p>
+<h2 id="companion-code">Companion Code<a class="headerlink" href="#companion-code" title="Permanent link">&para;</a></h2>
+<p>All of the code for this book may be found within the <a href="https://github.com/orgs/software-resilience-reliability-book/repositories">Software Resilience and Reliability GitHub Organization</a>. Chapters will reference any repositories that are used for code examples.</p>
+<p>We encourage you to clone the repository and run the examples for yourself. The best way to learn software development concepts is to read, and try out, existing solutions.</p>
+<p>You will need to install an IDE such as <a href="https://code.visualstudio.com/download">VS Code</a>, as well as the <a href="https://code.visualstudio.com/docs/languages/dotnet">.NET Software Development Kit</a> and any additional extensions to support development in the C# language.</p>
 
 
 
