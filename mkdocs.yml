@@ -70,13 +70,16 @@ nav:
   - The Build System:
       - builds/index.md # probably no repo - examples are standalone snippets
       - builds/what-a-build-does.md
-      - builds/build-output.md
-      - builds/errors/index.md
+      - builds/build-artifacts.md # note intermediate files, and that one of final steps of build process is usually to copy the actual compiled files
+      - builds/running-the-program.md # running via debugger (a tool to step through code) vs CLI (the actual program)
+
+  - Diagnosing Errors:
+      - diagnosing-errors/index.md # basic app with errors
       - builds/errors/compile-time.md
+      - error-output.md # warnings vs errors, fixing above issues
       - builds/errors/runtime.md
       - builds/errors/logic.md
       - builds/stack-traces.md
-      - builds/running-the-program.md # running via debugger (a tool to step through code) vs CLI (the actual program)
 
   # This has its own chapter early; we don't want to overwhelm students with too
   # many concepts at once so don't cover other test types yet
@@ -92,7 +95,7 @@ nav:
   - Leveraging the Type System:
       - type-system/index.md # link to color picker repo with type enhancements
       - type-system/types-as-contracts.md # More focused on "what can I expect to be on this?"
-      - type-system/enums-and-fixed-sets.md # Enums protect your code from developers using it incorrectly
+      - type-system/enums-and-fixed-sets.md # Enums protecyour code from developers using it incorrectly
       - type-system/protecting-invariants.md # Focused on guaranteeing valid state; e.g. a "HexColor" class that only allows valid hex colors
       - type-system/custom-exception-types.md
 
