@@ -69,6 +69,7 @@ nav:
 
   - The Build System:
       - builds/index.md # probably no repo - example is threaded through the lesson
+      - builds/creating-empty-project-shell.md # create and build console app
       - builds/creating-dotnet-project.md # create and build console app
       - builds/adding-a-package.md # add cli color library
       - builds/build-artifacts.md # note intermediate files, and that one of final steps of build process is usually to copy the actual compiled files

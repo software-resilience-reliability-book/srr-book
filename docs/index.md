@@ -22,8 +22,8 @@ All of the topics in this book may be applied to software generally, regardless 
 
 ## Companion Code
 
-All of the code for this book may be found within the [Software Resilience and Reliability GitHub Organization](https://github.com/orgs/software-resilience-reliability-book/repositories). Chapters will reference any repositories that are used for code examples.
+All of the code examples from this book may be found within the [Software Resilience and Reliability GitHub Organization](https://github.com/orgs/software-resilience-reliability-book/repositories). Chapters will reference any repositories that are used for code examples.
 
-We encourage you to clone the repository and run the examples for yourself. The best way to learn software development concepts is to read, and try out, existing solutions.
+We encourage you to clone or download the repository and run the examples for yourself. The best way to learn software development concepts is to read, and try out, existing solutions.
 
-You will need to install an IDE such as [VS Code](https://code.visualstudio.com/download), as well as the [.NET Software Development Kit](https://code.visualstudio.com/docs/languages/dotnet) and any additional extensions to support development in the C# language.
+[The Build System](builds/index.md) chapter of this book provides a walkthrough, where a simple console application is created and built using the .NET SDK.
