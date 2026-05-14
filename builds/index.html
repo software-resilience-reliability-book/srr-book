@@ -16,6 +16,8 @@
         <link rel="prev" href="../complexity-debt/refactoring/">
       
       
+        <link rel="next" href="creating-empty-project-shell/">
+      
       
         
       
@@ -655,6 +657,8 @@
       
         
       
+        
+      
     
     
     
@@ -711,14 +715,14 @@
   
   
     <li class="md-nav__item">
-      <a href="creating-dotnet-project.md" class="md-nav__link">
+      <a href="creating-empty-project-shell/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    None
+    Creating an Empty Project Shell
   
 
     
@@ -739,14 +743,14 @@
   
   
     <li class="md-nav__item">
-      <a href="adding-a-package.md" class="md-nav__link">
+      <a href="creating-dotnet-project/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    None
+    Creating a .NET Project
   
 
     
@@ -767,14 +771,14 @@
   
   
     <li class="md-nav__item">
-      <a href="build-artifacts.md" class="md-nav__link">
+      <a href="adding-a-package/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    None
+    Adding a package
   
 
     
@@ -795,14 +799,42 @@
   
   
     <li class="md-nav__item">
-      <a href="running-the-program.md" class="md-nav__link">
+      <a href="build-artifacts/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    None
+    Build artifacts
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="running-the-program/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Running the program
   
 
     
@@ -851,14 +883,14 @@
   
   
     <li class="md-nav__item">
-      <a href="what-belongs-in-version-control.md" class="md-nav__link">
+      <a href="what-belongs-in-version-control/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    None
+    What belongs in version control
   
 
     
@@ -2524,10 +2556,32 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#relevant-code" class="md-nav__link">
+  <a href="#required-installations" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Relevant Code
+        Required Installations
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#recommended-installations" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Recommended Installations
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#additional-c-resources" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Additional C# Resources
       
     </span>
   </a>
@@ -2556,10 +2610,27 @@
 
 <h1 id="the-build-system">The Build System<a class="headerlink" href="#the-build-system" title="Permanent link">&para;</a></h1>
 <p>Because builds are the first point of failure that we may encounter, we will explore this topic early in the book. To get the most out of this book, you should be able to run the provided code examples.</p>
-<p>If you don't have experience with C# or .NET we strongly recommend completing the <a href="https://learn.microsoft.com/en-us/training/modules/csharp-write-first/">Write your first C# code</a> tutorial on Microsoft Learn.</p>
-<h2 id="relevant-code">Relevant Code<a class="headerlink" href="#relevant-code" title="Permanent link">&para;</a></h2>
+<p>In this chapter we will create a simple console application using the C# language and the .NET SDK.</p>
+<h2 id="required-installations">Required Installations<a class="headerlink" href="#required-installations" title="Permanent link">&para;</a></h2>
+<p>You will need to install an IDE such as <a href="https://code.visualstudio.com/download">VS Code</a> to work with the code.</p>
+<p>You will also need to install the <a href="https://code.visualstudio.com/docs/languages/dotnet">.NET Software Development Kit</a> and any additional extensions to support development in the C# language. Follow the documentation on the linked page to get started.</p>
+<h2 id="recommended-installations">Recommended Installations<a class="headerlink" href="#recommended-installations" title="Permanent link">&para;</a></h2>
+<p>It is recommended that you also install the Git version control system to manage your code. Git is the industry standard version control solution, and allows you to download code repositories with a simple <code>git clone</code> command.</p>
+<p>GitHub does offer a desktop application. However, the preferred method of working with Git is to use the <strong>command line interface (CLI)</strong> in your terminal.</p>
+<p>There are many high-quality resources available to help you install and learn Git. We recommend the following to get started:</p>
+<p><mark>TODO: get Git recommended install video link from Chris</mark></p>
+<p>We do not link to a repository in this chapter, but will in future chapters.</p>
+<!-- prettier-ignore -->
+<div class="admonition note">
+<p class="admonition-title">One Step at a Time</p>
+<p>If you are not already comfortable with Git and prefer to focus on the concepts in this book, use the alternative method of downloading the example code in zip file format. This is perfectly okay! When learning new concepts it is more effective to focus on learning one concept at a time.</p>
+<p>You can always learn Git later!</p>
+</div>
+<h2 id="additional-c-resources">Additional C# Resources<a class="headerlink" href="#additional-c-resources" title="Permanent link">&para;</a></h2>
+<p><em>You do not have to know C# to follow the concepts in this book</em>. However, if you would like to learn more about developing in the C# language, we recommend that you:</p>
 <ul>
-<li>TODO: GH repos that have to do with builds? These snippets are so simple that they won't have repos I think.</li>
+<li>Skim the <a href="https://learn.microsoft.com/en-us/dotnet/csharp/tour-of-csharp/">C# Documentation</a> to brush up on unfamiliar concepts. You may progress by following the table of contents on the left of the page.</li>
+<li>Browse the <a href="https://learn.microsoft.com/en-us/training/browse/?resource_type=module&amp;terms=c%23&amp;levels=beginner">Beginner C# Modules</a> on Microsoft Learn to find modules that interest you.</li>
 </ul>
 
 
@@ -2611,6 +2682,22 @@
             </div>
           </a>
         
+        
+          
+          <a href="creating-empty-project-shell/" class="md-footer__link md-footer__link--next" aria-label="Next: Creating an Empty Project Shell">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              <div class="md-ellipsis">
+                Creating an Empty Project Shell
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"/></svg>
+            </div>
+          </a>
         
       </nav>
     
