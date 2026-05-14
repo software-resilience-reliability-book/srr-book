@@ -6,7 +6,7 @@ Software is an **asset**. It provides meaningful value to its owners and users.
 
 The code that makes up the software is a **liability**. Developers and maintainers must ensure that it continues to work. Every time the system changes, the code must be modified to support the new requirements. Additional functionality introduces points of failure to the system.
 
-To reiterate the quote from the start of this book:
+To revisit the quote from the start of this book:
 
 > ...one of the most critical indicators of a software application’s health is how easily, safely, and quickly it can be modified.
 
