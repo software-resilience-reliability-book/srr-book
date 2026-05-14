@@ -32,7 +32,7 @@ AnsiConsole.Markup($"You chose the color [#{hex}]#{hex}[/]\n");
 ```
 
 <!-- prettier-ignore -->
-!!! note "IDE Warnings"
+!!! info "IDE Warnings"
     Do not worry if you see green squiggles under the `Console.Readline()` line in your IDE. We will address this issue later.
 
 Then build the project:

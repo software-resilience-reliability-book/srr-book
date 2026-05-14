@@ -82,17 +82,16 @@ nav:
       - builds/build-artifacts.md
       - builds/running-the-program.md
       - builds/understanding-the-debugger.md
-      - builds/adding-a-package.md # add cli color library
-      - builds/publishing-the-application.md # note that users will never see IDE
-      - builds/what-belongs-in-version-control.md # intro .gitignore file. note that we can safely delete artifacts without losing information. we can always build again
+      - builds/adding-a-package.md
+      - builds/what-belongs-in-version-control.md
 
   - Diagnosing Errors:
       - diagnosing-errors/index.md # basic app with errors
-      - builds/errors/compile-time.md
-      - error-output.md # warnings vs errors, fixing above issues
-      - builds/errors/runtime.md
-      - builds/errors/logic.md
-      - builds/stack-traces.md
+      - diagnosing-errors/compile-time.md
+      - diagnosing-errors/error-output.md # warnings vs errors, fixing above issues
+      - diagnosing-errors/runtime.md
+      - diagnosing-errors/logic.md
+      - diagnosing-errors/stack-traces.md
 
   # This has its own chapter early; we don't want to overwhelm students with too
   # many concepts at once so don't cover other test types yet

@@ -25,7 +25,7 @@ _Object Oriented_
 - Excellent modularity and code reuse
 
 <!-- prettier-ignore -->
-!!! warning "Right Tool for the Job"
+!!! info "Right Tool for the Job"
     With the broad range of available options, simply choosing an appropriate technology can be a daunting task. It may be tempting to stick with a technology because you're familiar with it or because it's currently trendy. Some up front research into the pros and cons of each technology can help you make a more informed decision.
 
     If all you need to do is read a CSV file and create a graph image from the contents, a procedural script written in a language like Python is a good choice.

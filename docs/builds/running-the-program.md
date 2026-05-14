@@ -31,5 +31,5 @@ dotnet run
 Your new output should appear in the terminal.
 
 <!-- prettier-ignore -->
-!!! tip "Clearing Terminal Output"
+!!! info "Clearing Terminal Output"
     Use the `clear` command to clear the terminal output between program builds and runs.

@@ -34,7 +34,7 @@ git clone <https://github.com/your-username/your-project-name.git>
 ```
 
 <!-- prettier-ignore -->
-!!! note "Cloning an Empty Repository"
+!!! info "Cloning an Empty Repository"
     You will get a warning message about cloning an empty repository. This is expected and can be ignored.
 
 ## Open the Project in Visual Studio Code

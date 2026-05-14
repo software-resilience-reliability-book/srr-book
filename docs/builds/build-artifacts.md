@@ -23,3 +23,7 @@ Let's look at two significant file types that were created.
 | **.pdb**  | These files contain **debug symbols** that the debugger uses to map the compiled code to the source code.                                                                    |
 
 The `dotnet build` command creates a version of the application that is suitable for development use, but does not include the final artifacts that will be deployed as part of the released application.
+
+<!-- prettier-ignore -->
+!!! info "Project and Solution Files"
+    We will go into detail about what the `.csproj` and `.sln` files are and how they are used in a later chapter.

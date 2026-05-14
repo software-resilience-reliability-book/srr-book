@@ -31,7 +31,7 @@ This is h4 content.
 How to do asides:
 
 <!-- prettier-ignore -->
-!!! note "Optional custom title"
+!!! info "Optional custom title"
     Aside text here. Indented 4 spaces.
 
     Add line feed between paragraphs

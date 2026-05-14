@@ -18,7 +18,7 @@ Languages like C and C++ are compiled languages. In order to run code it must be
 To put it simply, the computer can make more accurate assumptions about a compiled program than an interpreted program.
 
 <!-- prettier-ignore -->
-!!! note "Intermediate Language (IL) and Just In Time (JIT) Compilation"
+!!! info "Intermediate Language (IL) and Just In Time (JIT) Compilation"
     ![JIT compiling process](../images/jit-compiling.svg)
 
     Some languages like Java and C# take a hybrid approach. These first compile to an **intermediate language (IL)** that isn't truly machine code. In other languages this is called **bytecode**.

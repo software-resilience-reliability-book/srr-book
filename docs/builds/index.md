@@ -23,7 +23,7 @@ There are many high-quality resources available to help you install and learn Gi
 We do not link to a repository in this chapter, but will in future chapters.
 
 <!-- prettier-ignore -->
-!!! note "One Step at a Time"
+!!! info "One Step at a Time"
     If you are not already comfortable with Git and prefer to focus on the concepts in this book, use the alternative method of downloading the example code in zip file format. This is perfectly okay! When learning new concepts it is more effective to focus on learning one concept at a time.
 
     You can always learn Git later!
