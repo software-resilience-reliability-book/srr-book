@@ -13,3 +13,9 @@ Custom styles and overrides for the Material theme can go here.
     margin-right: 12.1rem;
   }
 }
+
+/* Center images that are in the content area. */
+.md-content img.center {
+  display: block;
+  margin: 0 auto;
+}

@@ -10,11 +10,13 @@
         <meta name="author" content="Mike Jovanovich">
       
       
-        <link rel="canonical" href="https://software-resilience-reliability-book.github.io/srr-book/living-software/technical-debt/">
+        <link rel="canonical" href="https://software-resilience-reliability-book.github.io/srr-book/living-software/technical-debt-defiinition/">
       
       
         <link rel="prev" href="../">
       
+      
+        <link rel="next" href="../technical-debt-cost/">
       
       
         
@@ -25,7 +27,7 @@
     
     
       
-        <title>Technical Debt - Software Resilience and Reliability</title>
+        <title>What is Technical Debt? - Software Resilience and Reliability</title>
       
     
     
@@ -78,7 +80,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#technical-debt" class="md-skip">
+        <a href="#what-is-technical-debt" class="md-skip">
           Skip to content
         </a>
       
@@ -114,7 +116,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Technical Debt
+              What is Technical Debt?
             
           </span>
         </div>
@@ -297,6 +299,10 @@
       
         
       
+        
+      
+        
+      
     
     
     
@@ -369,7 +375,7 @@
   <span class="md-ellipsis">
     
   
-    Technical Debt
+    What is Technical Debt?
   
 
     
@@ -379,6 +385,62 @@
 
       </a>
       
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../technical-debt-cost/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Costs Associated with Technical Debt
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../managing-complexity/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Managing Complexity
+  
+
+    
+  </span>
+  
+  
+
+      </a>
     </li>
   
 
@@ -515,9 +577,19 @@
   
 
 
-<h1 id="technical-debt">Technical Debt<a class="headerlink" href="#technical-debt" title="Permanent link">&para;</a></h1>
-<p>Another page? Such is life.</p>
-<p>bbb</p>
+<h1 id="what-is-technical-debt">What is Technical Debt?<a class="headerlink" href="#what-is-technical-debt" title="Permanent link">&para;</a></h1>
+<p>We previously defined <strong>technical debt</strong> as the future costs associated with relying on shortcuts or suboptimal decisions made during software development.</p>
+<p>The idea aligns with the proverb "An ounce of prevention is worth a pound of cure": adopting best practices early in the development process can prevent the need for costly fixes later.</p>
+<p><img alt="technical debt impact on delivery" class="center" src="../../images/tech-debt-impact-on-delivery.svg" width="600" /></p>
+<p>Let's take a look at the image above.</p>
+<p>On the x-axis is "time": the left side is early in the development process, the right side is late in the development process.</p>
+<p>On the y-axis is "features delivered": early in the project there are no features. They are added over time.</p>
+<p>The two curves represent two different projects:</p>
+<p><em>Poor Technical Debt Management</em></p>
+<p>The project in red does not manage technical debt well. This curve roughly has a <strong>logarithmic</strong> shape as the project progresses.</p>
+<p>It may seem like quick progress early indicates that the project is off to a good start, but the reality is that the project is likely to fall behind later. It may even reach a point where nothing can be changed without breaking the system, and the project is effectively dead.</p>
+<p><em>Well-Managed Technical Debt</em></p>
+<p>The project in blue follows good practices for managing technical debt. This curve roughly has an <strong>exponential</strong> shape as the project progresses.</p>
 
 
 
@@ -568,6 +640,22 @@
             </div>
           </a>
         
+        
+          
+          <a href="../technical-debt-cost/" class="md-footer__link md-footer__link--next" aria-label="Next: Costs Associated with Technical Debt">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              <div class="md-ellipsis">
+                Costs Associated with Technical Debt
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"/></svg>
+            </div>
+          </a>
         
       </nav>
     

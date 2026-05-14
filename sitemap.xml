@@ -5,11 +5,23 @@
          <lastmod>2026-05-14</lastmod>
     </url>
     <url>
+         <loc>https://software-resilience-reliability-book.github.io/srr-book/example/</loc>
+         <lastmod>2026-05-14</lastmod>
+    </url>
+    <url>
          <loc>https://software-resilience-reliability-book.github.io/srr-book/living-software/</loc>
          <lastmod>2026-05-14</lastmod>
     </url>
     <url>
-         <loc>https://software-resilience-reliability-book.github.io/srr-book/living-software/technical-debt/</loc>
+         <loc>https://software-resilience-reliability-book.github.io/srr-book/living-software/managing-complexity/</loc>
+         <lastmod>2026-05-14</lastmod>
+    </url>
+    <url>
+         <loc>https://software-resilience-reliability-book.github.io/srr-book/living-software/technical-debt-cost/</loc>
+         <lastmod>2026-05-14</lastmod>
+    </url>
+    <url>
+         <loc>https://software-resilience-reliability-book.github.io/srr-book/living-software/technical-debt-defiinition/</loc>
          <lastmod>2026-05-14</lastmod>
     </url>
 </urlset>
