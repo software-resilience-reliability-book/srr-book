@@ -13,7 +13,7 @@
         <link rel="canonical" href="https://software-resilience-reliability-book.github.io/srr-book/builds/what-belongs-in-version-control/">
       
       
-        <link rel="prev" href="../running-the-program/">
+        <link rel="prev" href="../publishing-the-application/">
       
       
       
@@ -25,7 +25,7 @@
     
     
       
-        <title>What belongs in version control - Software Resilience and Reliability</title>
+        <title>What Belongs in Version Control? - Software Resilience and Reliability</title>
       
     
     
@@ -77,6 +77,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#what-belongs-in-version-control" class="md-skip">
+          Skip to content
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -109,7 +114,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              What belongs in version control
+              What Belongs in Version Control?
             
           </span>
         </div>
@@ -652,6 +657,10 @@
       
         
       
+        
+      
+        
+      
     
     
     
@@ -764,14 +773,14 @@
   
   
     <li class="md-nav__item">
-      <a href="../adding-a-package/" class="md-nav__link">
+      <a href="../compiling/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    Adding a package
+    Compiling
   
 
     
@@ -799,7 +808,7 @@
   <span class="md-ellipsis">
     
   
-    Build artifacts
+    Build Artifacts
   
 
     
@@ -827,7 +836,7 @@
   <span class="md-ellipsis">
     
   
-    Running the program
+    Running the Program
   
 
     
@@ -848,14 +857,70 @@
   
   
     <li class="md-nav__item">
-      <a href="../packaging-the-application.md" class="md-nav__link">
+      <a href="../understanding-the-debugger/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    None
+    Understanding the Debugger
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../adding-a-package/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Adding a Package
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../publishing-the-application/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Publishing the Application
   
 
     
@@ -882,6 +947,8 @@
       <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
       
       
+        
+      
       
       <a href="./" class="md-nav__link md-nav__link--active">
         
@@ -890,7 +957,7 @@
   <span class="md-ellipsis">
     
   
-    What belongs in version control
+    What Belongs in Version Control?
   
 
     
@@ -1755,6 +1822,8 @@
       
         
       
+        
+      
     
     
     
@@ -1914,7 +1983,35 @@
   
   
     <li class="md-nav__item">
-      <a href="../../environment-management/configuring-the-environment.md" class="md-nav__link">
+      <a href="../../environment-management/configuring-development-environment.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    None
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../environment-management/configuring-production-build.md" class="md-nav__link">
         
   
   
@@ -2547,6 +2644,8 @@
   
   
   
+    
+  
   
 </nav>
                   </div>
@@ -2566,9 +2665,11 @@
   
 
 
-  <h1>What belongs in version control</h1>
-
-
+<h1 id="what-belongs-in-version-control">What Belongs in Version Control?<a class="headerlink" href="#what-belongs-in-version-control" title="Permanent link">&para;</a></h1>
+<hr />
+<p>Note that artifacts that can be rebuilt (e.g. <code>bin</code> and <code>obj</code> directories) should not be tracked in version control.</p>
+<p>Before gitignore:</p>
+<p><img alt="explorer pane before gitignore" src="../../images/source-control-mess.png" /></p>
 
 
 
@@ -2604,7 +2705,7 @@
       <nav class="md-footer__inner md-grid" aria-label="Footer" >
         
           
-          <a href="../running-the-program/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Running the program">
+          <a href="../publishing-the-application/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Publishing the Application">
             <div class="md-footer__button md-icon">
               
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
@@ -2614,7 +2715,7 @@
                 Previous
               </span>
               <div class="md-ellipsis">
-                Running the program
+                Publishing the Application
               </div>
             </div>
           </a>
@@ -2652,7 +2753,7 @@
     
       
       
-      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.instant", "navigation.footer", "navigation.indexes", "navigation.top"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["content.code.copy", "navigation.instant", "navigation.footer", "navigation.indexes", "navigation.top"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
     
     
       <script src="../../assets/javascripts/bundle.79ae519e.min.js"></script>
