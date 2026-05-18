@@ -88,10 +88,12 @@ nav:
   - Diagnosing Errors:
       - diagnosing-errors/index.md # basic app with errors
       - diagnosing-errors/compile-time.md
-      - diagnosing-errors/error-output.md # warnings vs errors, fixing above issues
+      - diagnosing-errors/troubleshooting-failed-build.md
       - diagnosing-errors/runtime.md
+      - diagnosing-errors/test-harness.md
+      - diagnosing-errors/print-logging.md
+      - diagnosing-errors/validation-exceptions.md
       - diagnosing-errors/logic.md
-      - diagnosing-errors/stack-traces.md
 
   # This has its own chapter early; we don't want to overwhelm students with too
   # many concepts at once so don't cover other test types yet

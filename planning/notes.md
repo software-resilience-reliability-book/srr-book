@@ -14,6 +14,8 @@ Book is compiled with mkdocs.
 
 Make the icons in the asides consistent.
 
+Make chapter pages look like chapter pages.
+
 ## Chapters
 
 These do not need to be (and should not be) a one to one mapping with the course modules.
