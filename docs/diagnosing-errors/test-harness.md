@@ -10,6 +10,14 @@ The primary goal of a test harness is to exactly match the environment with the 
 - Same configuration values
 - Same input data
 
+You might also think of a test harness as a "developer sandbox" that allows us to flexibly run scenarios against the application for both new development and troubleshooting.
+
+...
+
+The main application that we will work with over the course of this book is a color transformation library. A **library** is a bundled unit of code that has no startup application, but can be used by other applications. Because there is no startup application, we need to create a test harness to run the library and see it in action.
+
+...
+
 <mark>TODO:</mark>
 
 - Write finished product of example domain application.
