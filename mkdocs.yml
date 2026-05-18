@@ -109,8 +109,8 @@ nav:
   - Leveraging the Type System:
       - type-system/index.md # link to color picker repo with type enhancements
       - type-system/types-as-contracts.md # More focused on "what can I expect to be on this?"
-      - type-system/enums-and-fixed-sets.md # Enums protecyour code from developers using it incorrectly
       - type-system/protecting-invariants.md # Focused on guaranteeing valid state; e.g. a "HexColor" class that only allows valid hex colors
+      - type-system/enums-and-fixed-sets.md # Enums protecyour code from developers using it incorrectly
       - type-system/custom-exception-types.md
 
   - Configuration and Externalized Settings:
