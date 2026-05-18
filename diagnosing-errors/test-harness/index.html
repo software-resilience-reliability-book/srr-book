@@ -10,25 +10,31 @@
         <meta name="author" content="Mike Jovanovich">
       
       
+        <link rel="canonical" href="https://software-resilience-reliability-book.github.io/srr-book/diagnosing-errors/test-harness/">
       
+      
+        <link rel="prev" href="../runtime/">
+      
+      
+        <link rel="next" href="../print-logging/">
       
       
         
       
       
-      <link rel="icon" href="/srr-book/assets/images/favicon.png">
+      <link rel="icon" href="../../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
     
     
       
-        <title>Software Resilience and Reliability</title>
+        <title>Test Harnesses - Software Resilience and Reliability</title>
       
     
     
-      <link rel="stylesheet" href="/srr-book/assets/stylesheets/main.484c7ddc.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.484c7ddc.min.css">
       
         
-        <link rel="stylesheet" href="/srr-book/assets/stylesheets/palette.ab4e12ef.min.css">
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
       
       
 
@@ -47,9 +53,9 @@
       
     
     
-      <link rel="stylesheet" href="/srr-book/css/custom.css">
+      <link rel="stylesheet" href="../../css/custom.css">
     
-    <script>__md_scope=new URL("/srr-book/",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
@@ -73,6 +79,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#test-harnesses" class="md-skip">
+          Skip to content
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -85,7 +96,7 @@
 
 <header class="md-header md-header--shadow" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href="/srr-book/." title="Software Resilience and Reliability" class="md-header__button md-logo" aria-label="Software Resilience and Reliability" data-md-component="logo">
+    <a href="../.." title="Software Resilience and Reliability" class="md-header__button md-logo" aria-label="Software Resilience and Reliability" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
@@ -105,7 +116,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              
+              Test Harnesses
             
           </span>
         </div>
@@ -221,7 +232,7 @@
 
 <nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="/srr-book/." title="Software Resilience and Reliability" class="md-nav__button md-logo" aria-label="Software Resilience and Reliability" data-md-component="logo">
+    <a href="../.." title="Software Resilience and Reliability" class="md-nav__button md-logo" aria-label="Software Resilience and Reliability" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
@@ -251,7 +262,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/srr-book/." class="md-nav__link">
+      <a href="../.." class="md-nav__link">
         
   
   
@@ -302,7 +313,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="/srr-book/living-software/" class="md-nav__link ">
+            <a href="../../living-software/" class="md-nav__link ">
               
   
   
@@ -346,7 +357,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/srr-book/living-software/why-software-changes/" class="md-nav__link">
+      <a href="../../living-software/why-software-changes/" class="md-nav__link">
         
   
   
@@ -374,7 +385,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/srr-book/living-software/reliability/" class="md-nav__link">
+      <a href="../../living-software/reliability/" class="md-nav__link">
         
   
   
@@ -402,7 +413,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/srr-book/living-software/resiliency/" class="md-nav__link">
+      <a href="../../living-software/resiliency/" class="md-nav__link">
         
   
   
@@ -463,7 +474,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="/srr-book/complexity-debt/" class="md-nav__link ">
+            <a href="../../complexity-debt/" class="md-nav__link ">
               
   
   
@@ -507,7 +518,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/srr-book/complexity-debt/managing-complexity/" class="md-nav__link">
+      <a href="../../complexity-debt/managing-complexity/" class="md-nav__link">
         
   
   
@@ -535,7 +546,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/srr-book/complexity-debt/technical-debt-defiinition/" class="md-nav__link">
+      <a href="../../complexity-debt/technical-debt-defiinition/" class="md-nav__link">
         
   
   
@@ -563,7 +574,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/srr-book/complexity-debt/technical-debt-cost/" class="md-nav__link">
+      <a href="../../complexity-debt/technical-debt-cost/" class="md-nav__link">
         
   
   
@@ -591,7 +602,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/srr-book/complexity-debt/refactoring/" class="md-nav__link">
+      <a href="../../complexity-debt/refactoring/" class="md-nav__link">
         
   
   
@@ -660,7 +671,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="/srr-book/builds/" class="md-nav__link ">
+            <a href="../../builds/" class="md-nav__link ">
               
   
   
@@ -704,7 +715,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/srr-book/builds/creating-empty-project-shell/" class="md-nav__link">
+      <a href="../../builds/creating-empty-project-shell/" class="md-nav__link">
         
   
   
@@ -732,7 +743,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/srr-book/builds/creating-dotnet-project/" class="md-nav__link">
+      <a href="../../builds/creating-dotnet-project/" class="md-nav__link">
         
   
   
@@ -760,7 +771,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/srr-book/builds/compiling/" class="md-nav__link">
+      <a href="../../builds/compiling/" class="md-nav__link">
         
   
   
@@ -788,7 +799,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/srr-book/builds/build-artifacts/" class="md-nav__link">
+      <a href="../../builds/build-artifacts/" class="md-nav__link">
         
   
   
@@ -816,7 +827,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/srr-book/builds/running-the-program/" class="md-nav__link">
+      <a href="../../builds/running-the-program/" class="md-nav__link">
         
   
   
@@ -844,7 +855,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/srr-book/builds/understanding-the-debugger/" class="md-nav__link">
+      <a href="../../builds/understanding-the-debugger/" class="md-nav__link">
         
   
   
@@ -872,7 +883,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/srr-book/builds/adding-a-package/" class="md-nav__link">
+      <a href="../../builds/adding-a-package/" class="md-nav__link">
         
   
   
@@ -900,7 +911,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/srr-book/builds/what-belongs-in-version-control/" class="md-nav__link">
+      <a href="../../builds/what-belongs-in-version-control/" class="md-nav__link">
         
   
   
@@ -932,6 +943,8 @@
       
   
   
+    
+  
   
   
     
@@ -959,15 +972,15 @@
     
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" checked>
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="/srr-book/diagnosing-errors/" class="md-nav__link ">
+            <a href="../" class="md-nav__link ">
               
   
   
@@ -991,7 +1004,7 @@
             
           </div>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_5">
             <span class="md-nav__icon md-icon"></span>
             
@@ -1011,7 +1024,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/srr-book/diagnosing-errors/compile-time/" class="md-nav__link">
+      <a href="../compile-time/" class="md-nav__link">
         
   
   
@@ -1039,7 +1052,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/srr-book/diagnosing-errors/troubleshooting-failed-build/" class="md-nav__link">
+      <a href="../troubleshooting-failed-build/" class="md-nav__link">
         
   
   
@@ -1067,7 +1080,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/srr-book/diagnosing-errors/runtime/" class="md-nav__link">
+      <a href="../runtime/" class="md-nav__link">
         
   
   
@@ -1092,10 +1105,37 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="/srr-book/diagnosing-errors/test-harness/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Test Harnesses
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   
@@ -1111,6 +1151,37 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#creating-a-test-harness" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Creating a Test Harness
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -1123,7 +1194,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/srr-book/diagnosing-errors/print-logging/" class="md-nav__link">
+      <a href="../print-logging/" class="md-nav__link">
         
   
   
@@ -1151,7 +1222,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/srr-book/diagnosing-errors/validation-exceptions/" class="md-nav__link">
+      <a href="../validation-exceptions/" class="md-nav__link">
         
   
   
@@ -1179,7 +1250,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/srr-book/diagnosing-errors/logic/" class="md-nav__link">
+      <a href="../logic/" class="md-nav__link">
         
   
   
@@ -1240,7 +1311,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="/srr-book/unit-testing/" class="md-nav__link ">
+            <a href="../../unit-testing/" class="md-nav__link ">
               
   
   
@@ -1284,7 +1355,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/srr-book/unit-testing/arrange-act-assert.md" class="md-nav__link">
+      <a href="../../unit-testing/arrange-act-assert.md" class="md-nav__link">
         
   
   
@@ -1312,7 +1383,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/srr-book/unit-testing/red-green-refactor.md" class="md-nav__link">
+      <a href="../../unit-testing/red-green-refactor.md" class="md-nav__link">
         
   
   
@@ -1340,7 +1411,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/srr-book/unit-testing/naming-tests.md" class="md-nav__link">
+      <a href="../../unit-testing/naming-tests.md" class="md-nav__link">
         
   
   
@@ -1368,7 +1439,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/srr-book/unit-testing/what-to-test.md" class="md-nav__link">
+      <a href="../../unit-testing/what-to-test.md" class="md-nav__link">
         
   
   
@@ -1462,7 +1533,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/srr-book/type-system/index.md" class="md-nav__link">
+      <a href="../../type-system/index.md" class="md-nav__link">
         
   
   
@@ -1490,7 +1561,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/srr-book/type-system/types-as-contracts.md" class="md-nav__link">
+      <a href="../../type-system/types-as-contracts.md" class="md-nav__link">
         
   
   
@@ -1518,7 +1589,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/srr-book/type-system/enums-and-fixed-sets.md" class="md-nav__link">
+      <a href="../../type-system/enums-and-fixed-sets.md" class="md-nav__link">
         
   
   
@@ -1546,7 +1617,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/srr-book/type-system/protecting-invariants.md" class="md-nav__link">
+      <a href="../../type-system/protecting-invariants.md" class="md-nav__link">
         
   
   
@@ -1574,7 +1645,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/srr-book/type-system/custom-exception-types.md" class="md-nav__link">
+      <a href="../../type-system/custom-exception-types.md" class="md-nav__link">
         
   
   
@@ -1666,7 +1737,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/srr-book/configuration/index.md" class="md-nav__link">
+      <a href="../../configuration/index.md" class="md-nav__link">
         
   
   
@@ -1694,7 +1765,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/srr-book/configuration/why-externalize.md" class="md-nav__link">
+      <a href="../../configuration/why-externalize.md" class="md-nav__link">
         
   
   
@@ -1722,7 +1793,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/srr-book/configuration/configuration-by-example.md" class="md-nav__link">
+      <a href="../../configuration/configuration-by-example.md" class="md-nav__link">
         
   
   
@@ -1750,7 +1821,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/srr-book/configuration/strongly-typed-configuration.md" class="md-nav__link">
+      <a href="../../configuration/strongly-typed-configuration.md" class="md-nav__link">
         
   
   
@@ -1846,7 +1917,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/srr-book/environment-management/index.md" class="md-nav__link">
+      <a href="../../environment-management/index.md" class="md-nav__link">
         
   
   
@@ -1874,7 +1945,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/srr-book/environment-management/development-environment.md" class="md-nav__link">
+      <a href="../../environment-management/development-environment.md" class="md-nav__link">
         
   
   
@@ -1902,7 +1973,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/srr-book/environment-management/staging-environment.md" class="md-nav__link">
+      <a href="../../environment-management/staging-environment.md" class="md-nav__link">
         
   
   
@@ -1930,7 +2001,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/srr-book/environment-management/production-environment.md" class="md-nav__link">
+      <a href="../../environment-management/production-environment.md" class="md-nav__link">
         
   
   
@@ -1958,7 +2029,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/srr-book/environment-management/configuring-development-environment.md" class="md-nav__link">
+      <a href="../../environment-management/configuring-development-environment.md" class="md-nav__link">
         
   
   
@@ -1986,7 +2057,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/srr-book/environment-management/configuring-production-build.md" class="md-nav__link">
+      <a href="../../environment-management/configuring-production-build.md" class="md-nav__link">
         
   
   
@@ -2080,7 +2151,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/srr-book/codebase-organization/index.md" class="md-nav__link">
+      <a href="../../codebase-organization/index.md" class="md-nav__link">
         
   
   
@@ -2108,7 +2179,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/srr-book/codebase-organization/single-responsibility-principle.md" class="md-nav__link">
+      <a href="../../codebase-organization/single-responsibility-principle.md" class="md-nav__link">
         
   
   
@@ -2136,7 +2207,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/srr-book/codebase-organization/modularity.md" class="md-nav__link">
+      <a href="../../codebase-organization/modularity.md" class="md-nav__link">
         
   
   
@@ -2164,7 +2235,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/srr-book/codebase-organization/decoupling.md" class="md-nav__link">
+      <a href="../../codebase-organization/decoupling.md" class="md-nav__link">
         
   
   
@@ -2192,7 +2263,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/srr-book/codebase-organization/internal-vs-external-dependencies.md" class="md-nav__link">
+      <a href="../../codebase-organization/internal-vs-external-dependencies.md" class="md-nav__link">
         
   
   
@@ -2286,7 +2357,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/srr-book/dependency-management/index.md" class="md-nav__link">
+      <a href="../../dependency-management/index.md" class="md-nav__link">
         
   
   
@@ -2314,7 +2385,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/srr-book/dependency-management/semantic-versioning.md" class="md-nav__link">
+      <a href="../../dependency-management/semantic-versioning.md" class="md-nav__link">
         
   
   
@@ -2342,7 +2413,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/srr-book/dependency-management/breaking-changes.md" class="md-nav__link">
+      <a href="../../dependency-management/breaking-changes.md" class="md-nav__link">
         
   
   
@@ -2370,7 +2441,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/srr-book/dependency-management/version-pinning.md" class="md-nav__link">
+      <a href="../../dependency-management/version-pinning.md" class="md-nav__link">
         
   
   
@@ -2398,7 +2469,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/srr-book/dependency-management/package-managers.md" class="md-nav__link">
+      <a href="../../dependency-management/package-managers.md" class="md-nav__link">
         
   
   
@@ -2490,7 +2561,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/srr-book/full-testing/index.md" class="md-nav__link">
+      <a href="../../full-testing/index.md" class="md-nav__link">
         
   
   
@@ -2518,7 +2589,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/srr-book/full-testing/test-types.md" class="md-nav__link">
+      <a href="../../full-testing/test-types.md" class="md-nav__link">
         
   
   
@@ -2546,7 +2617,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/srr-book/full-testing/integration-testing.md" class="md-nav__link">
+      <a href="../../full-testing/integration-testing.md" class="md-nav__link">
         
   
   
@@ -2574,7 +2645,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/srr-book/full-testing/end-to-end-testing.md" class="md-nav__link">
+      <a href="../../full-testing/end-to-end-testing.md" class="md-nav__link">
         
   
   
@@ -2619,6 +2690,27 @@
   
   
   
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#creating-a-test-harness" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Creating a Test Harness
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
   
 </nav>
                   </div>
@@ -2631,8 +2723,49 @@
               
               <article class="md-content__inner md-typeset">
                 
-  <h1>404 - Not found</h1>
+                  
 
+
+  
+  
+
+
+<h1 id="test-harnesses">Test Harnesses<a class="headerlink" href="#test-harnesses" title="Permanent link">&para;</a></h1>
+<h2 id="creating-a-test-harness">Creating a Test Harness<a class="headerlink" href="#creating-a-test-harness" title="Permanent link">&para;</a></h2>
+<p>To reproduce a runtime error, we need to create a <strong>test harness</strong> that can control the environment and reproduce the error. This can be as simple as a console application that can be run from the command line, or a more complex web application that can be deployed to a test environment.</p>
+<p>The primary goal of a test harness is to exactly match the environment with the error:</p>
+<ul>
+<li>Same versions of code and dependencies</li>
+<li>Same configuration values</li>
+<li>Same input data</li>
+</ul>
+<p><mark>TODO:</mark></p>
+<ul>
+<li>Write finished product of example domain application.</li>
+<li>Break apart into pieces as needed for chapter snippets.</li>
+<li>This one should be extremely basic; it will just show that the library has no startup app, so a test harness is needed. Use a scenario where the user has reported a problem with some input, so we just call the library with that input.</li>
+</ul>
+<p><mark>END TODO</mark></p>
+<!-- prettier-ignore -->
+<div class="admonition check">
+<p class="admonition-title">Check Your Exception Settings</p>
+<p>Most IDEs offer a way to configure which types of exceptions are caught by the debugger. By default, VS Code will only break on unhandled exceptions, that are not wrapped in a <code>try</code>/<code>catch</code> block.</p>
+<p>If you want to break on all exceptions, open the "Run and Debug" menu and make sure that "All Exceptions" is checked under the "Breakpoints" submenu.</p>
+<p><img alt="VS Code exception settings menu" src="../../images/exception-settings.png" /></p>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+                
               </article>
             </div>
           
@@ -2650,6 +2783,44 @@
       
         <footer class="md-footer">
   
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="Footer" >
+        
+          
+          <a href="../runtime/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Runtime Errors">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              <div class="md-ellipsis">
+                Runtime Errors
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="../print-logging/" class="md-footer__link md-footer__link--next" aria-label="Next: Print Statements and Logging">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              <div class="md-ellipsis">
+                Print Statements and Logging
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
     
   
   <div class="md-footer-meta md-typeset">
@@ -2681,10 +2852,10 @@
     
       
       
-      <script id="__config" type="application/json">{"annotate": null, "base": "/srr-book/", "features": ["content.code.copy", "navigation.instant", "navigation.footer", "navigation.indexes", "navigation.top"], "search": "/srr-book/assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["content.code.copy", "navigation.instant", "navigation.footer", "navigation.indexes", "navigation.top"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
     
     
-      <script src="/srr-book/assets/javascripts/bundle.79ae519e.min.js"></script>
+      <script src="../../assets/javascripts/bundle.79ae519e.min.js"></script>
       
     
   </body>

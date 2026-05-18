@@ -10,25 +10,31 @@
         <meta name="author" content="Mike Jovanovich">
       
       
+        <link rel="canonical" href="https://software-resilience-reliability-book.github.io/srr-book/diagnosing-errors/troubleshooting-failed-build/">
       
+      
+        <link rel="prev" href="../compile-time/">
+      
+      
+        <link rel="next" href="../runtime/">
       
       
         
       
       
-      <link rel="icon" href="/srr-book/assets/images/favicon.png">
+      <link rel="icon" href="../../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
     
     
       
-        <title>Software Resilience and Reliability</title>
+        <title>Troubleshooting a Failed Build - Software Resilience and Reliability</title>
       
     
     
-      <link rel="stylesheet" href="/srr-book/assets/stylesheets/main.484c7ddc.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.484c7ddc.min.css">
       
         
-        <link rel="stylesheet" href="/srr-book/assets/stylesheets/palette.ab4e12ef.min.css">
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
       
       
 
@@ -47,9 +53,9 @@
       
     
     
-      <link rel="stylesheet" href="/srr-book/css/custom.css">
+      <link rel="stylesheet" href="../../css/custom.css">
     
-    <script>__md_scope=new URL("/srr-book/",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
@@ -73,6 +79,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#troubleshooting-a-failed-build" class="md-skip">
+          Skip to content
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -85,7 +96,7 @@
 
 <header class="md-header md-header--shadow" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href="/srr-book/." title="Software Resilience and Reliability" class="md-header__button md-logo" aria-label="Software Resilience and Reliability" data-md-component="logo">
+    <a href="../.." title="Software Resilience and Reliability" class="md-header__button md-logo" aria-label="Software Resilience and Reliability" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
@@ -105,7 +116,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              
+              Troubleshooting a Failed Build
             
           </span>
         </div>
@@ -221,7 +232,7 @@
 
 <nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="/srr-book/." title="Software Resilience and Reliability" class="md-nav__button md-logo" aria-label="Software Resilience and Reliability" data-md-component="logo">
+    <a href="../.." title="Software Resilience and Reliability" class="md-nav__button md-logo" aria-label="Software Resilience and Reliability" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
@@ -251,7 +262,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/srr-book/." class="md-nav__link">
+      <a href="../.." class="md-nav__link">
         
   
   
@@ -302,7 +313,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="/srr-book/living-software/" class="md-nav__link ">
+            <a href="../../living-software/" class="md-nav__link ">
               
   
   
@@ -346,7 +357,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/srr-book/living-software/why-software-changes/" class="md-nav__link">
+      <a href="../../living-software/why-software-changes/" class="md-nav__link">
         
   
   
@@ -374,7 +385,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/srr-book/living-software/reliability/" class="md-nav__link">
+      <a href="../../living-software/reliability/" class="md-nav__link">
         
   
   
@@ -402,7 +413,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/srr-book/living-software/resiliency/" class="md-nav__link">
+      <a href="../../living-software/resiliency/" class="md-nav__link">
         
   
   
@@ -463,7 +474,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="/srr-book/complexity-debt/" class="md-nav__link ">
+            <a href="../../complexity-debt/" class="md-nav__link ">
               
   
   
@@ -507,7 +518,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/srr-book/complexity-debt/managing-complexity/" class="md-nav__link">
+      <a href="../../complexity-debt/managing-complexity/" class="md-nav__link">
         
   
   
@@ -535,7 +546,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/srr-book/complexity-debt/technical-debt-defiinition/" class="md-nav__link">
+      <a href="../../complexity-debt/technical-debt-defiinition/" class="md-nav__link">
         
   
   
@@ -563,7 +574,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/srr-book/complexity-debt/technical-debt-cost/" class="md-nav__link">
+      <a href="../../complexity-debt/technical-debt-cost/" class="md-nav__link">
         
   
   
@@ -591,7 +602,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/srr-book/complexity-debt/refactoring/" class="md-nav__link">
+      <a href="../../complexity-debt/refactoring/" class="md-nav__link">
         
   
   
@@ -660,7 +671,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="/srr-book/builds/" class="md-nav__link ">
+            <a href="../../builds/" class="md-nav__link ">
               
   
   
@@ -704,7 +715,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/srr-book/builds/creating-empty-project-shell/" class="md-nav__link">
+      <a href="../../builds/creating-empty-project-shell/" class="md-nav__link">
         
   
   
@@ -732,7 +743,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/srr-book/builds/creating-dotnet-project/" class="md-nav__link">
+      <a href="../../builds/creating-dotnet-project/" class="md-nav__link">
         
   
   
@@ -760,7 +771,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/srr-book/builds/compiling/" class="md-nav__link">
+      <a href="../../builds/compiling/" class="md-nav__link">
         
   
   
@@ -788,7 +799,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/srr-book/builds/build-artifacts/" class="md-nav__link">
+      <a href="../../builds/build-artifacts/" class="md-nav__link">
         
   
   
@@ -816,7 +827,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/srr-book/builds/running-the-program/" class="md-nav__link">
+      <a href="../../builds/running-the-program/" class="md-nav__link">
         
   
   
@@ -844,7 +855,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/srr-book/builds/understanding-the-debugger/" class="md-nav__link">
+      <a href="../../builds/understanding-the-debugger/" class="md-nav__link">
         
   
   
@@ -872,7 +883,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/srr-book/builds/adding-a-package/" class="md-nav__link">
+      <a href="../../builds/adding-a-package/" class="md-nav__link">
         
   
   
@@ -900,7 +911,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/srr-book/builds/what-belongs-in-version-control/" class="md-nav__link">
+      <a href="../../builds/what-belongs-in-version-control/" class="md-nav__link">
         
   
   
@@ -932,6 +943,8 @@
       
   
   
+    
+  
   
   
     
@@ -959,15 +972,15 @@
     
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" checked>
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="/srr-book/diagnosing-errors/" class="md-nav__link ">
+            <a href="../" class="md-nav__link ">
               
   
   
@@ -991,7 +1004,7 @@
             
           </div>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_5">
             <span class="md-nav__icon md-icon"></span>
             
@@ -1011,7 +1024,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/srr-book/diagnosing-errors/compile-time/" class="md-nav__link">
+      <a href="../compile-time/" class="md-nav__link">
         
   
   
@@ -1036,10 +1049,37 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="/srr-book/diagnosing-errors/troubleshooting-failed-build/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Troubleshooting a Failed Build
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   
@@ -1055,6 +1095,81 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#viewing-compile-time-errors" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Viewing Compile-Time Errors
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#interpreting-build-output" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Interpreting Build Output
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#diagnosing-compile-time-errors" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Diagnosing Compile-Time Errors
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#fixing-compile-time-errors" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Fixing Compile-Time Errors
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#build-warnings" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Build Warnings
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -1067,7 +1182,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/srr-book/diagnosing-errors/runtime/" class="md-nav__link">
+      <a href="../runtime/" class="md-nav__link">
         
   
   
@@ -1095,7 +1210,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/srr-book/diagnosing-errors/test-harness/" class="md-nav__link">
+      <a href="../test-harness/" class="md-nav__link">
         
   
   
@@ -1123,7 +1238,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/srr-book/diagnosing-errors/print-logging/" class="md-nav__link">
+      <a href="../print-logging/" class="md-nav__link">
         
   
   
@@ -1151,7 +1266,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/srr-book/diagnosing-errors/validation-exceptions/" class="md-nav__link">
+      <a href="../validation-exceptions/" class="md-nav__link">
         
   
   
@@ -1179,7 +1294,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/srr-book/diagnosing-errors/logic/" class="md-nav__link">
+      <a href="../logic/" class="md-nav__link">
         
   
   
@@ -1240,7 +1355,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="/srr-book/unit-testing/" class="md-nav__link ">
+            <a href="../../unit-testing/" class="md-nav__link ">
               
   
   
@@ -1284,7 +1399,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/srr-book/unit-testing/arrange-act-assert.md" class="md-nav__link">
+      <a href="../../unit-testing/arrange-act-assert.md" class="md-nav__link">
         
   
   
@@ -1312,7 +1427,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/srr-book/unit-testing/red-green-refactor.md" class="md-nav__link">
+      <a href="../../unit-testing/red-green-refactor.md" class="md-nav__link">
         
   
   
@@ -1340,7 +1455,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/srr-book/unit-testing/naming-tests.md" class="md-nav__link">
+      <a href="../../unit-testing/naming-tests.md" class="md-nav__link">
         
   
   
@@ -1368,7 +1483,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/srr-book/unit-testing/what-to-test.md" class="md-nav__link">
+      <a href="../../unit-testing/what-to-test.md" class="md-nav__link">
         
   
   
@@ -1462,7 +1577,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/srr-book/type-system/index.md" class="md-nav__link">
+      <a href="../../type-system/index.md" class="md-nav__link">
         
   
   
@@ -1490,7 +1605,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/srr-book/type-system/types-as-contracts.md" class="md-nav__link">
+      <a href="../../type-system/types-as-contracts.md" class="md-nav__link">
         
   
   
@@ -1518,7 +1633,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/srr-book/type-system/enums-and-fixed-sets.md" class="md-nav__link">
+      <a href="../../type-system/enums-and-fixed-sets.md" class="md-nav__link">
         
   
   
@@ -1546,7 +1661,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/srr-book/type-system/protecting-invariants.md" class="md-nav__link">
+      <a href="../../type-system/protecting-invariants.md" class="md-nav__link">
         
   
   
@@ -1574,7 +1689,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/srr-book/type-system/custom-exception-types.md" class="md-nav__link">
+      <a href="../../type-system/custom-exception-types.md" class="md-nav__link">
         
   
   
@@ -1666,7 +1781,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/srr-book/configuration/index.md" class="md-nav__link">
+      <a href="../../configuration/index.md" class="md-nav__link">
         
   
   
@@ -1694,7 +1809,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/srr-book/configuration/why-externalize.md" class="md-nav__link">
+      <a href="../../configuration/why-externalize.md" class="md-nav__link">
         
   
   
@@ -1722,7 +1837,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/srr-book/configuration/configuration-by-example.md" class="md-nav__link">
+      <a href="../../configuration/configuration-by-example.md" class="md-nav__link">
         
   
   
@@ -1750,7 +1865,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/srr-book/configuration/strongly-typed-configuration.md" class="md-nav__link">
+      <a href="../../configuration/strongly-typed-configuration.md" class="md-nav__link">
         
   
   
@@ -1846,7 +1961,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/srr-book/environment-management/index.md" class="md-nav__link">
+      <a href="../../environment-management/index.md" class="md-nav__link">
         
   
   
@@ -1874,7 +1989,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/srr-book/environment-management/development-environment.md" class="md-nav__link">
+      <a href="../../environment-management/development-environment.md" class="md-nav__link">
         
   
   
@@ -1902,7 +2017,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/srr-book/environment-management/staging-environment.md" class="md-nav__link">
+      <a href="../../environment-management/staging-environment.md" class="md-nav__link">
         
   
   
@@ -1930,7 +2045,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/srr-book/environment-management/production-environment.md" class="md-nav__link">
+      <a href="../../environment-management/production-environment.md" class="md-nav__link">
         
   
   
@@ -1958,7 +2073,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/srr-book/environment-management/configuring-development-environment.md" class="md-nav__link">
+      <a href="../../environment-management/configuring-development-environment.md" class="md-nav__link">
         
   
   
@@ -1986,7 +2101,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/srr-book/environment-management/configuring-production-build.md" class="md-nav__link">
+      <a href="../../environment-management/configuring-production-build.md" class="md-nav__link">
         
   
   
@@ -2080,7 +2195,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/srr-book/codebase-organization/index.md" class="md-nav__link">
+      <a href="../../codebase-organization/index.md" class="md-nav__link">
         
   
   
@@ -2108,7 +2223,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/srr-book/codebase-organization/single-responsibility-principle.md" class="md-nav__link">
+      <a href="../../codebase-organization/single-responsibility-principle.md" class="md-nav__link">
         
   
   
@@ -2136,7 +2251,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/srr-book/codebase-organization/modularity.md" class="md-nav__link">
+      <a href="../../codebase-organization/modularity.md" class="md-nav__link">
         
   
   
@@ -2164,7 +2279,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/srr-book/codebase-organization/decoupling.md" class="md-nav__link">
+      <a href="../../codebase-organization/decoupling.md" class="md-nav__link">
         
   
   
@@ -2192,7 +2307,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/srr-book/codebase-organization/internal-vs-external-dependencies.md" class="md-nav__link">
+      <a href="../../codebase-organization/internal-vs-external-dependencies.md" class="md-nav__link">
         
   
   
@@ -2286,7 +2401,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/srr-book/dependency-management/index.md" class="md-nav__link">
+      <a href="../../dependency-management/index.md" class="md-nav__link">
         
   
   
@@ -2314,7 +2429,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/srr-book/dependency-management/semantic-versioning.md" class="md-nav__link">
+      <a href="../../dependency-management/semantic-versioning.md" class="md-nav__link">
         
   
   
@@ -2342,7 +2457,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/srr-book/dependency-management/breaking-changes.md" class="md-nav__link">
+      <a href="../../dependency-management/breaking-changes.md" class="md-nav__link">
         
   
   
@@ -2370,7 +2485,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/srr-book/dependency-management/version-pinning.md" class="md-nav__link">
+      <a href="../../dependency-management/version-pinning.md" class="md-nav__link">
         
   
   
@@ -2398,7 +2513,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/srr-book/dependency-management/package-managers.md" class="md-nav__link">
+      <a href="../../dependency-management/package-managers.md" class="md-nav__link">
         
   
   
@@ -2490,7 +2605,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/srr-book/full-testing/index.md" class="md-nav__link">
+      <a href="../../full-testing/index.md" class="md-nav__link">
         
   
   
@@ -2518,7 +2633,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/srr-book/full-testing/test-types.md" class="md-nav__link">
+      <a href="../../full-testing/test-types.md" class="md-nav__link">
         
   
   
@@ -2546,7 +2661,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/srr-book/full-testing/integration-testing.md" class="md-nav__link">
+      <a href="../../full-testing/integration-testing.md" class="md-nav__link">
         
   
   
@@ -2574,7 +2689,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/srr-book/full-testing/end-to-end-testing.md" class="md-nav__link">
+      <a href="../../full-testing/end-to-end-testing.md" class="md-nav__link">
         
   
   
@@ -2619,6 +2734,71 @@
   
   
   
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#viewing-compile-time-errors" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Viewing Compile-Time Errors
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#interpreting-build-output" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Interpreting Build Output
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#diagnosing-compile-time-errors" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Diagnosing Compile-Time Errors
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#fixing-compile-time-errors" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Fixing Compile-Time Errors
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#build-warnings" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Build Warnings
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
   
 </nav>
                   </div>
@@ -2631,8 +2811,118 @@
               
               <article class="md-content__inner md-typeset">
                 
-  <h1>404 - Not found</h1>
+                  
 
+
+  
+  
+
+
+<h1 id="troubleshooting-a-failed-build">Troubleshooting a Failed Build<a class="headerlink" href="#troubleshooting-a-failed-build" title="Permanent link">&para;</a></h1>
+<h2 id="viewing-compile-time-errors">Viewing Compile-Time Errors<a class="headerlink" href="#viewing-compile-time-errors" title="Permanent link">&para;</a></h2>
+<p>When using an IDE such as VS Code, you will often (but not always) see visual indicators of compile-time errors in the form of green and red squiggles under the code.</p>
+<p><img alt="Visual indicators of compile-time errors in VS Code" src="../../images/ide_compile_error_squiggle.png" /></p>
+<p>You can hover over the squiggle to see the error message details. Often times this is a quick fix, such as a syntax error or name typo.</p>
+<p>If we try to build the project with the error from above in place, we will see the same error appear in the build output. Try running the snippet with the typo and check your terminal output to see the error.</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>mpjovanovich:<span class="w"> </span>dotnet<span class="w"> </span>build
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>Restore<span class="w"> </span><span class="nb">complete</span><span class="w"> </span><span class="o">(</span><span class="m">0</span>.4s<span class="o">)</span>
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="w">  </span>dotnet-build-sandbox<span class="w"> </span>net10.0<span class="w"> </span>failed<span class="w"> </span>with<span class="w"> </span><span class="m">1</span><span class="w"> </span>error<span class="o">(</span>s<span class="o">)</span><span class="w"> </span><span class="o">(</span><span class="m">0</span>.2s<span class="o">)</span>
+</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="w">    </span>/home/mpjovanovich/tmp/dotnet-build-sandbox/Program.cs<span class="o">(</span><span class="m">3</span>,9<span class="o">)</span>:<span class="w"> </span>error<span class="w"> </span>CS0117:<span class="w"> </span><span class="s1">&#39;Console&#39;</span><span class="w"> </span>does<span class="w"> </span>not<span class="w"> </span>contain<span class="w"> </span>a<span class="w"> </span>definition<span class="w"> </span><span class="k">for</span><span class="w"> </span><span class="s1">&#39;WritLine&#39;</span>
+</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>
+</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>Build<span class="w"> </span>failed<span class="w"> </span>with<span class="w"> </span><span class="m">1</span><span class="w"> </span>error<span class="o">(</span>s<span class="o">)</span><span class="w"> </span><span class="k">in</span><span class="w"> </span><span class="m">0</span>.7s
+</span></code></pre></div>
+<h2 id="interpreting-build-output">Interpreting Build Output<a class="headerlink" href="#interpreting-build-output" title="Permanent link">&para;</a></h2>
+<p>Let's pick this output apart piece by piece.</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>mpjovanovich:<span class="w"> </span>dotnet<span class="w"> </span>build
+</span></code></pre></div>
+<p>The command that was run.</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>Restore<span class="w"> </span><span class="nb">complete</span><span class="w"> </span><span class="o">(</span><span class="m">0</span>.4s<span class="o">)</span>
+</span></code></pre></div>
+<p>The .NET Build tool telling us that it automatically ran a restore operation prior to the build.</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="w">  </span>dotnet-build-sandbox<span class="w"> </span>net10.0<span class="w"> </span>failed<span class="w"> </span>with<span class="w"> </span><span class="m">1</span><span class="w"> </span>error<span class="o">(</span>s<span class="o">)</span><span class="w"> </span><span class="o">(</span><span class="m">0</span>.2s<span class="o">)</span>
+</span></code></pre></div>
+<p>The project name, the version of the .NET SDK we are using, the number of errors that occurred, and the time to compile.</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="w">    </span>/home/mpjovanovich/tmp/dotnet-build-sandbox/Program.cs<span class="o">(</span><span class="m">3</span>,9<span class="o">)</span>:<span class="w"> </span>error<span class="w"> </span>CS0117:<span class="w"> </span><span class="s1">&#39;Console&#39;</span><span class="w"> </span>does<span class="w"> </span>not<span class="w"> </span>contain<span class="w"> </span>a<span class="w"> </span>definition<span class="w"> </span><span class="k">for</span><span class="w"> </span><span class="s1">&#39;WritLine&#39;</span>
+</span></code></pre></div>
+<p>The path to the file that contains the error, the line number and character offset of the error, and the error message.</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>Build<span class="w"> </span>failed<span class="w"> </span>with<span class="w"> </span><span class="m">1</span><span class="w"> </span>error<span class="o">(</span>s<span class="o">)</span><span class="w"> </span><span class="k">in</span><span class="w"> </span><span class="m">0</span>.7s
+</span></code></pre></div>
+<p>A summary message about the state of the build.</p>
+<h2 id="diagnosing-compile-time-errors">Diagnosing Compile-Time Errors<a class="headerlink" href="#diagnosing-compile-time-errors" title="Permanent link">&para;</a></h2>
+<p>Of the above information, we are most interested in the error message for our single error. The error message line tells us the following:</p>
+<ul>
+<li>The file that has the error is <code>Program.cs</code>.</li>
+<li>The error is on line 3, character 9.</li>
+<li>The error message is <code>'Console' does not contain a definition for 'WritLine'</code>.</li>
+</ul>
+<p>Reading the error message tells us exactly where to look for the error, so that we can quickly pull up the relevant code. We don't need to scan the entire codebase.</p>
+<!-- prettier-ignore -->
+<div class="admonition warning">
+<p class="admonition-title">Line Numbers and Character Offsets</p>
+<p>The reported line numbers and character offsets may not exactly match what is in the source code. Compilers sometimes remove parts of the code during the compilation process. If you see a line number reported as an error but that code looks correct, check the lines nearby.</p>
+</div>
+<h2 id="fixing-compile-time-errors">Fixing Compile-Time Errors<a class="headerlink" href="#fixing-compile-time-errors" title="Permanent link">&para;</a></h2>
+<p>Let's modify <code>Program.cs</code> to introduce multiple errors.</p>
+<div class="language-csharp highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-6-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-6-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-6-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-6-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-6-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-6-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-6-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-6-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-6-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-6-10">10</a></span>
+<span class="normal"><a href="#__codelineno-6-11">11</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1"></a><span class="c1">// We&#39;re not allowed to use private here.</span>
+</span><span id="__span-6-2"><a id="__codelineno-6-2" name="__codelineno-6-2"></a><span class="k">private</span><span class="w"> </span><span class="k">static</span><span class="w"> </span><span class="kt">string</span><span class="w"> </span><span class="nf">GetMessage</span><span class="p">()</span>
+</span><span id="__span-6-3"><a id="__codelineno-6-3" name="__codelineno-6-3"></a><span class="p">{</span>
+</span><span id="__span-6-4"><a id="__codelineno-6-4" name="__codelineno-6-4"></a><span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="s">&quot;Hello, World!&quot;</span><span class="p">;</span>
+</span><span id="__span-6-5"><a id="__codelineno-6-5" name="__codelineno-6-5"></a><span class="p">}</span>
+</span><span id="__span-6-6"><a id="__codelineno-6-6" name="__codelineno-6-6"></a>
+</span><span id="__span-6-7"><a id="__codelineno-6-7" name="__codelineno-6-7"></a><span class="c1">// This line has a typo</span>
+</span><span id="__span-6-8"><a id="__codelineno-6-8" name="__codelineno-6-8"></a><span class="n">Console</span><span class="p">.</span><span class="n">WritLine</span><span class="p">(</span><span class="s">&quot;My method name has a typo!&quot;</span><span class="p">);</span>
+</span><span id="__span-6-9"><a id="__codelineno-6-9" name="__codelineno-6-9"></a>
+</span><span id="__span-6-10"><a id="__codelineno-6-10" name="__codelineno-6-10"></a><span class="c1">// No semicolon</span>
+</span><span id="__span-6-11"><a id="__codelineno-6-11" name="__codelineno-6-11"></a><span class="kt">int</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">5</span>
+</span></code></pre></div></td></tr></table></div>
+<p>We get the following build output:</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>mpjovanovich:<span class="w"> </span>dotnet<span class="w"> </span>build
+</span><span id="__span-7-2"><a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a>Restore<span class="w"> </span><span class="nb">complete</span><span class="w"> </span><span class="o">(</span><span class="m">0</span>.4s<span class="o">)</span>
+</span><span id="__span-7-3"><a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a><span class="w">  </span>dotnet-build-sandbox<span class="w"> </span>net10.0<span class="w"> </span>failed<span class="w"> </span>with<span class="w"> </span><span class="m">2</span><span class="w"> </span>error<span class="o">(</span>s<span class="o">)</span><span class="w"> </span><span class="o">(</span><span class="m">0</span>.1s<span class="o">)</span>
+</span><span id="__span-7-4"><a id="__codelineno-7-4" name="__codelineno-7-4" href="#__codelineno-7-4"></a><span class="w">    </span>/home/mpjovanovich/tmp/dotnet-build-sandbox/Program.cs<span class="o">(</span><span class="m">2</span>,1<span class="o">)</span>:<span class="w"> </span>error<span class="w"> </span>CS0106:<span class="w"> </span>The<span class="w"> </span>modifier<span class="w"> </span><span class="s1">&#39;private&#39;</span><span class="w"> </span>is<span class="w"> </span>not<span class="w"> </span>valid<span class="w"> </span><span class="k">for</span><span class="w"> </span>this<span class="w"> </span>item
+</span><span id="__span-7-5"><a id="__codelineno-7-5" name="__codelineno-7-5" href="#__codelineno-7-5"></a><span class="w">    </span>/home/mpjovanovich/tmp/dotnet-build-sandbox/Program.cs<span class="o">(</span><span class="m">11</span>,10<span class="o">)</span>:<span class="w"> </span>error<span class="w"> </span>CS1002:<span class="w"> </span><span class="p">;</span><span class="w"> </span>expected
+</span><span id="__span-7-6"><a id="__codelineno-7-6" name="__codelineno-7-6" href="#__codelineno-7-6"></a>
+</span><span id="__span-7-7"><a id="__codelineno-7-7" name="__codelineno-7-7" href="#__codelineno-7-7"></a>Build<span class="w"> </span>failed<span class="w"> </span>with<span class="w"> </span><span class="m">2</span><span class="w"> </span>error<span class="o">(</span>s<span class="o">)</span><span class="w"> </span><span class="k">in</span><span class="w"> </span><span class="m">0</span>.7s
+</span></code></pre></div>
+<p>Our source code actually has three errors, but the output only reports two! Sometimes one build error will mask another. The best strategy to address this case is to fix the errors one at a time, and rebuild after each fix.</p>
+<p>The steps to resolve our errors are: first remove the <code>private</code> modifier from the <code>GetMessage</code> method and rebuild. Then add the missing semicolon and rebuild again. Only then will we see the third error message regarding the <code>Console.WritLine</code> method call typo.</p>
+<h2 id="build-warnings">Build Warnings<a class="headerlink" href="#build-warnings" title="Permanent link">&para;</a></h2>
+<p>Even after fixing the above errors, I see two "green squiggles" in the IDE, and the build output shows the following warnings:</p>
+<p><img alt="Build warnings in VS Code" src="../../images/ide_build_warnings_squiggles.png" /></p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a>mpjovanovich:<span class="w"> </span>dotnet<span class="w"> </span>build
+</span><span id="__span-8-2"><a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a>Restore<span class="w"> </span><span class="nb">complete</span><span class="w"> </span><span class="o">(</span><span class="m">0</span>.4s<span class="o">)</span>
+</span><span id="__span-8-3"><a id="__codelineno-8-3" name="__codelineno-8-3" href="#__codelineno-8-3"></a><span class="w">  </span>dotnet-build-sandbox<span class="w"> </span>net10.0<span class="w"> </span>succeeded<span class="w"> </span>with<span class="w"> </span><span class="m">2</span><span class="w"> </span>warning<span class="o">(</span>s<span class="o">)</span><span class="w"> </span><span class="o">(</span><span class="m">0</span>.3s<span class="o">)</span><span class="w"> </span>→<span class="w"> </span>bin/Debug/net10.0/dotnet-build-sandbox.dll
+</span><span id="__span-8-4"><a id="__codelineno-8-4" name="__codelineno-8-4" href="#__codelineno-8-4"></a><span class="w">    </span>/home/mpjovanovich/tmp/dotnet-build-sandbox/Program.cs<span class="o">(</span><span class="m">11</span>,5<span class="o">)</span>:<span class="w"> </span>warning<span class="w"> </span>CS0219:<span class="w"> </span>The<span class="w"> </span>variable<span class="w"> </span><span class="s1">&#39;x&#39;</span><span class="w"> </span>is<span class="w"> </span>assigned<span class="w"> </span>but<span class="w"> </span>its<span class="w"> </span>value<span class="w"> </span>is<span class="w"> </span>never<span class="w"> </span>used
+</span><span id="__span-8-5"><a id="__codelineno-8-5" name="__codelineno-8-5" href="#__codelineno-8-5"></a><span class="w">    </span>/home/mpjovanovich/tmp/dotnet-build-sandbox/Program.cs<span class="o">(</span><span class="m">2</span>,15<span class="o">)</span>:<span class="w"> </span>warning<span class="w"> </span>CS8321:<span class="w"> </span>The<span class="w"> </span><span class="nb">local</span><span class="w"> </span><span class="k">function</span><span class="w"> </span><span class="s1">&#39;GetMessage&#39;</span><span class="w"> </span>is<span class="w"> </span>declared<span class="w"> </span>but<span class="w"> </span>never<span class="w"> </span>used
+</span><span id="__span-8-6"><a id="__codelineno-8-6" name="__codelineno-8-6" href="#__codelineno-8-6"></a>
+</span><span id="__span-8-7"><a id="__codelineno-8-7" name="__codelineno-8-7" href="#__codelineno-8-7"></a>Build<span class="w"> </span>succeeded<span class="w"> </span>with<span class="w"> </span><span class="m">2</span><span class="w"> </span>warning<span class="o">(</span>s<span class="o">)</span><span class="w"> </span><span class="k">in</span><span class="w"> </span><span class="m">0</span>.9s
+</span></code></pre></div>
+<p><strong>Build warnings</strong> indicate that the code will compile correctly, but there are potential issues that should be addressed.</p>
+<p>In this case the warnings tell us that we have code that is not being used anywhere in the application. This may indicate that there is a logic bug from something we intended to use but forgot to call, and it also leaves a distracting mess for anyone working with the codebase.</p>
+<p>Warnings are okay during active development, but should be addressed prior to committing and pushing code to a repository.</p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
               </article>
             </div>
           
@@ -2650,6 +2940,44 @@
       
         <footer class="md-footer">
   
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="Footer" >
+        
+          
+          <a href="../compile-time/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Compile-Time Errors">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              <div class="md-ellipsis">
+                Compile-Time Errors
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="../runtime/" class="md-footer__link md-footer__link--next" aria-label="Next: Runtime Errors">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              <div class="md-ellipsis">
+                Runtime Errors
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
     
   
   <div class="md-footer-meta md-typeset">
@@ -2681,10 +3009,10 @@
     
       
       
-      <script id="__config" type="application/json">{"annotate": null, "base": "/srr-book/", "features": ["content.code.copy", "navigation.instant", "navigation.footer", "navigation.indexes", "navigation.top"], "search": "/srr-book/assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["content.code.copy", "navigation.instant", "navigation.footer", "navigation.indexes", "navigation.top"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
     
     
-      <script src="/srr-book/assets/javascripts/bundle.79ae519e.min.js"></script>
+      <script src="../../assets/javascripts/bundle.79ae519e.min.js"></script>
       
     
   </body>
