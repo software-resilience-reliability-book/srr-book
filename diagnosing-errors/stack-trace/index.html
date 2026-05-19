@@ -1290,6 +1290,24 @@
         
       
       
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    The Stack Trace
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
       <a href="./" class="md-nav__link md-nav__link--active">
         
   
@@ -1306,6 +1324,80 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#what-is-the-call-stack" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        What is the Call Stack?
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#setting-up-the-program" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Setting up the Program
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#printing-the-stack-trace" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Printing the Stack Trace
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#interpreting-a-line-of-the-stack-trace" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Interpreting a Line of the Stack Trace
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#interpreting-the-full-stack-trace" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Interpreting the Full Stack Trace
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -2732,6 +2824,69 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#what-is-the-call-stack" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        What is the Call Stack?
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#setting-up-the-program" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Setting up the Program
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#printing-the-stack-trace" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Printing the Stack Trace
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#interpreting-a-line-of-the-stack-trace" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Interpreting a Line of the Stack Trace
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#interpreting-the-full-stack-trace" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Interpreting the Full Stack Trace
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -2751,6 +2906,108 @@
 
 
 <h1 id="the-stack-trace">The Stack Trace<a class="headerlink" href="#the-stack-trace" title="Permanent link">&para;</a></h1>
+<h2 id="what-is-the-call-stack">What is the Call Stack?<a class="headerlink" href="#what-is-the-call-stack" title="Permanent link">&para;</a></h2>
+<p>In any program except a simple script, functions call other functions within the application. Whenever one function calls another it adds a <strong>stack frame</strong> to the <strong>call stack</strong>.</p>
+<p>When an error occurs, a program will often provide a <strong>stack trace</strong> so that developers can diagnose where the error occurred. In C# these are attached to the Exception object as a property that can be printed or logged.</p>
+<p>Let's look at an example program that demonstrates how stack traces work.</p>
+<h2 id="setting-up-the-program">Setting up the Program<a class="headerlink" href="#setting-up-the-program" title="Permanent link">&para;</a></h2>
+<p>In the following example, execution of the program begins at the bottom, where <code>appendSomething1</code> is called and provided the string "START: ".</p>
+<p><code>appendSomething1</code> calls <code>appendSomething2</code>, which then calls <code>appendSomething3</code>.</p>
+<div class="language-csharp highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-0-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-0-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-0-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-0-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-0-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-0-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-0-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-0-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-0-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-0-10">10</a></span>
+<span class="normal"><a href="#__codelineno-0-11">11</a></span>
+<span class="normal"><a href="#__codelineno-0-12">12</a></span>
+<span class="normal"><a href="#__codelineno-0-13">13</a></span>
+<span class="normal"><a href="#__codelineno-0-14">14</a></span>
+<span class="normal"><a href="#__codelineno-0-15">15</a></span>
+<span class="normal"><a href="#__codelineno-0-16">16</a></span>
+<span class="normal"><a href="#__codelineno-0-17">17</a></span>
+<span class="normal"><a href="#__codelineno-0-18">18</a></span>
+<span class="normal"><a href="#__codelineno-0-19">19</a></span>
+<span class="normal"><a href="#__codelineno-0-20">20</a></span>
+<span class="normal"><a href="#__codelineno-0-21">21</a></span>
+<span class="normal"><a href="#__codelineno-0-22">22</a></span>
+<span class="normal"><a href="#__codelineno-0-23">23</a></span>
+<span class="normal"><a href="#__codelineno-0-24">24</a></span>
+<span class="normal"><a href="#__codelineno-0-25">25</a></span>
+<span class="normal"><a href="#__codelineno-0-26">26</a></span>
+<span class="normal"><a href="#__codelineno-0-27">27</a></span>
+<span class="normal"><a href="#__codelineno-0-28">28</a></span>
+<span class="normal"><a href="#__codelineno-0-29">29</a></span>
+<span class="normal"><a href="#__codelineno-0-30">30</a></span>
+<span class="normal"><a href="#__codelineno-0-31">31</a></span>
+<span class="normal"><a href="#__codelineno-0-32">32</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1"></a><span class="kt">string</span><span class="w"> </span><span class="nf">appendSomething3</span><span class="p">(</span><span class="kt">string</span><span class="w"> </span><span class="n">text</span><span class="p">)</span>
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2"></a><span class="p">{</span>
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3"></a><span class="w">    </span><span class="n">text</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">text</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">&quot;C&quot;</span><span class="p">;</span>
+</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4"></a><span class="w">    </span><span class="k">throw</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="nf">Exception</span><span class="p">(</span><span class="s">&quot;This is an intentional exception to demonstrate stack trace.&quot;</span><span class="p">);</span>
+</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5"></a><span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">text</span><span class="p">;</span>
+</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6"></a><span class="p">}</span>
+</span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7"></a>
+</span><span id="__span-0-8"><a id="__codelineno-0-8" name="__codelineno-0-8"></a><span class="kt">string</span><span class="w"> </span><span class="nf">appendSomething2</span><span class="p">(</span><span class="kt">string</span><span class="w"> </span><span class="n">text</span><span class="p">)</span>
+</span><span id="__span-0-9"><a id="__codelineno-0-9" name="__codelineno-0-9"></a><span class="p">{</span>
+</span><span id="__span-0-10"><a id="__codelineno-0-10" name="__codelineno-0-10"></a><span class="w">    </span><span class="n">text</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">text</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">&quot;B&quot;</span><span class="p">;</span>
+</span><span id="__span-0-11"><a id="__codelineno-0-11" name="__codelineno-0-11"></a><span class="w">    </span><span class="n">text</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">appendSomething3</span><span class="p">(</span><span class="n">text</span><span class="p">);</span>
+</span><span id="__span-0-12"><a id="__codelineno-0-12" name="__codelineno-0-12"></a><span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">text</span><span class="p">;</span>
+</span><span id="__span-0-13"><a id="__codelineno-0-13" name="__codelineno-0-13"></a><span class="p">}</span>
+</span><span id="__span-0-14"><a id="__codelineno-0-14" name="__codelineno-0-14"></a>
+</span><span id="__span-0-15"><a id="__codelineno-0-15" name="__codelineno-0-15"></a><span class="kt">string</span><span class="w"> </span><span class="nf">appendSomething1</span><span class="p">(</span><span class="kt">string</span><span class="w"> </span><span class="n">text</span><span class="p">)</span>
+</span><span id="__span-0-16"><a id="__codelineno-0-16" name="__codelineno-0-16"></a><span class="p">{</span>
+</span><span id="__span-0-17"><a id="__codelineno-0-17" name="__codelineno-0-17"></a><span class="w">    </span><span class="n">text</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">text</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">&quot;A&quot;</span><span class="p">;</span>
+</span><span id="__span-0-18"><a id="__codelineno-0-18" name="__codelineno-0-18"></a><span class="w">    </span><span class="n">text</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">appendSomething2</span><span class="p">(</span><span class="n">text</span><span class="p">);</span>
+</span><span id="__span-0-19"><a id="__codelineno-0-19" name="__codelineno-0-19"></a><span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">text</span><span class="p">;</span>
+</span><span id="__span-0-20"><a id="__codelineno-0-20" name="__codelineno-0-20"></a><span class="p">}</span>
+</span><span id="__span-0-21"><a id="__codelineno-0-21" name="__codelineno-0-21"></a>
+</span><span id="__span-0-22"><a id="__codelineno-0-22" name="__codelineno-0-22"></a><span class="k">try</span>
+</span><span id="__span-0-23"><a id="__codelineno-0-23" name="__codelineno-0-23"></a><span class="p">{</span>
+</span><span id="__span-0-24"><a id="__codelineno-0-24" name="__codelineno-0-24"></a><span class="w">    </span><span class="kt">string</span><span class="w"> </span><span class="n">result</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;START: &quot;</span><span class="p">;</span>
+</span><span id="__span-0-25"><a id="__codelineno-0-25" name="__codelineno-0-25"></a><span class="w">    </span><span class="n">result</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">appendSomething1</span><span class="p">(</span><span class="n">result</span><span class="p">);</span>
+</span><span id="__span-0-26"><a id="__codelineno-0-26" name="__codelineno-0-26"></a><span class="w">    </span><span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="n">result</span><span class="p">);</span>
+</span><span id="__span-0-27"><a id="__codelineno-0-27" name="__codelineno-0-27"></a><span class="p">}</span>
+</span><span id="__span-0-28"><a id="__codelineno-0-28" name="__codelineno-0-28"></a><span class="k">catch</span><span class="w"> </span><span class="p">(</span><span class="n">Exception</span><span class="w"> </span><span class="n">ex</span><span class="p">)</span>
+</span><span id="__span-0-29"><a id="__codelineno-0-29" name="__codelineno-0-29"></a><span class="p">{</span>
+</span><span id="__span-0-30"><a id="__codelineno-0-30" name="__codelineno-0-30"></a><span class="w">    </span><span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="s">&quot;An exception occurred: &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">ex</span><span class="p">.</span><span class="n">Message</span><span class="p">);</span>
+</span><span id="__span-0-31"><a id="__codelineno-0-31" name="__codelineno-0-31"></a><span class="w">    </span><span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="s">&quot;Stack Trace: &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">ex</span><span class="p">.</span><span class="n">StackTrace</span><span class="p">);</span>
+</span><span id="__span-0-32"><a id="__codelineno-0-32" name="__codelineno-0-32"></a><span class="p">}</span>
+</span></code></pre></div></td></tr></table></div>
+<p>By the time we reach <code>appendSomething3</code>, the call stack looks like this:</p>
+<p><img alt="VS Code Call Stack Panel" src="../../images/vs-code-call-stack-panel.png" /></p>
+<!-- prettier-ignore -->
+<div class="admonition info">
+<p class="admonition-title">Viewing the Call Stack in VS Code</p>
+<p>You can view the call stack in VS Code by opening the "Debug" panel and clicking the "Call Stack" tab.</p>
+<p>Try placing a breakpoint in <code>appendSomething3</code> and then clicking the "Debug" button, as shown in the screenshot.</p>
+</div>
+<h2 id="printing-the-stack-trace">Printing the Stack Trace<a class="headerlink" href="#printing-the-stack-trace" title="Permanent link">&para;</a></h2>
+<p>The code contains an intentional exception to demonstrate stack trace.</p>
+<p>Line 31 writes this stack trace to the console:</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>at Program.&lt;&lt;Main&gt;$&gt;g__appendSomething3|0_0(String text) in /home/mpjovanovich/tmp/dotnet-sandbox/Program.cs:line 4
+</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>at Program.&lt;&lt;Main&gt;$&gt;g__appendSomething2|0_1(String text) in /home/mpjovanovich/tmp/dotnet-sandbox/Program.cs:line 11
+</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>at Program.&lt;&lt;Main&gt;$&gt;g__appendSomething1|0_2(String text) in /home/mpjovanovich/tmp/dotnet-sandbox/Program.cs:line 18
+</span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a>at Program.&lt;Main&gt;$(String[] args) in /home/mpjovanovich/tmp/dotnet-sandbox/Program.cs:line 25
+</span></code></pre></div>
+<h2 id="interpreting-a-line-of-the-stack-trace">Interpreting a Line of the Stack Trace<a class="headerlink" href="#interpreting-a-line-of-the-stack-trace" title="Permanent link">&para;</a></h2>
+<p>When reading a stack trace, the first line is often the only one that we need. Here is how to read the first line.</p>
+<p><code>Program.&lt;&lt;Main&gt;$&gt;g__appendSomething3|0_0(String text)</code>
+: The compiler-generated unique identifier for the local function, along with its method signature. The IL compiler adds prefixes and suffixes to encode the enclosing method and function index. We can tell that this came from our <code>appendSomething3</code> method.</p>
+<p><code>/home/mpjovanovich/tmp/dotnet-sandbox/Program.cs:line 4</code>
+: Source file and line number.</p>
+<p>Putting this all together, we can see that the error occurred in our <code>appendSomething3</code> method on line 4 of our <code>Program.cs</code> file - the intentional exception that was thrown.</p>
+<h2 id="interpreting-the-full-stack-trace">Interpreting the Full Stack Trace<a class="headerlink" href="#interpreting-the-full-stack-trace" title="Permanent link">&para;</a></h2>
+<p>The remaining lines in the stack trace are from the calls that led up to the error:</p>
+<ul>
+<li>Line 4 in <code>appendSomething3</code> was called from line 11 in <code>appendSomething2</code></li>
+<li>Line 11 in <code>appendSomething2</code> was called from line 18 in <code>appendSomething1</code></li>
+<li>Line 18 in <code>appendSomething1</code> was called from line 25 in <code>Main</code> (the autogenerated top-level function)</li>
+</ul>
+<p>While the full call stack was not necessary to diagnose the error in this case, in a full program the function may be called in many cases. The full call stack is useful to tell us the path that the program took to get to the error - from start to finish.</p>
 
 
 
