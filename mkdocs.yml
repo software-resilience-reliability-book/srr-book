@@ -61,6 +61,8 @@ nav:
   # - Example: example.md
   - Preface: index.md
 
+  - Companion Code: companion-code.md
+
   - Living Software:
       - living-software/index.md
       - living-software/why-software-changes.md

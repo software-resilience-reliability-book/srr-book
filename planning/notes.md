@@ -61,6 +61,7 @@ Tast harnessing: Program.cs as means to step into HexConverter
 Test naming conventions: all of the tests
 Isolating test functionality / mocks: PaletteTransformerTest (see the mock)
 Protecting invariants / guard clauses: Constructor for RgbColor ensures we can assume a valid color after construction
+Config settings: client name in footer
 Dependency injection (if we get to this): PaletteTransformer
 Exception handling / Dev vs Prod config difference: Web app has a fail case build in, which we handle differently per environment.
 
