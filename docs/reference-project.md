@@ -1,11 +1,11 @@
-# Companion Code
+# Reference Project
 
 ## Location
 
 This book contains code in two formats:
 
 - Standalone code examples that can be run directly or wired up with minimal effort
-- Code examples that are part of a larger solution that is used to demonstrate a concept
+- Code examples that are part of a larger reference project that is used to demonstrate a concept
 
 The project that is used to illustrate most of the concepts is a [Color Transform Application](https://github.com/software-resilience-reliability-book/color-transform).
 

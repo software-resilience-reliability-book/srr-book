@@ -1,5 +1,7 @@
 # Docs are at: https://www.mkdocs.org/user-guide/configuration/
 
+# Preview with: mkdocs serve --livereload
+
 # ##########################################
 # Site
 # ##########################################
@@ -61,7 +63,7 @@ nav:
   # - Example: example.md
   - Preface: index.md
 
-  - Companion Code: companion-code.md
+  - Reference Project: reference-project.md
 
   - Living Software:
       - living-software/index.md
@@ -133,12 +135,12 @@ nav:
       # Only include if time. This isn't really an ops focused course.
       - environment-management/configuring-production-build.md
 
-  - Codebase Organization and Project Structure:
-      - codebase-organization/index.md # link to color picker repo with codebase organization concepts; e.g. some data store?
-      - codebase-organization/single-responsibility-principle.md
-      - codebase-organization/modularity.md
-      - codebase-organization/decoupling.md
-      - codebase-organization/internal-vs-external-dependencies.md # basically a quick note explaining that they'll have to add references to make it work when they refactor
+  - Project Refactoring:
+      - project-refactoring/index.md # link to color picker repo with codebase organization concepts; e.g. some data store?
+      - project-refactoring/single-responsibility-principle.md
+      - project-refactoring/modularity.md
+      - project-refactoring/decoupling.md
+      - project-refactoring/internal-vs-external-dependencies.md # basically a quick note explaining that they'll have to add references to make it work when they refactor
 
   - Dependency Management:
       - dependency-management/index.md # link to color picker repo with dependency management concepts; e.g. some data store?

@@ -13,3 +13,9 @@ Certain types of errors cannot be detected in advance of the program being run. 
 - Dividing a number by zero
 
 You will know that your program encountered a runtime error when it throws an **exception**. At this point the exception must be handled, or the program will crash.
+
+## Viewing Runtime Errors
+
+Runtime errors will appear in different ways depending on the environment. In a released application, the error will often be displayed to the user, logged, and the program will try to recover and resume execution.
+
+When using an IDE you will see a visual indicator that shows you where the error occurred. We will look at this in more detail in the next section.
