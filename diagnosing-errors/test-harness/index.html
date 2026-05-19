@@ -289,14 +289,14 @@
   
   
     <li class="md-nav__item">
-      <a href="../../companion-code/" class="md-nav__link">
+      <a href="../../reference-project/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    Companion Code
+    Reference Project
   
 
     
@@ -1195,10 +1195,43 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#why-use-a-test-harness" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Why Use a Test Harness?
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#creating-a-test-harness" class="md-nav__link">
     <span class="md-ellipsis">
       
         Creating a Test Harness
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#viewing-the-runtime-error" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Viewing the Runtime Error
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#fixing-the-bug" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Fixing the Bug
       
     </span>
   </a>
@@ -2149,7 +2182,7 @@
   <span class="md-ellipsis">
     
   
-    Codebase Organization and Project Structure
+    Project Refactoring
   
 
     
@@ -2165,7 +2198,7 @@
             <span class="md-nav__icon md-icon"></span>
             
   
-    Codebase Organization and Project Structure
+    Project Refactoring
   
 
           </label>
@@ -2178,7 +2211,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../codebase-organization/index.md" class="md-nav__link">
+      <a href="../../project-refactoring/index.md" class="md-nav__link">
         
   
   
@@ -2206,7 +2239,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../codebase-organization/single-responsibility-principle.md" class="md-nav__link">
+      <a href="../../project-refactoring/single-responsibility-principle.md" class="md-nav__link">
         
   
   
@@ -2234,7 +2267,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../codebase-organization/modularity.md" class="md-nav__link">
+      <a href="../../project-refactoring/modularity.md" class="md-nav__link">
         
   
   
@@ -2262,7 +2295,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../codebase-organization/decoupling.md" class="md-nav__link">
+      <a href="../../project-refactoring/decoupling.md" class="md-nav__link">
         
   
   
@@ -2290,7 +2323,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../codebase-organization/internal-vs-external-dependencies.md" class="md-nav__link">
+      <a href="../../project-refactoring/internal-vs-external-dependencies.md" class="md-nav__link">
         
   
   
@@ -2727,10 +2760,43 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#why-use-a-test-harness" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Why Use a Test Harness?
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#creating-a-test-harness" class="md-nav__link">
     <span class="md-ellipsis">
       
         Creating a Test Harness
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#viewing-the-runtime-error" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Viewing the Runtime Error
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#fixing-the-bug" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Fixing the Bug
       
     </span>
   </a>
@@ -2758,7 +2824,7 @@
 
 
 <h1 id="test-harnesses">Test Harnesses<a class="headerlink" href="#test-harnesses" title="Permanent link">&para;</a></h1>
-<h2 id="creating-a-test-harness">Creating a Test Harness<a class="headerlink" href="#creating-a-test-harness" title="Permanent link">&para;</a></h2>
+<h2 id="why-use-a-test-harness">Why Use a Test Harness?<a class="headerlink" href="#why-use-a-test-harness" title="Permanent link">&para;</a></h2>
 <p>To reproduce a runtime error, we need to create a <strong>test harness</strong> that can control the environment and reproduce the error. This can be as simple as a console application that can be run from the command line, or a more complex web application that can be deployed to a test environment.</p>
 <p>The primary goal of a test harness is to exactly match the environment with the error:</p>
 <ul>
@@ -2767,16 +2833,86 @@
 <li>Same input data</li>
 </ul>
 <p>You might also think of a test harness as a "developer sandbox" that allows us to flexibly run scenarios against the application for both new development and troubleshooting.</p>
-<p>...</p>
-<p>The main application that we will work with over the course of this book is a color transformation library. A <strong>library</strong> is a bundled unit of code that has no startup application, but can be used by other applications. Because there is no startup application, we need to create a test harness to run the library and see it in action.</p>
-<p>...</p>
-<p><mark>TODO:</mark></p>
-<ul>
-<li>Write finished product of example domain application.</li>
-<li>Break apart into pieces as needed for chapter snippets.</li>
-<li>This one should be extremely basic; it will just show that the library has no startup app, so a test harness is needed. Use a scenario where the user has reported a problem with some input, so we just call the library with that input.</li>
-</ul>
-<p><mark>END TODO</mark></p>
+<h2 id="creating-a-test-harness">Creating a Test Harness<a class="headerlink" href="#creating-a-test-harness" title="Permanent link">&para;</a></h2>
+<p>Let's run an example program with three files. Try following along by creating a new console application. If you need a reminder on how to do this, refer to the <a href="../../builds/creating-dotnet-project/">Creating a .NET Project</a> page.</p>
+<p>Create the three files below in the root directory of the project.</p>
+<p><em>weather.csv</em></p>
+<p>CSV data with yearly average temperatures for a weather station. Our example is very small, but these types of data failes can have thousands of rows, making it impossible to manually scan the data for discrepancies.</p>
+<p>Let's assume the client is reporting a runtime error when they load this file and try to find the record for 2022. We need to figure out why.</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>2020,North Station,98
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>2021,North Station,101
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>2023,North Station,99
+</span></code></pre></div>
+<p><em>WeatherRecord.cs</em></p>
+<p>A class to represent a weather record, along with some helper methods to load records into an array and find records from the array.</p>
+<p>Don't worry about the details of the class for now. We just need to know how to find the runtime error that will appear in this class.</p>
+<div class="language-csharp highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="k">public</span><span class="w"> </span><span class="k">class</span><span class="w"> </span><span class="nc">WeatherRecord</span>
+</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="p">{</span>
+</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="w">    </span><span class="k">public</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">Year</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="k">get</span><span class="p">;</span><span class="w"> </span><span class="k">set</span><span class="p">;</span><span class="w"> </span><span class="p">}</span>
+</span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a><span class="w">    </span><span class="k">public</span><span class="w"> </span><span class="kt">string</span><span class="w"> </span><span class="n">StationName</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="k">get</span><span class="p">;</span><span class="w"> </span><span class="k">set</span><span class="p">;</span><span class="w"> </span><span class="p">}</span>
+</span><span id="__span-1-5"><a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a><span class="w">    </span><span class="k">public</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">MaxTemp</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="k">get</span><span class="p">;</span><span class="w"> </span><span class="k">set</span><span class="p">;</span><span class="w"> </span><span class="p">}</span>
+</span><span id="__span-1-6"><a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a>
+</span><span id="__span-1-7"><a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a><span class="w">    </span><span class="k">public</span><span class="w"> </span><span class="k">static</span><span class="w"> </span><span class="n">WeatherRecord</span><span class="p">[]</span><span class="w"> </span><span class="nf">LoadRecords</span><span class="p">(</span><span class="kt">string</span><span class="w"> </span><span class="n">filePath</span><span class="p">)</span>
+</span><span id="__span-1-8"><a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a><span class="w">    </span><span class="p">{</span>
+</span><span id="__span-1-9"><a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a><span class="w">        </span><span class="kt">string</span><span class="p">[]</span><span class="w"> </span><span class="n">lines</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">File</span><span class="p">.</span><span class="n">ReadAllLines</span><span class="p">(</span><span class="n">filePath</span><span class="p">);</span>
+</span><span id="__span-1-10"><a id="__codelineno-1-10" name="__codelineno-1-10" href="#__codelineno-1-10"></a><span class="w">        </span><span class="n">WeatherRecord</span><span class="p">[]</span><span class="w"> </span><span class="n">records</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">WeatherRecord</span><span class="p">[</span><span class="n">lines</span><span class="p">.</span><span class="n">Length</span><span class="p">];</span>
+</span><span id="__span-1-11"><a id="__codelineno-1-11" name="__codelineno-1-11" href="#__codelineno-1-11"></a><span class="w">        </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">lines</span><span class="p">.</span><span class="n">Length</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="o">++</span><span class="p">)</span>
+</span><span id="__span-1-12"><a id="__codelineno-1-12" name="__codelineno-1-12" href="#__codelineno-1-12"></a><span class="w">        </span><span class="p">{</span>
+</span><span id="__span-1-13"><a id="__codelineno-1-13" name="__codelineno-1-13" href="#__codelineno-1-13"></a><span class="w">            </span><span class="kt">string</span><span class="p">[]</span><span class="w"> </span><span class="n">parts</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">lines</span><span class="p">[</span><span class="n">i</span><span class="p">].</span><span class="n">Split</span><span class="p">(</span><span class="sc">&#39;,&#39;</span><span class="p">);</span>
+</span><span id="__span-1-14"><a id="__codelineno-1-14" name="__codelineno-1-14" href="#__codelineno-1-14"></a><span class="w">            </span><span class="n">records</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">WeatherRecord</span>
+</span><span id="__span-1-15"><a id="__codelineno-1-15" name="__codelineno-1-15" href="#__codelineno-1-15"></a><span class="w">            </span><span class="p">{</span>
+</span><span id="__span-1-16"><a id="__codelineno-1-16" name="__codelineno-1-16" href="#__codelineno-1-16"></a><span class="w">                </span><span class="n">Year</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kt">int</span><span class="p">.</span><span class="n">Parse</span><span class="p">(</span><span class="n">parts</span><span class="p">[</span><span class="mi">0</span><span class="p">]),</span>
+</span><span id="__span-1-17"><a id="__codelineno-1-17" name="__codelineno-1-17" href="#__codelineno-1-17"></a><span class="w">                </span><span class="n">StationName</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">parts</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span>
+</span><span id="__span-1-18"><a id="__codelineno-1-18" name="__codelineno-1-18" href="#__codelineno-1-18"></a><span class="w">                </span><span class="n">MaxTemp</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kt">int</span><span class="p">.</span><span class="n">Parse</span><span class="p">(</span><span class="n">parts</span><span class="p">[</span><span class="mi">2</span><span class="p">])</span>
+</span><span id="__span-1-19"><a id="__codelineno-1-19" name="__codelineno-1-19" href="#__codelineno-1-19"></a><span class="w">            </span><span class="p">};</span>
+</span><span id="__span-1-20"><a id="__codelineno-1-20" name="__codelineno-1-20" href="#__codelineno-1-20"></a><span class="w">        </span><span class="p">}</span>
+</span><span id="__span-1-21"><a id="__codelineno-1-21" name="__codelineno-1-21" href="#__codelineno-1-21"></a><span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="n">records</span><span class="p">;</span>
+</span><span id="__span-1-22"><a id="__codelineno-1-22" name="__codelineno-1-22" href="#__codelineno-1-22"></a><span class="w">    </span><span class="p">}</span>
+</span><span id="__span-1-23"><a id="__codelineno-1-23" name="__codelineno-1-23" href="#__codelineno-1-23"></a>
+</span><span id="__span-1-24"><a id="__codelineno-1-24" name="__codelineno-1-24" href="#__codelineno-1-24"></a><span class="w">    </span><span class="k">public</span><span class="w"> </span><span class="k">static</span><span class="w"> </span><span class="n">WeatherRecord</span><span class="w"> </span><span class="nf">FindRecord</span><span class="p">(</span><span class="n">WeatherRecord</span><span class="p">[]</span><span class="w"> </span><span class="n">records</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">year</span><span class="p">)</span>
+</span><span id="__span-1-25"><a id="__codelineno-1-25" name="__codelineno-1-25" href="#__codelineno-1-25"></a><span class="w">    </span><span class="p">{</span>
+</span><span id="__span-1-26"><a id="__codelineno-1-26" name="__codelineno-1-26" href="#__codelineno-1-26"></a><span class="w">        </span><span class="k">foreach</span><span class="w"> </span><span class="p">(</span><span class="n">WeatherRecord</span><span class="w"> </span><span class="k">record</span><span class="w"> </span><span class="k">in</span><span class="w"> </span><span class="n">records</span><span class="p">)</span>
+</span><span id="__span-1-27"><a id="__codelineno-1-27" name="__codelineno-1-27" href="#__codelineno-1-27"></a><span class="w">        </span><span class="p">{</span>
+</span><span id="__span-1-28"><a id="__codelineno-1-28" name="__codelineno-1-28" href="#__codelineno-1-28"></a><span class="w">            </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="k">record</span><span class="p">.</span><span class="n">Year</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">year</span><span class="p">)</span>
+</span><span id="__span-1-29"><a id="__codelineno-1-29" name="__codelineno-1-29" href="#__codelineno-1-29"></a><span class="w">                </span><span class="k">return</span><span class="w"> </span><span class="k">record</span><span class="p">;</span>
+</span><span id="__span-1-30"><a id="__codelineno-1-30" name="__codelineno-1-30" href="#__codelineno-1-30"></a><span class="w">        </span><span class="p">}</span>
+</span><span id="__span-1-31"><a id="__codelineno-1-31" name="__codelineno-1-31" href="#__codelineno-1-31"></a><span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="k">null</span><span class="p">;</span>
+</span><span id="__span-1-32"><a id="__codelineno-1-32" name="__codelineno-1-32" href="#__codelineno-1-32"></a><span class="w">    </span><span class="p">}</span>
+</span><span id="__span-1-33"><a id="__codelineno-1-33" name="__codelineno-1-33" href="#__codelineno-1-33"></a><span class="p">}</span>
+</span></code></pre></div>
+<p><em>Program.cs</em></p>
+<p>The test harness for the program.</p>
+<p>This is what we will use to rig up a reproducable runtime error based on the file that the client has provided.</p>
+<div class="language-csharp highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="c1">// Point to the csv file that the client has provided.</span>
+</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="kt">string</span><span class="w"> </span><span class="n">filePath</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Path</span><span class="p">.</span><span class="n">Combine</span><span class="p">(</span><span class="n">AppDomain</span><span class="p">.</span><span class="n">CurrentDomain</span><span class="p">.</span><span class="n">BaseDirectory</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;weather.csv&quot;</span><span class="p">);</span>
+</span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a>
+</span><span id="__span-2-4"><a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a><span class="c1">// Load the records from the file.</span>
+</span><span id="__span-2-5"><a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a><span class="n">WeatherRecord</span><span class="p">[]</span><span class="w"> </span><span class="n">records</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">WeatherRecord</span><span class="p">.</span><span class="n">LoadRecords</span><span class="p">(</span><span class="n">filePath</span><span class="p">);</span>
+</span><span id="__span-2-6"><a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a>
+</span><span id="__span-2-7"><a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a><span class="c1">// Find the record for 2022.</span>
+</span><span id="__span-2-8"><a id="__codelineno-2-8" name="__codelineno-2-8" href="#__codelineno-2-8"></a><span class="n">WeatherRecord</span><span class="w"> </span><span class="n">result</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">WeatherRecord</span><span class="p">.</span><span class="n">FindRecord</span><span class="p">(</span><span class="n">records</span><span class="p">,</span><span class="w"> </span><span class="mi">2022</span><span class="p">);</span>
+</span><span id="__span-2-9"><a id="__codelineno-2-9" name="__codelineno-2-9" href="#__codelineno-2-9"></a>
+</span><span id="__span-2-10"><a id="__codelineno-2-10" name="__codelineno-2-10" href="#__codelineno-2-10"></a><span class="c1">// Write the result to the console.</span>
+</span><span id="__span-2-11"><a id="__codelineno-2-11" name="__codelineno-2-11" href="#__codelineno-2-11"></a><span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="s">$&quot;Max temp for 2022: {result.MaxTemp}°F&quot;</span><span class="p">);</span>
+</span></code></pre></div>
+<!-- prettier-ignore -->
+<div class="admonition check">
+<p class="admonition-title">Include the CSV File in the Project Output</p>
+<p>In order to get this example to work, you need to include the CSV file in the project output. In VS Code, add this to your <code>.csproj</code> file within the Project section:</p>
+<div class="language-xml highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="nt">&lt;ItemGroup&gt;</span>
+</span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="w">  </span><span class="nt">&lt;Content</span><span class="w"> </span><span class="na">Include=</span><span class="s">&quot;weather.csv&quot;</span><span class="nt">&gt;</span>
+</span><span id="__span-3-3"><a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a><span class="w">    </span><span class="nt">&lt;CopyToOutputDirectory&gt;</span>PreserveNewest<span class="nt">&lt;/CopyToOutputDirectory&gt;</span>
+</span><span id="__span-3-4"><a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a><span class="w">  </span><span class="nt">&lt;/Content&gt;</span>
+</span><span id="__span-3-5"><a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a><span class="nt">&lt;/ItemGroup&gt;</span>
+</span></code></pre></div>
+</div>
+<h2 id="viewing-the-runtime-error">Viewing the Runtime Error<a class="headerlink" href="#viewing-the-runtime-error" title="Permanent link">&para;</a></h2>
+<p>When we run the program through the debugger, we will see the following output:</p>
+<p><img alt="runtime error message" src="../../images/runtime-error-exception-message.png" /></p>
+<p>We see a NullReferenceException, which means that the program tried to access an object that is null. At this point we don't know why yet. Let's now put a breakpoint in the <code>FindRecord</code> method so that we can examine what records the program contains.</p>
+<p><img alt="breakpoint in FindRecord method" src="../../images/debug-find-weather-record.png" /></p>
+<p>There are three records in the array for the years 2020, 2021, and 2023. The record for 2022 is not in the array. The CSV file itself did not provide the necessary information.</p>
+<p>Our <code>Program.cs</code> file provided a short snippet of code that reproduced what the client was experiencing, and we can now confirm the source of the bug.</p>
 <!-- prettier-ignore -->
 <div class="admonition check">
 <p class="admonition-title">Check Your Exception Settings</p>
@@ -2784,6 +2920,9 @@
 <p>If you want to break on all exceptions, open the "Run and Debug" menu and make sure that "All Exceptions" is checked under the "Breakpoints" submenu.</p>
 <p><img alt="VS Code exception settings menu" src="../../images/exception-settings.png" /></p>
 </div>
+<h2 id="fixing-the-bug">Fixing the Bug<a class="headerlink" href="#fixing-the-bug" title="Permanent link">&para;</a></h2>
+<p>From this point, the fix becomes a matter of communicating intent. As the library author we can inform the client that the code is working as intended. If we do this, it is their responsibility as the library consumer (the ones using our code) to add a check on their end to ensure that their data is valid and handle the possible null value returned by our code.</p>
+<p>Alternatively, we can add error checking to either ensure that all years are present in the given range or to throw an exception if the year that is searched for is not found.</p>
 
 
 
