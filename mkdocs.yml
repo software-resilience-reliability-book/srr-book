@@ -96,7 +96,10 @@ nav:
       - diagnosing-errors/runtime.md
       - diagnosing-errors/test-harness.md
       - diagnosing-errors/print-logging.md
-      - diagnosing-errors/validation-exceptions.md
+      - diagnosing-errors/validating-runtime-input.md
+      - diagnosing-errors/handling-runtime-errors.md
+      - diagnosing-errors/error-contracts.md
+      - diagnosing-errors/stack-trace.md
       - diagnosing-errors/logic.md
 
   # This has its own chapter early; we don't want to overwhelm students with too
@@ -115,7 +118,7 @@ nav:
       - type-system/types-as-contracts.md # More focused on "what can I expect to be on this?"
       - type-system/protecting-invariants.md # Focused on guaranteeing valid state; e.g. a "HexColor" class that only allows valid hex colors
       - type-system/enums-and-fixed-sets.md # Enums protecyour code from developers using it incorrectly
-      - type-system/custom-exception-types.md
+      - type-system/custom-exception-types.md # We've covered exceptions plenty; this only needs to point out that we should handle the exact exception types in the error contract of the function that was called; look at the documentation
 
   - Configuration and Externalized Settings:
       - configuration/index.md # link to color picker repo with configuration concepts
