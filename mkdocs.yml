@@ -60,7 +60,6 @@ markdown_extensions:
 # Navigation
 # ##########################################
 nav:
-  # - Example: example.md
   - Preface: index.md
 
   - Reference Project: reference-project.md
@@ -90,7 +89,7 @@ nav:
       - builds/what-belongs-in-version-control.md
 
   - Diagnosing Errors:
-      - diagnosing-errors/index.md # basic app with errors
+      - diagnosing-errors/index.md
       - diagnosing-errors/compile-time.md
       - diagnosing-errors/troubleshooting-failed-build.md
       - diagnosing-errors/runtime.md
@@ -105,30 +104,64 @@ nav:
   # This has its own chapter early; we don't want to overwhelm students with too
   # many concepts at once so don't cover other test types yet
   - Unit Testing:
-      - unit-testing/index.md # link to color picker repo with basic test suite
+      # From this point forward use the reference project
+
+      # Introduction to unit testing and the reference project.
+      # What a unit test is, why it matters, and how to run the test suite.
+      # Very intro level
+      - unit-testing/index.md
+
+      # The Arrange-Act-Assert pattern as a consistent structure for writing tests.
+      # Make sure test fails before making it pass, otherwise you don't know if it actually works.
       - unit-testing/arrange-act-assert.md
-      - unit-testing/red-green-refactor.md
-      - unit-testing/naming-tests.md #
-      # how to appropriately scope tests; don't need one to one match with implementation
-      # golden path, edge cases and boundary conditions
+
+      # More on test philosophy
+      # Tests as living documentation of system behavior.
+      # Test what the code should do (behavior), not how it does it (implementation details).
       - unit-testing/what-to-test.md
 
+      # Practical advice on how to write effective tests.
+      # How to systematically cover behavior: golden path, edge cases,
+      # boundary conditions, and error contracts.
+      # Tabular tests(? is that what they're called?)
+      - unit-testing/writing-an-effective-test.md
+
   - Leveraging the Type System:
-      - type-system/index.md # link to color picker repo with type enhancements
-      - type-system/types-as-contracts.md # More focused on "what can I expect to be on this?"
-      - type-system/protecting-invariants.md # Focused on guaranteeing valid state; e.g. a "HexColor" class that only allows valid hex colors
-      - type-system/enums-and-fixed-sets.md # Enums protecyour code from developers using it incorrectly
-      - type-system/custom-exception-types.md # We've covered exceptions plenty; this only needs to point out that we should handle the exact exception types in the error contract of the function that was called; look at the documentation
+      # Use the reference project
+      - type-system/index.md
+
+      # More focused on "what can I expect to be on this data structure (class, record, struct)?"
+      - type-system/types-as-contracts.md
+
+      # Focused on guaranteeing valid state; e.g. a "HexColor" class that only allows valid hex colors
+      - type-system/protecting-invariants.md
+
+      # Enums protecyour code from developers using it incorrectly
+      - type-system/enums-and-fixed-sets.md
+
+      # We've covered exceptions plenty; this only needs to point out that we
+      # should handle the exact exception types in the error contract of the
+      # function that was called; look at the documentation
+      - type-system/custom-exception-types.md
 
   - Configuration and Externalized Settings:
-      - configuration/index.md # link to color picker repo with configuration concepts
+      # Use the reference project (needs added)
+      # Copyright text. Something else?
+      - configuration/index.md
+
       - configuration/why-externalize.md
+
+      # Demo a few things. Ideally we'd have a file path that we're pointing to in lieu of a database connection string.
+      # Log file? Palette file?
       - configuration/configuration-by-example.md
-      # Introduce "fail fast" concept here
+
+      # Use this as an example of a time when fail fast is appropriate.
+      # Don't know if it's worth getting caught up in .NET specifics (IOptions?); need to check difficulty level.
       - configuration/strongly-typed-configuration.md
 
   - Environment Management:
-      - environment-management/index.md # link to color picker repo with environment management concepts; e.g. some data store?
+      # Use the reference project (needs added)
+      - environment-management/index.md
       # For below focus on what they are, not implementation
       - environment-management/development-environment.md
       - environment-management/staging-environment.md
@@ -139,22 +172,31 @@ nav:
       - environment-management/configuring-production-build.md
 
   - Project Refactoring:
-      - project-refactoring/index.md # link to color picker repo with codebase organization concepts; e.g. some data store?
+      # Use the reference project? I guess just say that "we could have jammed everything into the web project but we didn't?"
+      - project-refactoring/index.md
       - project-refactoring/single-responsibility-principle.md
       - project-refactoring/modularity.md
       - project-refactoring/decoupling.md
-      - project-refactoring/internal-vs-external-dependencies.md # basically a quick note explaining that they'll have to add references to make it work when they refactor
+
+      # basically a quick note explaining that they'll have to add references to make it work when they refactor
+      - project-refactoring/internal-vs-external-dependencies.md
 
   - Dependency Management:
-      - dependency-management/index.md # link to color picker repo with dependency management concepts; e.g. some data store?
+      # Use the reference project
+      - dependency-management/index.md
       - dependency-management/semantic-versioning.md
       - dependency-management/breaking-changes.md
       - dependency-management/version-pinning.md
+
       # Probably doesn't warrant its own page; just incorporate it into the other pages that talk about dependencies
       - dependency-management/package-managers.md
 
   - Testing a Full Software Solution:
-      - full-testing/index.md # link to color picker repo with all three test types; can I do this? May have to add web API consumer?
-      - full-testing/test-types.md # what the three types are for; why use each
+      # Use the reference project
+      - full-testing/index.md
+      # what the three types are for; why use each
+      - full-testing/test-types.md
+      # Define and point to example in reference project (needs added)
       - full-testing/integration-testing.md
+      # Define and point to example in reference project (needs added)
       - full-testing/end-to-end-testing.md
