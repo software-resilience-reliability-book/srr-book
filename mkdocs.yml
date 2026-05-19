@@ -152,7 +152,8 @@ nav:
       - configuration/why-externalize.md
 
       # Demo a few things. Ideally we'd have a file path that we're pointing to in lieu of a database connection string.
-      # Log file? Palette file?
+      # Add a static "Design Reference" page that's a palette, and have this as config colors?
+      # Would show color divs, hex, and RGB values for each
       - configuration/configuration-by-example.md
 
       # Use this as an example of a time when fail fast is appropriate.
