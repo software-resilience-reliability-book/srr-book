@@ -10,31 +10,31 @@
         <meta name="author" content="Mike Jovanovich">
       
       
-        <link rel="canonical" href="https://software-resilience-reliability-book.github.io/srr-book/complexity-debt/">
+        <link rel="canonical" href="https://software-resilience-reliability-book.github.io/srr-book/diagnosing-errors/stack-trace/">
       
       
-        <link rel="prev" href="../living-software/resiliency/">
+        <link rel="prev" href="../error-contracts/">
       
       
-        <link rel="next" href="managing-complexity/">
+        <link rel="next" href="../logic/">
       
       
         
       
       
-      <link rel="icon" href="../assets/images/favicon.png">
+      <link rel="icon" href="../../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
     
     
       
-        <title>Complexity and Technical Debt - Software Resilience and Reliability</title>
+        <title>The Stack Trace - Software Resilience and Reliability</title>
       
     
     
-      <link rel="stylesheet" href="../assets/stylesheets/main.484c7ddc.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.484c7ddc.min.css">
       
         
-        <link rel="stylesheet" href="../assets/stylesheets/palette.ab4e12ef.min.css">
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
       
       
 
@@ -53,9 +53,9 @@
       
     
     
-      <link rel="stylesheet" href="../css/custom.css">
+      <link rel="stylesheet" href="../../css/custom.css">
     
-    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
@@ -80,7 +80,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#complexity-and-technical-debt" class="md-skip">
+        <a href="#the-stack-trace" class="md-skip">
           Skip to content
         </a>
       
@@ -96,7 +96,7 @@
 
 <header class="md-header md-header--shadow" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href=".." title="Software Resilience and Reliability" class="md-header__button md-logo" aria-label="Software Resilience and Reliability" data-md-component="logo">
+    <a href="../.." title="Software Resilience and Reliability" class="md-header__button md-logo" aria-label="Software Resilience and Reliability" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
@@ -116,7 +116,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Complexity and Technical Debt
+              The Stack Trace
             
           </span>
         </div>
@@ -232,7 +232,7 @@
 
 <nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href=".." title="Software Resilience and Reliability" class="md-nav__button md-logo" aria-label="Software Resilience and Reliability" data-md-component="logo">
+    <a href="../.." title="Software Resilience and Reliability" class="md-nav__button md-logo" aria-label="Software Resilience and Reliability" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
@@ -262,7 +262,7 @@
   
   
     <li class="md-nav__item">
-      <a href=".." class="md-nav__link">
+      <a href="../.." class="md-nav__link">
         
   
   
@@ -289,7 +289,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../reference-project/" class="md-nav__link">
+      <a href="../../reference-project/" class="md-nav__link">
         
   
   
@@ -340,7 +340,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../living-software/" class="md-nav__link ">
+            <a href="../../living-software/" class="md-nav__link ">
               
   
   
@@ -384,7 +384,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../living-software/why-software-changes/" class="md-nav__link">
+      <a href="../../living-software/why-software-changes/" class="md-nav__link">
         
   
   
@@ -412,7 +412,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../living-software/reliability/" class="md-nav__link">
+      <a href="../../living-software/reliability/" class="md-nav__link">
         
   
   
@@ -440,7 +440,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../living-software/resiliency/" class="md-nav__link">
+      <a href="../../living-software/resiliency/" class="md-nav__link">
         
   
   
@@ -472,8 +472,6 @@
       
   
   
-    
-  
   
   
     
@@ -495,15 +493,15 @@
     
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="./" class="md-nav__link md-nav__link--active">
+            <a href="../../complexity-debt/" class="md-nav__link ">
               
   
   
@@ -521,13 +519,13 @@
             </a>
             
               
-              <label class="md-nav__link md-nav__link--active" for="__nav_4" id="__nav_4_label" tabindex="0">
+              <label class="md-nav__link " for="__nav_4" id="__nav_4_label" tabindex="0">
                 <span class="md-nav__icon md-icon"></span>
               </label>
             
           </div>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_4">
             <span class="md-nav__icon md-icon"></span>
             
@@ -547,7 +545,7 @@
   
   
     <li class="md-nav__item">
-      <a href="managing-complexity/" class="md-nav__link">
+      <a href="../../complexity-debt/managing-complexity/" class="md-nav__link">
         
   
   
@@ -575,7 +573,7 @@
   
   
     <li class="md-nav__item">
-      <a href="technical-debt-defiinition/" class="md-nav__link">
+      <a href="../../complexity-debt/technical-debt-defiinition/" class="md-nav__link">
         
   
   
@@ -603,7 +601,7 @@
   
   
     <li class="md-nav__item">
-      <a href="technical-debt-cost/" class="md-nav__link">
+      <a href="../../complexity-debt/technical-debt-cost/" class="md-nav__link">
         
   
   
@@ -631,7 +629,7 @@
   
   
     <li class="md-nav__item">
-      <a href="refactoring/" class="md-nav__link">
+      <a href="../../complexity-debt/refactoring/" class="md-nav__link">
         
   
   
@@ -700,7 +698,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../builds/" class="md-nav__link ">
+            <a href="../../builds/" class="md-nav__link ">
               
   
   
@@ -744,7 +742,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../builds/creating-empty-project-shell/" class="md-nav__link">
+      <a href="../../builds/creating-empty-project-shell/" class="md-nav__link">
         
   
   
@@ -772,7 +770,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../builds/creating-dotnet-project/" class="md-nav__link">
+      <a href="../../builds/creating-dotnet-project/" class="md-nav__link">
         
   
   
@@ -800,7 +798,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../builds/compiling/" class="md-nav__link">
+      <a href="../../builds/compiling/" class="md-nav__link">
         
   
   
@@ -828,7 +826,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../builds/build-artifacts/" class="md-nav__link">
+      <a href="../../builds/build-artifacts/" class="md-nav__link">
         
   
   
@@ -856,7 +854,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../builds/running-the-program/" class="md-nav__link">
+      <a href="../../builds/running-the-program/" class="md-nav__link">
         
   
   
@@ -884,7 +882,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../builds/understanding-the-debugger/" class="md-nav__link">
+      <a href="../../builds/understanding-the-debugger/" class="md-nav__link">
         
   
   
@@ -912,7 +910,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../builds/adding-a-package/" class="md-nav__link">
+      <a href="../../builds/adding-a-package/" class="md-nav__link">
         
   
   
@@ -940,7 +938,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../builds/what-belongs-in-version-control/" class="md-nav__link">
+      <a href="../../builds/what-belongs-in-version-control/" class="md-nav__link">
         
   
   
@@ -972,6 +970,8 @@
       
   
   
+    
+  
   
   
     
@@ -1005,15 +1005,15 @@
     
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" checked>
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../diagnosing-errors/" class="md-nav__link ">
+            <a href="../" class="md-nav__link ">
               
   
   
@@ -1037,7 +1037,7 @@
             
           </div>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_6">
             <span class="md-nav__icon md-icon"></span>
             
@@ -1057,7 +1057,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../diagnosing-errors/compile-time/" class="md-nav__link">
+      <a href="../compile-time/" class="md-nav__link">
         
   
   
@@ -1085,7 +1085,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../diagnosing-errors/troubleshooting-failed-build/" class="md-nav__link">
+      <a href="../troubleshooting-failed-build/" class="md-nav__link">
         
   
   
@@ -1113,7 +1113,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../diagnosing-errors/runtime/" class="md-nav__link">
+      <a href="../runtime/" class="md-nav__link">
         
   
   
@@ -1141,7 +1141,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../diagnosing-errors/test-harness/" class="md-nav__link">
+      <a href="../test-harness/" class="md-nav__link">
         
   
   
@@ -1169,7 +1169,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../diagnosing-errors/print-logging/" class="md-nav__link">
+      <a href="../print-logging/" class="md-nav__link">
         
   
   
@@ -1197,7 +1197,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../diagnosing-errors/validating-runtime-input/" class="md-nav__link">
+      <a href="../validating-runtime-input/" class="md-nav__link">
         
   
   
@@ -1225,7 +1225,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../diagnosing-errors/handling-runtime-errors/" class="md-nav__link">
+      <a href="../handling-runtime-errors/" class="md-nav__link">
         
   
   
@@ -1253,7 +1253,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../diagnosing-errors/error-contracts/" class="md-nav__link">
+      <a href="../error-contracts/" class="md-nav__link">
         
   
   
@@ -1278,10 +1278,19 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../diagnosing-errors/stack-trace/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   
@@ -1297,6 +1306,7 @@
   
 
       </a>
+      
     </li>
   
 
@@ -1309,7 +1319,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../diagnosing-errors/logic/" class="md-nav__link">
+      <a href="../logic/" class="md-nav__link">
         
   
   
@@ -1370,7 +1380,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../unit-testing/" class="md-nav__link ">
+            <a href="../../unit-testing/" class="md-nav__link ">
               
   
   
@@ -1414,7 +1424,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../unit-testing/arrange-act-assert.md" class="md-nav__link">
+      <a href="../../unit-testing/arrange-act-assert.md" class="md-nav__link">
         
   
   
@@ -1442,7 +1452,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../unit-testing/red-green-refactor.md" class="md-nav__link">
+      <a href="../../unit-testing/red-green-refactor.md" class="md-nav__link">
         
   
   
@@ -1470,7 +1480,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../unit-testing/naming-tests.md" class="md-nav__link">
+      <a href="../../unit-testing/naming-tests.md" class="md-nav__link">
         
   
   
@@ -1498,7 +1508,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../unit-testing/what-to-test.md" class="md-nav__link">
+      <a href="../../unit-testing/what-to-test.md" class="md-nav__link">
         
   
   
@@ -1592,7 +1602,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../type-system/index.md" class="md-nav__link">
+      <a href="../../type-system/index.md" class="md-nav__link">
         
   
   
@@ -1620,7 +1630,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../type-system/types-as-contracts.md" class="md-nav__link">
+      <a href="../../type-system/types-as-contracts.md" class="md-nav__link">
         
   
   
@@ -1648,7 +1658,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../type-system/protecting-invariants.md" class="md-nav__link">
+      <a href="../../type-system/protecting-invariants.md" class="md-nav__link">
         
   
   
@@ -1676,7 +1686,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../type-system/enums-and-fixed-sets.md" class="md-nav__link">
+      <a href="../../type-system/enums-and-fixed-sets.md" class="md-nav__link">
         
   
   
@@ -1704,7 +1714,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../type-system/custom-exception-types.md" class="md-nav__link">
+      <a href="../../type-system/custom-exception-types.md" class="md-nav__link">
         
   
   
@@ -1796,7 +1806,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../configuration/index.md" class="md-nav__link">
+      <a href="../../configuration/index.md" class="md-nav__link">
         
   
   
@@ -1824,7 +1834,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../configuration/why-externalize.md" class="md-nav__link">
+      <a href="../../configuration/why-externalize.md" class="md-nav__link">
         
   
   
@@ -1852,7 +1862,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../configuration/configuration-by-example.md" class="md-nav__link">
+      <a href="../../configuration/configuration-by-example.md" class="md-nav__link">
         
   
   
@@ -1880,7 +1890,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../configuration/strongly-typed-configuration.md" class="md-nav__link">
+      <a href="../../configuration/strongly-typed-configuration.md" class="md-nav__link">
         
   
   
@@ -1976,7 +1986,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../environment-management/index.md" class="md-nav__link">
+      <a href="../../environment-management/index.md" class="md-nav__link">
         
   
   
@@ -2004,7 +2014,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../environment-management/development-environment.md" class="md-nav__link">
+      <a href="../../environment-management/development-environment.md" class="md-nav__link">
         
   
   
@@ -2032,7 +2042,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../environment-management/staging-environment.md" class="md-nav__link">
+      <a href="../../environment-management/staging-environment.md" class="md-nav__link">
         
   
   
@@ -2060,7 +2070,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../environment-management/production-environment.md" class="md-nav__link">
+      <a href="../../environment-management/production-environment.md" class="md-nav__link">
         
   
   
@@ -2088,7 +2098,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../environment-management/configuring-development-environment.md" class="md-nav__link">
+      <a href="../../environment-management/configuring-development-environment.md" class="md-nav__link">
         
   
   
@@ -2116,7 +2126,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../environment-management/configuring-production-build.md" class="md-nav__link">
+      <a href="../../environment-management/configuring-production-build.md" class="md-nav__link">
         
   
   
@@ -2210,7 +2220,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../project-refactoring/index.md" class="md-nav__link">
+      <a href="../../project-refactoring/index.md" class="md-nav__link">
         
   
   
@@ -2238,7 +2248,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../project-refactoring/single-responsibility-principle.md" class="md-nav__link">
+      <a href="../../project-refactoring/single-responsibility-principle.md" class="md-nav__link">
         
   
   
@@ -2266,7 +2276,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../project-refactoring/modularity.md" class="md-nav__link">
+      <a href="../../project-refactoring/modularity.md" class="md-nav__link">
         
   
   
@@ -2294,7 +2304,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../project-refactoring/decoupling.md" class="md-nav__link">
+      <a href="../../project-refactoring/decoupling.md" class="md-nav__link">
         
   
   
@@ -2322,7 +2332,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../project-refactoring/internal-vs-external-dependencies.md" class="md-nav__link">
+      <a href="../../project-refactoring/internal-vs-external-dependencies.md" class="md-nav__link">
         
   
   
@@ -2416,7 +2426,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../dependency-management/index.md" class="md-nav__link">
+      <a href="../../dependency-management/index.md" class="md-nav__link">
         
   
   
@@ -2444,7 +2454,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../dependency-management/semantic-versioning.md" class="md-nav__link">
+      <a href="../../dependency-management/semantic-versioning.md" class="md-nav__link">
         
   
   
@@ -2472,7 +2482,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../dependency-management/breaking-changes.md" class="md-nav__link">
+      <a href="../../dependency-management/breaking-changes.md" class="md-nav__link">
         
   
   
@@ -2500,7 +2510,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../dependency-management/version-pinning.md" class="md-nav__link">
+      <a href="../../dependency-management/version-pinning.md" class="md-nav__link">
         
   
   
@@ -2528,7 +2538,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../dependency-management/package-managers.md" class="md-nav__link">
+      <a href="../../dependency-management/package-managers.md" class="md-nav__link">
         
   
   
@@ -2620,7 +2630,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../full-testing/index.md" class="md-nav__link">
+      <a href="../../full-testing/index.md" class="md-nav__link">
         
   
   
@@ -2648,7 +2658,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../full-testing/test-types.md" class="md-nav__link">
+      <a href="../../full-testing/test-types.md" class="md-nav__link">
         
   
   
@@ -2676,7 +2686,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../full-testing/integration-testing.md" class="md-nav__link">
+      <a href="../../full-testing/integration-testing.md" class="md-nav__link">
         
   
   
@@ -2704,7 +2714,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../full-testing/end-to-end-testing.md" class="md-nav__link">
+      <a href="../../full-testing/end-to-end-testing.md" class="md-nav__link">
         
   
   
@@ -2770,10 +2780,7 @@
   
 
 
-<h1 id="complexity-and-technical-debt">Complexity and Technical Debt<a class="headerlink" href="#complexity-and-technical-debt" title="Permanent link">&para;</a></h1>
-<p>In this section we will look at the relationship between two of the most important concepts in software development: complexity and technical debt.</p>
-<p>Software development practices and technology choices are fundamentally tools for managing complexity. Imagine you work in a warehouse, fetching hats for customers at the front desk. If there are only a few items, throwing everything into a pile might work fine. But as inventory grows, you add boxes and shelves, then basic labels, then more sophisticated labeling schemes — and eventually you might outgrow the building entirely.</p>
-<p>Technical debt is what happens when complexity goes unmanaged. It's the equivalent of running a thriving hat business out of that original pile. Customers at the front desk may not notice anything wrong at first, but what happens when they're left waiting at the front while you search for the hat they need? What happens when you need to know how many hats of a certain type are in stock? Eventually, progress will grind to a halt.</p>
+<h1 id="the-stack-trace">The Stack Trace<a class="headerlink" href="#the-stack-trace" title="Permanent link">&para;</a></h1>
 
 
 
@@ -2809,7 +2816,7 @@
       <nav class="md-footer__inner md-grid" aria-label="Footer" >
         
           
-          <a href="../living-software/resiliency/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Resilient Software">
+          <a href="../error-contracts/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Error Contracts">
             <div class="md-footer__button md-icon">
               
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
@@ -2819,20 +2826,20 @@
                 Previous
               </span>
               <div class="md-ellipsis">
-                Resilient Software
+                Error Contracts
               </div>
             </div>
           </a>
         
         
           
-          <a href="managing-complexity/" class="md-footer__link md-footer__link--next" aria-label="Next: Managing Complexity">
+          <a href="../logic/" class="md-footer__link md-footer__link--next" aria-label="Next: Logic Errors">
             <div class="md-footer__title">
               <span class="md-footer__direction">
                 Next
               </span>
               <div class="md-ellipsis">
-                Managing Complexity
+                Logic Errors
               </div>
             </div>
             <div class="md-footer__button md-icon">
@@ -2873,10 +2880,10 @@
     
       
       
-      <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": ["content.code.copy", "navigation.instant", "navigation.footer", "navigation.indexes", "navigation.top"], "search": "../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["content.code.copy", "navigation.instant", "navigation.footer", "navigation.indexes", "navigation.top"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
     
     
-      <script src="../assets/javascripts/bundle.79ae519e.min.js"></script>
+      <script src="../../assets/javascripts/bundle.79ae519e.min.js"></script>
       
     
   </body>

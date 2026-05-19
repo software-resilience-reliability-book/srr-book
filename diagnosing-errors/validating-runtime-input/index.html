@@ -10,13 +10,13 @@
         <meta name="author" content="Mike Jovanovich">
       
       
-        <link rel="canonical" href="https://software-resilience-reliability-book.github.io/srr-book/diagnosing-errors/validation-exceptions/">
+        <link rel="canonical" href="https://software-resilience-reliability-book.github.io/srr-book/diagnosing-errors/validating-runtime-input/">
       
       
         <link rel="prev" href="../print-logging/">
       
       
-        <link rel="next" href="../logic/">
+        <link rel="next" href="../handling-runtime-errors/">
       
       
         
@@ -995,6 +995,12 @@
       
         
       
+        
+      
+        
+      
+        
+      
     
     
     
@@ -1251,10 +1257,21 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#handling-expected-runtime-errors" class="md-nav__link">
+  <a href="#sources-of-external-data" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Handling Expected Runtime Errors
+        Sources of External Data
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#types-of-input-validation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Types of Input Validation
       
     </span>
   </a>
@@ -1265,6 +1282,90 @@
   
 </nav>
       
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../handling-runtime-errors/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Handling Runtime Errors
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../error-contracts/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Error Contracts
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../stack-trace/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    The Stack Trace
+  
+
+    
+  </span>
+  
+  
+
+      </a>
     </li>
   
 
@@ -2727,10 +2828,21 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#handling-expected-runtime-errors" class="md-nav__link">
+  <a href="#sources-of-external-data" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Handling Expected Runtime Errors
+        Sources of External Data
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#types-of-input-validation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Types of Input Validation
       
     </span>
   </a>
@@ -2758,39 +2870,85 @@
 
 
 <h1 id="validating-runtime-input">Validating Runtime Input<a class="headerlink" href="#validating-runtime-input" title="Permanent link">&para;</a></h1>
-<h2 id="handling-expected-runtime-errors">Handling Expected Runtime Errors<a class="headerlink" href="#handling-expected-runtime-errors" title="Permanent link">&para;</a></h2>
-<!-- In some cases, we can anticipate that an error will occur and handle it appropriately. For example, if we are expecting a user to provide a valid email address, we can validate the input before processing it.
-
-<div class="language-csharp highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-0-1"> 1</a></span>
-<span class="normal"><a href="#__codelineno-0-2"> 2</a></span>
-<span class="normal"><a href="#__codelineno-0-3"> 3</a></span>
-<span class="normal"><a href="#__codelineno-0-4"> 4</a></span>
-<span class="normal"><a href="#__codelineno-0-5"> 5</a></span>
-<span class="normal"><a href="#__codelineno-0-6"> 6</a></span>
-<span class="normal"><a href="#__codelineno-0-7"> 7</a></span>
-<span class="normal"><a href="#__codelineno-0-8"> 8</a></span>
-<span class="normal"><a href="#__codelineno-0-9"> 9</a></span>
-<span class="normal"><a href="#__codelineno-0-10">10</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1"></a><span class="k">static</span><span class="w"> </span><span class="kt">bool</span><span class="w"> </span><span class="nf">IsValidEmail</span><span class="p">(</span><span class="kt">string</span><span class="w"> </span><span class="n">email</span><span class="p">)</span><span class="w"> </span><span class="o">=&gt;</span>
-</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2"></a><span class="w">    </span><span class="n">email</span><span class="p">.</span><span class="n">Contains</span><span class="p">(</span><span class="s">&quot;@&quot;</span><span class="p">)</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="n">email</span><span class="p">.</span><span class="n">Contains</span><span class="p">(</span><span class="s">&quot;.&quot;</span><span class="p">);</span>
-</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3"></a>
-</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4"></a><span class="k">static</span><span class="w"> </span><span class="k">void</span><span class="w"> </span><span class="nf">ProcessEmail</span><span class="p">(</span><span class="kt">string</span><span class="w"> </span><span class="n">email</span><span class="p">)</span>
-</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5"></a><span class="p">{</span>
-</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6"></a><span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="o">!</span><span class="n">IsValidEmail</span><span class="p">(</span><span class="n">email</span><span class="p">))</span>
-</span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7"></a><span class="w">    </span><span class="p">{</span>
-</span><span id="__span-0-8"><a id="__codelineno-0-8" name="__codelineno-0-8"></a><span class="w">        </span><span class="k">throw</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="nf">ArgumentException</span><span class="p">(</span><span class="s">&quot;Invalid email address&quot;</span><span class="p">);</span>
-</span><span id="__span-0-9"><a id="__codelineno-0-9" name="__codelineno-0-9"></a><span class="w">    </span><span class="p">}</span>
-</span><span id="__span-0-10"><a id="__codelineno-0-10" name="__codelineno-0-10"></a><span class="p">}</span>
-</span></code></pre></div></td></tr></table></div>
-
-Prefer validation to exception handling when possible.
-
-Exceptions form part of the contract of the application. It is the caller's responsibility to handle them.
-
-Alternatives to exceptions: .NET example would be Result<T>
-
-This will need broken into multiple pages, so may as well do so for compile-time error page as well.
-
--->
+<h2 id="sources-of-external-data">Sources of External Data<a class="headerlink" href="#sources-of-external-data" title="Permanent link">&para;</a></h2>
+<p>It is rare to have an application that does not have some source of external data feeding into it.</p>
+<p>This data may come from:</p>
+<ul>
+<li>Command line input</li>
+<li>Web forms or API requests</li>
+<li>Databases</li>
+<li>Parsed data files (CSV, XML, JSON, etc.)</li>
+<li>Configuration files</li>
+<li>Environment variables</li>
+<li>Command line arguments</li>
+<li>File paths or network resource locations</li>
+</ul>
+<p>External data is a leading cause of runtime errors. Because values are not known in advance, the system must be programmed defensively to handle unexpected values.</p>
+<p>All external inputs must be treated as untrusted data and potential points of failure.</p>
+<!-- prettier-ignore -->
+<div class="admonition warning">
+<p class="admonition-title">Know your Secure Coding Practices!</p>
+<p>In this book we do not cover the security aspects of handling external data. Our focus is on sanitizing and validating the data to ensure it is in a format that the application can process.</p>
+<p>Secure coding practices form a necessary part of a software developer's skillset, and should be studied in depth.</p>
+</div>
+<h2 id="types-of-input-validation">Types of Input Validation<a class="headerlink" href="#types-of-input-validation" title="Permanent link">&para;</a></h2>
+<p><strong>Validation</strong> checks whether the provided value is allowed according to the business rules that are in place and the data types that the application uses. The categories below provide some guidelines on what to look for in the context of user input. Be aware, though, that this input may come from any of the sources listed above.</p>
+<table>
+<thead>
+<tr>
+<th>Category</th>
+<th>What to check</th>
+<th>Example</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Required</strong></td>
+<td>Are empty values allowed for the field?</td>
+<td>User leaves a required field blank.</td>
+</tr>
+<tr>
+<td><strong>Type</strong></td>
+<td>Can the input be converted to the type your code expects?</td>
+<td>User types <code>one</code> when a number is required.</td>
+</tr>
+<tr>
+<td><strong>Numeric shape</strong></td>
+<td>After parsing, is the value the right kind of number?</td>
+<td>User enters <code>3.14</code> when only whole numbers are allowed, or <code>1.5</code> when an integer count is required.</td>
+</tr>
+<tr>
+<td><strong>Range</strong></td>
+<td>Is the value within allowed business limits (min/max)?</td>
+<td>User enters age <code>-99</code> or <code>500</code>.</td>
+</tr>
+<tr>
+<td><strong>Overflow</strong></td>
+<td>Is the value too large or too small for the type or storage that will hold it?</td>
+<td>User enters a 20-digit number that does not fit in a 32-bit integer, or a total that exceeds a database column's maximum.</td>
+</tr>
+<tr>
+<td><strong>Format</strong></td>
+<td>Does the text follow the expected layout (separators, order, units)?</td>
+<td>User types <code>12/31/2025</code> when the app expects <code>2025-12-31</code>.</td>
+</tr>
+<tr>
+<td><strong>Length</strong></td>
+<td>Does the input have the expected number of characters or items?</td>
+<td>User enters a 4-digit PIN with only 3 digits, or a username longer than the 50-character limit.</td>
+</tr>
+<tr>
+<td><strong>Allowed characters</strong></td>
+<td>Does the input use only characters your rules permit?</td>
+<td>User types letters in a digits-only field, or includes spaces in a code that must be alphanumeric.</td>
+</tr>
+<tr>
+<td><strong>Pattern</strong></td>
+<td>Does the input match a required structure (often a regex)?</td>
+<td>User types <code>bob.example.com</code> when an email must contain <code>@</code> and a domain.</td>
+</tr>
+</tbody>
+</table>
 
 
 
@@ -2843,13 +3001,13 @@ This will need broken into multiple pages, so may as well do so for compile-time
         
         
           
-          <a href="../logic/" class="md-footer__link md-footer__link--next" aria-label="Next: Logic Errors">
+          <a href="../handling-runtime-errors/" class="md-footer__link md-footer__link--next" aria-label="Next: Handling Runtime Errors">
             <div class="md-footer__title">
               <span class="md-footer__direction">
                 Next
               </span>
               <div class="md-ellipsis">
-                Logic Errors
+                Handling Runtime Errors
               </div>
             </div>
             <div class="md-footer__button md-icon">
