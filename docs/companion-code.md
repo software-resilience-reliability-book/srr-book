@@ -7,7 +7,7 @@ This book contains code in two formats:
 - Standalone code examples that can be run directly or wired up with minimal effort
 - Code examples that are part of a larger solution that is used to demonstrate a concept
 
-The project that is used to illustrate most of the concepts is a [Color Transform Application](https://github.com/software-resilience-reliability-book/color-transform-library).
+The project that is used to illustrate most of the concepts is a [Color Transform Application](https://github.com/software-resilience-reliability-book/color-transform).
 
 We encourage you to clone or download this repository and run the examples for yourself. The best way to learn software development concepts is to read, and try out, existing solutions.
 
