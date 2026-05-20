@@ -1584,10 +1584,21 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#example-test-suite" class="md-nav__link">
+  <a href="#creating-a-test-suite" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Example Test Suite
+        Creating a Test Suite
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#summary-of-what-to-test" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Summary of What to Test
       
     </span>
   </a>
@@ -2921,10 +2932,21 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#example-test-suite" class="md-nav__link">
+  <a href="#creating-a-test-suite" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Example Test Suite
+        Creating a Test Suite
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#summary-of-what-to-test" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Summary of What to Test
       
     </span>
   </a>
@@ -2981,7 +3003,7 @@
 <p>Sticking with our "single, atomic fact about a unit of behavior" definition for a test, we should typically aim for out tests to assert "one thing per test". The test above is actually testing that each component is correct, so we could have written three tests for it: one to verify the red value, one for green, and one for blue.</p>
 <p>In this case we considered the multiple assertions to be acceptible for this unit of behavior, but this is more of an exception to the general rule. It is ideal to have a test assert only one thing. Tests are cheap, and it is okay to have many tests.</p>
 </div>
-<h2 id="example-test-suite">Example Test Suite<a class="headerlink" href="#example-test-suite" title="Permanent link">&para;</a></h2>
+<h2 id="creating-a-test-suite">Creating a Test Suite<a class="headerlink" href="#creating-a-test-suite" title="Permanent link">&para;</a></h2>
 <p>Suppose we want to test the following functionality:</p>
 <div class="language-csharp highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="k">public</span><span class="w"> </span><span class="n">RgbColor</span><span class="w"> </span><span class="nf">FromHexString</span><span class="p">(</span><span class="kt">string</span><span class="w"> </span><span class="n">hex</span><span class="p">)</span>
 </span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="p">{</span>
@@ -3023,15 +3045,27 @@
 <li><code>hex_string_with_leading_hash_creates_correct_rbg_component_values</code></li>
 <li><code>hex_string_without_leading_hash_creates_correct_rbg_component_values</code></li>
 </ul>
-<hr />
-<p>... Sticking with our "single, atomic fact about a unit of behavior" definition for a test, we should aim to name tests in such a way that the reader understands what the test verifies.</p>
-<p>... "single, atomic fact about a unit of behavior".</p>
-<hr />
-<!-- # Practical advice on how to write effective tests.
-# Naming conventions
-# How to systematically cover behavior: golden path, edge cases,
-# boundary conditions, and error contracts.
-# Tabular tests(? is that what they're called?) -->
+<h2 id="summary-of-what-to-test">Summary of What to Test<a class="headerlink" href="#summary-of-what-to-test" title="Permanent link">&para;</a></h2>
+<p>We can view our system under test (in this case the <code>FromHexString</code> method) as a black box. We can only see the inputs and outputs, not the internal workings.</p>
+<p>Our test suite from above tested the following:</p>
+<table>
+<thead>
+<tr>
+<th>Behavior</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Return Values</td>
+<td>Test all segmented input / output combinations.</td>
+</tr>
+<tr>
+<td>Error Conditions</td>
+<td>Test that the error contract for the system under test is met. If an exception should be thrown, check for this. If an error value should be returned, check for this.</td>
+</tr>
+</tbody>
+</table>
 
 
 
