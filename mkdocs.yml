@@ -111,10 +111,8 @@ nav:
       - unit-testing/writing-effective-tests.md
       - unit-testing/test-segmentation.md
       - unit-testing/parameterized-tests.md
-
-      # Keep this very simple - example where current date is used for greeting;
-      # Explain that we should actually refactor the function itself to accept date as a parameter.
-      - unit-testing/controlling-external-dependencies.md
+      - unit-testing/controlling-test-dependencies.md
+      - unit-testing/knowing-what-to-test.md
 
   - Leveraging the Type System:
       # Use the reference project
