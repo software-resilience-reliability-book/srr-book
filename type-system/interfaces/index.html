@@ -10,13 +10,13 @@
         <meta name="author" content="Mike Jovanovich">
       
       
-        <link rel="canonical" href="https://software-resilience-reliability-book.github.io/srr-book/unit-testing/writing-effective-tests/">
+        <link rel="canonical" href="https://software-resilience-reliability-book.github.io/srr-book/type-system/interfaces/">
       
       
-        <link rel="prev" href="../arrange-act-assert/">
+        <link rel="prev" href="../exception-types/">
       
       
-        <link rel="next" href="../test-segmentation/">
+        <link rel="next" href="../controlling-test-environment/">
       
       
         
@@ -27,7 +27,7 @@
     
     
       
-        <title>Writing Effective Tests - Software Resilience and Reliability</title>
+        <title>Interfaces - Software Resilience and Reliability</title>
       
     
     
@@ -80,7 +80,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#writing-effective-tests" class="md-skip">
+        <a href="#interfaces" class="md-skip">
           Skip to content
         </a>
       
@@ -116,7 +116,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Writing Effective Tests
+              Interfaces
             
           </span>
         </div>
@@ -1339,8 +1339,6 @@
       
   
   
-    
-  
   
   
     
@@ -1370,15 +1368,15 @@
     
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7" >
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../" class="md-nav__link ">
+            <a href="../../unit-testing/" class="md-nav__link ">
               
   
   
@@ -1402,7 +1400,7 @@
             
           </div>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_7">
             <span class="md-nav__icon md-icon"></span>
             
@@ -1422,7 +1420,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../unit-testing/" class="md-nav__link">
+      <a href="../../unit-testing/unit-testing/" class="md-nav__link">
         
   
   
@@ -1450,7 +1448,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../using-reference-project/" class="md-nav__link">
+      <a href="../../unit-testing/using-reference-project/" class="md-nav__link">
         
   
   
@@ -1478,7 +1476,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../arrange-act-assert/" class="md-nav__link">
+      <a href="../../unit-testing/arrange-act-assert/" class="md-nav__link">
         
   
   
@@ -1503,37 +1501,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Writing Effective Tests
-  
-
-    
-  </span>
-  
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../../unit-testing/writing-effective-tests/" class="md-nav__link">
         
   
   
@@ -1549,70 +1520,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#naming-conventions" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Naming Conventions
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#fixing-an-earlier-test" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Fixing an Earlier Test
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#creating-a-test-suite" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Creating a Test Suite
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#summary-of-what-to-test" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Summary of What to Test
-      
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -1625,7 +1532,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../test-segmentation/" class="md-nav__link">
+      <a href="../../unit-testing/test-segmentation/" class="md-nav__link">
         
   
   
@@ -1653,7 +1560,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../parameterized-tests/" class="md-nav__link">
+      <a href="../../unit-testing/parameterized-tests/" class="md-nav__link">
         
   
   
@@ -1681,7 +1588,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../controlling-test-dependencies/" class="md-nav__link">
+      <a href="../../unit-testing/controlling-test-dependencies/" class="md-nav__link">
         
   
   
@@ -1709,7 +1616,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../knowing-what-to-test/" class="md-nav__link">
+      <a href="../../unit-testing/knowing-what-to-test/" class="md-nav__link">
         
   
   
@@ -1741,6 +1648,8 @@
       
   
   
+    
+  
   
   
     
@@ -1766,15 +1675,15 @@
     
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8" checked>
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../type-system/" class="md-nav__link ">
+            <a href="../" class="md-nav__link ">
               
   
   
@@ -1798,7 +1707,7 @@
             
           </div>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_8_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_8_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_8">
             <span class="md-nav__icon md-icon"></span>
             
@@ -1818,7 +1727,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../type-system/classes/" class="md-nav__link">
+      <a href="../classes/" class="md-nav__link">
         
   
   
@@ -1846,7 +1755,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../type-system/protecting-invariants/" class="md-nav__link">
+      <a href="../protecting-invariants/" class="md-nav__link">
         
   
   
@@ -1874,7 +1783,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../type-system/enums/" class="md-nav__link">
+      <a href="../enums/" class="md-nav__link">
         
   
   
@@ -1902,7 +1811,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../type-system/exception-types/" class="md-nav__link">
+      <a href="../exception-types/" class="md-nav__link">
         
   
   
@@ -1927,10 +1836,19 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../../type-system/interfaces/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   
@@ -1946,6 +1864,7 @@
   
 
       </a>
+      
     </li>
   
 
@@ -1958,7 +1877,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../type-system/controlling-test-environment/" class="md-nav__link">
+      <a href="../controlling-test-environment/" class="md-nav__link">
         
   
   
@@ -3006,58 +2925,6 @@
     
   
   
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#naming-conventions" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Naming Conventions
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#fixing-an-earlier-test" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Fixing an Earlier Test
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#creating-a-test-suite" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Creating a Test Suite
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#summary-of-what-to-test" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Summary of What to Test
-      
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
 </nav>
                   </div>
                 </div>
@@ -3076,99 +2943,38 @@
   
 
 
-<h1 id="writing-effective-tests">Writing Effective Tests<a class="headerlink" href="#writing-effective-tests" title="Permanent link">&para;</a></h1>
-<h2 id="naming-conventions">Naming Conventions<a class="headerlink" href="#naming-conventions" title="Permanent link">&para;</a></h2>
-<p>Borrowing again from Khorikov's book, some recommendations for naming tests are:</p>
-<ul>
-<li><em>"Name the test as if you were describing the scenario to a non-programmer who is familiar with the problem domain"</em>. Someone with an understanding of the application should be able to read the names of the tests and easily know what each is verifying.</li>
-<li><em>"Don't follow a rigid naming policy"</em>. There is no need to apply artificial constraints to test names just to make them fit a naming scheme.</li>
-</ul>
-<p>Refactoring code is a common practice, and method names often change. In order to ensure that tests are resistent to refactoring, it is best to avoid tying the test name to a particular method.</p>
-<h2 id="fixing-an-earlier-test">Fixing an Earlier Test<a class="headerlink" href="#fixing-an-earlier-test" title="Permanent link">&para;</a></h2>
-<p>Let's again bring up our test from earlier:</p>
-<div class="language-csharp highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="na">[Fact]</span>
-</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="k">public</span><span class="w"> </span><span class="k">void</span><span class="w"> </span><span class="nf">hex_string_creates_rgb_color_when_valid</span><span class="p">()</span>
-</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="p">{</span>
-</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="w">    </span><span class="kt">var</span><span class="w"> </span><span class="n">converter</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">HexConverter</span><span class="p">();</span>
-</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>
-</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a><span class="w">    </span><span class="kt">var</span><span class="w"> </span><span class="n">color</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">converter</span><span class="p">.</span><span class="n">FromHexString</span><span class="p">(</span><span class="s">&quot;#FF5511&quot;</span><span class="p">);</span>
-</span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a>
-</span><span id="__span-0-8"><a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a><span class="w">    </span><span class="n">Assert</span><span class="p">.</span><span class="n">Equal</span><span class="p">(</span><span class="mi">255</span><span class="p">,</span><span class="w"> </span><span class="n">color</span><span class="p">.</span><span class="n">Red</span><span class="p">);</span>
-</span><span id="__span-0-9"><a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a><span class="w">    </span><span class="n">Assert</span><span class="p">.</span><span class="n">Equal</span><span class="p">(</span><span class="mi">85</span><span class="p">,</span><span class="w"> </span><span class="n">color</span><span class="p">.</span><span class="n">Green</span><span class="p">);</span>
-</span><span id="__span-0-10"><a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a><span class="w">    </span><span class="n">Assert</span><span class="p">.</span><span class="n">Equal</span><span class="p">(</span><span class="mi">17</span><span class="p">,</span><span class="w"> </span><span class="n">color</span><span class="p">.</span><span class="n">Blue</span><span class="p">);</span>
-</span><span id="__span-0-11"><a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a><span class="p">}</span>
+<h1 id="interfaces">Interfaces<a class="headerlink" href="#interfaces" title="Permanent link">&para;</a></h1>
+<p>Interfaces are related to classes in that they establish guarantees about data and behavior of a type. Unlike classes, however, interfaces do not provide values for the data or implementations for the behavior. They rely on a class to implement the interface.</p>
+<p>Let's again refer to our reference project. The library offers several different ways to transform one color to another. Each of these ways has its own class that implements the <code>IColorTransform</code> interface.</p>
+<div class="language-csharp highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="k">public</span><span class="w"> </span><span class="k">interface</span><span class="w"> </span><span class="n">IColorTransform</span>
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="p">{</span>
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="w">    </span><span class="n">RgbColor</span><span class="w"> </span><span class="nf">Apply</span><span class="p">(</span><span class="n">RgbColor</span><span class="w"> </span><span class="n">color</span><span class="p">);</span>
+</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="p">}</span>
 </span></code></pre></div>
-<p>While writing this section we noticed that the name for this test doesn't meet the first recommendation from above. If we were to hand this off to a non-programmer, how would they interpret "creates RGB color"?</p>
-<p>A better name for this test is <code>hex_string_creates_correct_rbg_component_values</code>. That is what this test really verifies.</p>
-<!-- prettier-ignore -->
-<div class="admonition info">
-<p class="admonition-title">Aren't We Testing Multiple Things?</p>
-<p>Sticking with our "single, atomic fact about a unit of behavior" definition for a test, we should typically aim for out tests to assert "one thing per test". The test above is actually testing that each component is correct, so we could have written three tests for it: one to verify the red value, one for green, and one for blue.</p>
-<p>In this case we considered the multiple assertions to be acceptible for this unit of behavior, but this is more of an exception to the general rule. It is ideal to have a test assert only one thing. Tests are cheap, and it is okay to have many tests.</p>
-</div>
-<h2 id="creating-a-test-suite">Creating a Test Suite<a class="headerlink" href="#creating-a-test-suite" title="Permanent link">&para;</a></h2>
-<p>Suppose we want to test the following functionality:</p>
-<div class="language-csharp highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="k">public</span><span class="w"> </span><span class="n">RgbColor</span><span class="w"> </span><span class="nf">FromHexString</span><span class="p">(</span><span class="kt">string</span><span class="w"> </span><span class="n">hex</span><span class="p">)</span>
+<p>Any class that implements the <code>IColorTransform</code> interface is guaranteed to have an <code>Apply</code> method that takes a <code>RgbColor</code> as input and returns a <code>RgbColor</code>. If not the code will not compile.</p>
+<p>This becomes useful when we need to write a function that must transform a color, but doesn't need to know which transform that it will use.</p>
+<div class="language-csharp highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="k">public</span><span class="w"> </span><span class="k">class</span><span class="w"> </span><span class="nc">PaletteTransformer</span>
 </span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="p">{</span>
-</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="w">    </span><span class="n">hex</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">hex</span><span class="p">.</span><span class="n">TrimStart</span><span class="p">(</span><span class="sc">&#39;#&#39;</span><span class="p">);</span>
+</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="w">    </span><span class="k">private</span><span class="w"> </span><span class="k">readonly</span><span class="w"> </span><span class="n">IColorTransform</span><span class="w"> </span><span class="n">_transform</span><span class="p">;</span>
 </span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a>
-</span><span id="__span-1-5"><a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a><span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">hex</span><span class="p">.</span><span class="n">Length</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="mi">6</span><span class="p">)</span>
-</span><span id="__span-1-6"><a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a><span class="w">        </span><span class="k">throw</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="nf">ArgumentException</span><span class="p">(</span><span class="s">&quot;Hex color must be 6 characters.&quot;</span><span class="p">,</span><span class="w"> </span><span class="k">nameof</span><span class="p">(</span><span class="n">hex</span><span class="p">));</span>
-</span><span id="__span-1-7"><a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a>
-</span><span id="__span-1-8"><a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a><span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="o">!</span><span class="n">System</span><span class="p">.</span><span class="n">Text</span><span class="p">.</span><span class="n">RegularExpressions</span><span class="p">.</span><span class="n">Regex</span><span class="p">.</span><span class="n">IsMatch</span><span class="p">(</span><span class="n">hex</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;^[0-9A-Fa-f]{6}$&quot;</span><span class="p">))</span>
-</span><span id="__span-1-9"><a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a><span class="w">        </span><span class="k">throw</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="nf">ArgumentException</span><span class="p">(</span><span class="s">&quot;Hex color must contain only hex characters.&quot;</span><span class="p">,</span><span class="w"> </span><span class="k">nameof</span><span class="p">(</span><span class="n">hex</span><span class="p">));</span>
-</span><span id="__span-1-10"><a id="__codelineno-1-10" name="__codelineno-1-10" href="#__codelineno-1-10"></a>
-</span><span id="__span-1-11"><a id="__codelineno-1-11" name="__codelineno-1-11" href="#__codelineno-1-11"></a><span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="nf">RgbColor</span><span class="p">(</span>
-</span><span id="__span-1-12"><a id="__codelineno-1-12" name="__codelineno-1-12" href="#__codelineno-1-12"></a><span class="w">        </span><span class="n">Convert</span><span class="p">.</span><span class="n">ToInt32</span><span class="p">(</span><span class="n">hex</span><span class="p">[</span><span class="mi">0</span><span class="p">.</span><span class="mf">.2</span><span class="p">],</span><span class="w"> </span><span class="mi">16</span><span class="p">),</span>
-</span><span id="__span-1-13"><a id="__codelineno-1-13" name="__codelineno-1-13" href="#__codelineno-1-13"></a><span class="w">        </span><span class="n">Convert</span><span class="p">.</span><span class="n">ToInt32</span><span class="p">(</span><span class="n">hex</span><span class="p">[</span><span class="mi">2</span><span class="p">.</span><span class="mf">.4</span><span class="p">],</span><span class="w"> </span><span class="mi">16</span><span class="p">),</span>
-</span><span id="__span-1-14"><a id="__codelineno-1-14" name="__codelineno-1-14" href="#__codelineno-1-14"></a><span class="w">        </span><span class="n">Convert</span><span class="p">.</span><span class="n">ToInt32</span><span class="p">(</span><span class="n">hex</span><span class="p">[</span><span class="mi">4</span><span class="p">.</span><span class="mf">.6</span><span class="p">],</span><span class="w"> </span><span class="mi">16</span><span class="p">)</span>
-</span><span id="__span-1-15"><a id="__codelineno-1-15" name="__codelineno-1-15" href="#__codelineno-1-15"></a><span class="w">    </span><span class="p">);</span>
-</span><span id="__span-1-16"><a id="__codelineno-1-16" name="__codelineno-1-16" href="#__codelineno-1-16"></a><span class="p">}</span>
+</span><span id="__span-1-5"><a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a><span class="w">    </span><span class="k">public</span><span class="w"> </span><span class="nf">PaletteTransformer</span><span class="p">(</span><span class="n">IColorTransform</span><span class="w"> </span><span class="n">transform</span><span class="p">)</span>
+</span><span id="__span-1-6"><a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a><span class="w">    </span><span class="p">{</span>
+</span><span id="__span-1-7"><a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a><span class="w">        </span><span class="n">_transform</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">transform</span><span class="p">;</span>
+</span><span id="__span-1-8"><a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a><span class="w">    </span><span class="p">}</span>
+</span><span id="__span-1-9"><a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a>
+</span><span id="__span-1-10"><a id="__codelineno-1-10" name="__codelineno-1-10" href="#__codelineno-1-10"></a><span class="w">    </span><span class="k">public</span><span class="w"> </span><span class="n">ColorPalette</span><span class="w"> </span><span class="nf">Transform</span><span class="p">(</span><span class="n">ColorPalette</span><span class="w"> </span><span class="n">palette</span><span class="p">)</span>
+</span><span id="__span-1-11"><a id="__codelineno-1-11" name="__codelineno-1-11" href="#__codelineno-1-11"></a><span class="w">    </span><span class="p">{</span>
+</span><span id="__span-1-12"><a id="__codelineno-1-12" name="__codelineno-1-12" href="#__codelineno-1-12"></a><span class="w">        </span><span class="kt">var</span><span class="w"> </span><span class="n">transformedColors</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">List</span><span class="o">&lt;</span><span class="n">RgbColor</span><span class="o">&gt;</span><span class="p">();</span>
+</span><span id="__span-1-13"><a id="__codelineno-1-13" name="__codelineno-1-13" href="#__codelineno-1-13"></a><span class="w">        </span><span class="k">foreach</span><span class="w"> </span><span class="p">(</span><span class="kt">var</span><span class="w"> </span><span class="n">color</span><span class="w"> </span><span class="k">in</span><span class="w"> </span><span class="n">palette</span><span class="p">.</span><span class="n">Colors</span><span class="p">)</span>
+</span><span id="__span-1-14"><a id="__codelineno-1-14" name="__codelineno-1-14" href="#__codelineno-1-14"></a><span class="w">        </span><span class="p">{</span>
+</span><span id="__span-1-15"><a id="__codelineno-1-15" name="__codelineno-1-15" href="#__codelineno-1-15"></a><span class="w">            </span><span class="n">transformedColors</span><span class="p">.</span><span class="n">Add</span><span class="p">(</span><span class="n">_transform</span><span class="p">.</span><span class="n">Apply</span><span class="p">(</span><span class="n">color</span><span class="p">));</span>
+</span><span id="__span-1-16"><a id="__codelineno-1-16" name="__codelineno-1-16" href="#__codelineno-1-16"></a><span class="w">        </span><span class="p">}</span>
+</span><span id="__span-1-17"><a id="__codelineno-1-17" name="__codelineno-1-17" href="#__codelineno-1-17"></a><span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="nf">ColorPalette</span><span class="p">(</span><span class="n">transformedColors</span><span class="p">,</span><span class="w"> </span><span class="n">palette</span><span class="p">.</span><span class="n">Name</span><span class="p">);</span>
+</span><span id="__span-1-18"><a id="__codelineno-1-18" name="__codelineno-1-18" href="#__codelineno-1-18"></a><span class="w">    </span><span class="p">}</span>
+</span><span id="__span-1-19"><a id="__codelineno-1-19" name="__codelineno-1-19" href="#__codelineno-1-19"></a><span class="p">}</span>
 </span></code></pre></div>
-<p>Let's consider the external behavior that should be verified by our tests:</p>
-<ul>
-<li>It should be okay to pass in a hex string with a leading <code>#</code> character.</li>
-<li>It should be okay to pass in a hex string without a leading <code>#</code> character.</li>
-<li>A hex string that is not 6 characters long should be rejected.</li>
-<li>A hex string that contains characters other than hex characters (0-9, A-F, a-f) should be rejected.</li>
-<li>When a valid 6-character hex string is provided, the <code>FromHexString</code> method should return an <code>RgbColor</code> object with the correct RGB component values.</li>
-</ul>
-<p>We could break these down into the following tests, one per behavior:</p>
-<ul>
-<li><code>hex_string_with_leading_hash_creates_rgb_color</code></li>
-<li><code>hex_string_without_leading_hash_creates_rgb_color</code></li>
-<li><code>hex_string_fails_when_not_six_characters</code></li>
-<li><code>hex_string_fails_when_contains_invalid_hex_characters</code></li>
-<li><code>hex_string_creates_correct_rbg_component_values</code></li>
-</ul>
-<p>If we do this, however, it would be difficult to write the first two tests without also verifying the bahavior of the last test. We can instead prefer this list:</p>
-<ul>
-<li><code>hex_string_fails_when_not_six_characters</code></li>
-<li><code>hex_string_fails_when_contains_invalid_hex_characters</code></li>
-<li><code>hex_string_with_leading_hash_creates_correct_rbg_component_values</code></li>
-<li><code>hex_string_without_leading_hash_creates_correct_rbg_component_values</code></li>
-</ul>
-<h2 id="summary-of-what-to-test">Summary of What to Test<a class="headerlink" href="#summary-of-what-to-test" title="Permanent link">&para;</a></h2>
-<p>We can view our system under test (in this case the <code>FromHexString</code> method) as a black box. We can only see the inputs and outputs, not the internal workings.</p>
-<p>Our test suite from above tested the following:</p>
-<table>
-<thead>
-<tr>
-<th>Behavior</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Return Values</td>
-<td>Test all segmented input / output combinations.</td>
-</tr>
-<tr>
-<td>Error Conditions</td>
-<td>Test that the error contract for the system under test is met. If an exception should be thrown, check for this. If an error value should be returned, check for this.</td>
-</tr>
-</tbody>
-</table>
+<p>The <code>PaletteTransformer</code> class is responsible for applying a color transform to a color palette, which contains a collection of colors. It takes an <code>IColorTransform</code> as a dependency in its constructor. This allows us to inject different transform implementations into the class, such as <code>InvertTransform</code> or <code>TintTransform</code>.</p>
+<p><code>PalleteTransformer</code> calls the <code>Apply</code> method on whichever class that it is holding a reference to (<code>_transform.Apply</code>). The <code>_transform</code> field may hold a reference to an <code>InvertTransform</code> or a <code>TintTransform</code>, but it doesn't matter to the <code>PaletteTransformer</code> class.</p>
 
 
 
@@ -3204,7 +3010,7 @@
       <nav class="md-footer__inner md-grid" aria-label="Footer" >
         
           
-          <a href="../arrange-act-assert/" class="md-footer__link md-footer__link--prev" aria-label="Previous: The Arrange-Act-Assert Pattern">
+          <a href="../exception-types/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Exception types">
             <div class="md-footer__button md-icon">
               
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
@@ -3214,20 +3020,20 @@
                 Previous
               </span>
               <div class="md-ellipsis">
-                The Arrange-Act-Assert Pattern
+                Exception types
               </div>
             </div>
           </a>
         
         
           
-          <a href="../test-segmentation/" class="md-footer__link md-footer__link--next" aria-label="Next: Test Segmentation">
+          <a href="../controlling-test-environment/" class="md-footer__link md-footer__link--next" aria-label="Next: Controlling the Test Environment">
             <div class="md-footer__title">
               <span class="md-footer__direction">
                 Next
               </span>
               <div class="md-ellipsis">
-                Test Segmentation
+                Controlling the Test Environment
               </div>
             </div>
             <div class="md-footer__button md-icon">

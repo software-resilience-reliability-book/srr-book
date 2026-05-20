@@ -137,7 +137,15 @@
          <lastmod>2026-05-20</lastmod>
     </url>
     <url>
-         <loc>https://software-resilience-reliability-book.github.io/srr-book/type-system/enums-and-fixed-sets/</loc>
+         <loc>https://software-resilience-reliability-book.github.io/srr-book/type-system/classes/</loc>
+         <lastmod>2026-05-20</lastmod>
+    </url>
+    <url>
+         <loc>https://software-resilience-reliability-book.github.io/srr-book/type-system/controlling-test-environment/</loc>
+         <lastmod>2026-05-20</lastmod>
+    </url>
+    <url>
+         <loc>https://software-resilience-reliability-book.github.io/srr-book/type-system/enums/</loc>
          <lastmod>2026-05-20</lastmod>
     </url>
     <url>
@@ -145,15 +153,11 @@
          <lastmod>2026-05-20</lastmod>
     </url>
     <url>
+         <loc>https://software-resilience-reliability-book.github.io/srr-book/type-system/interfaces/</loc>
+         <lastmod>2026-05-20</lastmod>
+    </url>
+    <url>
          <loc>https://software-resilience-reliability-book.github.io/srr-book/type-system/protecting-invariants/</loc>
-         <lastmod>2026-05-20</lastmod>
-    </url>
-    <url>
-         <loc>https://software-resilience-reliability-book.github.io/srr-book/type-system/testing-with-interfaces/</loc>
-         <lastmod>2026-05-20</lastmod>
-    </url>
-    <url>
-         <loc>https://software-resilience-reliability-book.github.io/srr-book/type-system/types-as-contracts/</loc>
          <lastmod>2026-05-20</lastmod>
     </url>
     <url>

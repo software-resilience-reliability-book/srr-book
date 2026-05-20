@@ -10,13 +10,11 @@
         <meta name="author" content="Mike Jovanovich">
       
       
-        <link rel="canonical" href="https://software-resilience-reliability-book.github.io/srr-book/type-system/testing-with-interfaces/">
+        <link rel="canonical" href="https://software-resilience-reliability-book.github.io/srr-book/type-system/controlling-test-environment/">
       
       
-        <link rel="prev" href="../types-as-contracts/">
+        <link rel="prev" href="../interfaces/">
       
-      
-        <link rel="next" href="../protecting-invariants/">
       
       
         
@@ -27,7 +25,7 @@
     
     
       
-        <title>Testing with Interfaces - Software Resilience and Reliability</title>
+        <title>Controlling the Test Environment - Software Resilience and Reliability</title>
       
     
     
@@ -80,7 +78,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#testing-with-interfaces" class="md-skip">
+        <a href="#controlling-the-test-environment" class="md-skip">
           Skip to content
         </a>
       
@@ -116,7 +114,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Testing with Interfaces
+              Controlling the Test Environment
             
           </span>
         </div>
@@ -1669,6 +1667,8 @@
       
         
       
+        
+      
     
     
     
@@ -1725,14 +1725,126 @@
   
   
     <li class="md-nav__item">
-      <a href="../types-as-contracts/" class="md-nav__link">
+      <a href="../classes/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    Types as Contracts
+    Classes
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../protecting-invariants/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Protecting Invariants
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../enums/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Enumerations
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../exception-types/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Exception types
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../interfaces/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Interfaces
   
 
     
@@ -1769,7 +1881,7 @@
   <span class="md-ellipsis">
     
   
-    Testing with Interfaces
+    Controlling the Test Environment
   
 
     
@@ -1787,7 +1899,7 @@
   <span class="md-ellipsis">
     
   
-    Testing with Interfaces
+    Controlling the Test Environment
   
 
     
@@ -1824,10 +1936,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#mocking-a-colortransform" class="md-nav__link">
+  <a href="#faking-a-colortransform" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Mocking a ColorTransform
+        Faking a ColorTransform
       
     </span>
   </a>
@@ -1910,90 +2022,6 @@
   
 </nav>
       
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../protecting-invariants/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Protecting invariants
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../enums-and-fixed-sets/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Enums and fixed sets
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../exception-types/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Exception types
-  
-
-    
-  </span>
-  
-  
-
-      </a>
     </li>
   
 
@@ -3044,10 +3072,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#mocking-a-colortransform" class="md-nav__link">
+  <a href="#faking-a-colortransform" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Mocking a ColorTransform
+        Faking a ColorTransform
       
     </span>
   </a>
@@ -3146,14 +3174,14 @@
   
 
 
-<h1 id="testing-with-interfaces">Testing with Interfaces<a class="headerlink" href="#testing-with-interfaces" title="Permanent link">&para;</a></h1>
+<h1 id="controlling-the-test-environment">Controlling the Test Environment<a class="headerlink" href="#controlling-the-test-environment" title="Permanent link">&para;</a></h1>
 <h2 id="why-use-interfaces-in-tests">Why use Interfaces in Tests?<a class="headerlink" href="#why-use-interfaces-in-tests" title="Permanent link">&para;</a></h2>
-<p>Interfaces are used frequently in unit tests, because they allow us to:</p>
+<p>The use of interfaces is by no means specific to tests; however interfaces are used frequently in unit tests because they allow us to:</p>
 <ul>
-<li>Isolate the system under test, so that it does not depend on the implementation of the inputs supplied to it</li>
-<li>Simplify the creation of input data for the system under test</li>
+<li>Make test output predictable and deterministic by supplying controlled inputs</li>
+<li>Provide simplified versions of test dependencies that otherwise would be complex or costly to create</li>
 </ul>
-<h2 id="mocking-a-colortransform">Mocking a ColorTransform<a class="headerlink" href="#mocking-a-colortransform" title="Permanent link">&para;</a></h2>
+<h2 id="faking-a-colortransform">Faking a ColorTransform<a class="headerlink" href="#faking-a-colortransform" title="Permanent link">&para;</a></h2>
 <p>The <code>PaletteTransformerTests</code> class provides an example of how we can use interfaces to our advantage when writing tests.</p>
 <div class="language-csharp highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="cm">/*</span>
 </span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="cm">    This class is here to decouple the actual transform from the test rather than</span>
@@ -3254,7 +3282,7 @@
       <nav class="md-footer__inner md-grid" aria-label="Footer" >
         
           
-          <a href="../types-as-contracts/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Types as Contracts">
+          <a href="../interfaces/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Interfaces">
             <div class="md-footer__button md-icon">
               
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
@@ -3264,27 +3292,11 @@
                 Previous
               </span>
               <div class="md-ellipsis">
-                Types as Contracts
+                Interfaces
               </div>
             </div>
           </a>
         
-        
-          
-          <a href="../protecting-invariants/" class="md-footer__link md-footer__link--next" aria-label="Next: Protecting invariants">
-            <div class="md-footer__title">
-              <span class="md-footer__direction">
-                Next
-              </span>
-              <div class="md-ellipsis">
-                Protecting invariants
-              </div>
-            </div>
-            <div class="md-footer__button md-icon">
-              
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"/></svg>
-            </div>
-          </a>
         
       </nav>
     
