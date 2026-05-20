@@ -2,138 +2,158 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
          <loc>https://software-resilience-reliability-book.github.io/srr-book/</loc>
-         <lastmod>2026-05-19</lastmod>
+         <lastmod>2026-05-20</lastmod>
     </url>
     <url>
          <loc>https://software-resilience-reliability-book.github.io/srr-book/example/</loc>
-         <lastmod>2026-05-19</lastmod>
+         <lastmod>2026-05-20</lastmod>
     </url>
     <url>
          <loc>https://software-resilience-reliability-book.github.io/srr-book/reference-project/</loc>
-         <lastmod>2026-05-19</lastmod>
+         <lastmod>2026-05-20</lastmod>
     </url>
     <url>
          <loc>https://software-resilience-reliability-book.github.io/srr-book/builds/</loc>
-         <lastmod>2026-05-19</lastmod>
+         <lastmod>2026-05-20</lastmod>
     </url>
     <url>
          <loc>https://software-resilience-reliability-book.github.io/srr-book/builds/adding-a-package/</loc>
-         <lastmod>2026-05-19</lastmod>
+         <lastmod>2026-05-20</lastmod>
     </url>
     <url>
          <loc>https://software-resilience-reliability-book.github.io/srr-book/builds/build-artifacts/</loc>
-         <lastmod>2026-05-19</lastmod>
+         <lastmod>2026-05-20</lastmod>
     </url>
     <url>
          <loc>https://software-resilience-reliability-book.github.io/srr-book/builds/compiling/</loc>
-         <lastmod>2026-05-19</lastmod>
+         <lastmod>2026-05-20</lastmod>
     </url>
     <url>
          <loc>https://software-resilience-reliability-book.github.io/srr-book/builds/creating-dotnet-project/</loc>
-         <lastmod>2026-05-19</lastmod>
+         <lastmod>2026-05-20</lastmod>
     </url>
     <url>
          <loc>https://software-resilience-reliability-book.github.io/srr-book/builds/creating-empty-project-shell/</loc>
-         <lastmod>2026-05-19</lastmod>
+         <lastmod>2026-05-20</lastmod>
     </url>
     <url>
          <loc>https://software-resilience-reliability-book.github.io/srr-book/builds/running-the-program/</loc>
-         <lastmod>2026-05-19</lastmod>
+         <lastmod>2026-05-20</lastmod>
     </url>
     <url>
          <loc>https://software-resilience-reliability-book.github.io/srr-book/builds/understanding-the-debugger/</loc>
-         <lastmod>2026-05-19</lastmod>
+         <lastmod>2026-05-20</lastmod>
     </url>
     <url>
          <loc>https://software-resilience-reliability-book.github.io/srr-book/builds/what-belongs-in-version-control/</loc>
-         <lastmod>2026-05-19</lastmod>
+         <lastmod>2026-05-20</lastmod>
     </url>
     <url>
          <loc>https://software-resilience-reliability-book.github.io/srr-book/complexity-debt/</loc>
-         <lastmod>2026-05-19</lastmod>
+         <lastmod>2026-05-20</lastmod>
     </url>
     <url>
          <loc>https://software-resilience-reliability-book.github.io/srr-book/complexity-debt/managing-complexity/</loc>
-         <lastmod>2026-05-19</lastmod>
+         <lastmod>2026-05-20</lastmod>
     </url>
     <url>
          <loc>https://software-resilience-reliability-book.github.io/srr-book/complexity-debt/refactoring/</loc>
-         <lastmod>2026-05-19</lastmod>
+         <lastmod>2026-05-20</lastmod>
     </url>
     <url>
          <loc>https://software-resilience-reliability-book.github.io/srr-book/complexity-debt/technical-debt-cost/</loc>
-         <lastmod>2026-05-19</lastmod>
+         <lastmod>2026-05-20</lastmod>
     </url>
     <url>
          <loc>https://software-resilience-reliability-book.github.io/srr-book/complexity-debt/technical-debt-defiinition/</loc>
-         <lastmod>2026-05-19</lastmod>
+         <lastmod>2026-05-20</lastmod>
     </url>
     <url>
          <loc>https://software-resilience-reliability-book.github.io/srr-book/diagnosing-errors/</loc>
-         <lastmod>2026-05-19</lastmod>
+         <lastmod>2026-05-20</lastmod>
     </url>
     <url>
          <loc>https://software-resilience-reliability-book.github.io/srr-book/diagnosing-errors/compile-time/</loc>
-         <lastmod>2026-05-19</lastmod>
+         <lastmod>2026-05-20</lastmod>
     </url>
     <url>
          <loc>https://software-resilience-reliability-book.github.io/srr-book/diagnosing-errors/error-contracts/</loc>
-         <lastmod>2026-05-19</lastmod>
+         <lastmod>2026-05-20</lastmod>
     </url>
     <url>
          <loc>https://software-resilience-reliability-book.github.io/srr-book/diagnosing-errors/exception-handling/</loc>
-         <lastmod>2026-05-19</lastmod>
+         <lastmod>2026-05-20</lastmod>
     </url>
     <url>
          <loc>https://software-resilience-reliability-book.github.io/srr-book/diagnosing-errors/handling-runtime-errors/</loc>
-         <lastmod>2026-05-19</lastmod>
+         <lastmod>2026-05-20</lastmod>
     </url>
     <url>
          <loc>https://software-resilience-reliability-book.github.io/srr-book/diagnosing-errors/logic/</loc>
-         <lastmod>2026-05-19</lastmod>
+         <lastmod>2026-05-20</lastmod>
     </url>
     <url>
          <loc>https://software-resilience-reliability-book.github.io/srr-book/diagnosing-errors/print-logging/</loc>
-         <lastmod>2026-05-19</lastmod>
+         <lastmod>2026-05-20</lastmod>
     </url>
     <url>
          <loc>https://software-resilience-reliability-book.github.io/srr-book/diagnosing-errors/runtime/</loc>
-         <lastmod>2026-05-19</lastmod>
+         <lastmod>2026-05-20</lastmod>
     </url>
     <url>
          <loc>https://software-resilience-reliability-book.github.io/srr-book/diagnosing-errors/stack-trace/</loc>
-         <lastmod>2026-05-19</lastmod>
+         <lastmod>2026-05-20</lastmod>
     </url>
     <url>
          <loc>https://software-resilience-reliability-book.github.io/srr-book/diagnosing-errors/test-harness/</loc>
-         <lastmod>2026-05-19</lastmod>
+         <lastmod>2026-05-20</lastmod>
     </url>
     <url>
          <loc>https://software-resilience-reliability-book.github.io/srr-book/diagnosing-errors/troubleshooting-failed-build/</loc>
-         <lastmod>2026-05-19</lastmod>
+         <lastmod>2026-05-20</lastmod>
     </url>
     <url>
          <loc>https://software-resilience-reliability-book.github.io/srr-book/diagnosing-errors/validating-runtime-input/</loc>
-         <lastmod>2026-05-19</lastmod>
+         <lastmod>2026-05-20</lastmod>
     </url>
     <url>
          <loc>https://software-resilience-reliability-book.github.io/srr-book/living-software/</loc>
-         <lastmod>2026-05-19</lastmod>
+         <lastmod>2026-05-20</lastmod>
     </url>
     <url>
          <loc>https://software-resilience-reliability-book.github.io/srr-book/living-software/reliability/</loc>
-         <lastmod>2026-05-19</lastmod>
+         <lastmod>2026-05-20</lastmod>
     </url>
     <url>
          <loc>https://software-resilience-reliability-book.github.io/srr-book/living-software/resiliency/</loc>
-         <lastmod>2026-05-19</lastmod>
+         <lastmod>2026-05-20</lastmod>
     </url>
     <url>
          <loc>https://software-resilience-reliability-book.github.io/srr-book/living-software/why-software-changes/</loc>
-         <lastmod>2026-05-19</lastmod>
+         <lastmod>2026-05-20</lastmod>
     </url>
     <url>
          <loc>https://software-resilience-reliability-book.github.io/srr-book/unit-testing/</loc>
-         <lastmod>2026-05-19</lastmod>
+         <lastmod>2026-05-20</lastmod>
+    </url>
+    <url>
+         <loc>https://software-resilience-reliability-book.github.io/srr-book/unit-testing/arrange-act-assert/</loc>
+         <lastmod>2026-05-20</lastmod>
+    </url>
+    <url>
+         <loc>https://software-resilience-reliability-book.github.io/srr-book/unit-testing/controlling-external-dependencies/</loc>
+         <lastmod>2026-05-20</lastmod>
+    </url>
+    <url>
+         <loc>https://software-resilience-reliability-book.github.io/srr-book/unit-testing/unit-testing/</loc>
+         <lastmod>2026-05-20</lastmod>
+    </url>
+    <url>
+         <loc>https://software-resilience-reliability-book.github.io/srr-book/unit-testing/using-reference-project/</loc>
+         <lastmod>2026-05-20</lastmod>
+    </url>
+    <url>
+         <loc>https://software-resilience-reliability-book.github.io/srr-book/unit-testing/writing-effective-tests/</loc>
+         <lastmod>2026-05-20</lastmod>
     </url>
 </urlset>

@@ -10,13 +10,13 @@
         <meta name="author" content="Mike Jovanovich">
       
       
-        <link rel="canonical" href="https://software-resilience-reliability-book.github.io/srr-book/living-software/reliability/">
+        <link rel="canonical" href="https://software-resilience-reliability-book.github.io/srr-book/unit-testing/unit-testing/">
       
       
-        <link rel="prev" href="../why-software-changes/">
+        <link rel="prev" href="../">
       
       
-        <link rel="next" href="../resiliency/">
+        <link rel="next" href="../using-reference-project/">
       
       
         
@@ -27,7 +27,7 @@
     
     
       
-        <title>Reliabile Software - Software Resilience and Reliability</title>
+        <title>Unit Testing - Software Resilience and Reliability</title>
       
     
     
@@ -80,7 +80,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#reliabile-software" class="md-skip">
+        <a href="#unit-testing" class="md-skip">
           Skip to content
         </a>
       
@@ -116,7 +116,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Reliabile Software
+              Unit Testing
             
           </span>
         </div>
@@ -313,8 +313,6 @@
       
   
   
-    
-  
   
   
     
@@ -334,15 +332,15 @@
     
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../" class="md-nav__link ">
+            <a href="../../living-software/" class="md-nav__link ">
               
   
   
@@ -366,7 +364,7 @@
             
           </div>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_3">
             <span class="md-nav__icon md-icon"></span>
             
@@ -386,7 +384,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../why-software-changes/" class="md-nav__link">
+      <a href="../../living-software/why-software-changes/" class="md-nav__link">
         
   
   
@@ -411,19 +409,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../../living-software/reliability/" class="md-nav__link">
         
   
   
@@ -439,7 +428,6 @@
   
 
       </a>
-      
     </li>
   
 
@@ -452,7 +440,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../resiliency/" class="md-nav__link">
+      <a href="../../living-software/resiliency/" class="md-nav__link">
         
   
   
@@ -1351,6 +1339,8 @@
       
   
   
+    
+  
   
   
     
@@ -1374,15 +1364,15 @@
     
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7" checked>
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../unit-testing/" class="md-nav__link ">
+            <a href="../" class="md-nav__link ">
               
   
   
@@ -1406,7 +1396,7 @@
             
           </div>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_7">
             <span class="md-nav__icon md-icon"></span>
             
@@ -1423,10 +1413,37 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../../unit-testing/unit-testing/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Unit Testing
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   
@@ -1442,6 +1459,48 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#scope-of-unit-testing" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Scope of Unit Testing
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#what-to-test" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        What to Test
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -1454,7 +1513,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../unit-testing/using-reference-project/" class="md-nav__link">
+      <a href="../using-reference-project/" class="md-nav__link">
         
   
   
@@ -1482,7 +1541,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../unit-testing/arrange-act-assert/" class="md-nav__link">
+      <a href="../arrange-act-assert/" class="md-nav__link">
         
   
   
@@ -1510,7 +1569,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../unit-testing/writing-effective-tests/" class="md-nav__link">
+      <a href="../writing-effective-tests/" class="md-nav__link">
         
   
   
@@ -1538,7 +1597,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../unit-testing/controlling-external-dependencies/" class="md-nav__link">
+      <a href="../controlling-external-dependencies/" class="md-nav__link">
         
   
   
@@ -2792,6 +2851,36 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#scope-of-unit-testing" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Scope of Unit Testing
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#what-to-test" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        What to Test
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -2810,16 +2899,17 @@
   
 
 
-<h1 id="reliabile-software">Reliabile Software<a class="headerlink" href="#reliabile-software" title="Permanent link">&para;</a></h1>
-<p>Healthy software is <strong>reliable</strong>. It runs as expected without failure. Given the complexity of most software systems, it is amazing that they are able to operate without significant issues, but this doesn't come without discipline and careful attention to detail.</p>
-<p>Software is an <strong>asset</strong>. It provides meaningful value to its owners and users.</p>
-<p>The code that makes up the software is a <strong>liability</strong>. Developers and maintainers must ensure that it continues to work. Every time the system changes, the code must be modified to support the new requirements. Additional functionality introduces points of failure to the system.</p>
-<p>To revisit the quote from the start of this book:</p>
-<blockquote>
-<p>...one of the most critical indicators of a software application’s health is how easily, safely, and quickly it can be modified.</p>
-</blockquote>
-<p>This book isn't meant to cover all of the practices that a software developer might take to ensure reliable software, but we will examine how to write and structure code in ways that keep it robust.</p>
-<p>We will examine common failure modes, and look at how to prevent them. Because most failures happen when the codebase is changed, we will learn how to ensure that future changes don't break existing functionality.</p>
+<h1 id="unit-testing">Unit Testing<a class="headerlink" href="#unit-testing" title="Permanent link">&para;</a></h1>
+<h2 id="scope-of-unit-testing">Scope of Unit Testing<a class="headerlink" href="#scope-of-unit-testing" title="Permanent link">&para;</a></h2>
+<p>Before we can write a unit test, we need to come to an understanding of what a "unit' is.</p>
+<p>According to Vladimir Khorikov in <em>Unit Testing: Principles, Practices, and Patterns</em>, a <strong>unit test</strong> should test a "single, atomic fact about a unit of behavior".</p>
+<p>In practice many developers define a unit as a single class or method. This approach is often useful, but it is not a necessary assumption. Forcing tests to follow this structure can lead to tests that are too granular (testing so many fine details that the tests are no longer a useful summary of the behavior) or too coarse (not testing enough detail so that valuable behavior is missed in testing).</p>
+<p>For example, private methods that are not part of the public API of a class often do not need to be tested. Their behavior is tested implicity by testing public methods that call them.</p>
+<h2 id="what-to-test">What to Test<a class="headerlink" href="#what-to-test" title="Permanent link">&para;</a></h2>
+<p><strong><em>Unit tests should focus on the expected behavior of the application - not the implementation details.</em></strong></p>
+<p>Tests should approach behavior from the standpoint of the <strong>consumer</strong> of the code. When we discuss other types of tests later in the book, this consumer will be the user. With unit tests, the consumer is typically other parts of the application.</p>
+<p>Our code contains behavior that is both internal (necessary for the unit to function) and external (visible to other parts of the application). Unit tests should only focus on the external behavior, not the internal implementation details.</p>
+<p>As an example: when you approach a drivethrough window to pick up a sandwich that you have ordered, it should not matter to you whether the sandwich was prepared on a wooden table with four legs, or a steel counter attached to the wall. These are internal concerns. What matters is that you asked for a sandwich and received the correct order.</p>
 
 
 
@@ -2855,7 +2945,7 @@
       <nav class="md-footer__inner md-grid" aria-label="Footer" >
         
           
-          <a href="../why-software-changes/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Why Software Changes">
+          <a href="../" class="md-footer__link md-footer__link--prev" aria-label="Previous: Testing an Application">
             <div class="md-footer__button md-icon">
               
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
@@ -2865,20 +2955,20 @@
                 Previous
               </span>
               <div class="md-ellipsis">
-                Why Software Changes
+                Testing an Application
               </div>
             </div>
           </a>
         
         
           
-          <a href="../resiliency/" class="md-footer__link md-footer__link--next" aria-label="Next: Resilient Software">
+          <a href="../using-reference-project/" class="md-footer__link md-footer__link--next" aria-label="Next: Using the Reference Project">
             <div class="md-footer__title">
               <span class="md-footer__direction">
                 Next
               </span>
               <div class="md-ellipsis">
-                Resilient Software
+                Using the Reference Project
               </div>
             </div>
             <div class="md-footer__button md-icon">

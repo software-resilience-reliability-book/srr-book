@@ -16,6 +16,8 @@
         <link rel="prev" href="../diagnosing-errors/logic/">
       
       
+        <link rel="next" href="unit-testing/">
+      
       
         
       
@@ -25,7 +27,7 @@
     
     
       
-        <title>Unit Testing - Software Resilience and Reliability</title>
+        <title>Testing an Application - Software Resilience and Reliability</title>
       
     
     
@@ -78,7 +80,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#unit-testing" class="md-skip">
+        <a href="#testing-an-application" class="md-skip">
           Skip to content
         </a>
       
@@ -114,7 +116,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Unit Testing
+              Testing an Application
             
           </span>
         </div>
@@ -1354,6 +1356,10 @@
       
         
       
+        
+      
+        
+      
     
     
     
@@ -1373,7 +1379,7 @@
   <span class="md-ellipsis">
     
   
-    Unit Testing
+    Basics of Testing
   
 
     
@@ -1395,7 +1401,7 @@
             <span class="md-nav__icon md-icon"></span>
             
   
-    Unit Testing
+    Basics of Testing
   
 
           </label>
@@ -1410,14 +1416,14 @@
   
   
     <li class="md-nav__item">
-      <a href="arrange-act-assert.md" class="md-nav__link">
+      <a href="unit-testing/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    None
+    Unit Testing
   
 
     
@@ -1438,14 +1444,14 @@
   
   
     <li class="md-nav__item">
-      <a href="what-to-test.md" class="md-nav__link">
+      <a href="using-reference-project/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    None
+    Using the Reference Project
   
 
     
@@ -1466,14 +1472,70 @@
   
   
     <li class="md-nav__item">
-      <a href="writing-an-effective-test.md" class="md-nav__link">
+      <a href="arrange-act-assert/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    None
+    The Arrange-Act-Assert Pattern
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="writing-effective-tests/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Writing Effective Tests
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="controlling-external-dependencies/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Controlling External Dependencies
   
 
     
@@ -2738,10 +2800,43 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#using-the-reference-project" class="md-nav__link">
+  <a href="#regression-detection" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Using the Reference Project
+        Regression Detection
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#documentation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Documentation
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#requirements-verification" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Requirements Verification
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#codebase-organization" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Codebase Organization
       
     </span>
   </a>
@@ -2768,19 +2863,18 @@
   
 
 
-<h1 id="unit-testing">Unit Testing<a class="headerlink" href="#unit-testing" title="Permanent link">&para;</a></h1>
-<p>...</p>
+<h1 id="testing-an-application">Testing an Application<a class="headerlink" href="#testing-an-application" title="Permanent link">&para;</a></h1>
 <h2 id="why-testing">Why Testing?<a class="headerlink" href="#why-testing" title="Permanent link">&para;</a></h2>
-<p>... Explain importance of testing generally</p>
-<p>In the absense of proper testing, users may encounter runtime errors. Logic errors may go unnoticed and be released into a production environment. This is one reason why testing is so important - it helps to catch these types of errors early.</p>
-<h2 id="using-the-reference-project">Using the Reference Project<a class="headerlink" href="#using-the-reference-project" title="Permanent link">&para;</a></h2>
-<p>The main application that we will work with over the course of this book is a color transformation library. A <strong>library</strong> is a bundled unit of code that has no startup application, but can be used by other applications. Because there is no startup application, we need to create a test harness to run the library and see it in action.</p>
-<p>This project contains the unit tests that we will reference in this chapter, as well as code that we will use later in the book.</p>
-<!-- prettier-ignore -->
-<div class="admonition info">
-<p class="admonition-title">Additional Instructions</p>
-<p>For additional instructions on using the reference project, see the <a href="../reference-project/">reference project</a> page.</p>
-</div>
+<p>Earlier in this book we looked at the impact of technical debt on the development process. When an application accumulates technical debt changes become more difficult to make, and the application becomes fragile.</p>
+<p>It may seem as if tests only exist to help us catch errors in the code, but they serve a broad set of purposes.</p>
+<h2 id="regression-detection">Regression Detection<a class="headerlink" href="#regression-detection" title="Permanent link">&para;</a></h2>
+<p>A <strong>regression</strong> is a change in the behavior of the application that is not intended. In a fragile codebase, changing one thing may cause another thing to break. Tests help to verify that parts of the application that work today will continue to work whenever code is modified.</p>
+<h2 id="documentation">Documentation<a class="headerlink" href="#documentation" title="Permanent link">&para;</a></h2>
+<p>Tests serve as living documentation of the expected behavior of the code. Reading a suite of tests tells us exactly what is expected from the part of the application that is under test.</p>
+<h2 id="requirements-verification">Requirements Verification<a class="headerlink" href="#requirements-verification" title="Permanent link">&para;</a></h2>
+<p>Software is built to meet requirements and specifications. Tests can be used to verify that an application meets expectations prior to release.</p>
+<h2 id="codebase-organization">Codebase Organization<a class="headerlink" href="#codebase-organization" title="Permanent link">&para;</a></h2>
+<p>The ease with which tests can be written and maintained can serve as a signal of the quality of the codebase. When a codebase is difficult to test, it is often a signal that the code is due to be refactored. Tests help developers work in small, manageable increments to design a <strong>modular</strong> and <strong>decoupled</strong> codebase.</p>
 
 
 
@@ -2831,6 +2925,22 @@
             </div>
           </a>
         
+        
+          
+          <a href="unit-testing/" class="md-footer__link md-footer__link--next" aria-label="Next: Unit Testing">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              <div class="md-ellipsis">
+                Unit Testing
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"/></svg>
+            </div>
+          </a>
         
       </nav>
     
