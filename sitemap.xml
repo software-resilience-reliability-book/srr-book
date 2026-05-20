@@ -133,6 +133,30 @@
          <lastmod>2026-05-20</lastmod>
     </url>
     <url>
+         <loc>https://software-resilience-reliability-book.github.io/srr-book/type-system/</loc>
+         <lastmod>2026-05-20</lastmod>
+    </url>
+    <url>
+         <loc>https://software-resilience-reliability-book.github.io/srr-book/type-system/enums-and-fixed-sets/</loc>
+         <lastmod>2026-05-20</lastmod>
+    </url>
+    <url>
+         <loc>https://software-resilience-reliability-book.github.io/srr-book/type-system/exception-types/</loc>
+         <lastmod>2026-05-20</lastmod>
+    </url>
+    <url>
+         <loc>https://software-resilience-reliability-book.github.io/srr-book/type-system/protecting-invariants/</loc>
+         <lastmod>2026-05-20</lastmod>
+    </url>
+    <url>
+         <loc>https://software-resilience-reliability-book.github.io/srr-book/type-system/testing-with-interfaces/</loc>
+         <lastmod>2026-05-20</lastmod>
+    </url>
+    <url>
+         <loc>https://software-resilience-reliability-book.github.io/srr-book/type-system/types-as-contracts/</loc>
+         <lastmod>2026-05-20</lastmod>
+    </url>
+    <url>
          <loc>https://software-resilience-reliability-book.github.io/srr-book/unit-testing/</loc>
          <lastmod>2026-05-20</lastmod>
     </url>
