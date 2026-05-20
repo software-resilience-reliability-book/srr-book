@@ -1,5 +1,6 @@
 # Docs are at: https://www.mkdocs.org/user-guide/configuration/
 
+# Activate venv with: source .venv/bin/activate
 # Preview with: mkdocs serve --livereload
 
 # ##########################################
@@ -101,8 +102,6 @@ nav:
       - diagnosing-errors/stack-trace.md
       - diagnosing-errors/logic.md
 
-  # This has its own chapter early; we don't want to overwhelm students with too
-  # many concepts at once so don't cover other test types yet
   - Basics of Testing:
       - unit-testing/index.md
       - unit-testing/unit-testing.md
@@ -115,11 +114,9 @@ nav:
       - unit-testing/knowing-what-to-test.md
 
   - Leveraging the Type System:
-      # Use the reference project
       - type-system/index.md
-
-      # More focused on "what can I expect to be on this data structure (class, record, struct)?"
       - type-system/types-as-contracts.md
+      - type-system/testing-with-interfaces.md
 
       # Focused on guaranteeing valid state; e.g. a "HexColor" class that only allows valid hex colors
       - type-system/protecting-invariants.md
@@ -130,7 +127,7 @@ nav:
       # We've covered exceptions plenty; this only needs to point out that we
       # should handle the exact exception types in the error contract of the
       # function that was called; look at the documentation
-      - type-system/custom-exception-types.md
+      - type-system/exception-types.md
 
   - Configuration and Externalized Settings:
       # Use the reference project (needs added)

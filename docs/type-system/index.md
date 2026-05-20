@@ -1,0 +1,35 @@
+# The Type System
+
+## Working with Data Types
+
+All data in a program is represented as a value of a specific type. The computer has to know how to store and manipulate this data in order to be able to execute the program.
+
+For example, a 32-bit signed integer is represented in memory as a sequence of 32 bits, with one bit reserved for the sign and the remaining 31 bits encoding the value using a scheme called two's complement. A string may have several implementations, such as a null-terminated array of characters or a linked list of characters.
+
+Whether implicitly or explicitly, all values in a program have a data type.
+
+## Dynamically Typed Languages
+
+**Dynamically typed** languages do not require that the data type be declared, and type checking occurs at runtime. These languages typically infer the type of a variable based on the value assigned to it. For example, the following JavaScript code assigns a string to the `firstName` variable and a numeric value to the `age` variable, then prints the type of each variable:
+
+```javascript
+const firstName = "Arie";
+const age = 21;
+console.log(typeof firstName);
+console.log(typeof age);
+```
+
+## Statically Typed Languages
+
+**Statically typed** languages require that variables be declared with a specific type before they can be used.
+
+```csharp
+string firstName = "Arie";
+int age = 21;
+```
+
+Because the data type is known at compile time, the compiler can provide **type safety**, and prevent code from being compiled if there is a type mismatch. If a function expects a string, and you pass it an integer, the compiler will not allow it to compile.
+
+## Custom Types
+
+The type system not only descibes **primitive types** like integers and strings, but provides the means to create **custom types**. Classes are the primary way to create these custom types in C#.
