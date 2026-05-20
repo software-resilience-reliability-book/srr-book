@@ -108,14 +108,8 @@ nav:
       - unit-testing/unit-testing.md
       - unit-testing/using-reference-project.md
       - unit-testing/arrange-act-assert.md
-
-      # Practical advice on how to write effective tests.
-      # Naming conventions
-      # How to systematically cover behavior: golden path, edge cases,
-      # boundary conditions, and error contracts.
-      # Tabular tests(? is that what they're called?)
       - unit-testing/writing-effective-tests.md
-
+      - unit-testing/test-segmentation.md
       - unit-testing/parameterized-tests.md
 
       # Keep this very simple - example where current date is used for greeting;
