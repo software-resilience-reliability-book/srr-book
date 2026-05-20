@@ -37,7 +37,7 @@ A better name for this test is `hex_string_creates_correct_rbg_component_values`
 
     In this case we considered the multiple assertions to be acceptible for this unit of behavior, but this is more of an exception to the general rule. It is ideal to have a test assert only one thing. Tests are cheap, and it is okay to have many tests.
 
-## Example Test Suite
+## Creating a Test Suite
 
 Suppose we want to test the following functionality:
 
@@ -83,16 +83,13 @@ If we do this, however, it would be difficult to write the first two tests witho
 - `hex_string_with_leading_hash_creates_correct_rbg_component_values`
 - `hex_string_without_leading_hash_creates_correct_rbg_component_values`
 
----
+## Summary of What to Test
 
-... Sticking with our "single, atomic fact about a unit of behavior" definition for a test, we should aim to name tests in such a way that the reader understands what the test verifies.
+We can view our system under test (in this case the `FromHexString` method) as a black box. We can only see the inputs and outputs, not the internal workings.
 
-... "single, atomic fact about a unit of behavior".
+Our test suite from above tested the following:
 
----
-
-<!-- # Practical advice on how to write effective tests.
-# Naming conventions
-# How to systematically cover behavior: golden path, edge cases,
-# boundary conditions, and error contracts.
-# Tabular tests(? is that what they're called?) -->
+| Behavior         | Description                                                                                                                                                            |
+| ---------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Return Values    | Test all segmented input / output combinations.                                                                                                                        |
+| Error Conditions | Test that the error contract for the system under test is met. If an exception should be thrown, check for this. If an error value should be returned, check for this. |
