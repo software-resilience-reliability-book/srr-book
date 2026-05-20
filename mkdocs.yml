@@ -104,22 +104,9 @@ nav:
   # This has its own chapter early; we don't want to overwhelm students with too
   # many concepts at once so don't cover other test types yet
   - Basics of Testing:
-      # From this point forward use the reference project
-
-      # Benefits of testing an application.
       - unit-testing/index.md
-
-      # Introduction to unit testing and the reference project.
-      # More on test philosophy
-      # Tests as living documentation of system behavior.
-      # Test what the code should do (behavior), not how it does it (implementation details).
       - unit-testing/unit-testing.md
-
-      # How to run the test project.
       - unit-testing/using-reference-project.md
-
-      # The Arrange-Act-Assert pattern as a consistent structure for writing tests.
-      # Make sure test fails before making it pass, otherwise you don't know if it actually works.
       - unit-testing/arrange-act-assert.md
 
       # Practical advice on how to write effective tests.
@@ -128,6 +115,8 @@ nav:
       # boundary conditions, and error contracts.
       # Tabular tests(? is that what they're called?)
       - unit-testing/writing-effective-tests.md
+
+      - unit-testing/parameterized-tests.md
 
       # Keep this very simple - example where current date is used for greeting;
       # Explain that we should actually refactor the function itself to accept date as a parameter.

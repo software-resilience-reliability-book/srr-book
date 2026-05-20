@@ -20,7 +20,7 @@ dotnet add package Spectre.Console
 
 Copy and paste the following code into the `Program.cs` file. You can use the Copy button in the top right corner of the code block to copy the code to your clipboard:
 
-```csharp linenums="1"
+```csharp
 using Spectre.Console;
 
 // Get user input for color

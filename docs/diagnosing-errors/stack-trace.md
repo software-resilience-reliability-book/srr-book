@@ -14,7 +14,7 @@ In the following example, execution of the program begins at the bottom, where `
 
 `appendSomething1` calls `appendSomething2`, which then calls `appendSomething3`.
 
-```csharp linenums="1"
+```csharp
 string appendSomething3(string text)
 {
     text = text + "C";

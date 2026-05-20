@@ -8,7 +8,7 @@ This may come in the form of simple developer mistakes, or business logic rules 
 
 The following code snippet contains a logic error:
 
-```csharp linenums="1"
+```csharp
 int[] scores = { 85, 90, 78, 92, 88 };
 int total = 0;
 
@@ -25,7 +25,7 @@ In C#, if you divide two integers the result will be an integer. It will truncat
 
 To fix it we can cast the divisor to a double before performing the division:
 
-```csharp linenums="7"
+```csharp
 double average = total / (double)scores.Length;
 ```
 

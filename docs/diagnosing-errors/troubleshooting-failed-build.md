@@ -71,7 +71,7 @@ Reading the error message tells us exactly where to look for the error, so that 
 
 Let's modify `Program.cs` to introduce multiple errors.
 
-```csharp linenums="1"
+```csharp
 // We're not allowed to use private here.
 private static string GetMessage()
 {

@@ -55,11 +55,15 @@ Let's break down our steps one by one:
 `Assert`
 : We verify that the result is an RGB color with the red, green, and blue components all set to 0. This is the expected outcome of the action. If the results are not as expected, the test will report a failure.
 
+<!-- prettier-ignore -->
+!!! info "Test Name Change"
+  The name for the test above has changed in the reference project. You will see it listed as `hex_string_creates_correct_rbg_component_values`.
+
 ## Creating a Failing Test
 
 Let's modify our implementation of the `FromHexString` method so that we can see what a failing test looks like. Open the `src/ColorTransform/Utilities/HexConverter.cs` file and check the following lines:
 
-```csharp linenums="21"
+```csharp
 return new RgbColor(
     Convert.ToInt32(hex[0..2], 16), // red
     Convert.ToInt32(hex[2..4], 16), // green
@@ -75,7 +79,7 @@ In this case `hex` is the hex string that was passed into the function. The `0..
 
 To break our code, change the last line to only go to index 5:
 
-```csharp linenums="21"
+```csharp
 return new RgbColor(
     Convert.ToInt32(hex[0..2], 16), // red
     Convert.ToInt32(hex[2..4], 16), // green
@@ -87,7 +91,7 @@ return new RgbColor(
 
 Now run the tests again. You should see a failure:
 
-```text linenums="1"
+```text
 mpjovanovich: dotnet test
 Restore complete (0.6s)
   ColorTransform net10.0 succeeded (0.1s) → src/ColorTransform/bin/Debug/net10.0/ColorTransform.dll

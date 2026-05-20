@@ -8,7 +8,7 @@ Simple "debug print" statements are a quick and easy way to get a sense of what 
 
 Take the following example:
 
-```csharp linenums="1"
+```csharp
 // Dummy data; we don't actually know these values in advance.
 static (string City, int Temperature)[] GetMinDailyTemperatures() =>
     [("New York", 10), ("Los Angeles", 20), ("Chicago", 0), ("Houston", 30)];
@@ -37,7 +37,7 @@ We could find ourselves faced with an `Attempted to divide by zero` error logged
 
 To figure out what is happening we can add print statements to build a trace. This will show us the values being passed in and the result of each operation - the same things we would check if we had a debugger attached:
 
-```csharp linenums="1"
+```csharp
 // Dummy data; we don't actually know these values in advance.
 static (string City, int Temperature)[] GetMinDailyTemperatures() =>
     [("New York", 10), ("Los Angeles", 20), ("Chicago", 0), ("Houston", 30)];
