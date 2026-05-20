@@ -116,8 +116,6 @@ nav:
   - Leveraging the Type System:
       - type-system/index.md
       - type-system/classes.md
-
-      # Focused on guaranteeing valid state; e.g. a "HexColor" class that only allows valid hex colors
       - type-system/protecting-invariants.md
       # Enums protect code from developers using it incorrectly
       - type-system/enums.md
