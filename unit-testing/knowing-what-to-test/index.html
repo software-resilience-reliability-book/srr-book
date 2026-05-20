@@ -10,13 +10,11 @@
         <meta name="author" content="Mike Jovanovich">
       
       
-        <link rel="canonical" href="https://software-resilience-reliability-book.github.io/srr-book/builds/compiling/">
+        <link rel="canonical" href="https://software-resilience-reliability-book.github.io/srr-book/unit-testing/knowing-what-to-test/">
       
       
-        <link rel="prev" href="../creating-dotnet-project/">
+        <link rel="prev" href="../controlling-test-dependencies/">
       
-      
-        <link rel="next" href="../build-artifacts/">
       
       
         
@@ -27,7 +25,7 @@
     
     
       
-        <title>Compiling - Software Resilience and Reliability</title>
+        <title>Knowing What to Test - Software Resilience and Reliability</title>
       
     
     
@@ -80,7 +78,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#compiling" class="md-skip">
+        <a href="#knowing-what-to-test" class="md-skip">
           Skip to content
         </a>
       
@@ -116,7 +114,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Compiling
+              Knowing What to Test
             
           </span>
         </div>
@@ -661,8 +659,6 @@
       
   
   
-    
-  
   
   
     
@@ -692,15 +688,15 @@
     
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../" class="md-nav__link ">
+            <a href="../../builds/" class="md-nav__link ">
               
   
   
@@ -724,7 +720,7 @@
             
           </div>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_5">
             <span class="md-nav__icon md-icon"></span>
             
@@ -744,7 +740,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../creating-empty-project-shell/" class="md-nav__link">
+      <a href="../../builds/creating-empty-project-shell/" class="md-nav__link">
         
   
   
@@ -772,7 +768,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../creating-dotnet-project/" class="md-nav__link">
+      <a href="../../builds/creating-dotnet-project/" class="md-nav__link">
         
   
   
@@ -797,37 +793,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Compiling
-  
-
-    
-  </span>
-  
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../../builds/compiling/" class="md-nav__link">
         
   
   
@@ -843,48 +812,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#compiled-vs-interpreted" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Compiled vs Interpreted
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#building-in-net" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Building in .NET
-      
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -897,7 +824,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../build-artifacts/" class="md-nav__link">
+      <a href="../../builds/build-artifacts/" class="md-nav__link">
         
   
   
@@ -925,7 +852,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../running-the-program/" class="md-nav__link">
+      <a href="../../builds/running-the-program/" class="md-nav__link">
         
   
   
@@ -953,7 +880,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../understanding-the-debugger/" class="md-nav__link">
+      <a href="../../builds/understanding-the-debugger/" class="md-nav__link">
         
   
   
@@ -981,7 +908,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../adding-a-package/" class="md-nav__link">
+      <a href="../../builds/adding-a-package/" class="md-nav__link">
         
   
   
@@ -1009,7 +936,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../what-belongs-in-version-control/" class="md-nav__link">
+      <a href="../../builds/what-belongs-in-version-control/" class="md-nav__link">
         
   
   
@@ -1410,6 +1337,8 @@
       
   
   
+    
+  
   
   
     
@@ -1439,15 +1368,15 @@
     
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7" checked>
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../unit-testing/" class="md-nav__link ">
+            <a href="../" class="md-nav__link ">
               
   
   
@@ -1471,7 +1400,7 @@
             
           </div>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_7">
             <span class="md-nav__icon md-icon"></span>
             
@@ -1491,7 +1420,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../unit-testing/unit-testing/" class="md-nav__link">
+      <a href="../unit-testing/" class="md-nav__link">
         
   
   
@@ -1519,7 +1448,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../unit-testing/using-reference-project/" class="md-nav__link">
+      <a href="../using-reference-project/" class="md-nav__link">
         
   
   
@@ -1547,7 +1476,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../unit-testing/arrange-act-assert/" class="md-nav__link">
+      <a href="../arrange-act-assert/" class="md-nav__link">
         
   
   
@@ -1575,7 +1504,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../unit-testing/writing-effective-tests/" class="md-nav__link">
+      <a href="../writing-effective-tests/" class="md-nav__link">
         
   
   
@@ -1603,7 +1532,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../unit-testing/test-segmentation/" class="md-nav__link">
+      <a href="../test-segmentation/" class="md-nav__link">
         
   
   
@@ -1631,7 +1560,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../unit-testing/parameterized-tests/" class="md-nav__link">
+      <a href="../parameterized-tests/" class="md-nav__link">
         
   
   
@@ -1659,7 +1588,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../unit-testing/controlling-test-dependencies/" class="md-nav__link">
+      <a href="../controlling-test-dependencies/" class="md-nav__link">
         
   
   
@@ -1684,10 +1613,37 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../../unit-testing/knowing-what-to-test/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Knowing What to Test
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   
@@ -1703,6 +1659,48 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#what-is-test-coverage" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        What is Test Coverage?
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#what-is-worth-testing" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        What is Worth Testing?
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -2948,10 +2946,10 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#compiled-vs-interpreted" class="md-nav__link">
+  <a href="#what-is-test-coverage" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Compiled vs Interpreted
+        What is Test Coverage?
       
     </span>
   </a>
@@ -2959,10 +2957,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#building-in-net" class="md-nav__link">
+  <a href="#what-is-worth-testing" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Building in .NET
+        What is Worth Testing?
       
     </span>
   </a>
@@ -2989,43 +2987,46 @@
   
 
 
-<h1 id="compiling">Compiling<a class="headerlink" href="#compiling" title="Permanent link">&para;</a></h1>
-<p>Software developers write source code in human-readable high level languages. The CPU cannot directly execute this code. It needs to first go through a process called <strong>compilation</strong>. This translates the source code into <strong>machine code</strong> that the CPU can execute.</p>
-<h2 id="compiled-vs-interpreted">Compiled vs Interpreted<a class="headerlink" href="#compiled-vs-interpreted" title="Permanent link">&para;</a></h2>
-<p>There are two main paradigms for compiling source code:</p>
-<table>
-<thead>
-<tr>
-<th>Paradigm</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Interpreted</td>
-<td>The source code is translated into machine code one statement at a time at <strong>runtime</strong>. Types and memory are resolved dynamically.</td>
-</tr>
-<tr>
-<td>Compiled</td>
-<td>The source code is translated into machine code <strong>ahead of time</strong>. Types and memory are resolved at compile time.</td>
-</tr>
-</tbody>
-</table>
-<p>Languages like Python are interpreted languages. In order to run Python code you install the Python interpreter on your machine, which serves as the means of translation.</p>
-<p>Languages like C and C++ are compiled languages. In order to run code it must be compiled into machine code with a <strong>compiler</strong> program.</p>
-<p>To put it simply, the computer can make more accurate assumptions about a compiled program than an interpreted program.</p>
+<h1 id="knowing-what-to-test">Knowing What to Test<a class="headerlink" href="#knowing-what-to-test" title="Permanent link">&para;</a></h1>
+<h2 id="what-is-test-coverage">What is Test Coverage?<a class="headerlink" href="#what-is-test-coverage" title="Permanent link">&para;</a></h2>
+<p><strong>Test coverage</strong> is a measure of the extent to which a test suite exercises the codebase. There are many automated tools that perform <strong>static analysis</strong> to determine which lines of code are under test and calculate the percentage of overall code that is touched by the test suite.</p>
+<p>Trying to maximize this metric is not a productive use of developement time, as test coverage in itself does not guarantee that the codebase is thoroughly tested. It is very easy to write a test that does nothing useful.</p>
+<p>This leads to the question: "What parts of the codebase should we test?"</p>
+<h2 id="what-is-worth-testing">What is Worth Testing?<a class="headerlink" href="#what-is-worth-testing" title="Permanent link">&para;</a></h2>
+<p>Tests may be cheap, but they aren't free. The cost of "too many tests" usually manifests in the form of increased maintenance overhead and cognitive load.</p>
+<p>Tests should focus on code that is either high-value or high-risk.</p>
+<p><strong>Test Code That...</strong></p>
+<ul>
+<li>Implements core domain logic and business rules</li>
+<li>Enforces explicitly defined requirements</li>
+<li>Has high complexity</li>
+<li>Would cause costly or catastrophic failures if broken</li>
+</ul>
+<p>Code with these characteristics is typically found in the domain layer, such as our <code>ColorTransform</code> project as opposed to the UI layer, the <code>ColorTransform.Web</code> project.</p>
+<p><strong>Avoid Testing Code That...</strong></p>
+<ul>
+<li>Is trivial or has minimal complexity</li>
+<li>Primarily maps one piece of code to another</li>
+</ul>
+<p>These cases are better covered by integration or end-to-end tests, discussed in a later chapter.</p>
 <!-- prettier-ignore -->
 <div class="admonition info">
-<p class="admonition-title">Intermediate Language (IL) and Just In Time (JIT) Compilation</p>
-<p><img alt="JIT compiling process" src="../../images/jit-compiling.svg" /></p>
-<p>Some languages like Java and C# take a hybrid approach. These first compile to an <strong>intermediate language (IL)</strong> that isn't truly machine code. In other languages this is called <strong>bytecode</strong>.</p>
-<p>This intermediate code is then compiled to machine code at runtime by the .NET <strong>runtime</strong> through a process called <strong>just in time (JIT) compilation</strong>. JIT compilation is heavily used in modern programming languages, and blurs the line between the traditional categories of "interpreted" vs "compiled" languages.</p>
-<p>For now, it's enough that you understand that the code you write must be compiled ahead of time in order to be usable.</p>
-</div>
-<h2 id="building-in-net">Building in .NET<a class="headerlink" href="#building-in-net" title="Permanent link">&para;</a></h2>
-<p>To build our project we simply run the <code>dotnet build</code> command. This will compile the project.</p>
-<div class="language-bash highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>dotnet<span class="w"> </span>build
+<p class="admonition-title">What Not to Test</p>
+<p>Our <code>RgbColor</code> class has some code that assigns provided component values to attributes:</p>
+<div class="language-csharp highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="k">public</span><span class="w"> </span><span class="nf">RgbColor</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">red</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">green</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">blue</span><span class="p">)</span>
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="p">{</span>
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="w">    </span><span class="n">ValidateRange</span><span class="p">(</span><span class="n">red</span><span class="p">,</span><span class="w"> </span><span class="k">nameof</span><span class="p">(</span><span class="n">red</span><span class="p">));</span>
+</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="w">    </span><span class="n">ValidateRange</span><span class="p">(</span><span class="n">green</span><span class="p">,</span><span class="w"> </span><span class="k">nameof</span><span class="p">(</span><span class="n">green</span><span class="p">));</span>
+</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="w">    </span><span class="n">ValidateRange</span><span class="p">(</span><span class="n">blue</span><span class="p">,</span><span class="w"> </span><span class="k">nameof</span><span class="p">(</span><span class="n">blue</span><span class="p">));</span>
+</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>
+</span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a><span class="w">    </span><span class="n">Red</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">red</span><span class="p">;</span>
+</span><span id="__span-0-8"><a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a><span class="w">    </span><span class="n">Green</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">green</span><span class="p">;</span>
+</span><span id="__span-0-9"><a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a><span class="w">    </span><span class="n">Blue</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">blue</span><span class="p">;</span>
+</span><span id="__span-0-10"><a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a><span class="p">}</span>
 </span></code></pre></div>
+<p>We did not write tests to ensure that the red, green, and blue values that the caller passed in are correctly assigned to the Red, Green, and Blue attributes on the RgbColor object.</p>
+<p>This is trivial functionality. If a class constructor is not assigning values that were passed in, it would likely cause downstream errors that later tests would catch.</p>
+</div>
 
 
 
@@ -3061,7 +3062,7 @@
       <nav class="md-footer__inner md-grid" aria-label="Footer" >
         
           
-          <a href="../creating-dotnet-project/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Creating a .NET Project">
+          <a href="../controlling-test-dependencies/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Controlling Test Dependencies">
             <div class="md-footer__button md-icon">
               
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
@@ -3071,27 +3072,11 @@
                 Previous
               </span>
               <div class="md-ellipsis">
-                Creating a .NET Project
+                Controlling Test Dependencies
               </div>
             </div>
           </a>
         
-        
-          
-          <a href="../build-artifacts/" class="md-footer__link md-footer__link--next" aria-label="Next: Build Artifacts">
-            <div class="md-footer__title">
-              <span class="md-footer__direction">
-                Next
-              </span>
-              <div class="md-ellipsis">
-                Build Artifacts
-              </div>
-            </div>
-            <div class="md-footer__button md-icon">
-              
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"/></svg>
-            </div>
-          </a>
         
       </nav>
     

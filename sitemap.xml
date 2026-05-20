@@ -141,7 +141,11 @@
          <lastmod>2026-05-20</lastmod>
     </url>
     <url>
-         <loc>https://software-resilience-reliability-book.github.io/srr-book/unit-testing/controlling-external-dependencies/</loc>
+         <loc>https://software-resilience-reliability-book.github.io/srr-book/unit-testing/controlling-test-dependencies/</loc>
+         <lastmod>2026-05-20</lastmod>
+    </url>
+    <url>
+         <loc>https://software-resilience-reliability-book.github.io/srr-book/unit-testing/knowing-what-to-test/</loc>
          <lastmod>2026-05-20</lastmod>
     </url>
     <url>

@@ -16,7 +16,7 @@
         <link rel="prev" href="../test-segmentation/">
       
       
-        <link rel="next" href="../controlling-external-dependencies/">
+        <link rel="next" href="../controlling-test-dependencies/">
       
       
         
@@ -1364,6 +1364,8 @@
       
         
       
+        
+      
     
     
     
@@ -1569,6 +1571,24 @@
         
       
       
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Parameterized Tests
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
       <a href="./" class="md-nav__link md-nav__link--active">
         
   
@@ -1586,6 +1606,58 @@
 
       </a>
       
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#what-are-parameterized-tests" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        What are Parameterized Tests?
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#creating-a-parameterized-test-with-xunit" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Creating a Parameterized Test with xUnit
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#providing-multiple-inputs" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Providing Multiple Inputs
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -1598,14 +1670,42 @@
   
   
     <li class="md-nav__item">
-      <a href="../controlling-external-dependencies/" class="md-nav__link">
+      <a href="../controlling-test-dependencies/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    Controlling External Dependencies
+    Controlling Test Dependencies
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../knowing-what-to-test/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Knowing What to Test
   
 
     
@@ -2852,6 +2952,47 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#what-are-parameterized-tests" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        What are Parameterized Tests?
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#creating-a-parameterized-test-with-xunit" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Creating a Parameterized Test with xUnit
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#providing-multiple-inputs" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Providing Multiple Inputs
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -2871,6 +3012,80 @@
 
 
 <h1 id="parameterized-tests">Parameterized Tests<a class="headerlink" href="#parameterized-tests" title="Permanent link">&para;</a></h1>
+<h2 id="what-are-parameterized-tests">What are Parameterized Tests?<a class="headerlink" href="#what-are-parameterized-tests" title="Permanent link">&para;</a></h2>
+<p><strong>Parameterized tests</strong> are a way to run the same test with different inputs.</p>
+<p>Rather than writing multiple tests that have the same Arrange-Act-Assert logic, we can use parameterized tests reuse a single test.</p>
+<p>Let's again look at the <code>IsPassing</code> function:</p>
+<div class="language-csharp highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="k">public</span><span class="w"> </span><span class="k">static</span><span class="w"> </span><span class="kt">bool</span><span class="w"> </span><span class="nf">IsPassing</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">score</span><span class="p">)</span>
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="p">{</span>
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">score</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="mi">0</span><span class="w"> </span><span class="o">||</span><span class="w"> </span><span class="n">score</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="mi">100</span><span class="p">)</span>
+</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="w">        </span><span class="k">throw</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="nf">ArgumentOutOfRangeException</span><span class="p">(</span><span class="k">nameof</span><span class="p">(</span><span class="n">score</span><span class="p">));</span>
+</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>
+</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a><span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">score</span><span class="w"> </span><span class="o">&gt;=</span><span class="w"> </span><span class="mi">60</span><span class="p">;</span>
+</span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a><span class="p">}</span>
+</span></code></pre></div>
+<p>We defined our segments as follows:</p>
+<table>
+<thead>
+<tr>
+<th>Category</th>
+<th>Example Inputs</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Golden Path, Passing Course</td>
+<td>99, 75</td>
+</tr>
+<tr>
+<td>Golden Path, Failing Course</td>
+<td>50, 24</td>
+</tr>
+<tr>
+<td>Edge Cases / Boundaries</td>
+<td>0, 100</td>
+</tr>
+<tr>
+<td>Error Conditions</td>
+<td>-1, 101</td>
+</tr>
+</tbody>
+</table>
+<p>There is no need to write a test function each for:</p>
+<p><code>reports_pass_for_99</code> and <code>reports_pass_for_75</code></p>
+<p>We can make a single test function: <code>reports_pass_for_passing_score</code>.</p>
+<h2 id="creating-a-parameterized-test-with-xunit">Creating a Parameterized Test with xUnit<a class="headerlink" href="#creating-a-parameterized-test-with-xunit" title="Permanent link">&para;</a></h2>
+<p>Each testing framework has its own way of creating parameterized tests.</p>
+<p>In xUnit, we can use the <code>Theory</code> attribute. Here's what our test would look like:</p>
+<div class="language-csharp highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="na">[Theory]</span>
+</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="na">[InlineData(99)]</span>
+</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="na">[InlineData(75)]</span>
+</span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a><span class="k">public</span><span class="w"> </span><span class="k">void</span><span class="w"> </span><span class="nf">reports_pass_for_passing_score</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">score</span><span class="p">)</span>
+</span><span id="__span-1-5"><a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a><span class="p">{</span>
+</span><span id="__span-1-6"><a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a><span class="w">    </span><span class="kt">var</span><span class="w"> </span><span class="n">result</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">IsPassing</span><span class="p">(</span><span class="n">score</span><span class="p">);</span>
+</span><span id="__span-1-7"><a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a><span class="w">    </span><span class="n">Assert</span><span class="p">.</span><span class="n">True</span><span class="p">(</span><span class="n">result</span><span class="p">);</span>
+</span><span id="__span-1-8"><a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a><span class="p">}</span>
+</span></code></pre></div>
+<p>The <code>[InlineData]</code> attribute is used to provide the input values for the test. Whatever is in this attribute will be passed to the test function as the <code>score</code> parameter.</p>
+<p>The above test will be run twice, once with <code>99</code> and once with <code>75</code>.</p>
+<h2 id="providing-multiple-inputs">Providing Multiple Inputs<a class="headerlink" href="#providing-multiple-inputs" title="Permanent link">&para;</a></h2>
+<p>If you open the <code>src/ColorTransform/Models/RgbColor</code> file, you will see that our RGB class does not allow the Red, Green, or Blue values to be outside of the range 0-255. It would be cumbersome to write a test for each of the boundary values of each component.</p>
+<p>We can instead use paramaterized testing. Here is a snippet from <code>tests/ColorTransform.Tests/RgbColorTests.cs</code>:</p>
+<div class="language-csharp highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="na">[Theory]</span>
+</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="na">[InlineData(-1, 0, 0)]</span>
+</span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="na">[InlineData(0, -1, 0)]</span>
+</span><span id="__span-2-4"><a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a><span class="na">[InlineData(0, 0, -1)]</span>
+</span><span id="__span-2-5"><a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a><span class="na">[InlineData(256, 0, 0)]</span>
+</span><span id="__span-2-6"><a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a><span class="na">[InlineData(0, 256, 0)]</span>
+</span><span id="__span-2-7"><a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a><span class="na">[InlineData(0, 0, 256)]</span>
+</span><span id="__span-2-8"><a id="__codelineno-2-8" name="__codelineno-2-8" href="#__codelineno-2-8"></a><span class="k">public</span><span class="w"> </span><span class="k">void</span><span class="w"> </span><span class="nf">color_fails_when_component_values_are_out_of_range</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">r</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">g</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">b</span><span class="p">)</span>
+</span><span id="__span-2-9"><a id="__codelineno-2-9" name="__codelineno-2-9" href="#__codelineno-2-9"></a><span class="p">{</span>
+</span><span id="__span-2-10"><a id="__codelineno-2-10" name="__codelineno-2-10" href="#__codelineno-2-10"></a><span class="w">    </span><span class="n">Assert</span><span class="p">.</span><span class="n">Throws</span><span class="o">&lt;</span><span class="n">ArgumentOutOfRangeException</span><span class="o">&gt;</span><span class="p">(()</span><span class="w"> </span><span class="o">=&gt;</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">RgbColor</span><span class="p">(</span><span class="n">r</span><span class="p">,</span><span class="w"> </span><span class="n">g</span><span class="p">,</span><span class="w"> </span><span class="n">b</span><span class="p">));</span>
+</span><span id="__span-2-11"><a id="__codelineno-2-11" name="__codelineno-2-11" href="#__codelineno-2-11"></a><span class="p">}</span>
+</span></code></pre></div>
+<p>The first time the test is run, <code>r</code> will be <code>-1</code>, <code>g</code> will be <code>0</code>, and <code>b</code> will be <code>0</code>.</p>
+<p>The second time the test is run, <code>r</code> will be <code>0</code>, <code>g</code> will be <code>-1</code>, and <code>b</code> will be <code>0</code>. And so on.</p>
+<p>We have tested the <code>-1</code> boundary for each component, as well as the <code>256</code> boundary for each component.</p>
 
 
 
@@ -2923,13 +3138,13 @@
         
         
           
-          <a href="../controlling-external-dependencies/" class="md-footer__link md-footer__link--next" aria-label="Next: Controlling External Dependencies">
+          <a href="../controlling-test-dependencies/" class="md-footer__link md-footer__link--next" aria-label="Next: Controlling Test Dependencies">
             <div class="md-footer__title">
               <span class="md-footer__direction">
                 Next
               </span>
               <div class="md-ellipsis">
-                Controlling External Dependencies
+                Controlling Test Dependencies
               </div>
             </div>
             <div class="md-footer__button md-icon">
