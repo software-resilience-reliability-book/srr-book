@@ -103,28 +103,35 @@ nav:
 
   # This has its own chapter early; we don't want to overwhelm students with too
   # many concepts at once so don't cover other test types yet
-  - Unit Testing:
+  - Basics of Testing:
       # From this point forward use the reference project
 
-      # Introduction to unit testing and the reference project.
-      # What a unit test is, why it matters, and how to run the test suite.
-      # Very intro level
+      # Benefits of testing an application.
       - unit-testing/index.md
+
+      # Introduction to unit testing and the reference project.
+      # More on test philosophy
+      # Tests as living documentation of system behavior.
+      # Test what the code should do (behavior), not how it does it (implementation details).
+      - unit-testing/unit-testing.md
+
+      # How to run the test project.
+      - unit-testing/using-reference-project.md
 
       # The Arrange-Act-Assert pattern as a consistent structure for writing tests.
       # Make sure test fails before making it pass, otherwise you don't know if it actually works.
       - unit-testing/arrange-act-assert.md
 
-      # More on test philosophy
-      # Tests as living documentation of system behavior.
-      # Test what the code should do (behavior), not how it does it (implementation details).
-      - unit-testing/what-to-test.md
-
       # Practical advice on how to write effective tests.
+      # Naming conventions
       # How to systematically cover behavior: golden path, edge cases,
       # boundary conditions, and error contracts.
       # Tabular tests(? is that what they're called?)
-      - unit-testing/writing-an-effective-test.md
+      - unit-testing/writing-effective-tests.md
+
+      # Keep this very simple - example where current date is used for greeting;
+      # Explain that we should actually refactor the function itself to accept date as a parameter.
+      - unit-testing/controlling-external-dependencies.md
 
   - Leveraging the Type System:
       # Use the reference project
