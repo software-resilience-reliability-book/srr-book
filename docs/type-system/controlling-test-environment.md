@@ -1,13 +1,13 @@
-# Testing with Interfaces
+# Controlling the Test Environment
 
 ## Why use Interfaces in Tests?
 
-Interfaces are used frequently in unit tests, because they allow us to:
+The use of interfaces is by no means specific to tests; however interfaces are used frequently in unit tests because they allow us to:
 
-- Isolate the system under test, so that it does not depend on the implementation of the inputs supplied to it
-- Simplify the creation of input data for the system under test
+- Make test output predictable and deterministic by supplying controlled inputs
+- Provide simplified versions of test dependencies that otherwise would be complex or costly to create
 
-## Mocking a ColorTransform
+## Faking a ColorTransform
 
 The `PaletteTransformerTests` class provides an example of how we can use interfaces to our advantage when writing tests.
 

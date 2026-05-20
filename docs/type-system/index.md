@@ -32,4 +32,4 @@ Because the data type is known at compile time, the compiler can provide **type 
 
 ## Custom Types
 
-The type system not only descibes **primitive types** like integers and strings, but provides the means to create **custom types**. Classes are the primary way to create these custom types in C#.
+The type system not only descibes **primitive types** like integers and strings, but provides the means to create **custom types**. Classes are the primary way to create these custom types in C#. Other options include records, structs, and enumerations.

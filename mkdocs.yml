@@ -115,19 +115,21 @@ nav:
 
   - Leveraging the Type System:
       - type-system/index.md
-      - type-system/types-as-contracts.md
-      - type-system/testing-with-interfaces.md
+      - type-system/classes.md
 
       # Focused on guaranteeing valid state; e.g. a "HexColor" class that only allows valid hex colors
       - type-system/protecting-invariants.md
-
-      # Enums protecyour code from developers using it incorrectly
-      - type-system/enums-and-fixed-sets.md
+      # Enums protect code from developers using it incorrectly
+      - type-system/enums.md
 
       # We've covered exceptions plenty; this only needs to point out that we
       # should handle the exact exception types in the error contract of the
       # function that was called; look at the documentation
       - type-system/exception-types.md
+
+      # Students will likely find this section most challenging, so it has been moved to the end
+      - type-system/interfaces.md
+      - type-system/controlling-test-environment.md
 
   - Configuration and Externalized Settings:
       # Use the reference project (needs added)
