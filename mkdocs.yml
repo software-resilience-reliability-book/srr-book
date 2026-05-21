@@ -121,11 +121,6 @@ nav:
       - type-system/classes.md
       - type-system/protecting-invariants.md
       - type-system/enums.md
-      # We've covered exceptions plenty; this only needs to point out that we
-      # should handle the exact exception types in the error contract of the
-      # function that was called; look at the documentation
-      - type-system/exception-types.md
-      # Students will likely find this section most challenging, so it has been moved to the end
       - type-system/interfaces.md
       - type-system/controlling-test-environment.md
 
@@ -133,31 +128,31 @@ nav:
       # Use the reference project (needs added)
       # Copyright text. Something else?
       - configuration/index.md
+      - configuration/types-of-configuration.md
+      - configuration/environment-types.md
+      - configuration/configuring-environments.md
 
-      # show what kind of things are usually in a config
-      # Eg log file paths, database connection strings, etc.
-      - configuration/why-externalize.md
+      # Use this as an example of a time when fail fast is appropriate.
+      # Don't know if it's worth getting caught up in .NET specifics (IOptions?); need to check difficulty level.
+      - configuration/strongly-typed-configuration.md
 
       # Demo a few things. Ideally we'd have a file path that we're pointing to in lieu of a database connection string.
       # Add a static "Design Reference" page that's a palette, and have this as config colors?
       # Would show color divs, hex, and RGB values for each
       - configuration/configuration-by-example.md
 
-      # Use this as an example of a time when fail fast is appropriate.
-      # Don't know if it's worth getting caught up in .NET specifics (IOptions?); need to check difficulty level.
-      - configuration/strongly-typed-configuration.md
-
-  - Environment Management:
-      # Use the reference project (needs added)
-      - environment-management/index.md
-      # For below focus on what they are, not implementation
-      - environment-management/development-environment.md
-      - environment-management/staging-environment.md
-      - environment-management/production-environment.md
-      # Not sure what to put here?
-      - environment-management/configuring-development-environment.md
-      # Only include if time. This isn't really an ops focused course.
-      - environment-management/configuring-production-build.md
+  # Consolidate to configuration chapter
+  #   - Environment Management:
+  #       # Use the reference project (needs added)
+  #       - environment-management/index.md
+  #       # For below focus on what they are, not implementation
+  #       - environment-management/development-environment.md
+  #       - environment-management/staging-environment.md
+  #       - environment-management/production-environment.md
+  #       # Not sure what to put here?
+  #       - environment-management/configuring-development-environment.md
+  #       # Only include if time. This isn't really an ops focused course.
+  #       - environment-management/configuring-production-build.md
 
   - Project Refactoring:
       # Use the reference project? I guess just say that "we could have jammed everything into the web project but we didn't?"
