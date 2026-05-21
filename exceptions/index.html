@@ -10,31 +10,31 @@
         <meta name="author" content="Mike Jovanovich">
       
       
-        <link rel="canonical" href="https://software-resilience-reliability-book.github.io/srr-book/type-system/exception-types/">
+        <link rel="canonical" href="https://software-resilience-reliability-book.github.io/srr-book/exceptions/">
       
       
-        <link rel="prev" href="../enums/">
+        <link rel="prev" href="../unit-testing/knowing-what-to-test/">
       
       
-        <link rel="next" href="../interfaces/">
+        <link rel="next" href="../type-system/">
       
       
         
       
       
-      <link rel="icon" href="../../assets/images/favicon.png">
+      <link rel="icon" href="../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
     
     
       
-        <title>Using Exception Types Effectively - Software Resilience and Reliability</title>
+        <title>Using Exceptions Effectively - Software Resilience and Reliability</title>
       
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/main.484c7ddc.min.css">
+      <link rel="stylesheet" href="../assets/stylesheets/main.484c7ddc.min.css">
       
         
-        <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
+        <link rel="stylesheet" href="../assets/stylesheets/palette.ab4e12ef.min.css">
       
       
 
@@ -53,9 +53,9 @@
       
     
     
-      <link rel="stylesheet" href="../../css/custom.css">
+      <link rel="stylesheet" href="../css/custom.css">
     
-    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
@@ -80,7 +80,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#using-exception-types-effectively" class="md-skip">
+        <a href="#using-exceptions-effectively" class="md-skip">
           Skip to content
         </a>
       
@@ -96,7 +96,7 @@
 
 <header class="md-header md-header--shadow" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href="../.." title="Software Resilience and Reliability" class="md-header__button md-logo" aria-label="Software Resilience and Reliability" data-md-component="logo">
+    <a href=".." title="Software Resilience and Reliability" class="md-header__button md-logo" aria-label="Software Resilience and Reliability" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
@@ -116,7 +116,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Using Exception Types Effectively
+              Using Exceptions Effectively
             
           </span>
         </div>
@@ -232,7 +232,7 @@
 
 <nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="../.." title="Software Resilience and Reliability" class="md-nav__button md-logo" aria-label="Software Resilience and Reliability" data-md-component="logo">
+    <a href=".." title="Software Resilience and Reliability" class="md-nav__button md-logo" aria-label="Software Resilience and Reliability" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
@@ -262,7 +262,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../.." class="md-nav__link">
+      <a href=".." class="md-nav__link">
         
   
   
@@ -289,7 +289,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../reference-project/" class="md-nav__link">
+      <a href="../reference-project/" class="md-nav__link">
         
   
   
@@ -340,7 +340,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../living-software/" class="md-nav__link ">
+            <a href="../living-software/" class="md-nav__link ">
               
   
   
@@ -384,7 +384,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../living-software/why-software-changes/" class="md-nav__link">
+      <a href="../living-software/why-software-changes/" class="md-nav__link">
         
   
   
@@ -412,7 +412,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../living-software/reliability/" class="md-nav__link">
+      <a href="../living-software/reliability/" class="md-nav__link">
         
   
   
@@ -440,7 +440,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../living-software/resiliency/" class="md-nav__link">
+      <a href="../living-software/resiliency/" class="md-nav__link">
         
   
   
@@ -501,7 +501,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../complexity-debt/" class="md-nav__link ">
+            <a href="../complexity-debt/" class="md-nav__link ">
               
   
   
@@ -545,7 +545,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../complexity-debt/managing-complexity/" class="md-nav__link">
+      <a href="../complexity-debt/managing-complexity/" class="md-nav__link">
         
   
   
@@ -573,7 +573,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../complexity-debt/technical-debt-defiinition/" class="md-nav__link">
+      <a href="../complexity-debt/technical-debt-defiinition/" class="md-nav__link">
         
   
   
@@ -601,7 +601,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../complexity-debt/technical-debt-cost/" class="md-nav__link">
+      <a href="../complexity-debt/technical-debt-cost/" class="md-nav__link">
         
   
   
@@ -629,7 +629,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../complexity-debt/refactoring/" class="md-nav__link">
+      <a href="../complexity-debt/refactoring/" class="md-nav__link">
         
   
   
@@ -698,7 +698,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../builds/" class="md-nav__link ">
+            <a href="../builds/" class="md-nav__link ">
               
   
   
@@ -742,7 +742,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../builds/creating-empty-project-shell/" class="md-nav__link">
+      <a href="../builds/creating-empty-project-shell/" class="md-nav__link">
         
   
   
@@ -770,7 +770,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../builds/creating-dotnet-project/" class="md-nav__link">
+      <a href="../builds/creating-dotnet-project/" class="md-nav__link">
         
   
   
@@ -798,7 +798,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../builds/compiling/" class="md-nav__link">
+      <a href="../builds/compiling/" class="md-nav__link">
         
   
   
@@ -826,7 +826,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../builds/build-artifacts/" class="md-nav__link">
+      <a href="../builds/build-artifacts/" class="md-nav__link">
         
   
   
@@ -854,7 +854,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../builds/running-the-program/" class="md-nav__link">
+      <a href="../builds/running-the-program/" class="md-nav__link">
         
   
   
@@ -882,7 +882,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../builds/understanding-the-debugger/" class="md-nav__link">
+      <a href="../builds/understanding-the-debugger/" class="md-nav__link">
         
   
   
@@ -910,7 +910,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../builds/adding-a-package/" class="md-nav__link">
+      <a href="../builds/adding-a-package/" class="md-nav__link">
         
   
   
@@ -938,7 +938,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../builds/what-belongs-in-version-control/" class="md-nav__link">
+      <a href="../builds/what-belongs-in-version-control/" class="md-nav__link">
         
   
   
@@ -1011,7 +1011,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../diagnosing-errors/" class="md-nav__link ">
+            <a href="../diagnosing-errors/" class="md-nav__link ">
               
   
   
@@ -1055,7 +1055,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../diagnosing-errors/compile-time/" class="md-nav__link">
+      <a href="../diagnosing-errors/compile-time/" class="md-nav__link">
         
   
   
@@ -1083,7 +1083,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../diagnosing-errors/troubleshooting-failed-build/" class="md-nav__link">
+      <a href="../diagnosing-errors/troubleshooting-failed-build/" class="md-nav__link">
         
   
   
@@ -1111,7 +1111,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../diagnosing-errors/runtime/" class="md-nav__link">
+      <a href="../diagnosing-errors/runtime/" class="md-nav__link">
         
   
   
@@ -1139,7 +1139,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../diagnosing-errors/test-harness/" class="md-nav__link">
+      <a href="../diagnosing-errors/test-harness/" class="md-nav__link">
         
   
   
@@ -1167,7 +1167,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../diagnosing-errors/print-logging/" class="md-nav__link">
+      <a href="../diagnosing-errors/print-logging/" class="md-nav__link">
         
   
   
@@ -1195,7 +1195,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../diagnosing-errors/validating-runtime-input/" class="md-nav__link">
+      <a href="../diagnosing-errors/validating-runtime-input/" class="md-nav__link">
         
   
   
@@ -1223,7 +1223,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../diagnosing-errors/handling-runtime-errors/" class="md-nav__link">
+      <a href="../diagnosing-errors/handling-runtime-errors/" class="md-nav__link">
         
   
   
@@ -1251,7 +1251,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../diagnosing-errors/error-contracts/" class="md-nav__link">
+      <a href="../diagnosing-errors/error-contracts/" class="md-nav__link">
         
   
   
@@ -1279,7 +1279,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../diagnosing-errors/stack-trace/" class="md-nav__link">
+      <a href="../diagnosing-errors/stack-trace/" class="md-nav__link">
         
   
   
@@ -1307,7 +1307,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../diagnosing-errors/logic/" class="md-nav__link">
+      <a href="../diagnosing-errors/logic/" class="md-nav__link">
         
   
   
@@ -1376,7 +1376,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../unit-testing/" class="md-nav__link ">
+            <a href="../unit-testing/" class="md-nav__link ">
               
   
   
@@ -1420,7 +1420,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../unit-testing/unit-testing/" class="md-nav__link">
+      <a href="../unit-testing/unit-testing/" class="md-nav__link">
         
   
   
@@ -1448,7 +1448,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../unit-testing/using-reference-project/" class="md-nav__link">
+      <a href="../unit-testing/using-reference-project/" class="md-nav__link">
         
   
   
@@ -1476,7 +1476,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../unit-testing/arrange-act-assert/" class="md-nav__link">
+      <a href="../unit-testing/arrange-act-assert/" class="md-nav__link">
         
   
   
@@ -1504,7 +1504,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../unit-testing/writing-effective-tests/" class="md-nav__link">
+      <a href="../unit-testing/writing-effective-tests/" class="md-nav__link">
         
   
   
@@ -1532,7 +1532,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../unit-testing/test-segmentation/" class="md-nav__link">
+      <a href="../unit-testing/test-segmentation/" class="md-nav__link">
         
   
   
@@ -1560,7 +1560,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../unit-testing/parameterized-tests/" class="md-nav__link">
+      <a href="../unit-testing/parameterized-tests/" class="md-nav__link">
         
   
   
@@ -1588,7 +1588,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../unit-testing/controlling-test-dependencies/" class="md-nav__link">
+      <a href="../unit-testing/controlling-test-dependencies/" class="md-nav__link">
         
   
   
@@ -1616,7 +1616,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../unit-testing/knowing-what-to-test/" class="md-nav__link">
+      <a href="../unit-testing/knowing-what-to-test/" class="md-nav__link">
         
   
   
@@ -1659,18 +1659,6 @@
           
         
       
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
     
     
     
@@ -1683,7 +1671,83 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../" class="md-nav__link ">
+            <a href="./" class="md-nav__link md-nav__link--active">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Using Exceptions Effectively
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_8_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_8">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Using Exceptions Effectively
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_9" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../type-system/" class="md-nav__link ">
               
   
   
@@ -1701,14 +1765,14 @@
             </a>
             
               
-              <label class="md-nav__link " for="__nav_8" id="__nav_8_label" tabindex="0">
+              <label class="md-nav__link " for="__nav_9" id="__nav_9_label" tabindex="0">
                 <span class="md-nav__icon md-icon"></span>
               </label>
             
           </div>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_8_label" aria-expanded="true">
-          <label class="md-nav__title" for="__nav_8">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_9_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_9">
             <span class="md-nav__icon md-icon"></span>
             
   
@@ -1727,7 +1791,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../classes/" class="md-nav__link">
+      <a href="../type-system/classes/" class="md-nav__link">
         
   
   
@@ -1755,7 +1819,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../protecting-invariants/" class="md-nav__link">
+      <a href="../type-system/protecting-invariants/" class="md-nav__link">
         
   
   
@@ -1783,7 +1847,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../enums/" class="md-nav__link">
+      <a href="../type-system/enums/" class="md-nav__link">
         
   
   
@@ -1808,44 +1872,17 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Using Exception Types Effectively
-  
-
-    
-  </span>
-  
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../type-system/exception-types.md" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    Using Exception Types Effectively
+    None
   
 
     
@@ -1854,59 +1891,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#why-have-multiple-exception-types" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Why have Multiple Exception Types?
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#creating-custom-exception-types" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Creating Custom Exception Types
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#selectively-handling-exceptions" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Selectively Handling Exceptions
-      
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -1919,7 +1903,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../interfaces/" class="md-nav__link">
+      <a href="../type-system/interfaces/" class="md-nav__link">
         
   
   
@@ -1947,7 +1931,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../controlling-test-environment/" class="md-nav__link">
+      <a href="../type-system/controlling-test-environment/" class="md-nav__link">
         
   
   
@@ -2000,186 +1984,6 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_9" >
-        
-          
-          <label class="md-nav__link" for="__nav_9" id="__nav_9_label" tabindex="0">
-            
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Configuration and Externalized Settings
-  
-
-    
-  </span>
-  
-  
-
-            <span class="md-nav__icon md-icon"></span>
-          </label>
-        
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_9_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_9">
-            <span class="md-nav__icon md-icon"></span>
-            
-  
-    Configuration and Externalized Settings
-  
-
-          </label>
-          <ul class="md-nav__list" data-md-scrollfix>
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../configuration/index.md" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    None
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../configuration/why-externalize.md" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    None
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../configuration/configuration-by-example.md" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    None
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../configuration/strongly-typed-configuration.md" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    None
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-          </ul>
-        </nav>
-      
-    </li>
-  
-
-    
-      
-      
-  
-  
-  
-  
-    
-    
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-    
-    
-    
-    
-    <li class="md-nav__item md-nav__item--nested">
-      
-        
-        
         <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_10" >
         
           
@@ -2190,7 +1994,7 @@
   <span class="md-ellipsis">
     
   
-    Environment Management
+    Configuration and Externalized Settings
   
 
     
@@ -2206,7 +2010,7 @@
             <span class="md-nav__icon md-icon"></span>
             
   
-    Environment Management
+    Configuration and Externalized Settings
   
 
           </label>
@@ -2219,7 +2023,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../environment-management/index.md" class="md-nav__link">
+      <a href="../configuration/index.md" class="md-nav__link">
         
   
   
@@ -2247,7 +2051,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../environment-management/development-environment.md" class="md-nav__link">
+      <a href="../configuration/why-externalize.md" class="md-nav__link">
         
   
   
@@ -2275,7 +2079,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../environment-management/staging-environment.md" class="md-nav__link">
+      <a href="../configuration/configuration-by-example.md" class="md-nav__link">
         
   
   
@@ -2303,63 +2107,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../environment-management/production-environment.md" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    None
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../environment-management/configuring-development-environment.md" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    None
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../environment-management/configuring-production-build.md" class="md-nav__link">
+      <a href="../configuration/strongly-typed-configuration.md" class="md-nav__link">
         
   
   
@@ -2395,6 +2143,8 @@
   
     
     
+      
+        
       
         
       
@@ -2424,7 +2174,7 @@
   <span class="md-ellipsis">
     
   
-    Project Refactoring
+    Environment Management
   
 
     
@@ -2440,7 +2190,7 @@
             <span class="md-nav__icon md-icon"></span>
             
   
-    Project Refactoring
+    Environment Management
   
 
           </label>
@@ -2453,7 +2203,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../project-refactoring/index.md" class="md-nav__link">
+      <a href="../environment-management/index.md" class="md-nav__link">
         
   
   
@@ -2481,7 +2231,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../project-refactoring/single-responsibility-principle.md" class="md-nav__link">
+      <a href="../environment-management/development-environment.md" class="md-nav__link">
         
   
   
@@ -2509,7 +2259,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../project-refactoring/modularity.md" class="md-nav__link">
+      <a href="../environment-management/staging-environment.md" class="md-nav__link">
         
   
   
@@ -2537,7 +2287,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../project-refactoring/decoupling.md" class="md-nav__link">
+      <a href="../environment-management/production-environment.md" class="md-nav__link">
         
   
   
@@ -2565,7 +2315,35 @@
   
   
     <li class="md-nav__item">
-      <a href="../../project-refactoring/internal-vs-external-dependencies.md" class="md-nav__link">
+      <a href="../environment-management/configuring-development-environment.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    None
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../environment-management/configuring-production-build.md" class="md-nav__link">
         
   
   
@@ -2630,7 +2408,7 @@
   <span class="md-ellipsis">
     
   
-    Dependency Management
+    Project Refactoring
   
 
     
@@ -2643,6 +2421,212 @@
         
         <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_12_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_12">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Project Refactoring
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../project-refactoring/index.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    None
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../project-refactoring/single-responsibility-principle.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    None
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../project-refactoring/modularity.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    None
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../project-refactoring/decoupling.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    None
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../project-refactoring/internal-vs-external-dependencies.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    None
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_13" >
+        
+          
+          <label class="md-nav__link" for="__nav_13" id="__nav_13_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Dependency Management
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_13_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_13">
             <span class="md-nav__icon md-icon"></span>
             
   
@@ -2659,7 +2643,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../dependency-management/index.md" class="md-nav__link">
+      <a href="../dependency-management/index.md" class="md-nav__link">
         
   
   
@@ -2687,7 +2671,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../dependency-management/semantic-versioning.md" class="md-nav__link">
+      <a href="../dependency-management/semantic-versioning.md" class="md-nav__link">
         
   
   
@@ -2715,7 +2699,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../dependency-management/breaking-changes.md" class="md-nav__link">
+      <a href="../dependency-management/breaking-changes.md" class="md-nav__link">
         
   
   
@@ -2743,7 +2727,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../dependency-management/version-pinning.md" class="md-nav__link">
+      <a href="../dependency-management/version-pinning.md" class="md-nav__link">
         
   
   
@@ -2771,7 +2755,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../dependency-management/package-managers.md" class="md-nav__link">
+      <a href="../dependency-management/package-managers.md" class="md-nav__link">
         
   
   
@@ -2824,10 +2808,10 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_13" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_14" >
         
           
-          <label class="md-nav__link" for="__nav_13" id="__nav_13_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_14" id="__nav_14_label" tabindex="0">
             
   
   
@@ -2845,8 +2829,8 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_13_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_13">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_14_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_14">
             <span class="md-nav__icon md-icon"></span>
             
   
@@ -2863,7 +2847,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../full-testing/index.md" class="md-nav__link">
+      <a href="../full-testing/index.md" class="md-nav__link">
         
   
   
@@ -2891,7 +2875,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../full-testing/test-types.md" class="md-nav__link">
+      <a href="../full-testing/test-types.md" class="md-nav__link">
         
   
   
@@ -2919,7 +2903,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../full-testing/integration-testing.md" class="md-nav__link">
+      <a href="../full-testing/integration-testing.md" class="md-nav__link">
         
   
   
@@ -2947,7 +2931,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../full-testing/end-to-end-testing.md" class="md-nav__link">
+      <a href="../full-testing/end-to-end-testing.md" class="md-nav__link">
         
   
   
@@ -2995,47 +2979,6 @@
     
   
   
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#why-have-multiple-exception-types" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Why have Multiple Exception Types?
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#creating-custom-exception-types" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Creating Custom Exception Types
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#selectively-handling-exceptions" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Selectively Handling Exceptions
-      
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
 </nav>
                   </div>
                 </div>
@@ -3054,29 +2997,23 @@
   
 
 
-<h1 id="using-exception-types-effectively">Using Exception Types Effectively<a class="headerlink" href="#using-exception-types-effectively" title="Permanent link">&para;</a></h1>
-<h2 id="why-have-multiple-exception-types">Why have Multiple Exception Types?<a class="headerlink" href="#why-have-multiple-exception-types" title="Permanent link">&para;</a></h2>
-<p>In most languages <strong>Exception</strong> is treated as a base type that can have more specific derived types. This allows for flexibility when handling exceptions.</p>
-<p>A typical try/catch block looks like this:</p>
-<div class="language-csharp highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="k">try</span><span class="w"> </span><span class="p">{</span>
-</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="w">    </span><span class="c1">// code that can throw an exception</span>
-</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="p">}</span><span class="w"> </span><span class="k">catch</span><span class="w"> </span><span class="p">(</span><span class="n">Exception</span><span class="w"> </span><span class="n">e</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="w">    </span><span class="c1">// handle the exception</span>
-</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="p">}</span>
-</span></code></pre></div>
-<h2 id="creating-custom-exception-types">Creating Custom Exception Types<a class="headerlink" href="#creating-custom-exception-types" title="Permanent link">&para;</a></h2>
-<p>It can be useful to create custom exception types, aside from the built-in ones, to provide more context about the error.</p>
-<p>TODO</p>
-<div class="language-csharp highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="k">public</span><span class="w"> </span><span class="k">class</span><span class="w"> </span><span class="nc">MyException</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="n">Exception</span>
-</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="p">{</span>
-</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="w">    </span><span class="k">public</span><span class="w"> </span><span class="nf">MyException</span><span class="p">(</span><span class="kt">string</span><span class="w"> </span><span class="n">message</span><span class="p">)</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="k">base</span><span class="p">(</span><span class="n">message</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="p">}</span>
-</span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a><span class="p">}</span>
-</span></code></pre></div>
-<p>...</p>
-<h2 id="selectively-handling-exceptions">Selectively Handling Exceptions<a class="headerlink" href="#selectively-handling-exceptions" title="Permanent link">&para;</a></h2>
-<p>only handle types that the error contract defines;
-don't handle base Exception type unless global error handling is desired;
-...</p>
+<h1 id="using-exceptions-effectively">Using Exceptions Effectively<a class="headerlink" href="#using-exceptions-effectively" title="Permanent link">&para;</a></h1>
+<p>For this section we have provided a list of readings from the Microsoft docs, which cover the topic in depth:</p>
+<ul>
+<li><a href="https://learn.microsoft.com/en-us/dotnet/standard/exceptions/">Handling and throwing exceptions in .NET</a></li>
+<li><a href="https://learn.microsoft.com/en-us/dotnet/standard/exceptions/exception-class-and-properties">Exception class and properties</a></li>
+<li><a href="https://learn.microsoft.com/en-us/dotnet/standard/exceptions/how-to-use-the-try-catch-block-to-catch-exceptions">How to use the try/catch block to catch exceptions</a></li>
+<li><a href="https://learn.microsoft.com/en-us/dotnet/standard/exceptions/how-to-use-specific-exceptions-in-a-catch-block">How to use specific exceptions in a catch block</a></li>
+<li><a href="https://learn.microsoft.com/en-us/dotnet/standard/exceptions/how-to-explicitly-throw-exceptions">How to explicitly throw exceptions</a></li>
+<li><a href="https://learn.microsoft.com/en-us/dotnet/standard/exceptions/how-to-create-user-defined-exceptions">How to create user-defined exceptions</a></li>
+<li><a href="https://learn.microsoft.com/en-us/dotnet/standard/exceptions/how-to-use-finally-blocks">How to use finally blocks</a></li>
+<li><a href="https://learn.microsoft.com/en-us/dotnet/standard/exceptions/best-practices-for-exceptions">Best practices for exceptions</a></li>
+</ul>
+<!-- prettier-ignore -->
+<div class="admonition warning">
+<p class="admonition-title">Know the Basics of Exceptions</p>
+<p>Going forward, we will assume that you know how to use exceptions in your code.</p>
+</div>
 
 
 
@@ -3112,7 +3049,7 @@ don't handle base Exception type unless global error handling is desired;
       <nav class="md-footer__inner md-grid" aria-label="Footer" >
         
           
-          <a href="../enums/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Enumerations">
+          <a href="../unit-testing/knowing-what-to-test/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Knowing What to Test">
             <div class="md-footer__button md-icon">
               
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
@@ -3122,20 +3059,20 @@ don't handle base Exception type unless global error handling is desired;
                 Previous
               </span>
               <div class="md-ellipsis">
-                Enumerations
+                Knowing What to Test
               </div>
             </div>
           </a>
         
         
           
-          <a href="../interfaces/" class="md-footer__link md-footer__link--next" aria-label="Next: Interfaces">
+          <a href="../type-system/" class="md-footer__link md-footer__link--next" aria-label="Next: The Type System">
             <div class="md-footer__title">
               <span class="md-footer__direction">
                 Next
               </span>
               <div class="md-ellipsis">
-                Interfaces
+                The Type System
               </div>
             </div>
             <div class="md-footer__button md-icon">
@@ -3176,10 +3113,10 @@ don't handle base Exception type unless global error handling is desired;
     
       
       
-      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["content.code.copy", "navigation.instant", "navigation.footer", "navigation.indexes", "navigation.top"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+      <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": ["content.code.copy", "navigation.instant", "navigation.footer", "navigation.indexes", "navigation.top"], "search": "../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
     
     
-      <script src="../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      <script src="../assets/javascripts/bundle.79ae519e.min.js"></script>
       
     
   </body>
