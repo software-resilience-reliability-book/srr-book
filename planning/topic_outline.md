@@ -56,6 +56,7 @@
 - `appsettings.{Environment}.json` override behaviors
 - Debug vs Release builds (eg what is excluded from prod build)
 - Environment-specific settings, such as pointing to a development data store instead of prod
+- Seeding data for development environments?
 
 ## Module : Codebase Organization and Project Structure
 

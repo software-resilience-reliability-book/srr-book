@@ -117,14 +117,11 @@ nav:
       - type-system/index.md
       - type-system/classes.md
       - type-system/protecting-invariants.md
-      # Enums protect code from developers using it incorrectly
       - type-system/enums.md
-
       # We've covered exceptions plenty; this only needs to point out that we
       # should handle the exact exception types in the error contract of the
       # function that was called; look at the documentation
       - type-system/exception-types.md
-
       # Students will likely find this section most challenging, so it has been moved to the end
       - type-system/interfaces.md
       - type-system/controlling-test-environment.md
@@ -134,6 +131,8 @@ nav:
       # Copyright text. Something else?
       - configuration/index.md
 
+      # show what kind of things are usually in a config
+      # Eg log file paths, database connection strings, etc.
       - configuration/why-externalize.md
 
       # Demo a few things. Ideally we'd have a file path that we're pointing to in lieu of a database connection string.
@@ -152,7 +151,7 @@ nav:
       - environment-management/development-environment.md
       - environment-management/staging-environment.md
       - environment-management/production-environment.md
-      # appsettings overrides for environments, and why use them
+      # Not sure what to put here?
       - environment-management/configuring-development-environment.md
       # Only include if time. This isn't really an ops focused course.
       - environment-management/configuring-production-build.md
