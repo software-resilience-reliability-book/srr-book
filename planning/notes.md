@@ -6,6 +6,10 @@ mkdocs preview command:
 mkdocs serve --livereload
 ```
 
+May need to rescope lessons, as config stuff is pretty light while unit testing and error handling are very heavy.
+
+Add ms docs reading links where we can.
+
 ## Book
 
 ## Needed Topics (in order of likeliness to make scope)

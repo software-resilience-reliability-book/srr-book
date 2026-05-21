@@ -46,3 +46,9 @@ Open your `bin/Debug/net10.0` directory and you will see the new package dll's f
 ![Spectre.Console assemblies](../images/spectre-assemblies.png)
 
 Give the program a try - you should see colored output when you enter a valid six character hex color code!
+
+## Additional Resources
+
+To read more about NuGet, see the following article and related documentation on Microsoft docs:
+
+- [An introduction to NuGet](https://learn.microsoft.com/en-us/nuget/what-is-nuget)

@@ -113,6 +113,9 @@ nav:
       - unit-testing/controlling-test-dependencies.md
       - unit-testing/knowing-what-to-test.md
 
+  - Using Exceptions Effectively:
+      - exceptions/index.md
+
   - Leveraging the Type System:
       - type-system/index.md
       - type-system/classes.md

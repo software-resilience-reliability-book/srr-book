@@ -24,9 +24,11 @@ We do not link to a repository in this chapter, but will in future chapters.
 
     You can always learn Git later!
 
-## Additional C# Resources
+## Additional Resources
 
 _You do not have to know C# to follow the concepts in this book_. However, if you would like to learn more about developing in the C# language, we recommend that you:
 
 - Skim the [C# Documentation](https://learn.microsoft.com/en-us/dotnet/csharp/tour-of-csharp/) to brush up on unfamiliar concepts. You may progress by following the table of contents on the left of the page.
 - Browse the [Beginner C# Modules](https://learn.microsoft.com/en-us/training/browse/?resource_type=module&terms=c%23&levels=beginner) on Microsoft Learn to find modules that interest you.
+
+We will provide recommendations for supplementary resources throughout the book. Unless otherwised noted these are not necessary to understand the concepts in this book. They are optional readings.

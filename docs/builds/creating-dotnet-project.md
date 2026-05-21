@@ -25,3 +25,9 @@ dotnet new console
 This will create several files in the current directory. Open the `Program.cs` file and you will see a basic "Hello, World!" program.
 
 This is currently the only **source code** in the project. Our next step is to turn this code into something that the computer can execute.
+
+## Additional Resources
+
+If you need a reminder of the dotnet CLI commands, see the following article and related documentation on Microsoft docs:
+
+- [dotnet CLI commands](https://learn.microsoft.com/en-us/dotnet/core/tools/dotnet) for the full list of commands and their usage.

@@ -16,6 +16,14 @@ The source code line that the breakpoint is set to is looked up using the debugg
 
 ![breakpoint](../images/breakpoint.png)
 
+## Using the Debugger Effectively
+
+To learn more about debugging in VS Code, see the folling article and related videos. You do not need to install the browser tools (Microsoft Edge) mentioned in the video for this course:
+
+- [Debug code with Visual Studio Code](https://code.visualstudio.com/docs/debugtest/debugging)
+
 <!-- prettier-ignore -->
 !!! warning "Know the Basics of Debugging"
-    Going forward, we will assume that you know how to step through code using the VS Code debugger. If you are not familiar with debugging, please take an hour or so to learn the very basics.
+    Going forward, we will assume that you know how to step through code using the VS Code debugger.
+
+    Take the time to review this resource thoroughly. Even if you already know the basics, you might find something new.

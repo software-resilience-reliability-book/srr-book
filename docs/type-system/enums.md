@@ -102,3 +102,9 @@ public class GrayscaleTransform(GrayscaleFormula formula = GrayscaleFormula.Aver
 The `GrayscaleTransform` class needs to know which formula to use in the `Apply` method when converting a color to grayscale. It will call either `ToAverage` or `ToLuminance` depending on the formula provided to the switch statement.
 
 Rather than allowing arbitrary strings, we use an enum to restrict the valid values for the `formula` parameter. By default it is set to use `GrayscaleFormula.Average`, but the caller can specify `GrayscaleFormula.Luminance` if they want to use the luminance formula instead.
+
+## Additional Resources
+
+For additional resources on enums, see the following Microsoft docs:
+
+- [System.Enum class](https://learn.microsoft.com/en-us/dotnet/fundamentals/runtime-libraries/system-enum)

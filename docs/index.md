@@ -1,14 +1,18 @@
 # Software Resilience and Reliability
 
-## Preface
+## Why This Book was Written
 
 > Technology is the primary engine for value creation, innovation, and organizational performance. Unlike physical assets, software is not static. Its power lies in its ability to incorporate user feedback and evolve to meet changing needs. Consequently, one of the most critical indicators of a software application’s health is how easily, safely, and quickly it can be modified.
 >
 > -- [DORA / Google Cloud, 2026](https://dora.dev/ai/roi/report/)
 
-## Who this Book is For, and What You Need to Know
+This book is for developers who know how to write code but haven't yet had to maintain, extend, or ship software applications at scale.
 
-This book was written for new developers who have had some experience with programming, but may lack experience working on large or complex software projects.
+Professional software development introduces a set of challenges that extend far beyond coding algorithms. Developers must read and understand codebases that they didn't write, navigate shifting requirements, work with teammates who need to understand their work, and build on to systems that must keep running smoothly while they are being changed. The transition from programmer to working developer is rarely seamless, regardless of how well-prepared anyone is coming in.
+
+This book is intended to cover knowledge and practices that offer practical value when working on software projects, but are more often learned "on the job" through painful trial and error rather than taught explicitly.
+
+## Justification for Technology Choices
 
 This book uses **.NET** and the **C#** programming language to illustrate concepts. These were chosen because:
 
@@ -21,3 +25,9 @@ It is not expected that the reader have any C# experience. With the volume of hi
 This book uses **application software** as opposed to **system software** do demonstrate concepts. Application software is typically more accessible for new learners, and examples are easier to understand.
 
 All of the topics in this book may be applied to software generally, regardless of which technology a solution is implemented in.
+
+## Format of the Book
+
+This book is a mix of original content and curated external resources, depending on which approach best serves the topic.
+
+Although readers are free to skip sections, each chapter assumes that the reader understands content from previous chapters.
