@@ -73,7 +73,7 @@
          <lastmod>2026-05-21</lastmod>
     </url>
     <url>
-         <loc>https://software-resilience-reliability-book.github.io/srr-book/configuration/configuration-by-example/</loc>
+         <loc>https://software-resilience-reliability-book.github.io/srr-book/configuration/configuring-application/</loc>
          <lastmod>2026-05-21</lastmod>
     </url>
     <url>
@@ -86,6 +86,10 @@
     </url>
     <url>
          <loc>https://software-resilience-reliability-book.github.io/srr-book/configuration/types-of-configuration/</loc>
+         <lastmod>2026-05-21</lastmod>
+    </url>
+    <url>
+         <loc>https://software-resilience-reliability-book.github.io/srr-book/configuration/using-environment-settings/</loc>
          <lastmod>2026-05-21</lastmod>
     </url>
     <url>
