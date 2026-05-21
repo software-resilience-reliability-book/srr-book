@@ -124,13 +124,19 @@ nav:
       - type-system/interfaces.md
       - type-system/controlling-test-environment.md
 
-  - Configuration and Externalized Settings:
+  - Configuration and Environment Management:
       # Use the reference project (needs added)
       # Copyright text. Something else?
       - configuration/index.md
       - configuration/types-of-configuration.md
       - configuration/environment-types.md
-      - configuration/configuring-environments.md
+
+      # Simple modify of appconfig.json file
+      - configuration/configuring-application.md
+
+      # Program.cs file using ASP.NET Core env setting to modify something
+      # Explain overrides in appsettings.Development.json
+      - configuration/using-environment-settings.md
 
       # Use this as an example of a time when fail fast is appropriate.
       # Don't know if it's worth getting caught up in .NET specifics (IOptions?); need to check difficulty level.
@@ -139,7 +145,7 @@ nav:
       # Demo a few things. Ideally we'd have a file path that we're pointing to in lieu of a database connection string.
       # Add a static "Design Reference" page that's a palette, and have this as config colors?
       # Would show color divs, hex, and RGB values for each
-      - configuration/configuration-by-example.md
+    #   - configuration/configuration-by-example.md
 
   # Consolidate to configuration chapter
   #   - Environment Management:
