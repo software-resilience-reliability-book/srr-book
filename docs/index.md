@@ -8,7 +8,7 @@
 
 This book is for developers who know how to write code but may not have experience maintaining, extending, and refactoring large and complex software applications.
 
-Professional software development introduces a set of challenges that extend far beyond coding the implementation for algorithms and business logic. Developers must read and understand codebases that they didn't write, navigate shifting requirements, work with teammates who need to understand their work, and build on to systems that must keep running smoothly while they are being changed. The transition from programmer to working developer is rarely seamless, regardless of how well-prepared anyone is coming in.
+Professional software development introduces a set of challenges that extend far beyond coding the implementation for algorithms and business logic. Developers must read and understand codebases that they didn't write, navigate shifting requirements, communicate with teammates and stakeholders, and build on to systems that must keep running smoothly while they are being changed. The transition from programmer to working developer is rarely seamless, regardless of how well-prepared anyone is coming in.
 
 This book is intended to cover knowledge and practices that offer practical value when working on software projects, but are more often learned "on the job" through painful trial and error rather than taught explicitly.
 
