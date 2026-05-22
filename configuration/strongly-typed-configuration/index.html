@@ -25,7 +25,7 @@
     
     
       
-        <title>Strongly typed configuration - Software Resilience and Reliability</title>
+        <title>Strongly-Typed Configuration - Software Resilience and Reliability</title>
       
     
     
@@ -77,6 +77,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#strongly-typed-configuration" class="md-skip">
+          Skip to content
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -109,7 +114,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Strongly typed configuration
+              Strongly-Typed Configuration
             
           </span>
         </div>
@@ -2119,6 +2124,26 @@
       <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
       
       
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Strongly-Typed Configuration
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
       
       <a href="./" class="md-nav__link md-nav__link--active">
         
@@ -2127,7 +2152,7 @@
   <span class="md-ellipsis">
     
   
-    Strongly typed configuration
+    Strongly-Typed Configuration
   
 
     
@@ -2136,6 +2161,58 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#why-use-strongly-typed-configuration" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Why Use Strongly-Typed Configuration?
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#creating-a-strongly-typed-configuration-class" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Creating a Strongly-Typed Configuration Class
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#using-the-configuration-class" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Using the Configuration Class
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -2754,6 +2831,49 @@
   
   
   
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#why-use-strongly-typed-configuration" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Why Use Strongly-Typed Configuration?
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#creating-a-strongly-typed-configuration-class" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Creating a Strongly-Typed Configuration Class
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#using-the-configuration-class" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Using the Configuration Class
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
   
 </nav>
                   </div>
@@ -2773,9 +2893,47 @@
   
 
 
-  <h1>Strongly typed configuration</h1>
-
-
+<h1 id="strongly-typed-configuration">Strongly-Typed Configuration<a class="headerlink" href="#strongly-typed-configuration" title="Permanent link">&para;</a></h1>
+<h2 id="why-use-strongly-typed-configuration">Why Use Strongly-Typed Configuration?<a class="headerlink" href="#why-use-strongly-typed-configuration" title="Permanent link">&para;</a></h2>
+<p>The same benefits that we mentioned in the "Leveraging the Type System" section can be applied to configuration settings. By creating custom classes to represent configuration settings, we can ensure that the settings are validated and type-safe.</p>
+<h2 id="creating-a-strongly-typed-configuration-class">Creating a Strongly-Typed Configuration Class<a class="headerlink" href="#creating-a-strongly-typed-configuration-class" title="Permanent link">&para;</a></h2>
+<p>Imagine that we have an application that needs to send confirmation and password reset emails to users. We need to define a host name, port number, and email address for the email server. The configuration might look like this:</p>
+<div class="language-json highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="p">{</span>
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="w">  </span><span class="nt">&quot;Email&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="w">    </span><span class="nt">&quot;Host&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;smtp.example.com&quot;</span><span class="p">,</span>
+</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="w">    </span><span class="nt">&quot;Port&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">587</span><span class="p">,</span>
+</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="w">    </span><span class="nt">&quot;FromAddress&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;no-reply@example.com&quot;</span>
+</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a><span class="w">  </span><span class="p">}</span>
+</span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a><span class="p">}</span>
+</span></code></pre></div>
+<p>We can create a strongly-typed class to represent this configuration:</p>
+<div class="language-csharp highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="k">public</span><span class="w"> </span><span class="k">class</span><span class="w"> </span><span class="nc">EmailOptions</span>
+</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="p">{</span>
+</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="w">    </span><span class="na">[Required]</span>
+</span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a><span class="w">    </span><span class="k">public</span><span class="w"> </span><span class="kt">string</span><span class="w"> </span><span class="n">Host</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="k">get</span><span class="p">;</span><span class="w"> </span><span class="k">set</span><span class="p">;</span><span class="w"> </span><span class="p">}</span>
+</span><span id="__span-1-5"><a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a><span class="w">    </span><span class="na">[Range(1, 65535)]</span>
+</span><span id="__span-1-6"><a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a><span class="w">    </span><span class="k">public</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">Port</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="k">get</span><span class="p">;</span><span class="w"> </span><span class="k">set</span><span class="p">;</span><span class="w"> </span><span class="p">}</span>
+</span><span id="__span-1-7"><a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a><span class="w">    </span><span class="na">[Required]</span>
+</span><span id="__span-1-8"><a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a><span class="w">    </span><span class="k">public</span><span class="w"> </span><span class="kt">string</span><span class="w"> </span><span class="n">FromAddress</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="k">get</span><span class="p">;</span><span class="w"> </span><span class="k">set</span><span class="p">;</span><span class="w"> </span><span class="p">}</span>
+</span><span id="__span-1-9"><a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a><span class="p">}</span>
+</span></code></pre></div>
+<p>This is simply a class with properties for each of the configuration settings. The data annotations (<code>[Required]</code>, <code>[Range]</code>) define validation rules that will be enforced at startup.</p>
+<h2 id="using-the-configuration-class">Using the Configuration Class<a class="headerlink" href="#using-the-configuration-class" title="Permanent link">&para;</a></h2>
+<p>The <code>EmailOptions</code> class can now be registered in the <code>Program.cs</code> file and provided to any class that needs access to the settings. Assuming <code>_options</code> is an instance of <code>EmailOptions</code>, we can access the configuration settings like this:</p>
+<div class="language-csharp highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="c1">// Instead of configuration[&quot;Email:Host&quot;]</span>
+</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="kt">string</span><span class="w"> </span><span class="n">host</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">_options</span><span class="p">.</span><span class="n">Host</span><span class="p">;</span>
+</span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="c1">// Instead of configuration[&quot;Email:Port&quot;]</span>
+</span><span id="__span-2-4"><a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a><span class="kt">int</span><span class="w"> </span><span class="n">port</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">_options</span><span class="p">.</span><span class="n">Port</span><span class="p">;</span>
+</span><span id="__span-2-5"><a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a><span class="c1">// Instead of configuration[&quot;Email:FromAddress&quot;]</span>
+</span><span id="__span-2-6"><a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a><span class="kt">string</span><span class="w"> </span><span class="k">from</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">_options</span><span class="p">.</span><span class="n">FromAddress</span><span class="p">;</span>
+</span></code></pre></div>
+<p>This approach helps avoid typos in the names of settings, missing keys from the configuration file, and other runtime errors.</p>
+<!-- prettier-ignore -->
+<div class="admonition info">
+<p class="admonition-title">Optional custom title</p>
+<p>We have skipped over the registration and injection of the <code>EmailOptions</code> class in order to focus on the core concept of strongly-typed configuration.</p>
+<p>As of this writing the <a href="https://learn.microsoft.com/en-us/dotnet/core/extensions/options">Microsoft documentation for <code>IOptions</code></a> is quite technical. We recommend finding a more accessible tutorial if you plan to use strongly typed configurations in .NET.</p>
+</div>
 
 
 
