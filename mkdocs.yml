@@ -130,11 +130,9 @@ nav:
       - configuration/index.md
       - configuration/types-of-configuration.md
       - configuration/environment-types.md
-
-      # Simple modify of appconfig.json file
       - configuration/configuring-application.md
-
-      # Program.cs file using ASP.NET Core env setting to modify something
+      # ASPNETCORE_ENVIRONMENT
+      # Program.cs file using env flags
       # Explain overrides in appsettings.Development.json
       - configuration/using-environment-settings.md
 

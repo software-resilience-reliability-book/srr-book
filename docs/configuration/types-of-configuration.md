@@ -9,13 +9,13 @@
 By default, the application is launched from the root directory of the project, but we can also launch a specific project by passing the project name as an argument. Here's how we would run the web application included in the reference project if our current working directory in the terminal is the root directory of the project:
 
 ```bash
-dotnet run --project src/ColorTransform.Web/ColorTransform.Web.csproj
+dotnet run --project src/ColorTransform.Web
 ```
 
 If we instead wanted to run the test harness, we would pass the `ColorTransform.Harness` project name:
 
 ```bash
-dotnet run --project tests/ColorTransform.Harness/ColorTransform.Harness.csproj
+dotnet run --project tests/ColorTransform.Harness
 ```
 
 Allowing for the project path to be provided provides greater flexibility in how the CLI command can be used.

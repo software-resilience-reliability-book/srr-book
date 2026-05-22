@@ -12,6 +12,18 @@ This project contains the unit tests that we will reference in this chapter, as 
 
     For additional instructions on using the reference project, see the [reference project](../reference-project.md) page.
 
+## Using the Test Harness Sandbox Application
+
+The test harness for the library is a console application that can be run from the command line or with the VS Code debugger. It is located in the `tests/ColorTransform.Harness` directory.
+
+We recommend using the VS Code debugger to step through the test harness code.
+
+<!-- prettier-ignore -->
+!!! info "Where does the Test Harness Belong?"
+    Unlike the automated test suite which always belongs in version control, a test harness may or may not be included. This is a matter of preference, and often depends on how often the same type of test configuration is needed.
+
+    We have included the test harness in the reference project, but a test harness may be either a separate project that imports the required libraries, or an included project that is ignored in version control.
+
 ## Running the Tests
 
 In a C# project that contains tests, the tests can be run from the command line using the `dotnet test` command:

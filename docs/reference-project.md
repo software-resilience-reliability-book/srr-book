@@ -23,6 +23,6 @@ The Color Transform Application has four projects, which we will approach in the
 
 3. `ColorTransform.Tests` - Tests for the Color Transform Library. These can be run from the root directory with the `dotnet test` command.
 
-4. `ColorTransform.Web` - A web application that uses the Color Transform Library. It can be run from the root directory with the `dotnet run --project src/ColorTransform.Web/ColorTransform.Web.csproj` command. After it is running, you can open it in your browser at `http://localhost:5156`. To stop the application, press `Ctrl+C` in the terminal.
+4. `ColorTransform.Web` - A web application that uses the Color Transform Library. It can be run from the root directory with the `dotnet run --project src/ColorTransform.Web` command. After it is running, you can open it in your browser at `http://localhost:5156`. To stop the application, press `Ctrl+C` in the terminal.
 
 This book will provide guidance on how to run the code as concepts are explained, so you may wish to wait until you come across these sections.

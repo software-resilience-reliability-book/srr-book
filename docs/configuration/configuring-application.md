@@ -5,7 +5,7 @@
 As a reminder, the web project can be run from the command line using the `dotnet run` command.
 
 ```bash
-dotnet run --project src/ColorTransform.Web/ColorTransform.Web.csproj
+dotnet run --project src/ColorTransform.Web
 ```
 
 This will start the web server. You can open the application in your web browser. To find the correct address, look at the output in the terminal. Here is a snippet showing that our application is running on `http://localhost:5156`.
