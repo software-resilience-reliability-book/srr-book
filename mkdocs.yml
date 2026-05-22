@@ -131,7 +131,7 @@ nav:
       - type-system/controlling-test-environment.md
 
   - Configuration and Environment Management:
-      #   - configuration/index.md
+      - configuration/index.md
       - configuration/types-of-configuration.md
       - configuration/environment-types.md
       - configuration/configuring-application.md
