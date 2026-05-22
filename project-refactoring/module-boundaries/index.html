@@ -10,13 +10,13 @@
         <meta name="author" content="Mike Jovanovich">
       
       
-        <link rel="canonical" href="https://software-resilience-reliability-book.github.io/srr-book/diagnosing-errors/validating-runtime-input/">
+        <link rel="canonical" href="https://software-resilience-reliability-book.github.io/srr-book/project-refactoring/module-boundaries/">
       
       
-        <link rel="prev" href="../print-logging/">
+        <link rel="prev" href="../why-split-a-project/">
       
       
-        <link rel="next" href="../handling-runtime-errors/">
+        <link rel="next" href="../internal-external-dependencies/">
       
       
         
@@ -27,7 +27,7 @@
     
     
       
-        <title>Validating Runtime Input - Software Resilience and Reliability</title>
+        <title>Module boundaries - Software Resilience and Reliability</title>
       
     
     
@@ -79,11 +79,6 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
-        
-        <a href="#validating-runtime-input" class="md-skip">
-          Skip to content
-        </a>
-      
     </div>
     <div data-md-component="announce">
       
@@ -116,7 +111,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Validating Runtime Input
+              Module boundaries
             
           </span>
         </div>
@@ -1000,8 +995,6 @@
       
   
   
-    
-  
   
   
     
@@ -1035,15 +1028,15 @@
     
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../" class="md-nav__link ">
+            <a href="../../diagnosing-errors/" class="md-nav__link ">
               
   
   
@@ -1067,7 +1060,7 @@
             
           </div>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_6">
             <span class="md-nav__icon md-icon"></span>
             
@@ -1087,7 +1080,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../compile-time/" class="md-nav__link">
+      <a href="../../diagnosing-errors/compile-time/" class="md-nav__link">
         
   
   
@@ -1115,7 +1108,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../troubleshooting-failed-build/" class="md-nav__link">
+      <a href="../../diagnosing-errors/troubleshooting-failed-build/" class="md-nav__link">
         
   
   
@@ -1143,7 +1136,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../runtime/" class="md-nav__link">
+      <a href="../../diagnosing-errors/runtime/" class="md-nav__link">
         
   
   
@@ -1171,7 +1164,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../test-harness/" class="md-nav__link">
+      <a href="../../diagnosing-errors/test-harness/" class="md-nav__link">
         
   
   
@@ -1199,7 +1192,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../print-logging/" class="md-nav__link">
+      <a href="../../diagnosing-errors/print-logging/" class="md-nav__link">
         
   
   
@@ -1224,37 +1217,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Validating Runtime Input
-  
-
-    
-  </span>
-  
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../../diagnosing-errors/validating-runtime-input/" class="md-nav__link">
         
   
   
@@ -1270,48 +1236,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#sources-of-external-data" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Sources of External Data
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#types-of-input-validation" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Types of Input Validation
-      
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -1324,7 +1248,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../handling-runtime-errors/" class="md-nav__link">
+      <a href="../../diagnosing-errors/handling-runtime-errors/" class="md-nav__link">
         
   
   
@@ -1352,7 +1276,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../error-contracts/" class="md-nav__link">
+      <a href="../../diagnosing-errors/error-contracts/" class="md-nav__link">
         
   
   
@@ -1380,7 +1304,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../stack-trace/" class="md-nav__link">
+      <a href="../../diagnosing-errors/stack-trace/" class="md-nav__link">
         
   
   
@@ -1408,7 +1332,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../logic/" class="md-nav__link">
+      <a href="../../diagnosing-errors/logic/" class="md-nav__link">
         
   
   
@@ -2298,6 +2222,8 @@
       
   
   
+    
+  
   
   
     
@@ -2317,15 +2243,15 @@
     
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_11" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_11" checked>
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../project-refactoring/" class="md-nav__link ">
+            <a href="../" class="md-nav__link ">
               
   
   
@@ -2349,7 +2275,7 @@
             
           </div>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_11_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_11_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_11">
             <span class="md-nav__icon md-icon"></span>
             
@@ -2369,7 +2295,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../project-refactoring/why-split-a-project/" class="md-nav__link">
+      <a href="../why-split-a-project/" class="md-nav__link">
         
   
   
@@ -2394,10 +2320,17 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../../project-refactoring/module-boundaries/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   
@@ -2413,6 +2346,7 @@
   
 
       </a>
+      
     </li>
   
 
@@ -2425,7 +2359,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../project-refactoring/internal-external-dependencies/" class="md-nav__link">
+      <a href="../internal-external-dependencies/" class="md-nav__link">
         
   
   
@@ -2822,38 +2756,6 @@
   
   
   
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#sources-of-external-data" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Sources of External Data
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#types-of-input-validation" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Types of Input Validation
-      
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
   
 </nav>
                   </div>
@@ -2873,86 +2775,9 @@
   
 
 
-<h1 id="validating-runtime-input">Validating Runtime Input<a class="headerlink" href="#validating-runtime-input" title="Permanent link">&para;</a></h1>
-<h2 id="sources-of-external-data">Sources of External Data<a class="headerlink" href="#sources-of-external-data" title="Permanent link">&para;</a></h2>
-<p>It is rare to have an application that does not have some source of external data feeding into it.</p>
-<p>This data may come from:</p>
-<ul>
-<li>Command line input</li>
-<li>Web forms or API requests</li>
-<li>Databases</li>
-<li>Parsed data files (CSV, XML, JSON, etc.)</li>
-<li>Configuration files</li>
-<li>Environment variables</li>
-<li>Command line arguments</li>
-<li>File paths or network resource locations</li>
-</ul>
-<p>External data is a leading cause of runtime errors. Because values are not known in advance, the system must be programmed defensively to handle unexpected values.</p>
-<p>All external inputs must be treated as untrusted data and potential points of failure.</p>
-<!-- prettier-ignore -->
-<div class="admonition warning">
-<p class="admonition-title">Know your Secure Coding Practices!</p>
-<p>In this book we do not cover the security aspects of handling external data. Our focus is on sanitizing and validating the data to ensure it is in a format that the application can process.</p>
-<p>Secure coding practices form a necessary part of a software developer's skillset, and should be studied in depth.</p>
-</div>
-<h2 id="types-of-input-validation">Types of Input Validation<a class="headerlink" href="#types-of-input-validation" title="Permanent link">&para;</a></h2>
-<p><strong>Validation</strong> checks whether the provided value is allowed according to the business rules that are in place and the data types that the application uses. The categories below provide some guidelines on what to look for in the context of user input. Be aware, though, that this input may come from any of the sources listed above.</p>
-<table>
-<thead>
-<tr>
-<th>Category</th>
-<th>What to check</th>
-<th>Example</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><strong>Required</strong></td>
-<td>Are empty values allowed for the field?</td>
-<td>User leaves a required field blank.</td>
-</tr>
-<tr>
-<td><strong>Type</strong></td>
-<td>Can the input be converted to the type your code expects?</td>
-<td>User types <code>one</code> when a number is required.</td>
-</tr>
-<tr>
-<td><strong>Numeric shape</strong></td>
-<td>After parsing, is the value the right kind of number?</td>
-<td>User enters <code>3.14</code> when only whole numbers are allowed, or <code>1.5</code> when an integer count is required.</td>
-</tr>
-<tr>
-<td><strong>Range</strong></td>
-<td>Is the value within allowed business limits (min/max)?</td>
-<td>User enters age <code>-99</code> or <code>500</code>.</td>
-</tr>
-<tr>
-<td><strong>Overflow</strong></td>
-<td>Is the value too large or too small for the type or storage that will hold it?</td>
-<td>User enters a 20-digit number that does not fit in a 32-bit integer, or a total that exceeds a database column's maximum.</td>
-</tr>
-<tr>
-<td><strong>Format</strong></td>
-<td>Does the text follow the expected layout (separators, order, units)?</td>
-<td>User types <code>12/31/2025</code> when the app expects <code>2025-12-31</code>.</td>
-</tr>
-<tr>
-<td><strong>Length</strong></td>
-<td>Does the input have the expected number of characters or items?</td>
-<td>User enters a 4-digit PIN with only 3 digits, or a username longer than the 50-character limit.</td>
-</tr>
-<tr>
-<td><strong>Allowed characters</strong></td>
-<td>Does the input use only characters your rules permit?</td>
-<td>User types letters in a digits-only field, or includes spaces in a code that must be alphanumeric.</td>
-</tr>
-<tr>
-<td><strong>Pattern</strong></td>
-<td>Does the input match a required structure (often a regex)?</td>
-<td>User types <code>bob.example.com</code> when an email must contain <code>@</code> and a domain.</td>
-</tr>
-</tbody>
-</table>
+  <h1>Module boundaries</h1>
+
+
 
 
 
@@ -2988,7 +2813,7 @@
       <nav class="md-footer__inner md-grid" aria-label="Footer" >
         
           
-          <a href="../print-logging/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Print Statements and Logging">
+          <a href="../why-split-a-project/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Why split a project">
             <div class="md-footer__button md-icon">
               
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
@@ -2998,20 +2823,20 @@
                 Previous
               </span>
               <div class="md-ellipsis">
-                Print Statements and Logging
+                Why split a project
               </div>
             </div>
           </a>
         
         
           
-          <a href="../handling-runtime-errors/" class="md-footer__link md-footer__link--next" aria-label="Next: Handling Runtime Errors">
+          <a href="../internal-external-dependencies/" class="md-footer__link md-footer__link--next" aria-label="Next: Internal external dependencies">
             <div class="md-footer__title">
               <span class="md-footer__direction">
                 Next
               </span>
               <div class="md-ellipsis">
-                Handling Runtime Errors
+                Internal external dependencies
               </div>
             </div>
             <div class="md-footer__button md-icon">

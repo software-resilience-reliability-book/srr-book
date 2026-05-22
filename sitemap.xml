@@ -37,6 +37,10 @@
          <lastmod>2026-05-22</lastmod>
     </url>
     <url>
+         <loc>https://software-resilience-reliability-book.github.io/srr-book/builds/required-software/</loc>
+         <lastmod>2026-05-22</lastmod>
+    </url>
+    <url>
          <loc>https://software-resilience-reliability-book.github.io/srr-book/builds/running-the-program/</loc>
          <lastmod>2026-05-22</lastmod>
     </url>
@@ -161,6 +165,22 @@
          <lastmod>2026-05-22</lastmod>
     </url>
     <url>
+         <loc>https://software-resilience-reliability-book.github.io/srr-book/project-refactoring/</loc>
+         <lastmod>2026-05-22</lastmod>
+    </url>
+    <url>
+         <loc>https://software-resilience-reliability-book.github.io/srr-book/project-refactoring/internal-external-dependencies/</loc>
+         <lastmod>2026-05-22</lastmod>
+    </url>
+    <url>
+         <loc>https://software-resilience-reliability-book.github.io/srr-book/project-refactoring/module-boundaries/</loc>
+         <lastmod>2026-05-22</lastmod>
+    </url>
+    <url>
+         <loc>https://software-resilience-reliability-book.github.io/srr-book/project-refactoring/why-split-a-project/</loc>
+         <lastmod>2026-05-22</lastmod>
+    </url>
+    <url>
          <loc>https://software-resilience-reliability-book.github.io/srr-book/type-system/</loc>
          <lastmod>2026-05-22</lastmod>
     </url>
@@ -182,6 +202,10 @@
     </url>
     <url>
          <loc>https://software-resilience-reliability-book.github.io/srr-book/type-system/protecting-invariants/</loc>
+         <lastmod>2026-05-22</lastmod>
+    </url>
+    <url>
+         <loc>https://software-resilience-reliability-book.github.io/srr-book/type-system/type-implementation/</loc>
          <lastmod>2026-05-22</lastmod>
     </url>
     <url>
@@ -214,6 +238,10 @@
     </url>
     <url>
          <loc>https://software-resilience-reliability-book.github.io/srr-book/unit-testing/using-reference-project/</loc>
+         <lastmod>2026-05-22</lastmod>
+    </url>
+    <url>
+         <loc>https://software-resilience-reliability-book.github.io/srr-book/unit-testing/why-testing/</loc>
          <lastmod>2026-05-22</lastmod>
     </url>
     <url>
