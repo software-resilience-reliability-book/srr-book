@@ -125,14 +125,11 @@ nav:
       - type-system/controlling-test-environment.md
 
   - Configuration and Environment Management:
-      # Use the reference project (needs added)
-      # Copyright text. Something else?
       - configuration/index.md
       - configuration/types-of-configuration.md
       - configuration/environment-types.md
       - configuration/configuring-application.md
       - configuration/using-environment-settings.md
-
       # Don't know if this is worth it? .NET has IOptions or something like that.
       - configuration/strongly-typed-configuration.md
 
