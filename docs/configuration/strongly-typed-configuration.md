@@ -51,6 +51,6 @@ This approach helps avoid typos in the names of settings, missing keys from the 
 
 <!-- prettier-ignore -->
 !!! info "Optional custom title"
-    We have skipped over the registration and injection of the `EmailOptions` class in order to focus on the core concept of strongly-typed configuration.
+    We have not shown the registration and injection of the `EmailOptions` class in order to focus on the core concept of strongly-typed configuration.
 
     As of this writing the [Microsoft documentation for `IOptions`](https://learn.microsoft.com/en-us/dotnet/core/extensions/options) is quite technical. We recommend finding a more accessible tutorial if you plan to use strongly typed configurations in .NET.
