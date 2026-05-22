@@ -1521,6 +1521,17 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#using-the-test-harness-sandbox-application" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Using the Test Harness Sandbox Application
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#running-the-tests" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -2876,6 +2887,17 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#using-the-test-harness-sandbox-application" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Using the Test Harness Sandbox Application
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#running-the-tests" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -2948,6 +2970,15 @@
 <p class="admonition-title">Additional Instructions</p>
 <p>If you have not already done so, make sure to download the <a href="https://github.com/software-resilience-reliability-book/color-transform">Color Transform Application</a> reference project so that you can follow along. This project has been marked as a template, so you can make your own copy of the project and modify it as you see fit.</p>
 <p>For additional instructions on using the reference project, see the <a href="../../reference-project/">reference project</a> page.</p>
+</div>
+<h2 id="using-the-test-harness-sandbox-application">Using the Test Harness Sandbox Application<a class="headerlink" href="#using-the-test-harness-sandbox-application" title="Permanent link">&para;</a></h2>
+<p>The test harness for the library is a console application that can be run from the command line or with the VS Code debugger. It is located in the <code>tests/ColorTransform.Harness</code> directory.</p>
+<p>We recommend using the VS Code debugger to step through the test harness code.</p>
+<!-- prettier-ignore -->
+<div class="admonition info">
+<p class="admonition-title">Where does the Test Harness Belong?</p>
+<p>Unlike the automated test suite which always belongs in version control, a test harness may or may not be included. This is a matter of preference, and often depends on how often the same type of test configuration is needed.</p>
+<p>We have included the test harness in the reference project, but a test harness may be either a separate project that imports the required libraries, or an included project that is ignored in version control.</p>
 </div>
 <h2 id="running-the-tests">Running the Tests<a class="headerlink" href="#running-the-tests" title="Permanent link">&para;</a></h2>
 <p>In a C# project that contains tests, the tests can be run from the command line using the <code>dotnet test</code> command:</p>

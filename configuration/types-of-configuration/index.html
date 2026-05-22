@@ -2900,10 +2900,10 @@
 <h2 id="command-line-arguments">Command Line Arguments<a class="headerlink" href="#command-line-arguments" title="Permanent link">&para;</a></h2>
 <p><strong>Command line arguments</strong> are values that are passed to the application at startup via the command line. An example is the <code>--project</code> argument to the <code>dotnet run</code> command, which specifies the project to run.</p>
 <p>By default, the application is launched from the root directory of the project, but we can also launch a specific project by passing the project name as an argument. Here's how we would run the web application included in the reference project if our current working directory in the terminal is the root directory of the project:</p>
-<div class="language-bash highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>dotnet<span class="w"> </span>run<span class="w"> </span>--project<span class="w"> </span>src/ColorTransform.Web/ColorTransform.Web.csproj
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>dotnet<span class="w"> </span>run<span class="w"> </span>--project<span class="w"> </span>src/ColorTransform.Web
 </span></code></pre></div>
 <p>If we instead wanted to run the test harness, we would pass the <code>ColorTransform.Harness</code> project name:</p>
-<div class="language-bash highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>dotnet<span class="w"> </span>run<span class="w"> </span>--project<span class="w"> </span>tests/ColorTransform.Harness/ColorTransform.Harness.csproj
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>dotnet<span class="w"> </span>run<span class="w"> </span>--project<span class="w"> </span>tests/ColorTransform.Harness
 </span></code></pre></div>
 <p>Allowing for the project path to be provided provides greater flexibility in how the CLI command can be used.</p>
 <h2 id="environment-settings">Environment Settings<a class="headerlink" href="#environment-settings" title="Permanent link">&para;</a></h2>
