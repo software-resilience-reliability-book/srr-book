@@ -131,32 +131,10 @@ nav:
       - configuration/types-of-configuration.md
       - configuration/environment-types.md
       - configuration/configuring-application.md
-      # ASPNETCORE_ENVIRONMENT
-      # Program.cs file using env flags
-      # Explain overrides in appsettings.Development.json
       - configuration/using-environment-settings.md
 
-      # Use this as an example of a time when fail fast is appropriate.
-      # Don't know if it's worth getting caught up in .NET specifics (IOptions?); need to check difficulty level.
+      # Don't know if this is worth it? .NET has IOptions or something like that.
       - configuration/strongly-typed-configuration.md
-
-      # Demo a few things. Ideally we'd have a file path that we're pointing to in lieu of a database connection string.
-      # Add a static "Design Reference" page that's a palette, and have this as config colors?
-      # Would show color divs, hex, and RGB values for each
-    #   - configuration/configuration-by-example.md
-
-  # Consolidate to configuration chapter
-  #   - Environment Management:
-  #       # Use the reference project (needs added)
-  #       - environment-management/index.md
-  #       # For below focus on what they are, not implementation
-  #       - environment-management/development-environment.md
-  #       - environment-management/staging-environment.md
-  #       - environment-management/production-environment.md
-  #       # Not sure what to put here?
-  #       - environment-management/configuring-development-environment.md
-  #       # Only include if time. This isn't really an ops focused course.
-  #       - environment-management/configuring-production-build.md
 
   - Project Refactoring:
       # Use the reference project? I guess just say that "we could have jammed everything into the web project but we didn't?"
