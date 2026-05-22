@@ -6,7 +6,7 @@
 >
 > -- [DORA / Google Cloud, 2026](https://dora.dev/ai/roi/report/)
 
-This book is for developers who know how to write code but may not have experience maintaining, extending, or shipping large and complex software applications.
+This book is for developers who know how to write code but may not have experience maintaining, extending, and refactoring large and complex software applications.
 
 Professional software development introduces a set of challenges that extend far beyond coding algorithms. Developers must read and understand codebases that they didn't write, navigate shifting requirements, work with teammates who need to understand their work, and build on to systems that must keep running smoothly while they are being changed. The transition from programmer to working developer is rarely seamless, regardless of how well-prepared anyone is coming in.
 
