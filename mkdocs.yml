@@ -130,7 +130,6 @@ nav:
       - configuration/environment-types.md
       - configuration/configuring-application.md
       - configuration/using-environment-settings.md
-      # Don't know if this is worth it? .NET has IOptions or something like that.
       - configuration/strongly-typed-configuration.md
 
   - Project Refactoring:
