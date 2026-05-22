@@ -10,7 +10,6 @@ site_name: "Software Resilience and Reliability"
 site_url: "https://software-resilience-reliability-book.github.io/srr-book/"
 site_author: "Mike Jovanovich"
 repo_url: "https://github.com/software-resilience-reliability-book/srr-book"
-copyright: 'Copyright &copy; 2026 Mike Jovanovich. Licensed under <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a>'
 
 # ##########################################
 # Theme
@@ -80,6 +79,7 @@ nav:
 
   - The Build System:
       - builds/index.md
+      - builds/required-sofware.md
       - builds/creating-empty-project-shell.md
       - builds/creating-dotnet-project.md
       - builds/compiling.md
@@ -104,6 +104,7 @@ nav:
 
   - Basics of Testing:
       - unit-testing/index.md
+      - unit-testing/why-testing.md
       - unit-testing/unit-testing.md
       - unit-testing/using-reference-project.md
       - unit-testing/arrange-act-assert.md
@@ -115,9 +116,14 @@ nav:
 
   - Using Exceptions Effectively:
       - exceptions/index.md
+      # TODO:
+      # - How to properly scope try/catch blocks
+      # - When to rethrow
+      # - Atomic operations and transactions
 
   - Leveraging the Type System:
       - type-system/index.md
+      - type-system/type-implementations.md
       - type-system/classes.md
       - type-system/protecting-invariants.md
       - type-system/enums.md
@@ -125,7 +131,7 @@ nav:
       - type-system/controlling-test-environment.md
 
   - Configuration and Environment Management:
-      - configuration/index.md
+      #   - configuration/index.md
       - configuration/types-of-configuration.md
       - configuration/environment-types.md
       - configuration/configuring-application.md
@@ -135,12 +141,10 @@ nav:
   - Project Refactoring:
       # Use the reference project? I guess just say that "we could have jammed everything into the web project but we didn't?"
       - project-refactoring/index.md
-      - project-refactoring/single-responsibility-principle.md
-      - project-refactoring/modularity.md
-      - project-refactoring/decoupling.md
-
+      - project-refactoring/why-split-a-project.md
+      - project-refactoring/module-boundaries.md
       # basically a quick note explaining that they'll have to add references to make it work when they refactor
-      - project-refactoring/internal-vs-external-dependencies.md
+      - project-refactoring/internal-external-dependencies.md
 
   - Dependency Management:
       # Use the reference project
@@ -150,7 +154,7 @@ nav:
       - dependency-management/version-pinning.md
 
       # Probably doesn't warrant its own page; just incorporate it into the other pages that talk about dependencies
-      - dependency-management/package-managers.md
+    #   - dependency-management/package-managers.md
 
   - Testing a Full Software Solution:
       # Use the reference project

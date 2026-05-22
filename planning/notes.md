@@ -10,6 +10,8 @@ May need to rescope lessons, as config stuff is pretty light while unit testing 
 
 Add ms docs reading links where we can.
 
+Check the intro pages. Some have a lead-in ("in this chapter we will...") and others don't. Don't know if this is needed - see how many do. Make this consistent. Probably just do simple bullet point outline of chapter topics. Maybe just give this a h2 heading for "Chapter Topics".
+
 ## Book
 
 ## Needed Topics (in order of likeliness to make scope)

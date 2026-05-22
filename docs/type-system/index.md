@@ -1,52 +1,11 @@
 # The Type System
 
-## Working with Data Types
+Computers must know how to store and manipulate data in order to be able to execute a program. To do this, programming languages provide a **type system** that defines the allowed values and operations for each type.
 
-All data in a program is represented as a value of a specific type. The computer has to know how to store and manipulate this data in order to be able to execute the program.
+The foundation of a type system is **primitive types**. These are the basic types that are built into the language, such as integers, strings, and booleans. Primitive types often correspond to the basic data types of the underlying hardware - what the CPU can directly manipulate.
 
-For example, a 32-bit signed integer is represented in memory as a sequence of 32 bits, with one bit reserved for the sign and the remaining 31 bits encoding the value using a scheme called two's complement. A string may have several implementations, such as a null-terminated array of characters or a linked list of characters.
+For example, a 32-bit signed integer is represented in memory as a sequence of 32 bits, with one bit reserved for the sign and the remaining 31 bits encoding the value using a scheme called two's complement. A single character may be represented as single byte.
 
-Whether implicitly or explicitly, all values in a program have a data type.
+From these primitive types, more complex types can be built. This allows us, as programmers, to create data types that are meaningful and easily understood by humans: a "Vehicle" class with properties for "Make", "Model", and "Year". This way the codebase is not a cryptic collection of symbols; it is instead a communication tool that relays the intent of the code.
 
-## Dynamically Typed Languages
-
-**Dynamically typed** languages do not require that the data type be declared, and type checking occurs at runtime. These languages typically infer the type of a variable based on the value assigned to it. For example, the following JavaScript code assigns a string to the `firstName` variable and a numeric value to the `age` variable, then prints the type of each variable:
-
-```javascript
-const firstName = "Arie";
-const age = 21;
-console.log(typeof firstName);
-console.log(typeof age);
-```
-
-## Statically Typed Languages
-
-**Statically typed** languages require that variables be declared with a specific type before they can be used.
-
-```csharp
-string firstName = "Arie";
-int age = 21;
-```
-
-Because the data type is known at compile time, the compiler can provide **type safety**, and prevent code from being compiled if there is a type mismatch. If a function expects a string, and you pass it an integer, the compiler will not allow it to compile.
-
-## Custom Types
-
-The type system not only descibes **primitive types** like integers and strings, but provides the means to create **custom types**. Classes are the primary way to create these custom types in C#. Other options include records, structs, and enumerations.
-
-## Additional Resources
-
-We will cover the what is needed to follow the concepts in this book. If you would like to learn more about data types that C# supports see the following documentation:
-
-- [Classes](https://learn.microsoft.com/en-us/dotnet/csharp/fundamentals/types/classes)
-- [Structs](https://learn.microsoft.com/en-us/dotnet/csharp/fundamentals/types/structs)
-- [Record types](https://learn.microsoft.com/en-us/dotnet/csharp/fundamentals/types/records)
-- [Interfaces](https://learn.microsoft.com/en-us/dotnet/csharp/fundamentals/types/interfaces)
-- [Enumerations](https://learn.microsoft.com/en-us/dotnet/csharp/fundamentals/types/enums)
-- [Generics](https://learn.microsoft.com/en-us/dotnet/csharp/fundamentals/types/generics)
-
-If you are new to object oriented programming you may also follow these tutorials:
-
-- [Explore object oriented programming with classes and objects](https://learn.microsoft.com/en-us/dotnet/csharp/fundamentals/tutorials/classes)
-- [Object-Oriented programming (C#)](https://learn.microsoft.com/en-us/dotnet/csharp/fundamentals/tutorials/oop)
-- [Inheritance in C# and .NET](https://learn.microsoft.com/en-us/dotnet/csharp/fundamentals/tutorials/inheritance)
+Choosing types that accurately model a domain improves the reliability of a program by establishing expectations about data and behaviors.
