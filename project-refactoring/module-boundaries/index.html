@@ -13,7 +13,7 @@
         <link rel="canonical" href="https://software-resilience-reliability-book.github.io/srr-book/project-refactoring/module-boundaries/">
       
       
-        <link rel="prev" href="../why-split-a-project/">
+        <link rel="prev" href="../encapsulating-modules/">
       
       
         <link rel="next" href="../internal-external-dependencies/">
@@ -27,7 +27,7 @@
     
     
       
-        <title>Module boundaries - Software Resilience and Reliability</title>
+        <title>Module Boundaries - Software Resilience and Reliability</title>
       
     
     
@@ -79,6 +79,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#module-boundaries" class="md-skip">
+          Skip to content
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -111,7 +116,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Module boundaries
+              Module Boundaries
             
           </span>
         </div>
@@ -2252,6 +2257,8 @@
       
         
       
+        
+      
     
     
     
@@ -2308,14 +2315,14 @@
   
   
     <li class="md-nav__item">
-      <a href="../why-split-a-project/" class="md-nav__link">
+      <a href="../encapsulating-modules/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    Why split a project
+    Encapsulating Modules
   
 
     
@@ -2342,6 +2349,8 @@
       <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
       
       
+        
+      
       
       <a href="./" class="md-nav__link md-nav__link--active">
         
@@ -2350,7 +2359,7 @@
   <span class="md-ellipsis">
     
   
-    Module boundaries
+    Module Boundaries
   
 
     
@@ -2360,6 +2369,34 @@
 
       </a>
       
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../build-units.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    None
+  
+
+    
+  </span>
+  
+  
+
+      </a>
     </li>
   
 
@@ -2769,6 +2806,8 @@
   
   
   
+    
+  
   
 </nav>
                   </div>
@@ -2788,9 +2827,12 @@
   
 
 
-  <h1>Module boundaries</h1>
-
-
+<h1 id="module-boundaries">Module Boundaries<a class="headerlink" href="#module-boundaries" title="Permanent link">&para;</a></h1>
+<p>... direction of dependencies ...</p>
+<p>... current project looks like this. note that library reference represents core functionality that does not depend on any other projects.</p>
+<p><img alt="library modularity" src="../../images/library-modularity.svg" width="400" /></p>
+<p>... suppose we wanted to add a mobile app as a second front-end option for our users. We could simply point it at the same library.</p>
+<!-- TODO: diagram showing public API of library, kind of like a class diagram? Is there one for this? May have to make custom -->
 
 
 
@@ -2826,7 +2868,7 @@
       <nav class="md-footer__inner md-grid" aria-label="Footer" >
         
           
-          <a href="../why-split-a-project/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Why split a project">
+          <a href="../encapsulating-modules/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Encapsulating Modules">
             <div class="md-footer__button md-icon">
               
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
@@ -2836,7 +2878,7 @@
                 Previous
               </span>
               <div class="md-ellipsis">
-                Why split a project
+                Encapsulating Modules
               </div>
             </div>
           </a>
