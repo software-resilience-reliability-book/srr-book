@@ -141,8 +141,11 @@ nav:
   - Project Refactoring:
       # Use the reference project? I guess just say that "we could have jammed everything into the web project but we didn't?"
       - project-refactoring/index.md
-      - project-refactoring/why-split-a-project.md
+      - project-refactoring/encapsulating-modules.md
+      # This is probably the place to put the diagram showing how our library is used by different projects?
       - project-refactoring/module-boundaries.md
+      # Note how isolating modules gives build independence to projects
+      - project-refactoring/build-units.md
       # basically a quick note explaining that they'll have to add references to make it work when they refactor
       - project-refactoring/internal-external-dependencies.md
 
