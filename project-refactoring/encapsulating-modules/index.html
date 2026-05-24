@@ -2944,7 +2944,18 @@
 <h2 id="encapsulation-within-functions">Encapsulation Within Functions<a class="headerlink" href="#encapsulation-within-functions" title="Permanent link">&para;</a></h2>
 <p>To know what a function does, you look at its <strong>signature</strong>. This contains the functions name, input values (paramaters), and output values (return value). If the function is descriptive enough, you should not have to dig into the code to determine its purpose.</p>
 <p>Each function has local variables that the rest of the program doesn't need to know about.</p>
-<div class="language-csharp highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="c1">// TODO: show function that has some locals with notes about &quot;caller knows only this - inputs and outputs&quot; over method signature. And another note &quot;caller does not need to know this&quot; over locals.</span>
+<div class="language-csharp highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="c1">// Function signature is the interface.</span>
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="c1">// It forms the visible boundary to the outside world.</span>
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="kt">int</span><span class="w"> </span><span class="nf">CountWords</span><span class="p">(</span><span class="kt">string</span><span class="w"> </span><span class="n">text</span><span class="p">)</span>
+</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="p">{</span>
+</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="w">    </span><span class="c1">// The caller does not need to know about these local variables, or any logic</span>
+</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a><span class="w">    </span><span class="c1">// and business rules within the function.</span>
+</span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a><span class="w">    </span><span class="kt">string</span><span class="w"> </span><span class="n">trimmed</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">text</span><span class="p">.</span><span class="n">Trim</span><span class="p">();</span>
+</span><span id="__span-0-8"><a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a><span class="w">    </span><span class="kt">string</span><span class="p">[]</span><span class="w"> </span><span class="n">words</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">trimmed</span><span class="p">.</span><span class="n">Split</span><span class="p">(</span><span class="sc">&#39; &#39;</span><span class="p">,</span><span class="w"> </span><span class="n">StringSplitOptions</span><span class="p">.</span><span class="n">RemoveEmptyEntries</span><span class="p">);</span>
+</span><span id="__span-0-9"><a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a>
+</span><span id="__span-0-10"><a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a><span class="w">    </span><span class="c1">// The caller knows only that they will receive a count</span>
+</span><span id="__span-0-11"><a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a><span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">words</span><span class="p">.</span><span class="n">Length</span><span class="p">;</span>
+</span><span id="__span-0-12"><a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a><span class="p">}</span>
 </span></code></pre></div>
 <p>A function's signature forms its <strong>Application Programming Interface (API)</strong>. Callers of this API do not need to know the internals of the function.</p>
 <h2 id="encapsulation-within-classes">Encapsulation Within Classes<a class="headerlink" href="#encapsulation-within-classes" title="Permanent link">&para;</a></h2>
@@ -2969,9 +2980,8 @@
 </table>
 <p>These modifiers define the "rules" of access:</p>
 <ul>
-<li>If a function should not be seen outside of the class, it should be private.</li>
-<li>If a function should be seen only by inherited classes, it should be protected.</li>
-<li>If a function should be seen by any consumer of the module, it should be public.</li>
+<li>Use <code>public</code> to make a function accessible to any consumer of the class.</li>
+<li>Use <code>private</code> to make a function visible only within the class itself.</li>
 </ul>
 <p>The <code>RgbColor</code> record type needs to ensure that the red, green, and blue values are within the range of 0 to 255 when the object is constructed. To make the code more readable, this functionality has been extracted to a private method, <code>ValidateRange</code>. This private method should never be called directly by any code outside of the <code>RgbColor</code> class. These callers may only "see" the constructor method.</p>
 <div class="language-csharp highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="k">public</span><span class="w"> </span><span class="k">record</span><span class="w"> </span><span class="n">RgbColor</span>
@@ -3024,9 +3034,8 @@
 </table>
 <p>These modifiers define the "rules" of access:</p>
 <ul>
-<li>If a class should not be seen outside of the module, it should be internal.</li>
-<li>If a class should be seen by any consumer of the module, it should be public.</li>
-<li>If a class should be seen only by the module itself, it should be private.</li>
+<li>Use <code>public</code> for classes that are intended to be accessed by any consumer of the module.</li>
+<li>Use <code>internal</code> for classes that are intended to be accessed within the module itself.</li>
 </ul>
 <p>The <code>ColorMath</code> class contains a simple utility method for clamping a value to the range of 0 to 255. This is something we want to be able to use in several places <em>inside</em> the project, but not <em>outside</em> of it.</p>
 <div class="language-csharp highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="k">internal</span><span class="w"> </span><span class="k">static</span><span class="w"> </span><span class="k">class</span><span class="w"> </span><span class="nc">ColorMath</span>
@@ -3035,7 +3044,17 @@
 </span><span id="__span-2-4"><a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a><span class="w">        </span><span class="n">Math</span><span class="p">.</span><span class="n">Clamp</span><span class="p">(</span><span class="k">value</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">255</span><span class="p">);</span>
 </span><span id="__span-2-5"><a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a><span class="p">}</span>
 </span></code></pre></div>
-<div class="language-csharp highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="c1">// TODO: show usage inside project by public class</span>
+<!-- TODO: explain how this is used / consumed in the project -->
+
+<div class="language-csharp highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="k">public</span><span class="w"> </span><span class="k">class</span><span class="w"> </span><span class="nc">InvertTransform</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="n">IColorTransform</span>
+</span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="p">{</span>
+</span><span id="__span-3-3"><a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a><span class="w">    </span><span class="k">public</span><span class="w"> </span><span class="n">RgbColor</span><span class="w"> </span><span class="nf">Apply</span><span class="p">(</span><span class="n">RgbColor</span><span class="w"> </span><span class="n">color</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-3-4"><a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a><span class="w">        </span><span class="kt">int</span><span class="w"> </span><span class="n">red</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">ColorMath</span><span class="p">.</span><span class="n">Clamp</span><span class="p">(</span><span class="mi">255</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">color</span><span class="p">.</span><span class="n">Red</span><span class="p">);</span>
+</span><span id="__span-3-5"><a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a><span class="w">        </span><span class="kt">int</span><span class="w"> </span><span class="n">green</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">ColorMath</span><span class="p">.</span><span class="n">Clamp</span><span class="p">(</span><span class="mi">255</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">color</span><span class="p">.</span><span class="n">Green</span><span class="p">);</span>
+</span><span id="__span-3-6"><a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a><span class="w">        </span><span class="kt">int</span><span class="w"> </span><span class="n">blue</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">ColorMath</span><span class="p">.</span><span class="n">Clamp</span><span class="p">(</span><span class="mi">255</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">color</span><span class="p">.</span><span class="n">Blue</span><span class="p">);</span>
+</span><span id="__span-3-7"><a id="__codelineno-3-7" name="__codelineno-3-7" href="#__codelineno-3-7"></a><span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="nf">RgbColor</span><span class="p">(</span><span class="n">red</span><span class="p">,</span><span class="w"> </span><span class="n">green</span><span class="p">,</span><span class="w"> </span><span class="n">blue</span><span class="p">);</span>
+</span><span id="__span-3-8"><a id="__codelineno-3-8" name="__codelineno-3-8" href="#__codelineno-3-8"></a><span class="w">    </span><span class="p">}</span>
+</span><span id="__span-3-9"><a id="__codelineno-3-9" name="__codelineno-3-9" href="#__codelineno-3-9"></a><span class="p">}</span>
 </span></code></pre></div>
 <p>The set of public classes exposed on a module form its API. Callers of this API do not need to know the internals of the module.</p>
 <!-- prettier-ignore -->
