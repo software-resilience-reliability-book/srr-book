@@ -11,7 +11,18 @@ To know what a function does, you look at its **signature**. This contains the f
 Each function has local variables that the rest of the program doesn't need to know about.
 
 ```csharp
-// TODO: show function that has some locals with notes about "caller knows only this - inputs and outputs" over method signature. And another note "caller does not need to know this" over locals.
+// Function signature is the interface.
+// It forms the visible boundary to the outside world.
+int CountWords(string text)
+{
+    // The caller does not need to know about these local variables, or any logic
+    // and business rules within the function.
+    string trimmed = text.Trim();
+    string[] words = trimmed.Split(' ', StringSplitOptions.RemoveEmptyEntries);
+
+    // The caller knows only that they will receive a count
+    return words.Length;
+}
 ```
 
 A function's signature forms its **Application Programming Interface (API)**. Callers of this API do not need to know the internals of the function.
@@ -27,9 +38,8 @@ Classes extend this by bundling state with behavior at a slightly larger scale. 
 
 These modifiers define the "rules" of access:
 
-- If a function should not be seen outside of the class, it should be private.
-- If a function should be seen only by inherited classes, it should be protected.
-- If a function should be seen by any consumer of the module, it should be public.
+- Use `public` to make a function accessible to any consumer of the class.
+- Use `private` to make a function visible only within the class itself.
 
 The `RgbColor` record type needs to ensure that the red, green, and blue values are within the range of 0 to 255 when the object is constructed. To make the code more readable, this functionality has been extracted to a private method, `ValidateRange`. This private method should never be called directly by any code outside of the `RgbColor` class. These callers may only "see" the constructor method.
 
@@ -75,9 +85,8 @@ Modules may use visibility modifiers to control access to their classes.
 
 These modifiers define the "rules" of access:
 
-- If a class should not be seen outside of the module, it should be internal.
-- If a class should be seen by any consumer of the module, it should be public.
-- If a class should be seen only by the module itself, it should be private.
+- Use `public` for classes that are intended to be accessed by any consumer of the module.
+- Use `internal` for classes that are intended to be accessed within the module itself.
 
 The `ColorMath` class contains a simple utility method for clamping a value to the range of 0 to 255. This is something we want to be able to use in several places _inside_ the project, but not _outside_ of it.
 
@@ -89,8 +98,18 @@ internal static class ColorMath
 }
 ```
 
+<!-- TODO: explain how this is used / consumed in the project -->
+
 ```csharp
-// TODO: show usage inside project by public class
+public class InvertTransform : IColorTransform
+{
+    public RgbColor Apply(RgbColor color) {
+        int red = ColorMath.Clamp(255 - color.Red);
+        int green = ColorMath.Clamp(255 - color.Green);
+        int blue = ColorMath.Clamp(255 - color.Blue);
+        return new RgbColor(red, green, blue);
+    }
+}
 ```
 
 The set of public classes exposed on a module form its API. Callers of this API do not need to know the internals of the module.
