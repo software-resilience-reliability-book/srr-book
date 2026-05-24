@@ -18,7 +18,7 @@ It works much like replacing a headlight on a car. We only need to replace the b
 
 ## Single Responsibility Principle for Modules
 
-What is significant with the example is what we do not need to do: modify or rebuild the Input module. The implementation details related to "pressing the space button should cause a jump event" did not change at all. Only the movement rules of the character's jump.
+A significant point of this example is what we do not need to do: modify or rebuild the Input module. The implementation details related to "pressing the space button should cause a jump event" did not change at all. Only the movement rules of the character's jump.
 
 This aligns with the Single Responsibility Principle.
 

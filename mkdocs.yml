@@ -145,8 +145,8 @@ nav:
       # This is probably the place to put the diagram showing how our library is used by different projects?
       - project-refactoring/choosing-module-boundaries.md
       # Note how isolating modules gives build independence to projects
-      - project-refactoring/build-units.md
-      - project-refactoring/enforcing-direction-dependencies.md
+      - project-refactoring/independent-build-units.md
+      - project-refactoring/managing-direction-dependencies.md
       # basically a quick note explaining that they'll have to add references to make it work when they refactor
       - project-refactoring/internal-external-dependencies.md
 
