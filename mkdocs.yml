@@ -141,23 +141,24 @@ nav:
   - Project Refactoring:
       # Use the reference project? I guess just say that "we could have jammed everything into the web project but we didn't?"
       - project-refactoring/index.md
-      - project-refactoring/encapsulating-modules.md
+      - project-refactoring/encapsulation-modules.md
       # This is probably the place to put the diagram showing how our library is used by different projects?
-      - project-refactoring/module-boundaries.md
+      - project-refactoring/choosing-module-boundaries.md
       # Note how isolating modules gives build independence to projects
       - project-refactoring/build-units.md
+      - project-refactoring/enforcing-direction-dependencies.md
       # basically a quick note explaining that they'll have to add references to make it work when they refactor
       - project-refactoring/internal-external-dependencies.md
 
   - Dependency Management:
       # Use the reference project
       - dependency-management/index.md
+      # point to semver.org page
       - dependency-management/semantic-versioning.md
+      # expand on previous page with examples
       - dependency-management/breaking-changes.md
+      # callout not about huge amount of supply chain attacks and what this means for us as devs
       - dependency-management/version-pinning.md
-
-      # Probably doesn't warrant its own page; just incorporate it into the other pages that talk about dependencies
-    #   - dependency-management/package-managers.md
 
   - Testing a Full Software Solution:
       # Use the reference project

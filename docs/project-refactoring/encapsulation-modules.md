@@ -1,4 +1,4 @@
-# Encapsulating Modules
+# Implementing Encapsulation with Modules
 
 **Encapsulation** is the practice of hiding implementation details behind a controlled interface. Used effectively, consumers of that interface gain a simplified abstraction. The set of exposed data and functionality clearly communicates the code's intent.
 

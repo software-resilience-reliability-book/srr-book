@@ -1,4 +1,4 @@
-# Module Boundaries
+# Enforcing Direction of Dependencies
 
 ... direction of dependencies ...
 
