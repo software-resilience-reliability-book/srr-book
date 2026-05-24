@@ -10,13 +10,13 @@
         <meta name="author" content="Mike Jovanovich">
       
       
-        <link rel="canonical" href="https://software-resilience-reliability-book.github.io/srr-book/project-refactoring/module-boundaries/">
+        <link rel="canonical" href="https://software-resilience-reliability-book.github.io/srr-book/project-refactoring/encapsulation-modules/">
       
       
-        <link rel="prev" href="../encapsulating-modules/">
+        <link rel="prev" href="../">
       
       
-        <link rel="next" href="../internal-external-dependencies/">
+        <link rel="next" href="../choosing-module-boundaries/">
       
       
         
@@ -27,7 +27,7 @@
     
     
       
-        <title>Module Boundaries - Software Resilience and Reliability</title>
+        <title>Implementing Encapsulation with Modules - Software Resilience and Reliability</title>
       
     
     
@@ -80,7 +80,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#module-boundaries" class="md-skip">
+        <a href="#implementing-encapsulation-with-modules" class="md-skip">
           Skip to content
         </a>
       
@@ -116,7 +116,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Module Boundaries
+              Implementing Encapsulation with Modules
             
           </span>
         </div>
@@ -1849,14 +1849,14 @@
   
   
     <li class="md-nav__item">
-      <a href="../../type-system/type-implementations.md" class="md-nav__link">
+      <a href="../../type-system/type-implementations/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    None
+    Type Implementations
   
 
     
@@ -2259,6 +2259,8 @@
       
         
       
+        
+      
     
     
     
@@ -2312,34 +2314,6 @@
                 
   
   
-  
-  
-    <li class="md-nav__item">
-      <a href="../encapsulating-modules/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Encapsulating Modules
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
     
   
   
@@ -2352,6 +2326,24 @@
         
       
       
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Implementing Encapsulation with Modules
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
       <a href="./" class="md-nav__link md-nav__link--active">
         
   
@@ -2359,7 +2351,7 @@
   <span class="md-ellipsis">
     
   
-    Module Boundaries
+    Implementing Encapsulation with Modules
   
 
     
@@ -2369,6 +2361,86 @@
 
       </a>
       
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#encapsulation-within-functions" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Encapsulation Within Functions
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#encapsulation-within-classes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Encapsulation Within Classes
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#encapsulation-within-modules" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Encapsulation Within Modules
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../choosing-module-boundaries/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Choosing Module Boundaries
+  
+
+    
+  </span>
+  
+  
+
+      </a>
     </li>
   
 
@@ -2389,6 +2461,34 @@
     
   
     None
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../enforcing-direction-dependencies/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Enforcing Direction of Dependencies
   
 
     
@@ -2809,6 +2909,47 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#encapsulation-within-functions" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Encapsulation Within Functions
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#encapsulation-within-classes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Encapsulation Within Classes
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#encapsulation-within-modules" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Encapsulation Within Modules
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -2827,12 +2968,130 @@
   
 
 
-<h1 id="module-boundaries">Module Boundaries<a class="headerlink" href="#module-boundaries" title="Permanent link">&para;</a></h1>
-<p>... direction of dependencies ...</p>
-<p>... current project looks like this. note that library reference represents core functionality that does not depend on any other projects.</p>
-<p><img alt="library modularity" src="../../images/library-modularity.svg" width="400" /></p>
-<p>... suppose we wanted to add a mobile app as a second front-end option for our users. We could simply point it at the same library.</p>
-<!-- TODO: diagram showing public API of library, kind of like a class diagram? Is there one for this? May have to make custom -->
+<h1 id="implementing-encapsulation-with-modules">Implementing Encapsulation with Modules<a class="headerlink" href="#implementing-encapsulation-with-modules" title="Permanent link">&para;</a></h1>
+<p><strong>Encapsulation</strong> is the practice of hiding implementation details behind a controlled interface. Used effectively, consumers of that interface gain a simplified abstraction. The set of exposed data and functionality clearly communicates the code's intent.</p>
+<p>Referring back to the hierarchy of code units:</p>
+<h2 id="encapsulation-within-functions">Encapsulation Within Functions<a class="headerlink" href="#encapsulation-within-functions" title="Permanent link">&para;</a></h2>
+<p>To know what a function does, you look at its <strong>signature</strong>. This contains the functions name, input values (paramaters), and output values (return value). If the function is descriptive enough, you should not have to dig into the code to determine its purpose.</p>
+<p>Each function has local variables that the rest of the program doesn't need to know about.</p>
+<div class="language-csharp highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="c1">// Function signature is the interface.</span>
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="c1">// It forms the visible boundary to the outside world.</span>
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="kt">int</span><span class="w"> </span><span class="nf">CountWords</span><span class="p">(</span><span class="kt">string</span><span class="w"> </span><span class="n">text</span><span class="p">)</span>
+</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="p">{</span>
+</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="w">    </span><span class="c1">// The caller does not need to know about these local variables, or any logic</span>
+</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a><span class="w">    </span><span class="c1">// and business rules within the function.</span>
+</span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a><span class="w">    </span><span class="kt">string</span><span class="w"> </span><span class="n">trimmed</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">text</span><span class="p">.</span><span class="n">Trim</span><span class="p">();</span>
+</span><span id="__span-0-8"><a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a><span class="w">    </span><span class="kt">string</span><span class="p">[]</span><span class="w"> </span><span class="n">words</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">trimmed</span><span class="p">.</span><span class="n">Split</span><span class="p">(</span><span class="sc">&#39; &#39;</span><span class="p">,</span><span class="w"> </span><span class="n">StringSplitOptions</span><span class="p">.</span><span class="n">RemoveEmptyEntries</span><span class="p">);</span>
+</span><span id="__span-0-9"><a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a>
+</span><span id="__span-0-10"><a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a><span class="w">    </span><span class="c1">// The caller knows only that they will receive a count</span>
+</span><span id="__span-0-11"><a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a><span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">words</span><span class="p">.</span><span class="n">Length</span><span class="p">;</span>
+</span><span id="__span-0-12"><a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a><span class="p">}</span>
+</span></code></pre></div>
+<p>A function's signature forms its <strong>Application Programming Interface (API)</strong>. Callers of this API do not need to know the internals of the function.</p>
+<h2 id="encapsulation-within-classes">Encapsulation Within Classes<a class="headerlink" href="#encapsulation-within-classes" title="Permanent link">&para;</a></h2>
+<p>Classes extend this by bundling state with behavior at a slightly larger scale. Classes typically hide or expose members (data and functionality) via <strong>access modifier</strong> keywords.</p>
+<table>
+<thead>
+<tr>
+<th>Access Modifier</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>private</strong></td>
+<td>Members are accessible only within the class.</td>
+</tr>
+<tr>
+<td><strong>public</strong></td>
+<td>Members are accessible from anywhere.</td>
+</tr>
+</tbody>
+</table>
+<p>These modifiers define the "rules" of access:</p>
+<ul>
+<li>Use <code>public</code> to make a function accessible to any consumer of the class.</li>
+<li>Use <code>private</code> to make a function visible only within the class itself.</li>
+</ul>
+<p>The <code>RgbColor</code> record type needs to ensure that the red, green, and blue values are within the range of 0 to 255 when the object is constructed. To make the code more readable, this functionality has been extracted to a private method, <code>ValidateRange</code>. This private method should never be called directly by any code outside of the <code>RgbColor</code> class. These callers may only "see" the constructor method.</p>
+<div class="language-csharp highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="k">public</span><span class="w"> </span><span class="k">record</span><span class="w"> </span><span class="n">RgbColor</span>
+</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="p">{</span>
+</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="w">    </span><span class="c1">// ...</span>
+</span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a>
+</span><span id="__span-1-5"><a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a><span class="w">    </span><span class="k">public</span><span class="w"> </span><span class="nf">RgbColor</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">red</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">green</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">blue</span><span class="p">)</span>
+</span><span id="__span-1-6"><a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a><span class="w">    </span><span class="p">{</span>
+</span><span id="__span-1-7"><a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a><span class="w">        </span><span class="n">ValidateRange</span><span class="p">(</span><span class="n">red</span><span class="p">,</span><span class="w"> </span><span class="k">nameof</span><span class="p">(</span><span class="n">red</span><span class="p">));</span>
+</span><span id="__span-1-8"><a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a><span class="w">        </span><span class="n">ValidateRange</span><span class="p">(</span><span class="n">green</span><span class="p">,</span><span class="w"> </span><span class="k">nameof</span><span class="p">(</span><span class="n">green</span><span class="p">));</span>
+</span><span id="__span-1-9"><a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a><span class="w">        </span><span class="n">ValidateRange</span><span class="p">(</span><span class="n">blue</span><span class="p">,</span><span class="w"> </span><span class="k">nameof</span><span class="p">(</span><span class="n">blue</span><span class="p">));</span>
+</span><span id="__span-1-10"><a id="__codelineno-1-10" name="__codelineno-1-10" href="#__codelineno-1-10"></a>
+</span><span id="__span-1-11"><a id="__codelineno-1-11" name="__codelineno-1-11" href="#__codelineno-1-11"></a><span class="w">        </span><span class="n">Red</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">red</span><span class="p">;</span>
+</span><span id="__span-1-12"><a id="__codelineno-1-12" name="__codelineno-1-12" href="#__codelineno-1-12"></a><span class="w">        </span><span class="n">Green</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">green</span><span class="p">;</span>
+</span><span id="__span-1-13"><a id="__codelineno-1-13" name="__codelineno-1-13" href="#__codelineno-1-13"></a><span class="w">        </span><span class="n">Blue</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">blue</span><span class="p">;</span>
+</span><span id="__span-1-14"><a id="__codelineno-1-14" name="__codelineno-1-14" href="#__codelineno-1-14"></a><span class="w">    </span><span class="p">}</span>
+</span><span id="__span-1-15"><a id="__codelineno-1-15" name="__codelineno-1-15" href="#__codelineno-1-15"></a>
+</span><span id="__span-1-16"><a id="__codelineno-1-16" name="__codelineno-1-16" href="#__codelineno-1-16"></a><span class="w">    </span><span class="k">private</span><span class="w"> </span><span class="k">void</span><span class="w"> </span><span class="nf">ValidateRange</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="k">value</span><span class="p">,</span><span class="w"> </span><span class="kt">string</span><span class="w"> </span><span class="n">name</span><span class="p">)</span>
+</span><span id="__span-1-17"><a id="__codelineno-1-17" name="__codelineno-1-17" href="#__codelineno-1-17"></a><span class="w">    </span><span class="p">{</span>
+</span><span id="__span-1-18"><a id="__codelineno-1-18" name="__codelineno-1-18" href="#__codelineno-1-18"></a><span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="k">value</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="mi">0</span><span class="w"> </span><span class="o">||</span><span class="w"> </span><span class="k">value</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="mi">255</span><span class="p">)</span><span class="w"> </span><span class="k">throw</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">ArgumentOutOfRangeException</span><span class="p">(</span><span class="n">name</span><span class="p">);</span>
+</span><span id="__span-1-19"><a id="__codelineno-1-19" name="__codelineno-1-19" href="#__codelineno-1-19"></a><span class="w">    </span><span class="p">}</span>
+</span><span id="__span-1-20"><a id="__codelineno-1-20" name="__codelineno-1-20" href="#__codelineno-1-20"></a><span class="p">}</span>
+</span></code></pre></div>
+<p>The set of public methods exposed on a class form its API. Callers of this API do not need to know the internals of the class.</p>
+<!-- prettier-ignore -->
+<div class="admonition info">
+<p class="admonition-title">Other Access Modifiers</p>
+<p>There are other combinations of access modifier that we have not listed, such as a protected method in a class, or a private class within another class. We are focusing on the most common use cases in this section.</p>
+</div>
+<h2 id="encapsulation-within-modules">Encapsulation Within Modules<a class="headerlink" href="#encapsulation-within-modules" title="Permanent link">&para;</a></h2>
+<p>Organizing code into modules provides the same encapsulation benefits as classes and functions. Each module controls access and visibility over its contained classes, and can expose only what is necessary to the consumer of the package.</p>
+<p>Modules may use visibility modifiers to control access to their classes.</p>
+<table>
+<thead>
+<tr>
+<th>Access Modifier</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>internal</strong></td>
+<td>Classes are accessible within the same assembly (module).</td>
+</tr>
+<tr>
+<td><strong>public</strong></td>
+<td>Classes are accessible from outside the module.</td>
+</tr>
+</tbody>
+</table>
+<p>These modifiers define the "rules" of access:</p>
+<ul>
+<li>Use <code>public</code> for classes that are intended to be accessed by any consumer of the module.</li>
+<li>Use <code>internal</code> for classes that are intended to be accessed within the module itself.</li>
+</ul>
+<p>The <code>ColorMath</code> class contains a simple utility method for clamping a value to the range of 0 to 255. This is something we want to be able to use in several places <em>inside</em> the project, but not <em>outside</em> of it.</p>
+<div class="language-csharp highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="k">internal</span><span class="w"> </span><span class="k">static</span><span class="w"> </span><span class="k">class</span><span class="w"> </span><span class="nc">ColorMath</span>
+</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="p">{</span>
+</span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="w">    </span><span class="k">public</span><span class="w"> </span><span class="k">static</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="nf">Clamp</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="k">value</span><span class="p">)</span><span class="w"> </span><span class="o">=&gt;</span>
+</span><span id="__span-2-4"><a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a><span class="w">        </span><span class="n">Math</span><span class="p">.</span><span class="n">Clamp</span><span class="p">(</span><span class="k">value</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">255</span><span class="p">);</span>
+</span><span id="__span-2-5"><a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a><span class="p">}</span>
+</span></code></pre></div>
+<!-- TODO: explain how this is used / consumed in the project -->
+
+<div class="language-csharp highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="k">public</span><span class="w"> </span><span class="k">class</span><span class="w"> </span><span class="nc">InvertTransform</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="n">IColorTransform</span>
+</span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="p">{</span>
+</span><span id="__span-3-3"><a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a><span class="w">    </span><span class="k">public</span><span class="w"> </span><span class="n">RgbColor</span><span class="w"> </span><span class="nf">Apply</span><span class="p">(</span><span class="n">RgbColor</span><span class="w"> </span><span class="n">color</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-3-4"><a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a><span class="w">        </span><span class="kt">int</span><span class="w"> </span><span class="n">red</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">ColorMath</span><span class="p">.</span><span class="n">Clamp</span><span class="p">(</span><span class="mi">255</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">color</span><span class="p">.</span><span class="n">Red</span><span class="p">);</span>
+</span><span id="__span-3-5"><a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a><span class="w">        </span><span class="kt">int</span><span class="w"> </span><span class="n">green</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">ColorMath</span><span class="p">.</span><span class="n">Clamp</span><span class="p">(</span><span class="mi">255</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">color</span><span class="p">.</span><span class="n">Green</span><span class="p">);</span>
+</span><span id="__span-3-6"><a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a><span class="w">        </span><span class="kt">int</span><span class="w"> </span><span class="n">blue</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">ColorMath</span><span class="p">.</span><span class="n">Clamp</span><span class="p">(</span><span class="mi">255</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">color</span><span class="p">.</span><span class="n">Blue</span><span class="p">);</span>
+</span><span id="__span-3-7"><a id="__codelineno-3-7" name="__codelineno-3-7" href="#__codelineno-3-7"></a><span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="nf">RgbColor</span><span class="p">(</span><span class="n">red</span><span class="p">,</span><span class="w"> </span><span class="n">green</span><span class="p">,</span><span class="w"> </span><span class="n">blue</span><span class="p">);</span>
+</span><span id="__span-3-8"><a id="__codelineno-3-8" name="__codelineno-3-8" href="#__codelineno-3-8"></a><span class="w">    </span><span class="p">}</span>
+</span><span id="__span-3-9"><a id="__codelineno-3-9" name="__codelineno-3-9" href="#__codelineno-3-9"></a><span class="p">}</span>
+</span></code></pre></div>
+<p>The set of public classes exposed on a module form its API. Callers of this API do not need to know the internals of the module.</p>
+<!-- prettier-ignore -->
+<div class="admonition info">
+<p class="admonition-title">Encapsulation in Other Languages</p>
+<p>Other languages may have different implementations of access control. For example, in JavaScript there is no "public" keyword. Instead a module may "export" a public API. In Python, member access control is determined by convention; you simply apply underscore prefixes to private members and this signals to other developers not to use them.</p>
+</div>
 
 
 
@@ -2868,7 +3127,7 @@
       <nav class="md-footer__inner md-grid" aria-label="Footer" >
         
           
-          <a href="../encapsulating-modules/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Encapsulating Modules">
+          <a href="../" class="md-footer__link md-footer__link--prev" aria-label="Previous: Project Refactoring">
             <div class="md-footer__button md-icon">
               
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
@@ -2878,20 +3137,20 @@
                 Previous
               </span>
               <div class="md-ellipsis">
-                Encapsulating Modules
+                Project Refactoring
               </div>
             </div>
           </a>
         
         
           
-          <a href="../internal-external-dependencies/" class="md-footer__link md-footer__link--next" aria-label="Next: Internal external dependencies">
+          <a href="../choosing-module-boundaries/" class="md-footer__link md-footer__link--next" aria-label="Next: Choosing Module Boundaries">
             <div class="md-footer__title">
               <span class="md-footer__direction">
                 Next
               </span>
               <div class="md-ellipsis">
-                Internal external dependencies
+                Choosing Module Boundaries
               </div>
             </div>
             <div class="md-footer__button md-icon">

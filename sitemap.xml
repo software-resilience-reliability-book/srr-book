@@ -169,15 +169,23 @@
          <lastmod>2026-05-24</lastmod>
     </url>
     <url>
-         <loc>https://software-resilience-reliability-book.github.io/srr-book/project-refactoring/encapsulating-modules/</loc>
+         <loc>https://software-resilience-reliability-book.github.io/srr-book/project-refactoring/choosing-module-boundaries/</loc>
+         <lastmod>2026-05-24</lastmod>
+    </url>
+    <url>
+         <loc>https://software-resilience-reliability-book.github.io/srr-book/project-refactoring/encapsulation-modules/</loc>
+         <lastmod>2026-05-24</lastmod>
+    </url>
+    <url>
+         <loc>https://software-resilience-reliability-book.github.io/srr-book/project-refactoring/enforcing-direction-dependencies/</loc>
+         <lastmod>2026-05-24</lastmod>
+    </url>
+    <url>
+         <loc>https://software-resilience-reliability-book.github.io/srr-book/project-refactoring/independent-build-units/</loc>
          <lastmod>2026-05-24</lastmod>
     </url>
     <url>
          <loc>https://software-resilience-reliability-book.github.io/srr-book/project-refactoring/internal-external-dependencies/</loc>
-         <lastmod>2026-05-24</lastmod>
-    </url>
-    <url>
-         <loc>https://software-resilience-reliability-book.github.io/srr-book/project-refactoring/module-boundaries/</loc>
          <lastmod>2026-05-24</lastmod>
     </url>
     <url>
@@ -205,7 +213,7 @@
          <lastmod>2026-05-24</lastmod>
     </url>
     <url>
-         <loc>https://software-resilience-reliability-book.github.io/srr-book/type-system/type-implementation/</loc>
+         <loc>https://software-resilience-reliability-book.github.io/srr-book/type-system/type-implementations/</loc>
          <lastmod>2026-05-24</lastmod>
     </url>
     <url>

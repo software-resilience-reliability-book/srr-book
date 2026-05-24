@@ -10,13 +10,13 @@
         <meta name="author" content="Mike Jovanovich">
       
       
-        <link rel="canonical" href="https://software-resilience-reliability-book.github.io/srr-book/configuration/environment-types/">
+        <link rel="canonical" href="https://software-resilience-reliability-book.github.io/srr-book/type-system/type-implementations/">
       
       
-        <link rel="prev" href="../types-of-configuration/">
+        <link rel="prev" href="../">
       
       
-        <link rel="next" href="../configuring-application/">
+        <link rel="next" href="../classes/">
       
       
         
@@ -27,7 +27,7 @@
     
     
       
-        <title>Environment Types - Software Resilience and Reliability</title>
+        <title>Type Implementations - Software Resilience and Reliability</title>
       
     
     
@@ -80,7 +80,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#environment-types" class="md-skip">
+        <a href="#type-implementations" class="md-skip">
           Skip to content
         </a>
       
@@ -116,7 +116,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Environment Types
+              Type Implementations
             
           </span>
         </div>
@@ -1772,6 +1772,8 @@
       
   
   
+    
+  
   
   
     
@@ -1797,15 +1799,15 @@
     
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_9" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_9" checked>
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../type-system/" class="md-nav__link ">
+            <a href="../" class="md-nav__link ">
               
   
   
@@ -1829,7 +1831,7 @@
             
           </div>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_9_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_9_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_9">
             <span class="md-nav__icon md-icon"></span>
             
@@ -1846,10 +1848,37 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../../type-system/type-implementations/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Type Implementations
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   
@@ -1865,6 +1894,70 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#dynamically-typed-languages" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Dynamically Typed Languages
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#statically-typed-languages" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Statically Typed Languages
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#custom-types" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Custom Types
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#additional-resources" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Additional Resources
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -1877,7 +1970,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../type-system/classes/" class="md-nav__link">
+      <a href="../classes/" class="md-nav__link">
         
   
   
@@ -1905,7 +1998,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../type-system/protecting-invariants/" class="md-nav__link">
+      <a href="../protecting-invariants/" class="md-nav__link">
         
   
   
@@ -1933,7 +2026,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../type-system/enums/" class="md-nav__link">
+      <a href="../enums/" class="md-nav__link">
         
   
   
@@ -1961,7 +2054,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../type-system/interfaces/" class="md-nav__link">
+      <a href="../interfaces/" class="md-nav__link">
         
   
   
@@ -1989,7 +2082,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../type-system/controlling-test-environment/" class="md-nav__link">
+      <a href="../controlling-test-environment/" class="md-nav__link">
         
   
   
@@ -2021,8 +2114,6 @@
       
   
   
-    
-  
   
   
     
@@ -2046,15 +2137,15 @@
     
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_10" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_10" >
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../" class="md-nav__link ">
+            <a href="../../configuration/" class="md-nav__link ">
               
   
   
@@ -2078,7 +2169,7 @@
             
           </div>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_10_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_10_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_10">
             <span class="md-nav__icon md-icon"></span>
             
@@ -2098,7 +2189,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../types-of-configuration/" class="md-nav__link">
+      <a href="../../configuration/types-of-configuration/" class="md-nav__link">
         
   
   
@@ -2123,37 +2214,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Environment Types
-  
-
-    
-  </span>
-  
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../../configuration/environment-types/" class="md-nav__link">
         
   
   
@@ -2169,87 +2233,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#development-environment" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Development Environment
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Development Environment">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#local-database" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Local Database
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#local-file-system" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Local File System
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#local-web-server" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Local Web Server
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#production-environment" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Production Environment
-      
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -2262,7 +2245,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../configuring-application/" class="md-nav__link">
+      <a href="../../configuration/configuring-application/" class="md-nav__link">
         
   
   
@@ -2290,7 +2273,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../using-environment-settings/" class="md-nav__link">
+      <a href="../../configuration/using-environment-settings/" class="md-nav__link">
         
   
   
@@ -2318,7 +2301,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../strongly-typed-configuration/" class="md-nav__link">
+      <a href="../../configuration/strongly-typed-configuration/" class="md-nav__link">
         
   
   
@@ -2944,60 +2927,43 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#development-environment" class="md-nav__link">
+  <a href="#dynamically-typed-languages" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Development Environment
+        Dynamically Typed Languages
       
     </span>
   </a>
-  
-    <nav class="md-nav" aria-label="Development Environment">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#local-database" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Local Database
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#local-file-system" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Local File System
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#local-web-server" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Local Web Server
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#production-environment" class="md-nav__link">
+  <a href="#statically-typed-languages" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Production Environment
+        Statically Typed Languages
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#custom-types" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Custom Types
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#additional-resources" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Additional Resources
       
     </span>
   </a>
@@ -3024,36 +2990,39 @@
   
 
 
-<h1 id="environment-types">Environment Types<a class="headerlink" href="#environment-types" title="Permanent link">&para;</a></h1>
-<p>In this section we will focus on the difference between a development environment and a production environment. You may hear of other environment types, such as staging or QA, but the main focus here is on configuring the development environment, since this is where developers spend most of their time.</p>
-<h2 id="development-environment">Development Environment<a class="headerlink" href="#development-environment" title="Permanent link">&para;</a></h2>
-<p>Developers need to be able to run and modify an application while working on it without affecting users of the live application. To accomplish this, developers recreate the application's environment locally. This is called a <strong>development environment</strong>.</p>
-<p>A development environment might include:</p>
-<h3 id="local-database">Local Database<a class="headerlink" href="#local-database" title="Permanent link">&para;</a></h3>
-<p>A local database can be seeded with a subset of realistic data to allow developers to exercise the application's use cases without impacting the live database. A development environment should never point to a production database, to avoid accidentally modifying production data.</p>
-<p>The database often runs on the developer's own machine, though in some cases, if there is a large amount of data, developers may use a shared development database.</p>
-<p>Using a local database involves modifying connection strings to point to the local database instance, and sometimes using a different database provider entirely (for example, SQLite instead of SQL Server).</p>
-<h3 id="local-file-system">Local File System<a class="headerlink" href="#local-file-system" title="Permanent link">&para;</a></h3>
-<p>Much like the local database, any files the application needs to access can be placed on the local file system. Developers can then modify file-path settings to point to the local file system rather than the production file system.</p>
-<h3 id="local-web-server">Local Web Server<a class="headerlink" href="#local-web-server" title="Permanent link">&para;</a></h3>
-<p>Applications with a web component require a <strong>dedicated web server</strong> to host a production instance. This typically involves renting infrastructure from a cloud provider or self-hosting server hardware.</p>
-<p>A <strong>local web server</strong> can be used during development. With the advent of lightweight web servers - such as <a href="https://learn.microsoft.com/ga-ie/ASPNET/Core/fundamentals/servers/kestrel?view=aspnetcore-10.0">Kestrel</a> used in .NET Core web applications - it is now possible to run a web server on the developer's own machine.</p>
-<p>To use a local web server, developers modify the application's configuration to point to a local web server address rather than the production web server.</p>
-<h2 id="production-environment">Production Environment<a class="headerlink" href="#production-environment" title="Permanent link">&para;</a></h2>
-<p>The <strong>production environment</strong> is the environment in which an application is deployed to end users. Software running in production typically has different needs than software running on a development machine. These may include:</p>
+<h1 id="type-implementations">Type Implementations<a class="headerlink" href="#type-implementations" title="Permanent link">&para;</a></h1>
+<h2 id="dynamically-typed-languages">Dynamically Typed Languages<a class="headerlink" href="#dynamically-typed-languages" title="Permanent link">&para;</a></h2>
+<p>Whether implicitly or explicitly, all values in a program have a data type.</p>
+<p><strong>Dynamically typed</strong> languages do not require that the data type be declared, and type checking occurs at runtime. These languages typically infer the type of a variable based on the value assigned to it. For example, the following JavaScript code assigns a string to the <code>firstName</code> variable and a numeric value to the <code>age</code> variable, then prints the type of each variable:</p>
+<div class="language-javascript highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="kd">const</span><span class="w"> </span><span class="nx">firstName</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;Arie&quot;</span><span class="p">;</span>
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="kd">const</span><span class="w"> </span><span class="nx">age</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">21</span><span class="p">;</span>
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="ow">typeof</span><span class="w"> </span><span class="nx">firstName</span><span class="p">);</span>
+</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="ow">typeof</span><span class="w"> </span><span class="nx">age</span><span class="p">);</span>
+</span></code></pre></div>
+<h2 id="statically-typed-languages">Statically Typed Languages<a class="headerlink" href="#statically-typed-languages" title="Permanent link">&para;</a></h2>
+<p><strong>Statically typed</strong> languages require that variables be declared with a specific type before they can be used.</p>
+<div class="language-csharp highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="kt">string</span><span class="w"> </span><span class="n">firstName</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;Arie&quot;</span><span class="p">;</span>
+</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="kt">int</span><span class="w"> </span><span class="n">age</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">21</span><span class="p">;</span>
+</span></code></pre></div>
+<p>Because the data type is known at compile time, the compiler can provide <strong>type safety</strong>, and prevent code from being compiled if there is a type mismatch. If a function expects a string, and you pass it an integer, the compiler will not allow it to compile.</p>
+<h2 id="custom-types">Custom Types<a class="headerlink" href="#custom-types" title="Permanent link">&para;</a></h2>
+<p>The type system not only descibes <strong>primitive types</strong> like integers and strings, but provides the means to create <strong>custom types</strong>. Classes are the primary way to create these custom types in C#. Other options include records, structs, and enumerations.</p>
+<h2 id="additional-resources">Additional Resources<a class="headerlink" href="#additional-resources" title="Permanent link">&para;</a></h2>
+<p>We will cover the what is needed to follow the concepts in this book. If you would like to learn more about data types that C# supports see the following documentation:</p>
 <ul>
-<li>Support for a large number of concurrent users</li>
-<li>Storage and management of a greater quantity of data</li>
-<li>Stronger guarantees about availability and reliability (uptime, response times, etc.)</li>
-<li>Stronger security requirements (authentication, authorization, data protection, etc.)</li>
+<li><a href="https://learn.microsoft.com/en-us/dotnet/csharp/fundamentals/types/classes">Classes</a></li>
+<li><a href="https://learn.microsoft.com/en-us/dotnet/csharp/fundamentals/types/structs">Structs</a></li>
+<li><a href="https://learn.microsoft.com/en-us/dotnet/csharp/fundamentals/types/records">Record types</a></li>
+<li><a href="https://learn.microsoft.com/en-us/dotnet/csharp/fundamentals/types/interfaces">Interfaces</a></li>
+<li><a href="https://learn.microsoft.com/en-us/dotnet/csharp/fundamentals/types/enums">Enumerations</a></li>
+<li><a href="https://learn.microsoft.com/en-us/dotnet/csharp/fundamentals/types/generics">Generics</a></li>
 </ul>
-<p>Each of the components mentioned in the development environment section will differ in the production environment:</p>
+<p>If you are new to object oriented programming you may also follow these tutorials:</p>
 <ul>
-<li>The database is usually hosted on a dedicated server, may be of a different type than in development, and will almost always hold significantly more data.</li>
-<li>The file system usually points to a dedicated storage area, whether local to the production server or hosted in the cloud.</li>
-<li>The web server is usually hosted on a dedicated server.</li>
+<li><a href="https://learn.microsoft.com/en-us/dotnet/csharp/fundamentals/tutorials/classes">Explore object oriented programming with classes and objects</a></li>
+<li><a href="https://learn.microsoft.com/en-us/dotnet/csharp/fundamentals/tutorials/oop">Object-Oriented programming (C#)</a></li>
+<li><a href="https://learn.microsoft.com/en-us/dotnet/csharp/fundamentals/tutorials/inheritance">Inheritance in C# and .NET</a></li>
 </ul>
-<p>All of the above may be configured, managed, or owned by the client, depending on the agreement between the client and the software vendor.</p>
 
 
 
@@ -3089,7 +3058,7 @@
       <nav class="md-footer__inner md-grid" aria-label="Footer" >
         
           
-          <a href="../types-of-configuration/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Types of Configuration">
+          <a href="../" class="md-footer__link md-footer__link--prev" aria-label="Previous: The Type System">
             <div class="md-footer__button md-icon">
               
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
@@ -3099,20 +3068,20 @@
                 Previous
               </span>
               <div class="md-ellipsis">
-                Types of Configuration
+                The Type System
               </div>
             </div>
           </a>
         
         
           
-          <a href="../configuring-application/" class="md-footer__link md-footer__link--next" aria-label="Next: Configuring an Application">
+          <a href="../classes/" class="md-footer__link md-footer__link--next" aria-label="Next: Classes">
             <div class="md-footer__title">
               <span class="md-footer__direction">
                 Next
               </span>
               <div class="md-ellipsis">
-                Configuring an Application
+                Classes
               </div>
             </div>
             <div class="md-footer__button md-icon">

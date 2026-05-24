@@ -10,13 +10,13 @@
         <meta name="author" content="Mike Jovanovich">
       
       
-        <link rel="canonical" href="https://software-resilience-reliability-book.github.io/srr-book/configuration/environment-types/">
+        <link rel="canonical" href="https://software-resilience-reliability-book.github.io/srr-book/project-refactoring/choosing-module-boundaries/">
       
       
-        <link rel="prev" href="../types-of-configuration/">
+        <link rel="prev" href="../encapsulation-modules/">
       
       
-        <link rel="next" href="../configuring-application/">
+        <link rel="next" href="../enforcing-direction-dependencies/">
       
       
         
@@ -27,7 +27,7 @@
     
     
       
-        <title>Environment Types - Software Resilience and Reliability</title>
+        <title>Choosing Module Boundaries - Software Resilience and Reliability</title>
       
     
     
@@ -80,7 +80,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#environment-types" class="md-skip">
+        <a href="#choosing-module-boundaries" class="md-skip">
           Skip to content
         </a>
       
@@ -116,7 +116,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Environment Types
+              Choosing Module Boundaries
             
           </span>
         </div>
@@ -2021,8 +2021,6 @@
       
   
   
-    
-  
   
   
     
@@ -2046,15 +2044,15 @@
     
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_10" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_10" >
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../" class="md-nav__link ">
+            <a href="../../configuration/" class="md-nav__link ">
               
   
   
@@ -2078,7 +2076,7 @@
             
           </div>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_10_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_10_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_10">
             <span class="md-nav__icon md-icon"></span>
             
@@ -2098,7 +2096,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../types-of-configuration/" class="md-nav__link">
+      <a href="../../configuration/types-of-configuration/" class="md-nav__link">
         
   
   
@@ -2123,37 +2121,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Environment Types
-  
-
-    
-  </span>
-  
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../../configuration/environment-types/" class="md-nav__link">
         
   
   
@@ -2169,87 +2140,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#development-environment" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Development Environment
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Development Environment">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#local-database" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Local Database
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#local-file-system" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Local File System
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#local-web-server" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Local Web Server
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#production-environment" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Production Environment
-      
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -2262,7 +2152,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../configuring-application/" class="md-nav__link">
+      <a href="../../configuration/configuring-application/" class="md-nav__link">
         
   
   
@@ -2290,7 +2180,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../using-environment-settings/" class="md-nav__link">
+      <a href="../../configuration/using-environment-settings/" class="md-nav__link">
         
   
   
@@ -2318,7 +2208,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../strongly-typed-configuration/" class="md-nav__link">
+      <a href="../../configuration/strongly-typed-configuration/" class="md-nav__link">
         
   
   
@@ -2350,6 +2240,8 @@
       
   
   
+    
+  
   
   
     
@@ -2373,15 +2265,15 @@
     
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_11" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_11" checked>
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../project-refactoring/" class="md-nav__link ">
+            <a href="../" class="md-nav__link ">
               
   
   
@@ -2405,7 +2297,7 @@
             
           </div>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_11_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_11_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_11">
             <span class="md-nav__icon md-icon"></span>
             
@@ -2425,7 +2317,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../project-refactoring/encapsulation-modules/" class="md-nav__link">
+      <a href="../encapsulation-modules/" class="md-nav__link">
         
   
   
@@ -2450,10 +2342,19 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../../project-refactoring/choosing-module-boundaries/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   
@@ -2469,6 +2370,7 @@
   
 
       </a>
+      
     </li>
   
 
@@ -2481,7 +2383,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../project-refactoring/build-units.md" class="md-nav__link">
+      <a href="../build-units.md" class="md-nav__link">
         
   
   
@@ -2509,7 +2411,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../project-refactoring/enforcing-direction-dependencies/" class="md-nav__link">
+      <a href="../enforcing-direction-dependencies/" class="md-nav__link">
         
   
   
@@ -2537,7 +2439,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../project-refactoring/internal-external-dependencies/" class="md-nav__link">
+      <a href="../internal-external-dependencies/" class="md-nav__link">
         
   
   
@@ -2937,75 +2839,6 @@
     
   
   
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#development-environment" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Development Environment
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Development Environment">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#local-database" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Local Database
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#local-file-system" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Local File System
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#local-web-server" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Local Web Server
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#production-environment" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Production Environment
-      
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
 </nav>
                   </div>
                 </div>
@@ -3024,36 +2857,48 @@
   
 
 
-<h1 id="environment-types">Environment Types<a class="headerlink" href="#environment-types" title="Permanent link">&para;</a></h1>
-<p>In this section we will focus on the difference between a development environment and a production environment. You may hear of other environment types, such as staging or QA, but the main focus here is on configuring the development environment, since this is where developers spend most of their time.</p>
-<h2 id="development-environment">Development Environment<a class="headerlink" href="#development-environment" title="Permanent link">&para;</a></h2>
-<p>Developers need to be able to run and modify an application while working on it without affecting users of the live application. To accomplish this, developers recreate the application's environment locally. This is called a <strong>development environment</strong>.</p>
-<p>A development environment might include:</p>
-<h3 id="local-database">Local Database<a class="headerlink" href="#local-database" title="Permanent link">&para;</a></h3>
-<p>A local database can be seeded with a subset of realistic data to allow developers to exercise the application's use cases without impacting the live database. A development environment should never point to a production database, to avoid accidentally modifying production data.</p>
-<p>The database often runs on the developer's own machine, though in some cases, if there is a large amount of data, developers may use a shared development database.</p>
-<p>Using a local database involves modifying connection strings to point to the local database instance, and sometimes using a different database provider entirely (for example, SQLite instead of SQL Server).</p>
-<h3 id="local-file-system">Local File System<a class="headerlink" href="#local-file-system" title="Permanent link">&para;</a></h3>
-<p>Much like the local database, any files the application needs to access can be placed on the local file system. Developers can then modify file-path settings to point to the local file system rather than the production file system.</p>
-<h3 id="local-web-server">Local Web Server<a class="headerlink" href="#local-web-server" title="Permanent link">&para;</a></h3>
-<p>Applications with a web component require a <strong>dedicated web server</strong> to host a production instance. This typically involves renting infrastructure from a cloud provider or self-hosting server hardware.</p>
-<p>A <strong>local web server</strong> can be used during development. With the advent of lightweight web servers - such as <a href="https://learn.microsoft.com/ga-ie/ASPNET/Core/fundamentals/servers/kestrel?view=aspnetcore-10.0">Kestrel</a> used in .NET Core web applications - it is now possible to run a web server on the developer's own machine.</p>
-<p>To use a local web server, developers modify the application's configuration to point to a local web server address rather than the production web server.</p>
-<h2 id="production-environment">Production Environment<a class="headerlink" href="#production-environment" title="Permanent link">&para;</a></h2>
-<p>The <strong>production environment</strong> is the environment in which an application is deployed to end users. Software running in production typically has different needs than software running on a development machine. These may include:</p>
-<ul>
-<li>Support for a large number of concurrent users</li>
-<li>Storage and management of a greater quantity of data</li>
-<li>Stronger guarantees about availability and reliability (uptime, response times, etc.)</li>
-<li>Stronger security requirements (authentication, authorization, data protection, etc.)</li>
-</ul>
-<p>Each of the components mentioned in the development environment section will differ in the production environment:</p>
-<ul>
-<li>The database is usually hosted on a dedicated server, may be of a different type than in development, and will almost always hold significantly more data.</li>
-<li>The file system usually points to a dedicated storage area, whether local to the production server or hosted in the cloud.</li>
-<li>The web server is usually hosted on a dedicated server.</li>
-</ul>
-<p>All of the above may be configured, managed, or owned by the client, depending on the agreement between the client and the software vendor.</p>
+<h1 id="choosing-module-boundaries">Choosing Module Boundaries<a class="headerlink" href="#choosing-module-boundaries" title="Permanent link">&para;</a></h1>
+<p>Sometimes module boundares are created to isolate related cohesive functionality that should be treated as a single unit. A project may have several libraries, each responsible for a different aspect of the application.</p>
+<p>Imagine a simple computer game where the user simply moves a character around the screen. The user may have a following companion, or be chased by an antagonist. This application may have separate libraries for:</p>
+<table>
+<thead>
+<tr>
+<th>Library</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Input</td>
+<td>Processes keyboard, mouse, or controller input</td>
+</tr>
+<tr>
+<td>Physics</td>
+<td>Handles movement, collisions, and gravity</td>
+</tr>
+<tr>
+<td>AI</td>
+<td>Controls non-player character (NPC) behaviors</td>
+</tr>
+<tr>
+<td>Audio</td>
+<td>Manages sound effects and music</td>
+</tr>
+<tr>
+<td>Rendering</td>
+<td>Draws graphics and UI to the screen</td>
+</tr>
+<tr>
+<td>Save-Configuration</td>
+<td>Handles saving/loading user and game settings</td>
+</tr>
+</tbody>
+</table>
+<p>Each of these libraries focuses on one aspect of the application.</p>
+<p>The Input library has no reason to know about the Physics library. Input is concerned with mapping user actions to intent: "pressing the right arrow key should move the character right." Physics is concerned with resolving positional movement rules in the world: "a character colliding with a wall should stop." Neither needs to know about AI, which governs NPC behavior: "a companion should stay behind the player at some distance X", or Audio, which responds to game events: "a collision with a wall should trigger a thud sound".</p>
+<p>The set of overall functionality that any of these modules exposes in its API is likely to be only a small subset of the overall functionality of the module. There may be great complexity inside of the Save-Configuration library, but it may expose only a single class in its public API.</p>
+<p>The main consideration when deciding whether to extract functionality into its own module is the <em>degree of communication across module boundaries</em>.</p>
+<p>These libraries do not directly talk to each other much, if at all. Coordination between them is typically handled by a separate controlling module.</p>
 
 
 
@@ -3089,7 +2934,7 @@
       <nav class="md-footer__inner md-grid" aria-label="Footer" >
         
           
-          <a href="../types-of-configuration/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Types of Configuration">
+          <a href="../encapsulation-modules/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Implementing Encapsulation with Modules">
             <div class="md-footer__button md-icon">
               
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
@@ -3099,20 +2944,20 @@
                 Previous
               </span>
               <div class="md-ellipsis">
-                Types of Configuration
+                Implementing Encapsulation with Modules
               </div>
             </div>
           </a>
         
         
           
-          <a href="../configuring-application/" class="md-footer__link md-footer__link--next" aria-label="Next: Configuring an Application">
+          <a href="../enforcing-direction-dependencies/" class="md-footer__link md-footer__link--next" aria-label="Next: Enforcing Direction of Dependencies">
             <div class="md-footer__title">
               <span class="md-footer__direction">
                 Next
               </span>
               <div class="md-ellipsis">
-                Configuring an Application
+                Enforcing Direction of Dependencies
               </div>
             </div>
             <div class="md-footer__button md-icon">
