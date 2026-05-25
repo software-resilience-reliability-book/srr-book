@@ -54,7 +54,7 @@ If you run the program now you will see the NotImplementedException error.
 Success! We have a starter shell in place for the application. Just creating a minimal working program is the first milestone in building the solution.
 
 <!-- prettier-ignore -->
-!!! info "Garbage In, Garbage Out"
+!!! warning "Garbage In, Garbage Out"
     The requirements that we have provided are very lax. In reality we would want to define behavior in more detail. For example: What tense should be used? What do we do if we hit a token placeholder without a valid identifier? Should we allow duplicate replacement words?
 
     Without proper requirements, we don't know if we have met acceptance criteria and cannot properly confirm that the system works through testing.

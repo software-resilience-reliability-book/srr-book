@@ -1,4 +1,4 @@
-# Creating and Publishing an Application
+# Creating and Packaging an Application
 
 In this section we will provide a walkthrough to build a simple "word substitution" console application that contains two projects:
 
