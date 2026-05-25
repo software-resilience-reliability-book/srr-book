@@ -1,8 +1,8 @@
 # Refactoring the a New Module
 
-As the `WordReplacer` class and related logic increase in complexity, any refactor will become more difficult. Now that we have a the basic program working we are at a good point to migrate the new functionality into its own class library.
-
 ## Creating a Class Library
+
+As the `WordReplacer` class and related logic increase in complexity, any refactor will become more difficult. Now that we have a the basic program working we are at a good point to migrate the new functionality into its own class library.
 
 To create a class library, we create another folder under the root directory and run the following command:
 
@@ -70,6 +70,8 @@ The error in `Program.cs` is still present. We have added the assembly reference
 ```csharp
 using WordSub;
 ```
+
+This line tells the compiler to import the `WordSub` namespace, which contains the `WordReplacer` class.
 
 The squiggles should now be gone. We can run the program with the debugger, or with the `dotnet run` command while in the WordSub.App subdirectory, and we get the NotImplementedException error again.
 
