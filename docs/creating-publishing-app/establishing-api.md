@@ -9,7 +9,7 @@ The next step is to formalize the functionality of the application by establishi
 An example run might look like this:
 
 ```
-Enter a sentence or 'q' to quit: The [adjective] [noun] [verb].
+Enter a sentence: The [adjective] [noun] [verb].
 The slow chicken dances.
 ```
 

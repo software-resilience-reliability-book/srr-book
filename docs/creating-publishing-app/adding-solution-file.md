@@ -37,8 +37,9 @@ dotnet sln add WordSub
 dotnet sln add WordSub.App
 ```
 
-Finally, build the solution to ensure that it works:
+Finally, build the solution to ensure that it works, and run the console application. This time you will need to pass the project name to the `dotnet run` command:
 
 ```bash
 dotnet build
+dotnet run --project WordSub.App
 ```

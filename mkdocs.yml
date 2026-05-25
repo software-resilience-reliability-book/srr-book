@@ -146,6 +146,8 @@ nav:
       - creating-publishing-app/refactoring-new-module.md
       - creating-publishing-app/adding-external-package.md
       - creating-publishing-app/adding-solution-file.md
+      - creating-publishing-app/adding-program-logic.md
+      - creating-publishing-app/publishing-application.md
 
   - Testing a Full Software Solution:
       # Use the reference project
