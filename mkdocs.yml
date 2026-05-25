@@ -139,26 +139,24 @@ nav:
       - configuration/strongly-typed-configuration.md
 
   - Project Refactoring:
-      # Use the reference project? I guess just say that "we could have jammed everything into the web project but we didn't?"
       - project-refactoring/index.md
       - project-refactoring/encapsulation-modules.md
-      # This is probably the place to put the diagram showing how our library is used by different projects?
       - project-refactoring/choosing-module-boundaries.md
-      # Note how isolating modules gives build independence to projects
       - project-refactoring/independent-build-units.md
       - project-refactoring/managing-direction-dependencies.md
       # basically a quick note explaining that they'll have to add references to make it work when they refactor
+      # Needs to reference dotnet CLI commands and explain csproj file and slnx file
       - project-refactoring/internal-external-dependencies.md
 
-  - Dependency Management:
+  - Version Management:
       # Use the reference project
-      - dependency-management/index.md
+      - version-management/index.md
       # point to semver.org page
-      - dependency-management/semantic-versioning.md
+      - version-management/semantic-versioning.md
       # expand on previous page with examples
-      - dependency-management/breaking-changes.md
+      - version-management/breaking-changes.md
       # callout not about huge amount of supply chain attacks and what this means for us as devs
-      - dependency-management/version-pinning.md
+      - version-management/version-pinning.md
 
   - Testing a Full Software Solution:
       # Use the reference project

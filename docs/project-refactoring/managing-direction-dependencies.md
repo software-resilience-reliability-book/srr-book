@@ -1,31 +1,45 @@
 # Managing Direction of Dependencies
 
-Aside from isolating functionality into logical independent units, modularity within an application can also help to enforce direction of dependencies.
+Aside from isolating functionality into logical independent units, modularity within an application can also help to enforce the direction of dependencies between modules.
 
-... direction of dependencies ...
+Just as a function has a caller, a module has a consumer. Lower level "core" libraries are used by higher level "executive" libraries, which often form the executable - the entry point to the application.
 
-... current project looks like this. note that library reference represents core functionality that does not depend on any other projects.
+## Sharing a Dependency
 
-![library modularity](../images/library-modularity.svg){ width="400" }
+The `ColorTransform` module from the reference project contains core functionality that does not depend on any other modules.
 
-... suppose we wanted to add a mobile app as a second front-end option for our users. We could simply point it at the same library.
+![library modularity graph](../images/library-modularity.svg){ width="450" }
 
-<!-- TODO: diagram showing public API of library, kind of like a class diagram? Is there one for this? May have to make custom -->
+This frees it to be reused by several consumers:
 
-<!-- Dependencies Have Direction
+| Consumer        | Description                                                          |
+| --------------- | -------------------------------------------------------------------- |
+| Web Application | The user-facing application that allows users to transform colors.   |
+| Test Harness    | The console application that allows developers to debug the library. |
+| Test Suite      | The automated test unit tests project.                               |
 
-A module that depends on another is a consuming module
-The consumed module has no knowledge of its consumers
-Core palette library vs. its frontends as the primary example
+Suppose we wanted to add a mobile app as another option for users to interface with the color transform library. We could simply point it at the `ColorTransform` library that contains the core "logic" of the application.
 
-The Controlling Module
+![library modularity graph with mobile](../images/library-modularity-with-mobile.svg){ width="620" }
 
-In a well-structured project, low-level modules don't need to know about each other
-A higher-level controlling module consumes them and coordinates their behavior
-Game libraries as the primary example
+The new mobile application front-end project would not have to have any knowledge of other consumers; it could even be developed independently by a different team.
 
-What Breaks When Direction Is Ignored
+This pattern of orienting dependencies is present in several application architectures, such as Hexagonal Architecture (Ports and Adapters) and Clean Architecture. What is common to these is that the core functionality of an application is kept as free of dependencies as possible, leaving its consumers to reference it.
 
-When a low-level module consumes a higher-level one, isolation breaks down
-Physics importing from AI as a concrete example of what goes wrong
-Brief mention that this pattern will appear in common real-world architectures (e.g. data access layers) even if not demonstrated here -->
+<!-- prettier-ignore -->
+!!! info "Complex Dependency Graphs"
+    The examples above show shallow graphs for clarity, but real applications commonly have chains of dependencies — module A depends on module B, which depends on module C, and so on. This is normal and expected.
+
+    What matters is that the direction of dependencies remains consistent: consumers depend on the core, never the reverse.
+
+## Orchestrating Many Dependencies
+
+In a well-structured project, low-level foundational modules don't need to know about each other. The API of these modules is not meant for other modules within the same layer. A higher-level module consumes them and coordinates their behavior.
+
+Consider the game library from the previous section:
+
+![library modularity for game](../images/library-modularity-game.svg){ width="650" }
+
+The core functionality, the "logic" of the application, is contained in multiple libraries. We have only showed a few here. The entry point to the application is a project that depends on all of these libraries.
+
+This project is responsible for coordinating their activity, and managing their input and output. Setting the application up this way removes the need for the lower level libraries to communicate (depend on) each other. The orchestrating module "supervises" the program's execution by calling each module in turn and passing only the information that each needs to know to perform its task.
