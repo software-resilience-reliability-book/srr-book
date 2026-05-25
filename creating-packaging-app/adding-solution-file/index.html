@@ -10,13 +10,13 @@
         <meta name="author" content="Mike Jovanovich">
       
       
-        <link rel="canonical" href="https://software-resilience-reliability-book.github.io/srr-book/creating-publishing-app/startup-project/">
+        <link rel="canonical" href="https://software-resilience-reliability-book.github.io/srr-book/creating-packaging-app/adding-solution-file/">
       
       
-        <link rel="prev" href="../">
+        <link rel="prev" href="../adding-external-package/">
       
       
-        <link rel="next" href="../establishing-api/">
+        <link rel="next" href="../adding-program-logic/">
       
       
         
@@ -27,7 +27,7 @@
     
     
       
-        <title>Startup project - Software Resilience and Reliability</title>
+        <title>Adding a Solution File - Software Resilience and Reliability</title>
       
     
     
@@ -80,7 +80,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#the-startup-project" class="md-skip">
+        <a href="#adding-a-solution-file" class="md-skip">
           Skip to content
         </a>
       
@@ -116,7 +116,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Startup project
+              Adding a Solution File
             
           </span>
         </div>
@@ -2409,7 +2409,7 @@
   <span class="md-ellipsis">
     
   
-    Creating and Publishing an Application
+    Creating and Packaging an Application
   
 
     
@@ -2431,7 +2431,7 @@
             <span class="md-nav__icon md-icon"></span>
             
   
-    Creating and Publishing an Application
+    Creating and Packaging an Application
   
 
           </label>
@@ -2443,35 +2443,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Startup project
-  
-
-    
-  </span>
-  
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../startup-project/" class="md-nav__link">
         
   
   
@@ -2487,35 +2462,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#the-startup-project" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        The Startup Project
-      
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -2609,10 +2555,37 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../adding-solution-file/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Adding a Solution File
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   
@@ -2628,6 +2601,59 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#what-is-a-solution-file" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        What is a Solution File?
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#creating-a-solution-file" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Creating a Solution File
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#adding-projects-to-the-solution" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Adding Projects to the Solution
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -2668,14 +2694,14 @@
   
   
     <li class="md-nav__item">
-      <a href="../publishing-application/" class="md-nav__link">
+      <a href="../packaging-application/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    Publishing the Application
+    Packaging the Application
   
 
     
@@ -2889,6 +2915,8 @@
   
   
   
+    
+  
   
     <label class="md-nav__title" for="__toc">
       <span class="md-nav__icon md-icon"></span>
@@ -2897,10 +2925,32 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#the-startup-project" class="md-nav__link">
+  <a href="#what-is-a-solution-file" class="md-nav__link">
     <span class="md-ellipsis">
       
-        The Startup Project
+        What is a Solution File?
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#creating-a-solution-file" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Creating a Solution File
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#adding-projects-to-the-solution" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Adding Projects to the Solution
       
     </span>
   </a>
@@ -2927,34 +2977,34 @@
   
 
 
-  <h1>Startup project</h1>
-
-<h2 id="the-startup-project">The Startup Project<a class="headerlink" href="#the-startup-project" title="Permanent link">&para;</a></h2>
-<p>One approach to building this project is to begin by putting everything in the same project and refactoring later. This would not be a good idea for a very large project, but for our application the refactor will be simple.</p>
-<p>Start by creating a new directory for the project. This directory will have subdirectories for each of the projects that it contains. We've called our root directory "word-sub".</p>
-<p>Within this root directory, create the console application in its own subdirectory. It's best to name this new subdirectory for the console application the same as the project name for consistency:</p>
-<div class="language-bash highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>mkdir<span class="w"> </span>WordSub.App
-</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="nb">cd</span><span class="w"> </span>WordSub.App
-</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>dotnet<span class="w"> </span>new<span class="w"> </span>console
+<h1 id="adding-a-solution-file">Adding a Solution File<a class="headerlink" href="#adding-a-solution-file" title="Permanent link">&para;</a></h1>
+<h2 id="what-is-a-solution-file">What is a Solution File?<a class="headerlink" href="#what-is-a-solution-file" title="Permanent link">&para;</a></h2>
+<p>We could continue changing directories whenever we need to work on different projects, but using a <strong>solution file</strong> will make this process much easier.</p>
+<p>In .NET, the solution file groups related projects together and provides a way to perform operations that span multiple projects. It also defines what should be included in the build output; for example, to exclude test projects from application that is released to production.</p>
+<h2 id="creating-a-solution-file">Creating a Solution File<a class="headerlink" href="#creating-a-solution-file" title="Permanent link">&para;</a></h2>
+<p>Navigate to the root directory of the project and use the dotnet CLI to create a new solution file:</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="nb">cd</span><span class="w"> </span>..
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>dotnet<span class="w"> </span>new<span class="w"> </span>sln
 </span></code></pre></div>
-<p>The file structure should now look like this:</p>
+<p>This will create a new file called <code>[root directory].sln</code> in the root directory. If stuck with the root directory name used earlier, "word-sub", then your project structure should look like this:</p>
 <div class="language-text highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>word-sub/
-</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>└── WordSub.App
-</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>    ├── Program.cs
-</span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a>    └── WordSub.App.csproj
+</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>├── WordSub
+</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>│   ├── WordReplacer.cs
+</span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a>│   └── WordSub.csproj
+</span><span id="__span-1-5"><a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a>├── WordSub.App
+</span><span id="__span-1-6"><a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a>│   ├── Program.cs
+</span><span id="__span-1-7"><a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a>│   └── WordSub.App.csproj
+</span><span id="__span-1-8"><a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a>└── word-sub.slnx
 </span></code></pre></div>
-<p>We can now look at the <code>csproj</code> file for the project in more detail:</p>
-<div class="language-xml highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="nt">&lt;Project</span><span class="w"> </span><span class="na">Sdk=</span><span class="s">&quot;Microsoft.NET.Sdk&quot;</span><span class="nt">&gt;</span>
-</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="w">  </span><span class="nt">&lt;PropertyGroup&gt;</span>
-</span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="w">    </span><span class="nt">&lt;OutputType&gt;</span>Exe<span class="nt">&lt;/OutputType&gt;</span>
-</span><span id="__span-2-4"><a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a><span class="w">    </span><span class="nt">&lt;TargetFramework&gt;</span>net10.0<span class="nt">&lt;/TargetFramework&gt;</span>
-</span><span id="__span-2-5"><a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a><span class="w">    </span><span class="nt">&lt;ImplicitUsings&gt;</span>enable<span class="nt">&lt;/ImplicitUsings&gt;</span>
-</span><span id="__span-2-6"><a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a><span class="w">    </span><span class="nt">&lt;Nullable&gt;</span>enable<span class="nt">&lt;/Nullable&gt;</span>
-</span><span id="__span-2-7"><a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a><span class="w">  </span><span class="nt">&lt;/PropertyGroup&gt;</span>
-</span><span id="__span-2-8"><a id="__codelineno-2-8" name="__codelineno-2-8" href="#__codelineno-2-8"></a><span class="nt">&lt;/Project&gt;</span>
+<h2 id="adding-projects-to-the-solution">Adding Projects to the Solution<a class="headerlink" href="#adding-projects-to-the-solution" title="Permanent link">&para;</a></h2>
+<p>To add the projects to the solution, run the following commands:</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>dotnet<span class="w"> </span>sln<span class="w"> </span>add<span class="w"> </span>WordSub
+</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>dotnet<span class="w"> </span>sln<span class="w"> </span>add<span class="w"> </span>WordSub.App
 </span></code></pre></div>
-<p>What's important to us is the <code>&lt;OutputType&gt;</code> element, which is set to <code>Exe</code>. This tells the build system that this project is an executable program, not a library.</p>
-<p>The only other file is the <code>Program.cs</code> file, which contains some demo text from the project template.</p>
+<p>Finally, build the solution to ensure that it works, and run the console application. This time you will need to pass the project name to the <code>dotnet run</code> command:</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>dotnet<span class="w"> </span>build
+</span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>dotnet<span class="w"> </span>run<span class="w"> </span>--project<span class="w"> </span>WordSub.App
+</span></code></pre></div>
 
 
 
@@ -2990,7 +3040,7 @@
       <nav class="md-footer__inner md-grid" aria-label="Footer" >
         
           
-          <a href="../" class="md-footer__link md-footer__link--prev" aria-label="Previous: Creating and Publishing an Application">
+          <a href="../adding-external-package/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Adding an External Package">
             <div class="md-footer__button md-icon">
               
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
@@ -3000,20 +3050,20 @@
                 Previous
               </span>
               <div class="md-ellipsis">
-                Creating and Publishing an Application
+                Adding an External Package
               </div>
             </div>
           </a>
         
         
           
-          <a href="../establishing-api/" class="md-footer__link md-footer__link--next" aria-label="Next: Establishing the API">
+          <a href="../adding-program-logic/" class="md-footer__link md-footer__link--next" aria-label="Next: Adding the Program Logic">
             <div class="md-footer__title">
               <span class="md-footer__direction">
                 Next
               </span>
               <div class="md-ellipsis">
-                Establishing the API
+                Adding the Program Logic
               </div>
             </div>
             <div class="md-footer__button md-icon">

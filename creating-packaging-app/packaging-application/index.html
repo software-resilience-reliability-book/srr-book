@@ -10,31 +10,29 @@
         <meta name="author" content="Mike Jovanovich">
       
       
-        <link rel="canonical" href="https://software-resilience-reliability-book.github.io/srr-book/creating-publishing-app/">
+        <link rel="canonical" href="https://software-resilience-reliability-book.github.io/srr-book/creating-packaging-app/packaging-application/">
       
       
-        <link rel="prev" href="../project-refactoring/managing-direction-dependencies/">
+        <link rel="prev" href="../adding-program-logic/">
       
-      
-        <link rel="next" href="startup-project/">
       
       
         
       
       
-      <link rel="icon" href="../assets/images/favicon.png">
+      <link rel="icon" href="../../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
     
     
       
-        <title>Creating and Publishing an Application - Software Resilience and Reliability</title>
+        <title>Packaging the Application - Software Resilience and Reliability</title>
       
     
     
-      <link rel="stylesheet" href="../assets/stylesheets/main.484c7ddc.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.484c7ddc.min.css">
       
         
-        <link rel="stylesheet" href="../assets/stylesheets/palette.ab4e12ef.min.css">
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
       
       
 
@@ -53,9 +51,9 @@
       
     
     
-      <link rel="stylesheet" href="../css/custom.css">
+      <link rel="stylesheet" href="../../css/custom.css">
     
-    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
@@ -80,7 +78,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#creating-and-publishing-an-application" class="md-skip">
+        <a href="#packaging-the-application" class="md-skip">
           Skip to content
         </a>
       
@@ -96,7 +94,7 @@
 
 <header class="md-header md-header--shadow" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href=".." title="Software Resilience and Reliability" class="md-header__button md-logo" aria-label="Software Resilience and Reliability" data-md-component="logo">
+    <a href="../.." title="Software Resilience and Reliability" class="md-header__button md-logo" aria-label="Software Resilience and Reliability" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
@@ -116,7 +114,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Creating and Publishing an Application
+              Packaging the Application
             
           </span>
         </div>
@@ -232,7 +230,7 @@
 
 <nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href=".." title="Software Resilience and Reliability" class="md-nav__button md-logo" aria-label="Software Resilience and Reliability" data-md-component="logo">
+    <a href="../.." title="Software Resilience and Reliability" class="md-nav__button md-logo" aria-label="Software Resilience and Reliability" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
@@ -262,7 +260,7 @@
   
   
     <li class="md-nav__item">
-      <a href=".." class="md-nav__link">
+      <a href="../.." class="md-nav__link">
         
   
   
@@ -289,7 +287,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../reference-project/" class="md-nav__link">
+      <a href="../../reference-project/" class="md-nav__link">
         
   
   
@@ -340,7 +338,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../living-software/" class="md-nav__link ">
+            <a href="../../living-software/" class="md-nav__link ">
               
   
   
@@ -384,7 +382,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../living-software/why-software-changes/" class="md-nav__link">
+      <a href="../../living-software/why-software-changes/" class="md-nav__link">
         
   
   
@@ -412,7 +410,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../living-software/reliability/" class="md-nav__link">
+      <a href="../../living-software/reliability/" class="md-nav__link">
         
   
   
@@ -440,7 +438,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../living-software/resiliency/" class="md-nav__link">
+      <a href="../../living-software/resiliency/" class="md-nav__link">
         
   
   
@@ -501,7 +499,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../complexity-debt/" class="md-nav__link ">
+            <a href="../../complexity-debt/" class="md-nav__link ">
               
   
   
@@ -545,7 +543,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../complexity-debt/managing-complexity/" class="md-nav__link">
+      <a href="../../complexity-debt/managing-complexity/" class="md-nav__link">
         
   
   
@@ -573,7 +571,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../complexity-debt/technical-debt-defiinition/" class="md-nav__link">
+      <a href="../../complexity-debt/technical-debt-defiinition/" class="md-nav__link">
         
   
   
@@ -601,7 +599,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../complexity-debt/technical-debt-cost/" class="md-nav__link">
+      <a href="../../complexity-debt/technical-debt-cost/" class="md-nav__link">
         
   
   
@@ -629,7 +627,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../complexity-debt/refactoring/" class="md-nav__link">
+      <a href="../../complexity-debt/refactoring/" class="md-nav__link">
         
   
   
@@ -700,7 +698,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../builds/" class="md-nav__link ">
+            <a href="../../builds/" class="md-nav__link ">
               
   
   
@@ -744,7 +742,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../builds/required-sofware.md" class="md-nav__link">
+      <a href="../../builds/required-sofware.md" class="md-nav__link">
         
   
   
@@ -772,7 +770,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../builds/creating-empty-project-shell/" class="md-nav__link">
+      <a href="../../builds/creating-empty-project-shell/" class="md-nav__link">
         
   
   
@@ -800,7 +798,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../builds/creating-dotnet-project/" class="md-nav__link">
+      <a href="../../builds/creating-dotnet-project/" class="md-nav__link">
         
   
   
@@ -828,7 +826,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../builds/compiling/" class="md-nav__link">
+      <a href="../../builds/compiling/" class="md-nav__link">
         
   
   
@@ -856,7 +854,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../builds/build-artifacts/" class="md-nav__link">
+      <a href="../../builds/build-artifacts/" class="md-nav__link">
         
   
   
@@ -884,7 +882,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../builds/running-the-program/" class="md-nav__link">
+      <a href="../../builds/running-the-program/" class="md-nav__link">
         
   
   
@@ -912,7 +910,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../builds/understanding-the-debugger/" class="md-nav__link">
+      <a href="../../builds/understanding-the-debugger/" class="md-nav__link">
         
   
   
@@ -940,7 +938,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../builds/adding-a-package/" class="md-nav__link">
+      <a href="../../builds/adding-a-package/" class="md-nav__link">
         
   
   
@@ -968,7 +966,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../builds/what-belongs-in-version-control/" class="md-nav__link">
+      <a href="../../builds/what-belongs-in-version-control/" class="md-nav__link">
         
   
   
@@ -1041,7 +1039,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../diagnosing-errors/" class="md-nav__link ">
+            <a href="../../diagnosing-errors/" class="md-nav__link ">
               
   
   
@@ -1085,7 +1083,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../diagnosing-errors/compile-time/" class="md-nav__link">
+      <a href="../../diagnosing-errors/compile-time/" class="md-nav__link">
         
   
   
@@ -1113,7 +1111,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../diagnosing-errors/troubleshooting-failed-build/" class="md-nav__link">
+      <a href="../../diagnosing-errors/troubleshooting-failed-build/" class="md-nav__link">
         
   
   
@@ -1141,7 +1139,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../diagnosing-errors/runtime/" class="md-nav__link">
+      <a href="../../diagnosing-errors/runtime/" class="md-nav__link">
         
   
   
@@ -1169,7 +1167,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../diagnosing-errors/test-harness/" class="md-nav__link">
+      <a href="../../diagnosing-errors/test-harness/" class="md-nav__link">
         
   
   
@@ -1197,7 +1195,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../diagnosing-errors/print-logging/" class="md-nav__link">
+      <a href="../../diagnosing-errors/print-logging/" class="md-nav__link">
         
   
   
@@ -1225,7 +1223,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../diagnosing-errors/validating-runtime-input/" class="md-nav__link">
+      <a href="../../diagnosing-errors/validating-runtime-input/" class="md-nav__link">
         
   
   
@@ -1253,7 +1251,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../diagnosing-errors/handling-runtime-errors/" class="md-nav__link">
+      <a href="../../diagnosing-errors/handling-runtime-errors/" class="md-nav__link">
         
   
   
@@ -1281,7 +1279,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../diagnosing-errors/error-contracts/" class="md-nav__link">
+      <a href="../../diagnosing-errors/error-contracts/" class="md-nav__link">
         
   
   
@@ -1309,7 +1307,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../diagnosing-errors/stack-trace/" class="md-nav__link">
+      <a href="../../diagnosing-errors/stack-trace/" class="md-nav__link">
         
   
   
@@ -1337,7 +1335,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../diagnosing-errors/logic/" class="md-nav__link">
+      <a href="../../diagnosing-errors/logic/" class="md-nav__link">
         
   
   
@@ -1408,7 +1406,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../unit-testing/" class="md-nav__link ">
+            <a href="../../unit-testing/" class="md-nav__link ">
               
   
   
@@ -1452,7 +1450,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../unit-testing/why-testing/" class="md-nav__link">
+      <a href="../../unit-testing/why-testing/" class="md-nav__link">
         
   
   
@@ -1480,7 +1478,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../unit-testing/unit-testing/" class="md-nav__link">
+      <a href="../../unit-testing/unit-testing/" class="md-nav__link">
         
   
   
@@ -1508,7 +1506,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../unit-testing/using-reference-project/" class="md-nav__link">
+      <a href="../../unit-testing/using-reference-project/" class="md-nav__link">
         
   
   
@@ -1536,7 +1534,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../unit-testing/arrange-act-assert/" class="md-nav__link">
+      <a href="../../unit-testing/arrange-act-assert/" class="md-nav__link">
         
   
   
@@ -1564,7 +1562,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../unit-testing/writing-effective-tests/" class="md-nav__link">
+      <a href="../../unit-testing/writing-effective-tests/" class="md-nav__link">
         
   
   
@@ -1592,7 +1590,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../unit-testing/test-segmentation/" class="md-nav__link">
+      <a href="../../unit-testing/test-segmentation/" class="md-nav__link">
         
   
   
@@ -1620,7 +1618,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../unit-testing/parameterized-tests/" class="md-nav__link">
+      <a href="../../unit-testing/parameterized-tests/" class="md-nav__link">
         
   
   
@@ -1648,7 +1646,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../unit-testing/controlling-test-dependencies/" class="md-nav__link">
+      <a href="../../unit-testing/controlling-test-dependencies/" class="md-nav__link">
         
   
   
@@ -1676,7 +1674,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../unit-testing/knowing-what-to-test/" class="md-nav__link">
+      <a href="../../unit-testing/knowing-what-to-test/" class="md-nav__link">
         
   
   
@@ -1741,7 +1739,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../type-system/" class="md-nav__link ">
+            <a href="../../type-system/" class="md-nav__link ">
               
   
   
@@ -1785,7 +1783,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../type-system/type-implementations/" class="md-nav__link">
+      <a href="../../type-system/type-implementations/" class="md-nav__link">
         
   
   
@@ -1813,7 +1811,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../type-system/classes/" class="md-nav__link">
+      <a href="../../type-system/classes/" class="md-nav__link">
         
   
   
@@ -1841,7 +1839,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../type-system/protecting-invariants/" class="md-nav__link">
+      <a href="../../type-system/protecting-invariants/" class="md-nav__link">
         
   
   
@@ -1869,7 +1867,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../type-system/enums/" class="md-nav__link">
+      <a href="../../type-system/enums/" class="md-nav__link">
         
   
   
@@ -1897,7 +1895,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../type-system/interfaces/" class="md-nav__link">
+      <a href="../../type-system/interfaces/" class="md-nav__link">
         
   
   
@@ -1925,7 +1923,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../type-system/controlling-test-environment/" class="md-nav__link">
+      <a href="../../type-system/controlling-test-environment/" class="md-nav__link">
         
   
   
@@ -1988,7 +1986,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../configuration/" class="md-nav__link ">
+            <a href="../../configuration/" class="md-nav__link ">
               
   
   
@@ -2032,7 +2030,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../configuration/types-of-configuration/" class="md-nav__link">
+      <a href="../../configuration/types-of-configuration/" class="md-nav__link">
         
   
   
@@ -2060,7 +2058,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../configuration/environment-types/" class="md-nav__link">
+      <a href="../../configuration/environment-types/" class="md-nav__link">
         
   
   
@@ -2088,7 +2086,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../configuration/configuring-application/" class="md-nav__link">
+      <a href="../../configuration/configuring-application/" class="md-nav__link">
         
   
   
@@ -2116,7 +2114,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../configuration/using-environment-settings/" class="md-nav__link">
+      <a href="../../configuration/using-environment-settings/" class="md-nav__link">
         
   
   
@@ -2144,7 +2142,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../configuration/strongly-typed-configuration/" class="md-nav__link">
+      <a href="../../configuration/strongly-typed-configuration/" class="md-nav__link">
         
   
   
@@ -2205,7 +2203,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../project-refactoring/" class="md-nav__link ">
+            <a href="../../project-refactoring/" class="md-nav__link ">
               
   
   
@@ -2249,7 +2247,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../project-refactoring/encapsulation-modules/" class="md-nav__link">
+      <a href="../../project-refactoring/encapsulation-modules/" class="md-nav__link">
         
   
   
@@ -2277,7 +2275,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../project-refactoring/choosing-module-boundaries/" class="md-nav__link">
+      <a href="../../project-refactoring/choosing-module-boundaries/" class="md-nav__link">
         
   
   
@@ -2305,7 +2303,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../project-refactoring/independent-build-units/" class="md-nav__link">
+      <a href="../../project-refactoring/independent-build-units/" class="md-nav__link">
         
   
   
@@ -2333,7 +2331,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../project-refactoring/managing-direction-dependencies/" class="md-nav__link">
+      <a href="../../project-refactoring/managing-direction-dependencies/" class="md-nav__link">
         
   
   
@@ -2402,14 +2400,14 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="./" class="md-nav__link md-nav__link--active">
+            <a href="../" class="md-nav__link ">
               
   
   
   <span class="md-ellipsis">
     
   
-    Creating and Publishing an Application
+    Creating and Packaging an Application
   
 
     
@@ -2420,7 +2418,7 @@
             </a>
             
               
-              <label class="md-nav__link md-nav__link--active" for="__nav_11" id="__nav_11_label" tabindex="0">
+              <label class="md-nav__link " for="__nav_11" id="__nav_11_label" tabindex="0">
                 <span class="md-nav__icon md-icon"></span>
               </label>
             
@@ -2431,7 +2429,7 @@
             <span class="md-nav__icon md-icon"></span>
             
   
-    Creating and Publishing an Application
+    Creating and Packaging an Application
   
 
           </label>
@@ -2446,7 +2444,7 @@
   
   
     <li class="md-nav__item">
-      <a href="startup-project/" class="md-nav__link">
+      <a href="../startup-project/" class="md-nav__link">
         
   
   
@@ -2474,7 +2472,7 @@
   
   
     <li class="md-nav__item">
-      <a href="establishing-api/" class="md-nav__link">
+      <a href="../establishing-api/" class="md-nav__link">
         
   
   
@@ -2502,7 +2500,7 @@
   
   
     <li class="md-nav__item">
-      <a href="refactoring-new-module/" class="md-nav__link">
+      <a href="../refactoring-new-module/" class="md-nav__link">
         
   
   
@@ -2530,7 +2528,7 @@
   
   
     <li class="md-nav__item">
-      <a href="adding-external-package/" class="md-nav__link">
+      <a href="../adding-external-package/" class="md-nav__link">
         
   
   
@@ -2558,7 +2556,7 @@
   
   
     <li class="md-nav__item">
-      <a href="adding-solution-file/" class="md-nav__link">
+      <a href="../adding-solution-file/" class="md-nav__link">
         
   
   
@@ -2586,7 +2584,7 @@
   
   
     <li class="md-nav__item">
-      <a href="adding-program-logic/" class="md-nav__link">
+      <a href="../adding-program-logic/" class="md-nav__link">
         
   
   
@@ -2611,17 +2609,44 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="publishing-application/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Packaging the Application
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   
   <span class="md-ellipsis">
     
   
-    Publishing the Application
+    Packaging the Application
   
 
     
@@ -2630,6 +2655,70 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#release-vs-debug" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Release vs Debug
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#creating-the-package" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Creating the Package
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#what-is-in-the-package" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        What Is in the Package
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#running-the-cli-application" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Running the CLI Application
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -2706,7 +2795,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../full-testing/index.md" class="md-nav__link">
+      <a href="../../full-testing/index.md" class="md-nav__link">
         
   
   
@@ -2734,7 +2823,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../full-testing/test-types.md" class="md-nav__link">
+      <a href="../../full-testing/test-types.md" class="md-nav__link">
         
   
   
@@ -2762,7 +2851,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../full-testing/integration-testing.md" class="md-nav__link">
+      <a href="../../full-testing/integration-testing.md" class="md-nav__link">
         
   
   
@@ -2790,7 +2879,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../full-testing/end-to-end-testing.md" class="md-nav__link">
+      <a href="../../full-testing/end-to-end-testing.md" class="md-nav__link">
         
   
   
@@ -2838,6 +2927,58 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#release-vs-debug" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Release vs Debug
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#creating-the-package" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Creating the Package
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#what-is-in-the-package" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        What Is in the Package
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#running-the-cli-application" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Running the CLI Application
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -2856,27 +2997,79 @@
   
 
 
-<h1 id="creating-and-publishing-an-application">Creating and Publishing an Application<a class="headerlink" href="#creating-and-publishing-an-application" title="Permanent link">&para;</a></h1>
-<p>In this section we will provide a walkthrough to build a simple "word substitution" console application that contains two projects:</p>
+<h1 id="packaging-the-application">Packaging the Application<a class="headerlink" href="#packaging-the-application" title="Permanent link">&para;</a></h1>
+<p>So far we have been building and running the application on our own machine. <strong>Packaging</strong> is the step where we create a folder of files that someone else can copy and run—without your source code, project files, or development tools.</p>
+<!-- prettier-ignore -->
+<div class="admonition info">
+<p class="admonition-title">What &quot;Publishing&quot; Means Here</p>
+<p>The .NET CLI uses the command name <code>dotnet publish</code> for this step. This can bring to mind the idea of publishing to a public registry or website where others can download and use the package. However, in this context it simply means creating a release version of the application.</p>
+</div>
+<h2 id="release-vs-debug">Release vs Debug<a class="headerlink" href="#release-vs-debug" title="Permanent link">&para;</a></h2>
+<p>During development we usually build in <strong>Debug</strong> configuration. Debug builds are larger, slower, and include extra information that helps the debugger map running code back to our source files.</p>
+<p>For distribution we use <strong>Release</strong> configuration. Release builds are optimized for running the app, not for stepping through it line by line in the debugger.</p>
+<p>You do not need to change any project files to switch configurations. We pass <code>-c Release</code> on the command line when we package the app.</p>
+<h2 id="creating-the-package">Creating the Package<a class="headerlink" href="#creating-the-package" title="Permanent link">&para;</a></h2>
+<p>From the root directory of the solution run:</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>dotnet<span class="w"> </span>publish<span class="w"> </span>WordSub.App/WordSub.App.csproj<span class="w"> </span>-c<span class="w"> </span>Release<span class="w"> </span>-o<span class="w"> </span>./publish<span class="w"> </span>-p:DebugType<span class="o">=</span>none<span class="w"> </span>-p:DebugSymbols<span class="o">=</span><span class="nb">false</span>
+</span></code></pre></div>
 <table>
 <thead>
 <tr>
-<th>Project</th>
-<th>Description</th>
+<th>Part of the command</th>
+<th>What it does</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>WordSub.App</td>
-<td>A console application that allows the user to substitute words using terminal input.</td>
+<td><code>dotnet publish</code></td>
+<td>Build the app and gather everything needed to run it elsewhere</td>
 </tr>
 <tr>
-<td>WordSub</td>
-<td>The library that contains the functionality to perform the substitutions.</td>
+<td><code>WordSub.App/WordSub.App.csproj</code></td>
+<td>The executable project we want to package</td>
+</tr>
+<tr>
+<td><code>-c Release</code></td>
+<td>Use the Release configuration</td>
+</tr>
+<tr>
+<td><code>-o ./publish</code></td>
+<td>Write output into a new <code>publish</code> folder under the solution root</td>
+</tr>
+<tr>
+<td><code>-p:DebugType=none</code></td>
+<td>Disable debug symbols</td>
+</tr>
+<tr>
+<td><code>-p:DebugSymbols=false</code></td>
+<td>Disable debug symbols</td>
 </tr>
 </tbody>
 </table>
-<p>We will also call into a third library that we did not author.</p>
+<p>When the command finishes, you should see a message indicating success and a path ending in <code>publish</code>.</p>
+<p>Your root directory will now have a <code>publish</code> folder:</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>word-sub/publish/
+</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>├── Bogus.dll
+</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>├── WordSub.App
+</span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a>├── WordSub.App.deps.json
+</span><span id="__span-1-5"><a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a>├── WordSub.App.dll
+</span><span id="__span-1-6"><a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a>├── WordSub.App.runtimeconfig.json
+</span><span id="__span-1-7"><a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a>└── WordSub.dll
+</span></code></pre></div>
+<h2 id="what-is-in-the-package">What Is in the Package<a class="headerlink" href="#what-is-in-the-package" title="Permanent link">&para;</a></h2>
+<p>The <code>publish</code> folder contains <strong>compiled</strong> output—already translated from C# into a form the .NET runtime can execute. For example, the <code>WordSub.App.dll</code> file is the compiled version of the main program (<code>Program.cs</code>) and the <code>WordSub.dll</code> file is the compiled version of the library project (<code>WordSub.cs</code>).</p>
+<p>The packaged application does not contain source code, debugging information, or any intermediate build artifacts.</p>
+<!-- prettier-ignore -->
+<div class="admonition info">
+<p class="admonition-title">Proving the Files are Compiled</p>
+<p>If you try opening the dll files in a text editor you will see a lot of gibberish. This is becase the text editor is trying to interpret the binary file as text - ASCII or Unicode characters. Because nothing lines up with the encoding scheme, the text editor symbols appear random.</p>
+</div>
+<h2 id="running-the-cli-application">Running the CLI Application<a class="headerlink" href="#running-the-cli-application" title="Permanent link">&para;</a></h2>
+<p>All of the files in <code>publish</code> folder make up the packaged application.</p>
+<p>To run the packaged application, users will need to install the .NET runtime on their machine. After that they can run it on their machine by navigating to the directory containing the files and running the <code>dotnet</code> command.</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>dotnet<span class="w"> </span>WordSub.App.dll
+</span></code></pre></div>
+<p>You can try this yourself using your publish directory; or better yet, copy and paste the contents of the publish directory into a new directory and try it there. This will better illustrate how the files no longer depend on anything in the source project.</p>
 
 
 
@@ -2912,7 +3105,7 @@
       <nav class="md-footer__inner md-grid" aria-label="Footer" >
         
           
-          <a href="../project-refactoring/managing-direction-dependencies/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Managing Direction of Dependencies">
+          <a href="../adding-program-logic/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Adding the Program Logic">
             <div class="md-footer__button md-icon">
               
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
@@ -2922,27 +3115,11 @@
                 Previous
               </span>
               <div class="md-ellipsis">
-                Managing Direction of Dependencies
+                Adding the Program Logic
               </div>
             </div>
           </a>
         
-        
-          
-          <a href="startup-project/" class="md-footer__link md-footer__link--next" aria-label="Next: Startup project">
-            <div class="md-footer__title">
-              <span class="md-footer__direction">
-                Next
-              </span>
-              <div class="md-ellipsis">
-                Startup project
-              </div>
-            </div>
-            <div class="md-footer__button md-icon">
-              
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"/></svg>
-            </div>
-          </a>
         
       </nav>
     
@@ -2972,10 +3149,10 @@
     
       
       
-      <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": ["content.code.copy", "navigation.instant", "navigation.footer", "navigation.indexes", "navigation.top"], "search": "../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["content.code.copy", "navigation.instant", "navigation.footer", "navigation.indexes", "navigation.top"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
     
     
-      <script src="../assets/javascripts/bundle.79ae519e.min.js"></script>
+      <script src="../../assets/javascripts/bundle.79ae519e.min.js"></script>
       
     
   </body>

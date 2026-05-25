@@ -10,13 +10,13 @@
         <meta name="author" content="Mike Jovanovich">
       
       
-        <link rel="canonical" href="https://software-resilience-reliability-book.github.io/srr-book/creating-publishing-app/adding-external-package/">
+        <link rel="canonical" href="https://software-resilience-reliability-book.github.io/srr-book/creating-packaging-app/establishing-api/">
       
       
-        <link rel="prev" href="../refactoring-new-module/">
+        <link rel="prev" href="../startup-project/">
       
       
-        <link rel="next" href="../adding-solution-file/">
+        <link rel="next" href="../refactoring-new-module/">
       
       
         
@@ -27,7 +27,7 @@
     
     
       
-        <title>Adding an External Package - Software Resilience and Reliability</title>
+        <title>Establishing the API - Software Resilience and Reliability</title>
       
     
     
@@ -80,7 +80,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#adding-an-external-package" class="md-skip">
+        <a href="#establishing-the-api" class="md-skip">
           Skip to content
         </a>
       
@@ -116,7 +116,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Adding an External Package
+              Establishing the API
             
           </span>
         </div>
@@ -2409,7 +2409,7 @@
   <span class="md-ellipsis">
     
   
-    Creating and Publishing an Application
+    Creating and Packaging an Application
   
 
     
@@ -2431,7 +2431,7 @@
             <span class="md-nav__icon md-icon"></span>
             
   
-    Creating and Publishing an Application
+    Creating and Packaging an Application
   
 
           </label>
@@ -2471,10 +2471,37 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../establishing-api/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Establishing the API
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   
@@ -2490,6 +2517,48 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#creating-the-wordreplacer-class" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Creating the WordReplacer Class
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#calling-the-new-class" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Calling the New Class
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -2527,37 +2596,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Adding an External Package
-  
-
-    
-  </span>
-  
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../adding-external-package/" class="md-nav__link">
         
   
   
@@ -2573,48 +2615,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#external-dependencies" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        External Dependencies
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#adding-the-bogus-package" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Adding the Bogus Package
-      
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -2683,14 +2683,14 @@
   
   
     <li class="md-nav__item">
-      <a href="../publishing-application/" class="md-nav__link">
+      <a href="../packaging-application/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    Publishing the Application
+    Packaging the Application
   
 
     
@@ -2914,10 +2914,10 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#external-dependencies" class="md-nav__link">
+  <a href="#creating-the-wordreplacer-class" class="md-nav__link">
     <span class="md-ellipsis">
       
-        External Dependencies
+        Creating the WordReplacer Class
       
     </span>
   </a>
@@ -2925,10 +2925,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#adding-the-bogus-package" class="md-nav__link">
+  <a href="#calling-the-new-class" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Adding the Bogus Package
+        Calling the New Class
       
     </span>
   </a>
@@ -2955,23 +2955,48 @@
   
 
 
-<h1 id="adding-an-external-package">Adding an External Package<a class="headerlink" href="#adding-an-external-package" title="Permanent link">&para;</a></h1>
-<h2 id="external-dependencies">External Dependencies<a class="headerlink" href="#external-dependencies" title="Permanent link">&para;</a></h2>
-<p>Applications may depend on modules that were authored by the same team, or modules that were authored by a different team outside of the organization. Modules containing code that we have control over are <strong>internal</strong> dependencies. Modules containing code that we do not have control over are <strong>external</strong> dependencies.</p>
-<p>For this application we are not going to write the "randomness" logic ourselves. We will rely on an existing third-party library to provide this functionality.</p>
-<h2 id="adding-the-bogus-package">Adding the <code>Bogus</code> Package<a class="headerlink" href="#adding-the-bogus-package" title="Permanent link">&para;</a></h2>
-<p>We will use the <code>Bogus</code> package to generate random words for the word replacement logic. This package will be used by the <code>WordReplacer</code> class, so use the <code>cd</code> command to navigate back to the WordSub subdirectory. To add the package, run the following command:</p>
-<div class="language-bash highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="nb">cd</span><span class="w"> </span>../WordSub
-</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>dotnet<span class="w"> </span>add<span class="w"> </span>package<span class="w"> </span>Bogus<span class="w"> </span>--version<span class="w"> </span><span class="m">35</span>.6.5
+<h1 id="establishing-the-api">Establishing the API<a class="headerlink" href="#establishing-the-api" title="Permanent link">&para;</a></h1>
+<h2 id="creating-the-wordreplacer-class">Creating the <code>WordReplacer</code> Class<a class="headerlink" href="#creating-the-wordreplacer-class" title="Permanent link">&para;</a></h2>
+<p>The next step is to formalize the functionality of the application by establishing its API. The informal requirements for the application are as follows:</p>
+<blockquote>
+<p>The application must accept as input a sentence containing token placeholders for parts of speech, and output a new sentence with the tokens replaced with randomized words corresponding to the part of speech.</p>
+</blockquote>
+<p>An example run might look like this:</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>Enter a sentence: The [adjective] [noun] [verb].
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>The slow chicken dances.
 </span></code></pre></div>
-<p>The <code>Bogus</code> library is published in an online NuGet package repository. The NuGet package manager resolves the name, downloads the package from the repository, and adds the appropriate reference to the <code>WordSub</code> project.</p>
-<p>In this case, we have also included the <code>--version</code> flag to specify the version of the package we want to use. This ensures that the demo will still work if the package is updated in the future.</p>
-<p>The following was added to the <code>WordSub.csproj</code> file:</p>
-<div class="language-xml highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="nt">&lt;ItemGroup&gt;</span>
-</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="w">  </span><span class="nt">&lt;PackageReference</span><span class="w"> </span><span class="na">Include=</span><span class="s">&quot;Bogus&quot;</span><span class="w"> </span><span class="na">Version=</span><span class="s">&quot;35.6.5&quot;</span><span class="w"> </span><span class="nt">/&gt;</span>
-</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="nt">&lt;/ItemGroup&gt;</span>
+<p>We can manage this with one class containing a single public method: <code>WordReplacer.Replace</code>.</p>
+<p>Let's create the new class for this functionality. Be sure to put this class in the <code>WordSub.App</code> directory.</p>
+<div class="language-csharp highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="k">public</span><span class="w"> </span><span class="k">class</span><span class="w"> </span><span class="nc">WordReplacer</span>
+</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="p">{</span>
+</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="w">    </span><span class="k">public</span><span class="w"> </span><span class="kt">string</span><span class="w"> </span><span class="nf">Replace</span><span class="p">(</span><span class="kt">string</span><span class="w"> </span><span class="n">text</span><span class="p">)</span>
+</span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a><span class="w">    </span><span class="p">{</span>
+</span><span id="__span-1-5"><a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a><span class="w">        </span><span class="k">throw</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="nf">NotImplementedException</span><span class="p">();</span>
+</span><span id="__span-1-6"><a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a><span class="w">    </span><span class="p">}</span>
+</span><span id="__span-1-7"><a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a><span class="p">}</span>
 </span></code></pre></div>
-<p>Unlike the internal project reference, this uses the <code>PackageReference</code> element to specify the package, and contains no path information to point at a project on our local machine. <code>Bogus</code> is not our code; we are simply using it in our library.</p>
+<p>As a placeholder, we will throw a <code>NotImplementedException</code>, so that anyone trying to call this method while it is under development will be met with a clear error message.</p>
+<h2 id="calling-the-new-class">Calling the New Class<a class="headerlink" href="#calling-the-new-class" title="Permanent link">&para;</a></h2>
+<p>Now we can call this method from the <code>Program.cs</code> file:</p>
+<div class="language-csharp highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="kt">var</span><span class="w"> </span><span class="n">wordReplacer</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">WordReplacer</span><span class="p">();</span>
+</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="kt">var</span><span class="w"> </span><span class="n">result</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">wordReplacer</span><span class="p">.</span><span class="n">Replace</span><span class="p">(</span><span class="s">&quot;The [adjective] [noun] [verb].&quot;</span><span class="p">);</span>
+</span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="n">result</span><span class="p">);</span>
+</span></code></pre></div>
+<p>The file structure should now look like this:</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>word-sub/
+</span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>└── WordSub.App
+</span><span id="__span-3-3"><a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a>    ├── Program.cs
+</span><span id="__span-3-4"><a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a>    ├── WordReplacer.cs
+</span><span id="__span-3-5"><a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a>    └── WordSub.App.csproj
+</span></code></pre></div>
+<p>If you run the program now you will see the NotImplementedException error.</p>
+<p>Success! We have a starter shell in place for the application. Just creating a minimal working program is the first milestone in building the solution.</p>
+<!-- prettier-ignore -->
+<div class="admonition warning">
+<p class="admonition-title">Garbage In, Garbage Out</p>
+<p>The requirements that we have provided are very lax. In reality we would want to define behavior in more detail. For example: What tense should be used? What do we do if we hit a token placeholder without a valid identifier? Should we allow duplicate replacement words?</p>
+<p>Without proper requirements, we don't know if we have met acceptance criteria and cannot properly confirm that the system works through testing.</p>
+</div>
 
 
 
@@ -3007,7 +3032,7 @@
       <nav class="md-footer__inner md-grid" aria-label="Footer" >
         
           
-          <a href="../refactoring-new-module/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Refactoring the a New Module">
+          <a href="../startup-project/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Startup project">
             <div class="md-footer__button md-icon">
               
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
@@ -3017,20 +3042,20 @@
                 Previous
               </span>
               <div class="md-ellipsis">
-                Refactoring the a New Module
+                Startup project
               </div>
             </div>
           </a>
         
         
           
-          <a href="../adding-solution-file/" class="md-footer__link md-footer__link--next" aria-label="Next: Adding a Solution File">
+          <a href="../refactoring-new-module/" class="md-footer__link md-footer__link--next" aria-label="Next: Refactoring the a New Module">
             <div class="md-footer__title">
               <span class="md-footer__direction">
                 Next
               </span>
               <div class="md-ellipsis">
-                Adding a Solution File
+                Refactoring the a New Module
               </div>
             </div>
             <div class="md-footer__button md-icon">

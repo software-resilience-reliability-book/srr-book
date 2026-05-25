@@ -10,13 +10,13 @@
         <meta name="author" content="Mike Jovanovich">
       
       
-        <link rel="canonical" href="https://software-resilience-reliability-book.github.io/srr-book/creating-publishing-app/refactoring-new-module/">
+        <link rel="canonical" href="https://software-resilience-reliability-book.github.io/srr-book/creating-packaging-app/adding-external-package/">
       
       
-        <link rel="prev" href="../establishing-api/">
+        <link rel="prev" href="../refactoring-new-module/">
       
       
-        <link rel="next" href="../adding-external-package/">
+        <link rel="next" href="../adding-solution-file/">
       
       
         
@@ -27,7 +27,7 @@
     
     
       
-        <title>Refactoring the a New Module - Software Resilience and Reliability</title>
+        <title>Adding an External Package - Software Resilience and Reliability</title>
       
     
     
@@ -80,7 +80,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#refactoring-the-a-new-module" class="md-skip">
+        <a href="#adding-an-external-package" class="md-skip">
           Skip to content
         </a>
       
@@ -116,7 +116,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Refactoring the a New Module
+              Adding an External Package
             
           </span>
         </div>
@@ -2409,7 +2409,7 @@
   <span class="md-ellipsis">
     
   
-    Creating and Publishing an Application
+    Creating and Packaging an Application
   
 
     
@@ -2431,7 +2431,7 @@
             <span class="md-nav__icon md-icon"></span>
             
   
-    Creating and Publishing an Application
+    Creating and Packaging an Application
   
 
           </label>
@@ -2499,6 +2499,34 @@
                 
   
   
+  
+  
+    <li class="md-nav__item">
+      <a href="../refactoring-new-module/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Refactoring the a New Module
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
     
   
   
@@ -2518,7 +2546,7 @@
   <span class="md-ellipsis">
     
   
-    Refactoring the a New Module
+    Adding an External Package
   
 
     
@@ -2536,7 +2564,7 @@
   <span class="md-ellipsis">
     
   
-    Refactoring the a New Module
+    Adding an External Package
   
 
     
@@ -2562,10 +2590,10 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#creating-a-class-library" class="md-nav__link">
+  <a href="#external-dependencies" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Creating a Class Library
+        External Dependencies
       
     </span>
   </a>
@@ -2573,21 +2601,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#adding-an-internal-project-reference" class="md-nav__link">
+  <a href="#adding-the-bogus-package" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Adding an Internal Project Reference
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#adding-a-using-directive" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Adding a Using Directive
+        Adding the Bogus Package
       
     </span>
   </a>
@@ -2598,34 +2615,6 @@
   
 </nav>
       
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../adding-external-package/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Adding an External Package
-  
-
-    
-  </span>
-  
-  
-
-      </a>
     </li>
   
 
@@ -2694,14 +2683,14 @@
   
   
     <li class="md-nav__item">
-      <a href="../publishing-application/" class="md-nav__link">
+      <a href="../packaging-application/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    Publishing the Application
+    Packaging the Application
   
 
     
@@ -2925,10 +2914,10 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#creating-a-class-library" class="md-nav__link">
+  <a href="#external-dependencies" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Creating a Class Library
+        External Dependencies
       
     </span>
   </a>
@@ -2936,21 +2925,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#adding-an-internal-project-reference" class="md-nav__link">
+  <a href="#adding-the-bogus-package" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Adding an Internal Project Reference
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#adding-a-using-directive" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Adding a Using Directive
+        Adding the Bogus Package
       
     </span>
   </a>
@@ -2977,56 +2955,23 @@
   
 
 
-<h1 id="refactoring-the-a-new-module">Refactoring the a New Module<a class="headerlink" href="#refactoring-the-a-new-module" title="Permanent link">&para;</a></h1>
-<h2 id="creating-a-class-library">Creating a Class Library<a class="headerlink" href="#creating-a-class-library" title="Permanent link">&para;</a></h2>
-<p>As the <code>WordReplacer</code> class and related logic increase in complexity, any refactor will become more difficult. Now that we have a the basic program working we are at a good point to migrate the new functionality into its own class library.</p>
-<p>To create a class library, we create another folder under the root directory and run the following command:</p>
-<div class="language-bash highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="c1"># This assumes you are still in the WordSub.App subdirectory.</span>
-</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="nb">cd</span><span class="w"> </span>..
-</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>mkdir<span class="w"> </span>WordSub
-</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="nb">cd</span><span class="w"> </span>WordSub
-</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>dotnet<span class="w"> </span>new<span class="w"> </span>classlib
+<h1 id="adding-an-external-package">Adding an External Package<a class="headerlink" href="#adding-an-external-package" title="Permanent link">&para;</a></h1>
+<h2 id="external-dependencies">External Dependencies<a class="headerlink" href="#external-dependencies" title="Permanent link">&para;</a></h2>
+<p>Applications may depend on modules that were authored by the same team, or modules that were authored by a different team outside of the organization. Modules containing code that we have control over are <strong>internal</strong> dependencies. Modules containing code that we do not have control over are <strong>external</strong> dependencies.</p>
+<p>For this application we are not going to write the "randomness" logic ourselves. We will rely on an existing third-party library to provide this functionality.</p>
+<h2 id="adding-the-bogus-package">Adding the <code>Bogus</code> Package<a class="headerlink" href="#adding-the-bogus-package" title="Permanent link">&para;</a></h2>
+<p>We will use the <code>Bogus</code> package to generate random words for the word replacement logic. This package will be used by the <code>WordReplacer</code> class, so use the <code>cd</code> command to navigate back to the WordSub subdirectory. To add the package, run the following command:</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="nb">cd</span><span class="w"> </span>../WordSub
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>dotnet<span class="w"> </span>add<span class="w"> </span>package<span class="w"> </span>Bogus<span class="w"> </span>--version<span class="w"> </span><span class="m">35</span>.6.5
 </span></code></pre></div>
-<p>This will create a new directory with the same name as the class library, and a <code>Class1.cs</code> file. Rename this file to <code>WordReplacer.cs</code> and copy the contents of the contents of the original <code>WordReplacer.cs</code> file into it. Make sure to keep the namespace line in this file:</p>
-<div class="language-csharp highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="k">namespace</span><span class="w"> </span><span class="nn">WordSub</span><span class="p">;</span>
-</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>
-</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="k">public</span><span class="w"> </span><span class="k">class</span><span class="w"> </span><span class="nc">WordReplacer</span>
-</span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a><span class="p">{</span>
-</span><span id="__span-1-5"><a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a><span class="w">    </span><span class="k">public</span><span class="w"> </span><span class="kt">string</span><span class="w"> </span><span class="nf">Replace</span><span class="p">(</span><span class="kt">string</span><span class="w"> </span><span class="n">text</span><span class="p">)</span>
-</span><span id="__span-1-6"><a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a><span class="w">    </span><span class="p">{</span>
-</span><span id="__span-1-7"><a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a><span class="w">        </span><span class="k">throw</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="nf">NotImplementedException</span><span class="p">();</span>
-</span><span id="__span-1-8"><a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a><span class="w">    </span><span class="p">}</span>
-</span><span id="__span-1-9"><a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a><span class="p">}</span>
+<p>The <code>Bogus</code> library is published in an online NuGet package repository. The NuGet package manager resolves the name, downloads the package from the repository, and adds the appropriate reference to the <code>WordSub</code> project.</p>
+<p>In this case, we have also included the <code>--version</code> flag to specify the version of the package we want to use. This ensures that the demo will still work if the package is updated in the future.</p>
+<p>The following was added to the <code>WordSub.csproj</code> file:</p>
+<div class="language-xml highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="nt">&lt;ItemGroup&gt;</span>
+</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="w">  </span><span class="nt">&lt;PackageReference</span><span class="w"> </span><span class="na">Include=</span><span class="s">&quot;Bogus&quot;</span><span class="w"> </span><span class="na">Version=</span><span class="s">&quot;35.6.5&quot;</span><span class="w"> </span><span class="nt">/&gt;</span>
+</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="nt">&lt;/ItemGroup&gt;</span>
 </span></code></pre></div>
-<p>After this, clean up by removing the original <code>WordReplacer.cs</code> file in the WordSub.App subdirectory:</p>
-<div class="language-text highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>word-sub/
-</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>├── WordSub
-</span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a>│   ├── WordReplacer.cs
-</span><span id="__span-2-4"><a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a>│   └── WordSub.csproj
-</span><span id="__span-2-5"><a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a>└── WordSub.App
-</span><span id="__span-2-6"><a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a>    ├── Program.cs
-</span><span id="__span-2-7"><a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a>    └── WordSub.App.csproj
-</span></code></pre></div>
-<h2 id="adding-an-internal-project-reference">Adding an Internal Project Reference<a class="headerlink" href="#adding-an-internal-project-reference" title="Permanent link">&para;</a></h2>
-<p>If you open the <code>Program.cs</code> file you will now see error squiggles:</p>
-<p><img alt="wordsub app assembly missing error" src="../../images/wordsub-assembly-missing-error.png" /></p>
-<p>The error text, "are you missing a using directive or an assembly reference?" reveals the issue. Now that we have moved the <code>WordReplacer</code> class to a new class library, we need to add a project reference to the <code>WordSub.App</code> project. The console application project does not currently have a way to access the code from the new project.</p>
-<p>To add the reference navigate to the WordSub.App subdirectory and add the reference to the WordSub project:</p>
-<div class="language-bash highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="nb">cd</span><span class="w"> </span>../WordSub.App
-</span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>dotnet<span class="w"> </span>add<span class="w"> </span>reference<span class="w"> </span>../WordSub/WordSub.csproj
-</span></code></pre></div>
-<p>We provide the path to the <code>csproj</code> file for the WordSub library when calling the <code>dotnet add reference</code> command. This adds a reference to the <code>csproj</code> file of the console application:</p>
-<div class="language-xml highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="nt">&lt;ItemGroup&gt;</span>
-</span><span id="__span-4-2"><a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a><span class="w">  </span><span class="nt">&lt;ProjectReference</span><span class="w"> </span><span class="na">Include=</span><span class="s">&quot;..\WordSub\WordSub.csproj&quot;</span><span class="w"> </span><span class="nt">/&gt;</span>
-</span><span id="__span-4-3"><a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a><span class="nt">&lt;/ItemGroup&gt;</span>
-</span></code></pre></div>
-<h2 id="adding-a-using-directive">Adding a Using Directive<a class="headerlink" href="#adding-a-using-directive" title="Permanent link">&para;</a></h2>
-<p>The error in <code>Program.cs</code> is still present. We have added the assembly reference from the original error message. We now need to add the using directive. Simply add the following line to the top of the file:</p>
-<div class="language-csharp highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="k">using</span><span class="w"> </span><span class="nn">WordSub</span><span class="p">;</span>
-</span></code></pre></div>
-<p>This line tells the compiler to import the <code>WordSub</code> namespace, which contains the <code>WordReplacer</code> class.</p>
-<p>The squiggles should now be gone. We can run the program with the debugger, or with the <code>dotnet run</code> command while in the WordSub.App subdirectory, and we get the NotImplementedException error again.</p>
-<p>The refactor is a success. We are now ready to implement the word replacement logic.</p>
+<p>Unlike the internal project reference, this uses the <code>PackageReference</code> element to specify the package, and contains no path information to point at a project on our local machine. <code>Bogus</code> is not our code; we are simply using it in our library.</p>
 
 
 
@@ -3062,7 +3007,7 @@
       <nav class="md-footer__inner md-grid" aria-label="Footer" >
         
           
-          <a href="../establishing-api/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Establishing the API">
+          <a href="../refactoring-new-module/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Refactoring the a New Module">
             <div class="md-footer__button md-icon">
               
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
@@ -3072,20 +3017,20 @@
                 Previous
               </span>
               <div class="md-ellipsis">
-                Establishing the API
+                Refactoring the a New Module
               </div>
             </div>
           </a>
         
         
           
-          <a href="../adding-external-package/" class="md-footer__link md-footer__link--next" aria-label="Next: Adding an External Package">
+          <a href="../adding-solution-file/" class="md-footer__link md-footer__link--next" aria-label="Next: Adding a Solution File">
             <div class="md-footer__title">
               <span class="md-footer__direction">
                 Next
               </span>
               <div class="md-ellipsis">
-                Adding an External Package
+                Adding a Solution File
               </div>
             </div>
             <div class="md-footer__button md-icon">
