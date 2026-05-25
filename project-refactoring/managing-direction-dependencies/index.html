@@ -2410,6 +2410,24 @@
         
       
       
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Managing Direction of Dependencies
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
       <a href="./" class="md-nav__link md-nav__link--active">
         
   
@@ -2426,6 +2444,47 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#sharing-a-dependency" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Sharing a Dependency
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#orchestrating-many-dependencies" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Orchestrating Many Dependencies
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -2502,7 +2561,7 @@
   <span class="md-ellipsis">
     
   
-    Dependency Management
+    Version Management
   
 
     
@@ -2518,7 +2577,7 @@
             <span class="md-nav__icon md-icon"></span>
             
   
-    Dependency Management
+    Version Management
   
 
           </label>
@@ -2531,7 +2590,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../dependency-management/index.md" class="md-nav__link">
+      <a href="../../version-management/index.md" class="md-nav__link">
         
   
   
@@ -2559,7 +2618,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../dependency-management/semantic-versioning.md" class="md-nav__link">
+      <a href="../../version-management/semantic-versioning.md" class="md-nav__link">
         
   
   
@@ -2587,7 +2646,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../dependency-management/breaking-changes.md" class="md-nav__link">
+      <a href="../../version-management/breaking-changes.md" class="md-nav__link">
         
   
   
@@ -2615,7 +2674,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../dependency-management/version-pinning.md" class="md-nav__link">
+      <a href="../../version-management/version-pinning.md" class="md-nav__link">
         
   
   
@@ -2839,6 +2898,36 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#sharing-a-dependency" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Sharing a Dependency
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#orchestrating-many-dependencies" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Orchestrating Many Dependencies
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -2858,30 +2947,50 @@
 
 
 <h1 id="managing-direction-of-dependencies">Managing Direction of Dependencies<a class="headerlink" href="#managing-direction-of-dependencies" title="Permanent link">&para;</a></h1>
-<p>Aside from isolating functionality into logical independent units, modularity within an application can also help to enforce direction of dependencies.</p>
-<p>... direction of dependencies ...</p>
-<p>... current project looks like this. note that library reference represents core functionality that does not depend on any other projects.</p>
-<p><img alt="library modularity" src="../../images/library-modularity.svg" width="400" /></p>
-<p>... suppose we wanted to add a mobile app as a second front-end option for our users. We could simply point it at the same library.</p>
-<!-- TODO: diagram showing public API of library, kind of like a class diagram? Is there one for this? May have to make custom -->
-
-<!-- Dependencies Have Direction
-
-A module that depends on another is a consuming module
-The consumed module has no knowledge of its consumers
-Core palette library vs. its frontends as the primary example
-
-The Controlling Module
-
-In a well-structured project, low-level modules don't need to know about each other
-A higher-level controlling module consumes them and coordinates their behavior
-Game libraries as the primary example
-
-What Breaks When Direction Is Ignored
-
-When a low-level module consumes a higher-level one, isolation breaks down
-Physics importing from AI as a concrete example of what goes wrong
-Brief mention that this pattern will appear in common real-world architectures (e.g. data access layers) even if not demonstrated here -->
+<p>Aside from isolating functionality into logical independent units, modularity within an application can also help to enforce the direction of dependencies between modules.</p>
+<p>Just as a function has a caller, a module has a consumer. Lower level "core" libraries are used by higher level "executive" libraries, which often form the executable - the entry point to the application.</p>
+<h2 id="sharing-a-dependency">Sharing a Dependency<a class="headerlink" href="#sharing-a-dependency" title="Permanent link">&para;</a></h2>
+<p>The <code>ColorTransform</code> module from the reference project contains core functionality that does not depend on any other modules.</p>
+<p><img alt="library modularity graph" src="../../images/library-modularity.svg" width="450" /></p>
+<p>This frees it to be reused by several consumers:</p>
+<table>
+<thead>
+<tr>
+<th>Consumer</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Web Application</td>
+<td>The user-facing application that allows users to transform colors.</td>
+</tr>
+<tr>
+<td>Test Harness</td>
+<td>The console application that allows developers to debug the library.</td>
+</tr>
+<tr>
+<td>Test Suite</td>
+<td>The automated test unit tests project.</td>
+</tr>
+</tbody>
+</table>
+<p>Suppose we wanted to add a mobile app as another option for users to interface with the color transform library. We could simply point it at the <code>ColorTransform</code> library that contains the core "logic" of the application.</p>
+<p><img alt="library modularity graph with mobile" src="../../images/library-modularity-with-mobile.svg" width="620" /></p>
+<p>The new mobile application front-end project would not have to have any knowledge of other consumers; it could even be developed independently by a different team.</p>
+<p>This pattern of orienting dependencies is present in several application architectures, such as Hexagonal Architecture (Ports and Adapters) and Clean Architecture. What is common to these is that the core functionality of an application is kept as free of dependencies as possible, leaving its consumers to reference it.</p>
+<!-- prettier-ignore -->
+<div class="admonition info">
+<p class="admonition-title">Complex Dependency Graphs</p>
+<p>The examples above show shallow graphs for clarity, but real applications commonly have chains of dependencies — module A depends on module B, which depends on module C, and so on. This is normal and expected.</p>
+<p>What matters is that the direction of dependencies remains consistent: consumers depend on the core, never the reverse.</p>
+</div>
+<h2 id="orchestrating-many-dependencies">Orchestrating Many Dependencies<a class="headerlink" href="#orchestrating-many-dependencies" title="Permanent link">&para;</a></h2>
+<p>In a well-structured project, low-level foundational modules don't need to know about each other. The API of these modules is not meant for other modules within the same layer. A higher-level module consumes them and coordinates their behavior.</p>
+<p>Consider the game library from the previous section:</p>
+<p><img alt="library modularity for game" src="../../images/library-modularity-game.svg" width="650" /></p>
+<p>The core functionality, the "logic" of the application, is contained in multiple libraries. We have only showed a few here. The entry point to the application is a project that depends on all of these libraries.</p>
+<p>This project is responsible for coordinating their activity, and managing their input and output. Setting the application up this way removes the need for the lower level libraries to communicate (depend on) each other. The orchestrating module "supervises" the program's execution by calling each module in turn and passing only the information that each needs to know to perform its task.</p>
 
 
 
