@@ -97,6 +97,26 @@
          <lastmod>2026-05-25</lastmod>
     </url>
     <url>
+         <loc>https://software-resilience-reliability-book.github.io/srr-book/creating-publishing-app/</loc>
+         <lastmod>2026-05-25</lastmod>
+    </url>
+    <url>
+         <loc>https://software-resilience-reliability-book.github.io/srr-book/creating-publishing-app/adding-external-package/</loc>
+         <lastmod>2026-05-25</lastmod>
+    </url>
+    <url>
+         <loc>https://software-resilience-reliability-book.github.io/srr-book/creating-publishing-app/establishing-api/</loc>
+         <lastmod>2026-05-25</lastmod>
+    </url>
+    <url>
+         <loc>https://software-resilience-reliability-book.github.io/srr-book/creating-publishing-app/refactoring-new-module/</loc>
+         <lastmod>2026-05-25</lastmod>
+    </url>
+    <url>
+         <loc>https://software-resilience-reliability-book.github.io/srr-book/creating-publishing-app/startup-project/</loc>
+         <lastmod>2026-05-25</lastmod>
+    </url>
+    <url>
          <loc>https://software-resilience-reliability-book.github.io/srr-book/diagnosing-errors/</loc>
          <lastmod>2026-05-25</lastmod>
     </url>
@@ -178,10 +198,6 @@
     </url>
     <url>
          <loc>https://software-resilience-reliability-book.github.io/srr-book/project-refactoring/independent-build-units/</loc>
-         <lastmod>2026-05-25</lastmod>
-    </url>
-    <url>
-         <loc>https://software-resilience-reliability-book.github.io/srr-book/project-refactoring/internal-external-dependencies/</loc>
          <lastmod>2026-05-25</lastmod>
     </url>
     <url>

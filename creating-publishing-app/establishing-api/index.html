@@ -10,13 +10,13 @@
         <meta name="author" content="Mike Jovanovich">
       
       
-        <link rel="canonical" href="https://software-resilience-reliability-book.github.io/srr-book/unit-testing/arrange-act-assert/">
+        <link rel="canonical" href="https://software-resilience-reliability-book.github.io/srr-book/creating-publishing-app/establishing-api/">
       
       
-        <link rel="prev" href="../using-reference-project/">
+        <link rel="prev" href="../startup-project/">
       
       
-        <link rel="next" href="../writing-effective-tests/">
+        <link rel="next" href="../refactoring-new-module/">
       
       
         
@@ -27,7 +27,7 @@
     
     
       
-        <title>The Arrange-Act-Assert Pattern - Software Resilience and Reliability</title>
+        <title>Establishing the API - Software Resilience and Reliability</title>
       
     
     
@@ -80,7 +80,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#the-arrange-act-assert-pattern" class="md-skip">
+        <a href="#establishing-the-api" class="md-skip">
           Skip to content
         </a>
       
@@ -116,7 +116,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              The Arrange-Act-Assert Pattern
+              Establishing the API
             
           </span>
         </div>
@@ -1369,8 +1369,6 @@
       
   
   
-    
-  
   
   
     
@@ -1402,15 +1400,15 @@
     
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7" >
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../" class="md-nav__link ">
+            <a href="../../unit-testing/" class="md-nav__link ">
               
   
   
@@ -1434,7 +1432,7 @@
             
           </div>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_7">
             <span class="md-nav__icon md-icon"></span>
             
@@ -1454,7 +1452,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../why-testing/" class="md-nav__link">
+      <a href="../../unit-testing/why-testing/" class="md-nav__link">
         
   
   
@@ -1482,7 +1480,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../unit-testing/" class="md-nav__link">
+      <a href="../../unit-testing/unit-testing/" class="md-nav__link">
         
   
   
@@ -1510,7 +1508,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../using-reference-project/" class="md-nav__link">
+      <a href="../../unit-testing/using-reference-project/" class="md-nav__link">
         
   
   
@@ -1535,37 +1533,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    The Arrange-Act-Assert Pattern
-  
-
-    
-  </span>
-  
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../../unit-testing/arrange-act-assert/" class="md-nav__link">
         
   
   
@@ -1581,70 +1552,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#the-goal-of-a-unit-test" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        The Goal of a Unit Test
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#examining-a-unit-test" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Examining a Unit Test
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#creating-a-failing-test" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Creating a Failing Test
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#interpreting-the-test-results" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Interpreting the Test Results
-      
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -1657,7 +1564,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../writing-effective-tests/" class="md-nav__link">
+      <a href="../../unit-testing/writing-effective-tests/" class="md-nav__link">
         
   
   
@@ -1685,7 +1592,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../test-segmentation/" class="md-nav__link">
+      <a href="../../unit-testing/test-segmentation/" class="md-nav__link">
         
   
   
@@ -1713,7 +1620,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../parameterized-tests/" class="md-nav__link">
+      <a href="../../unit-testing/parameterized-tests/" class="md-nav__link">
         
   
   
@@ -1741,7 +1648,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../controlling-test-dependencies/" class="md-nav__link">
+      <a href="../../unit-testing/controlling-test-dependencies/" class="md-nav__link">
         
   
   
@@ -1769,7 +1676,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../knowing-what-to-test/" class="md-nav__link">
+      <a href="../../unit-testing/knowing-what-to-test/" class="md-nav__link">
         
   
   
@@ -2458,6 +2365,8 @@
       
   
   
+    
+  
   
   
     
@@ -2479,15 +2388,15 @@
     
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_11" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_11" checked>
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../creating-publishing-app/" class="md-nav__link ">
+            <a href="../" class="md-nav__link ">
               
   
   
@@ -2511,7 +2420,7 @@
             
           </div>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_11_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_11_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_11">
             <span class="md-nav__icon md-icon"></span>
             
@@ -2531,7 +2440,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../creating-publishing-app/startup-project/" class="md-nav__link">
+      <a href="../startup-project/" class="md-nav__link">
         
   
   
@@ -2556,10 +2465,37 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../../creating-publishing-app/establishing-api/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Establishing the API
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   
@@ -2575,6 +2511,48 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#creating-the-wordreplacer-class" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Creating the WordReplacer Class
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#calling-the-new-class" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Calling the New Class
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -2587,7 +2565,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../creating-publishing-app/refactoring-new-module/" class="md-nav__link">
+      <a href="../refactoring-new-module/" class="md-nav__link">
         
   
   
@@ -2615,7 +2593,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../creating-publishing-app/adding-external-package/" class="md-nav__link">
+      <a href="../adding-external-package/" class="md-nav__link">
         
   
   
@@ -2846,10 +2824,10 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#the-goal-of-a-unit-test" class="md-nav__link">
+  <a href="#creating-the-wordreplacer-class" class="md-nav__link">
     <span class="md-ellipsis">
       
-        The Goal of a Unit Test
+        Creating the WordReplacer Class
       
     </span>
   </a>
@@ -2857,32 +2835,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#examining-a-unit-test" class="md-nav__link">
+  <a href="#calling-the-new-class" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Examining a Unit Test
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#creating-a-failing-test" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Creating a Failing Test
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#interpreting-the-test-results" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Interpreting the Test Results
+        Calling the New Class
       
     </span>
   </a>
@@ -2909,125 +2865,48 @@
   
 
 
-<h1 id="the-arrange-act-assert-pattern">The Arrange-Act-Assert Pattern<a class="headerlink" href="#the-arrange-act-assert-pattern" title="Permanent link">&para;</a></h1>
-<h2 id="the-goal-of-a-unit-test">The Goal of a Unit Test<a class="headerlink" href="#the-goal-of-a-unit-test" title="Permanent link">&para;</a></h2>
-<p>Tests should be treated as their own self-contained program, much like running a controlled experiment in a lab. Each test should be <strong>repeatable</strong> and <strong>deterministic</strong>. The output of a test should be the same every time it is run.</p>
-<p>The <strong>Arrange-Act-Assert (AAA)</strong> pattern can be used to achieve this:</p>
-<table>
-<thead>
-<tr>
-<th>Step</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Arrange</td>
-<td>Set up the test environment. This includes creating any objects and data that the <strong>system under test</strong> requires.</td>
-</tr>
-<tr>
-<td>Act</td>
-<td>Perform the action that is being tested. This usually involves the system under test calling a method that is being tested.</td>
-</tr>
-<tr>
-<td>Assert</td>
-<td>Verify the expected outcome. This includes checking the result of the action.</td>
-</tr>
-</tbody>
-</table>
-<h2 id="examining-a-unit-test">Examining a Unit Test<a class="headerlink" href="#examining-a-unit-test" title="Permanent link">&para;</a></h2>
-<p>Let's explore the AAA pattern by example. Our color transform library contains a <code>HexConverter</code> class. This class has a <code>FromHexString</code> method that converts a hex string, such as "#FF0000", to its equivalent RGB color representation, such as "(255, 0, 0)".</p>
-<p>The <strong>model</strong> for the RGB color is mostly a simple data container with properties for the red, green, and blue components:</p>
-<div class="language-csharp highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="k">public</span><span class="w"> </span><span class="k">record</span><span class="w"> </span><span class="n">RgbColor</span>
-</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="p">{</span>
-</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="w">    </span><span class="k">public</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">Red</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="k">get</span><span class="p">;</span><span class="w"> </span><span class="p">}</span>
-</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="w">    </span><span class="k">public</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">Green</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="k">get</span><span class="p">;</span><span class="w"> </span><span class="p">}</span>
-</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="w">    </span><span class="k">public</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">Blue</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="k">get</span><span class="p">;</span><span class="w"> </span><span class="p">}</span>
-</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a><span class="w">    </span><span class="c1">// ...</span>
-</span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a><span class="p">}</span>
+<h1 id="establishing-the-api">Establishing the API<a class="headerlink" href="#establishing-the-api" title="Permanent link">&para;</a></h1>
+<h2 id="creating-the-wordreplacer-class">Creating the <code>WordReplacer</code> Class<a class="headerlink" href="#creating-the-wordreplacer-class" title="Permanent link">&para;</a></h2>
+<p>The next step is to formalize the functionality of the application by establishing its API. The informal requirements for the application are as follows:</p>
+<blockquote>
+<p>The application must accept as input a sentence containing token placeholders for parts of speech, and output a new sentence with the tokens replaced with randomized words corresponding to the part of speech.</p>
+</blockquote>
+<p>An example run might look like this:</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>Enter a sentence or &#39;q&#39; to quit: The [adjective] [noun] [verb].
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>The slow chicken dances.
 </span></code></pre></div>
-<p>The test for the <code>FromHexString</code> method is as follows:</p>
-<div class="language-csharp highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="na">[Fact]</span>
-</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="k">public</span><span class="w"> </span><span class="k">void</span><span class="w"> </span><span class="nf">hex_string_creates_rgb_color_when_valid</span><span class="p">()</span>
-</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="p">{</span>
-</span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a><span class="w">    </span><span class="kt">var</span><span class="w"> </span><span class="n">converter</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">HexConverter</span><span class="p">();</span>
-</span><span id="__span-1-5"><a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a>
-</span><span id="__span-1-6"><a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a><span class="w">    </span><span class="kt">var</span><span class="w"> </span><span class="n">color</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">converter</span><span class="p">.</span><span class="n">FromHexString</span><span class="p">(</span><span class="s">&quot;#FF5511&quot;</span><span class="p">);</span>
-</span><span id="__span-1-7"><a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a>
-</span><span id="__span-1-8"><a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a><span class="w">    </span><span class="n">Assert</span><span class="p">.</span><span class="n">Equal</span><span class="p">(</span><span class="mi">255</span><span class="p">,</span><span class="w"> </span><span class="n">color</span><span class="p">.</span><span class="n">Red</span><span class="p">);</span>
-</span><span id="__span-1-9"><a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a><span class="w">    </span><span class="n">Assert</span><span class="p">.</span><span class="n">Equal</span><span class="p">(</span><span class="mi">85</span><span class="p">,</span><span class="w"> </span><span class="n">color</span><span class="p">.</span><span class="n">Green</span><span class="p">);</span>
-</span><span id="__span-1-10"><a id="__codelineno-1-10" name="__codelineno-1-10" href="#__codelineno-1-10"></a><span class="w">    </span><span class="n">Assert</span><span class="p">.</span><span class="n">Equal</span><span class="p">(</span><span class="mi">17</span><span class="p">,</span><span class="w"> </span><span class="n">color</span><span class="p">.</span><span class="n">Blue</span><span class="p">);</span>
-</span><span id="__span-1-11"><a id="__codelineno-1-11" name="__codelineno-1-11" href="#__codelineno-1-11"></a><span class="p">}</span>
+<p>We can manage this with one class containing a single public method: <code>WordReplacer.Replace</code>.</p>
+<p>Let's create the new class for this functionality. Be sure to put this class in the <code>WordSub.App</code> directory.</p>
+<div class="language-csharp highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="k">public</span><span class="w"> </span><span class="k">class</span><span class="w"> </span><span class="nc">WordReplacer</span>
+</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="p">{</span>
+</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="w">    </span><span class="k">public</span><span class="w"> </span><span class="kt">string</span><span class="w"> </span><span class="nf">Replace</span><span class="p">(</span><span class="kt">string</span><span class="w"> </span><span class="n">text</span><span class="p">)</span>
+</span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a><span class="w">    </span><span class="p">{</span>
+</span><span id="__span-1-5"><a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a><span class="w">        </span><span class="k">throw</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="nf">NotImplementedException</span><span class="p">();</span>
+</span><span id="__span-1-6"><a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a><span class="w">    </span><span class="p">}</span>
+</span><span id="__span-1-7"><a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a><span class="p">}</span>
 </span></code></pre></div>
-<p>Let's break down our steps one by one:</p>
-<p><code>Arrange</code>
-: We create an instance of the <code>HexConverter</code> class. That was all that was needed to set up the test environment.</p>
-<p><code>Act</code>
-: We call the <code>FromHexString</code> method with the string "#000000". This is the action that is being tested.</p>
-<p><code>Assert</code>
-: We verify that the result is an RGB color with the red, green, and blue components all set to 0. This is the expected outcome of the action. If the results are not as expected, the test will report a failure.</p>
+<p>As a placeholder, we will throw a <code>NotImplementedException</code>, so that anyone trying to call this method while it is under development will be met with a clear error message.</p>
+<h2 id="calling-the-new-class">Calling the New Class<a class="headerlink" href="#calling-the-new-class" title="Permanent link">&para;</a></h2>
+<p>Now we can call this method from the <code>Program.cs</code> file:</p>
+<div class="language-csharp highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="kt">var</span><span class="w"> </span><span class="n">wordReplacer</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">WordReplacer</span><span class="p">();</span>
+</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="kt">var</span><span class="w"> </span><span class="n">result</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">wordReplacer</span><span class="p">.</span><span class="n">Replace</span><span class="p">(</span><span class="s">&quot;The [adjective] [noun] [verb].&quot;</span><span class="p">);</span>
+</span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="n">result</span><span class="p">);</span>
+</span></code></pre></div>
+<p>The file structure should now look like this:</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>word-sub/
+</span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>└── WordSub.App
+</span><span id="__span-3-3"><a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a>    ├── Program.cs
+</span><span id="__span-3-4"><a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a>    ├── WordReplacer.cs
+</span><span id="__span-3-5"><a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a>    └── WordSub.App.csproj
+</span></code></pre></div>
+<p>If you run the program now you will see the NotImplementedException error.</p>
+<p>Success! We have a starter shell in place for the application. Just creating a minimal working program is the first milestone in building the solution.</p>
 <!-- prettier-ignore -->
 <div class="admonition info">
-<p class="admonition-title">Test Name Change</p>
+<p class="admonition-title">Garbage In, Garbage Out</p>
+<p>The requirements that we have provided are very lax. In reality we would want to define behavior in more detail. For example: What tense should be used? What do we do if we hit a token placeholder without a valid identifier? Should we allow duplicate replacement words?</p>
+<p>Without proper requirements, we don't know if we have met acceptance criteria and cannot properly confirm that the system works through testing.</p>
 </div>
-<p>The name for the test above has changed in the reference project. You will see it listed as <code>hex_string_creates_correct_rbg_component_values</code>.</p>
-<h2 id="creating-a-failing-test">Creating a Failing Test<a class="headerlink" href="#creating-a-failing-test" title="Permanent link">&para;</a></h2>
-<p>Let's modify our implementation of the <code>FromHexString</code> method so that we can see what a failing test looks like. Open the <code>src/ColorTransform/Utilities/HexConverter.cs</code> file and check the following lines:</p>
-<div class="language-csharp highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="k">return</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="nf">RgbColor</span><span class="p">(</span>
-</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="w">    </span><span class="n">Convert</span><span class="p">.</span><span class="n">ToInt32</span><span class="p">(</span><span class="n">hex</span><span class="p">[</span><span class="mi">0</span><span class="p">.</span><span class="mf">.2</span><span class="p">],</span><span class="w"> </span><span class="mi">16</span><span class="p">),</span><span class="w"> </span><span class="c1">// red</span>
-</span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="w">    </span><span class="n">Convert</span><span class="p">.</span><span class="n">ToInt32</span><span class="p">(</span><span class="n">hex</span><span class="p">[</span><span class="mi">2</span><span class="p">.</span><span class="mf">.4</span><span class="p">],</span><span class="w"> </span><span class="mi">16</span><span class="p">),</span><span class="w"> </span><span class="c1">// green</span>
-</span><span id="__span-2-4"><a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a><span class="w">    </span><span class="n">Convert</span><span class="p">.</span><span class="n">ToInt32</span><span class="p">(</span><span class="n">hex</span><span class="p">[</span><span class="mi">4</span><span class="p">.</span><span class="mf">.6</span><span class="p">],</span><span class="w"> </span><span class="mi">16</span><span class="p">)</span><span class="w"> </span><span class="c1">// blue</span>
-</span><span id="__span-2-5"><a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a><span class="p">);</span>
-</span></code></pre></div>
-<p>In this case <code>hex</code> is the hex string that was passed into the function. The <code>0..2</code> is a range that starts at index 0 and goes up to, but not including, index 2. This pulls off the first two characters of the hex string - the red component.</p>
-<p><code>2..4</code> does the same for the next two characters - the green component.</p>
-<p><code>4..6</code> does the same for the last two characters - the blue component.</p>
-<p>To break our code, change the last line to only go to index 5:</p>
-<div class="language-csharp highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="k">return</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="nf">RgbColor</span><span class="p">(</span>
-</span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="w">    </span><span class="n">Convert</span><span class="p">.</span><span class="n">ToInt32</span><span class="p">(</span><span class="n">hex</span><span class="p">[</span><span class="mi">0</span><span class="p">.</span><span class="mf">.2</span><span class="p">],</span><span class="w"> </span><span class="mi">16</span><span class="p">),</span><span class="w"> </span><span class="c1">// red</span>
-</span><span id="__span-3-3"><a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a><span class="w">    </span><span class="n">Convert</span><span class="p">.</span><span class="n">ToInt32</span><span class="p">(</span><span class="n">hex</span><span class="p">[</span><span class="mi">2</span><span class="p">.</span><span class="mf">.4</span><span class="p">],</span><span class="w"> </span><span class="mi">16</span><span class="p">),</span><span class="w"> </span><span class="c1">// green</span>
-</span><span id="__span-3-4"><a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a><span class="w">    </span><span class="n">Convert</span><span class="p">.</span><span class="n">ToInt32</span><span class="p">(</span><span class="n">hex</span><span class="p">[</span><span class="mi">4</span><span class="p">.</span><span class="mf">.5</span><span class="p">],</span><span class="w"> </span><span class="mi">16</span><span class="p">)</span><span class="w"> </span><span class="c1">// blue</span>
-</span><span id="__span-3-5"><a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a><span class="p">);</span>
-</span></code></pre></div>
-<h2 id="interpreting-the-test-results">Interpreting the Test Results<a class="headerlink" href="#interpreting-the-test-results" title="Permanent link">&para;</a></h2>
-<p>Now run the tests again. You should see a failure:</p>
-<div class="language-text highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>mpjovanovich: dotnet test
-</span><span id="__span-4-2"><a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a>Restore complete (0.6s)
-</span><span id="__span-4-3"><a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a>  ColorTransform net10.0 succeeded (0.1s) → src/ColorTransform/bin/Debug/net10.0/ColorTransform.dll
-</span><span id="__span-4-4"><a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a>  ColorTransform.Tests net10.0 succeeded (0.1s) → tests/ColorTransform.Tests/bin/Debug/net10.0/ColorTransform.Tests.dll
-</span><span id="__span-4-5"><a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a>[xUnit.net 00:00:00.00] xUnit.net VSTest Adapter v3.1.4+50e68bbb8b (64-bit .NET 10.0.7)
-</span><span id="__span-4-6"><a id="__codelineno-4-6" name="__codelineno-4-6" href="#__codelineno-4-6"></a>[xUnit.net 00:00:00.05]   Discovering: ColorTransform.Tests
-</span><span id="__span-4-7"><a id="__codelineno-4-7" name="__codelineno-4-7" href="#__codelineno-4-7"></a>[xUnit.net 00:00:00.11]   Discovered:  ColorTransform.Tests
-</span><span id="__span-4-8"><a id="__codelineno-4-8" name="__codelineno-4-8" href="#__codelineno-4-8"></a>[xUnit.net 00:00:00.14]   Starting:    ColorTransform.Tests
-</span><span id="__span-4-9"><a id="__codelineno-4-9" name="__codelineno-4-9" href="#__codelineno-4-9"></a>[xUnit.net 00:00:00.21]     ColorTransform.Tests.HexConverterTests.hex_string_creates_rgb_color_when_valid [FAIL]
-</span><span id="__span-4-10"><a id="__codelineno-4-10" name="__codelineno-4-10" href="#__codelineno-4-10"></a>[xUnit.net 00:00:00.21]       Assert.Equal() Failure: Values differ
-</span><span id="__span-4-11"><a id="__codelineno-4-11" name="__codelineno-4-11" href="#__codelineno-4-11"></a>[xUnit.net 00:00:00.21]       Expected: 17
-</span><span id="__span-4-12"><a id="__codelineno-4-12" name="__codelineno-4-12" href="#__codelineno-4-12"></a>[xUnit.net 00:00:00.21]       Actual:   1
-</span><span id="__span-4-13"><a id="__codelineno-4-13" name="__codelineno-4-13" href="#__codelineno-4-13"></a>[xUnit.net 00:00:00.21]       Stack Trace:
-</span><span id="__span-4-14"><a id="__codelineno-4-14" name="__codelineno-4-14" href="#__codelineno-4-14"></a>[xUnit.net 00:00:00.21]         /home/mpjovanovich/git/color-transform/tests/ColorTransform.Tests/HexConverterTests.cs(18,0): at ColorTransform.Tests.HexConverterTests.hex_string_creates_rgb_color_when_valid()
-</span><span id="__span-4-15"><a id="__codelineno-4-15" name="__codelineno-4-15" href="#__codelineno-4-15"></a>[xUnit.net 00:00:00.21]            at System.Reflection.MethodBaseInvoker.InterpretedInvoke_Method(Object obj, IntPtr* args)
-</span><span id="__span-4-16"><a id="__codelineno-4-16" name="__codelineno-4-16" href="#__codelineno-4-16"></a>[xUnit.net 00:00:00.21]            at System.Reflection.MethodBaseInvoker.InvokeWithNoArgs(Object obj, BindingFlags invokeAttr)
-</span><span id="__span-4-17"><a id="__codelineno-4-17" name="__codelineno-4-17" href="#__codelineno-4-17"></a>[xUnit.net 00:00:00.21]   Finished:    ColorTransform.Tests
-</span><span id="__span-4-18"><a id="__codelineno-4-18" name="__codelineno-4-18" href="#__codelineno-4-18"></a>  ColorTransform.Tests test net10.0 failed with 1 error(s) (0.7s)
-</span><span id="__span-4-19"><a id="__codelineno-4-19" name="__codelineno-4-19" href="#__codelineno-4-19"></a>    /home/mpjovanovich/git/color-transform/tests/ColorTransform.Tests/HexConverterTests.cs(18): error TESTERROR:
-</span><span id="__span-4-20"><a id="__codelineno-4-20" name="__codelineno-4-20" href="#__codelineno-4-20"></a>      ColorTransform.Tests.HexConverterTests.hex_string_creates_rgb_color_when_valid (8ms): Error Message: Assert.Equal() Failure: Values differ
-</span><span id="__span-4-21"><a id="__codelineno-4-21" name="__codelineno-4-21" href="#__codelineno-4-21"></a>      Expected: 17
-</span><span id="__span-4-22"><a id="__codelineno-4-22" name="__codelineno-4-22" href="#__codelineno-4-22"></a>      Actual:   1
-</span><span id="__span-4-23"><a id="__codelineno-4-23" name="__codelineno-4-23" href="#__codelineno-4-23"></a>      Stack Trace:
-</span><span id="__span-4-24"><a id="__codelineno-4-24" name="__codelineno-4-24" href="#__codelineno-4-24"></a>         at ColorTransform.Tests.HexConverterTests.hex_string_creates_rgb_color_when_valid() in /home/mpjovanovich/git/color-transform/tests/Col
-</span><span id="__span-4-25"><a id="__codelineno-4-25" name="__codelineno-4-25" href="#__codelineno-4-25"></a>      orTransform.Tests/HexConverterTests.cs:line 18
-</span><span id="__span-4-26"><a id="__codelineno-4-26" name="__codelineno-4-26" href="#__codelineno-4-26"></a>         at System.Reflection.MethodBaseInvoker.InterpretedInvoke_Method(Object obj, IntPtr* args)
-</span><span id="__span-4-27"><a id="__codelineno-4-27" name="__codelineno-4-27" href="#__codelineno-4-27"></a>         at System.Reflection.MethodBaseInvoker.InvokeWithNoArgs(Object obj, BindingFlags invokeAttr)
-</span><span id="__span-4-28"><a id="__codelineno-4-28" name="__codelineno-4-28" href="#__codelineno-4-28"></a>
-</span><span id="__span-4-29"><a id="__codelineno-4-29" name="__codelineno-4-29" href="#__codelineno-4-29"></a>Test summary: total: 31, failed: 1, succeeded: 30, skipped: 0, duration: 0.7s
-</span><span id="__span-4-30"><a id="__codelineno-4-30" name="__codelineno-4-30" href="#__codelineno-4-30"></a>Build failed with 1 error(s) in 1.7s
-</span></code></pre></div>
-<p>The summary tells us that there was one failure.</p>
-<p><code>ColorTransform.Tests.HexConverterTests.hex_string_creates_rgb_color_when_valid [FAIL]</code> tells us the name of the test that failed.</p>
-<p><code>Assert.Equal() Failure: Values differ</code> tells us that the test failed because the expected and actual values were different.</p>
-<p><code>Expected: 17</code> tells us the expected value that was passed to the <code>Assert.Equal</code> method.</p>
-<p><code>Actual:   1</code> tells us the actual value that was returned by the test.</p>
-<p>In this case, since we only pulled off the first character for the blue component it did not convert <code>11</code> to it's equivalent decimal value of 17. It converted only the first character, <code>1</code>, to 1.</p>
 
 
 
@@ -3063,7 +2942,7 @@
       <nav class="md-footer__inner md-grid" aria-label="Footer" >
         
           
-          <a href="../using-reference-project/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Using the Reference Project">
+          <a href="../startup-project/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Startup project">
             <div class="md-footer__button md-icon">
               
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
@@ -3073,20 +2952,20 @@
                 Previous
               </span>
               <div class="md-ellipsis">
-                Using the Reference Project
+                Startup project
               </div>
             </div>
           </a>
         
         
           
-          <a href="../writing-effective-tests/" class="md-footer__link md-footer__link--next" aria-label="Next: Writing Effective Tests">
+          <a href="../refactoring-new-module/" class="md-footer__link md-footer__link--next" aria-label="Next: Refactoring the a New Module">
             <div class="md-footer__title">
               <span class="md-footer__direction">
                 Next
               </span>
               <div class="md-ellipsis">
-                Writing Effective Tests
+                Refactoring the a New Module
               </div>
             </div>
             <div class="md-footer__button md-icon">
