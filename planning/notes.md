@@ -16,3 +16,5 @@ Check consistency of pages with respect to headers. Pages should either have:
 Make the icons in the asides consistent.
 
 Check voice in titles and subtitles. Some are verbs, others not.
+
+Remove this and the planning folder from the repo.

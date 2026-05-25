@@ -31,8 +31,6 @@ theme:
       toggle:
         icon: material/brightness-4
         name: Switch to light mode
-  # logo: "logo.png" # TODO: add logo?
-  # favicon: "favicon.ico" # TODO: add favicon
   features:
     - content.code.copy # Show code copy button
     - navigation.instant # no page flash between chapters
