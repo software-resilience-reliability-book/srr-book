@@ -2384,6 +2384,8 @@
       
         
       
+        
+      
     
     
     
@@ -2612,6 +2614,34 @@
     
   
     Adding an External Package
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../adding-solution-file/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Adding a Solution File
   
 
     
@@ -2888,8 +2918,8 @@
 
 
 <h1 id="refactoring-the-a-new-module">Refactoring the a New Module<a class="headerlink" href="#refactoring-the-a-new-module" title="Permanent link">&para;</a></h1>
-<p>As the <code>WordReplacer</code> class and related logic increase in complexity, any refactor will become more difficult. Now that we have a the basic program working we are at a good point to migrate the new functionality into its own class library.</p>
 <h2 id="creating-a-class-library">Creating a Class Library<a class="headerlink" href="#creating-a-class-library" title="Permanent link">&para;</a></h2>
+<p>As the <code>WordReplacer</code> class and related logic increase in complexity, any refactor will become more difficult. Now that we have a the basic program working we are at a good point to migrate the new functionality into its own class library.</p>
 <p>To create a class library, we create another folder under the root directory and run the following command:</p>
 <div class="language-bash highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="c1"># This assumes you are still in the WordSub.App subdirectory.</span>
 </span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="nb">cd</span><span class="w"> </span>..
@@ -2934,6 +2964,7 @@
 <p>The error in <code>Program.cs</code> is still present. We have added the assembly reference from the original error message. We now need to add the using directive. Simply add the following line to the top of the file:</p>
 <div class="language-csharp highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="k">using</span><span class="w"> </span><span class="nn">WordSub</span><span class="p">;</span>
 </span></code></pre></div>
+<p>This line tells the compiler to import the <code>WordSub</code> namespace, which contains the <code>WordReplacer</code> class.</p>
 <p>The squiggles should now be gone. We can run the program with the debugger, or with the <code>dotnet run</code> command while in the WordSub.App subdirectory, and we get the NotImplementedException error again.</p>
 <p>The refactor is a success. We are now ready to implement the word replacement logic.</p>
 
