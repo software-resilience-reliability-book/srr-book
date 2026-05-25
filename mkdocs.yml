@@ -114,13 +114,6 @@ nav:
       - unit-testing/controlling-test-dependencies.md
       - unit-testing/knowing-what-to-test.md
 
-  - Using Exceptions Effectively:
-      - exceptions/index.md
-      # TODO:
-      # - How to properly scope try/catch blocks
-      # - When to rethrow
-      # - Atomic operations and transactions
-
   - Leveraging the Type System:
       - type-system/index.md
       - type-system/type-implementations.md
@@ -144,19 +137,14 @@ nav:
       - project-refactoring/choosing-module-boundaries.md
       - project-refactoring/independent-build-units.md
       - project-refactoring/managing-direction-dependencies.md
-      # basically a quick note explaining that they'll have to add references to make it work when they refactor
-      # Needs to reference dotnet CLI commands and explain csproj file and slnx file
-      - project-refactoring/internal-external-dependencies.md
 
-  - Version Management:
-      # Use the reference project
-      - version-management/index.md
-      # point to semver.org page
-      - version-management/semantic-versioning.md
-      # expand on previous page with examples
-      - version-management/breaking-changes.md
-      # callout not about huge amount of supply chain attacks and what this means for us as devs
-      - version-management/version-pinning.md
+    # TODO: add to course planning doc readings
+  - Creating and Publishing an Application:
+      - creating-publishing-app/index.md
+      - creating-publishing-app/startup-project.md
+      - creating-publishing-app/establishing-api.md
+      - creating-publishing-app/refactoring-new-module.md
+      - creating-publishing-app/adding-external-package.md
 
   - Testing a Full Software Solution:
       # Use the reference project
