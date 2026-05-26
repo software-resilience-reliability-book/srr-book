@@ -77,7 +77,7 @@ nav:
 
   - The Build System:
       - builds/index.md
-      - builds/required-sofware.md
+      - builds/required-software.md
       - builds/creating-empty-project-shell.md
       - builds/creating-dotnet-project.md
       - builds/compiling.md
@@ -136,7 +136,6 @@ nav:
       - project-refactoring/independent-build-units.md
       - project-refactoring/managing-direction-dependencies.md
 
-    # TODO: add to course planning doc readings
   - Creating and Packaging an Application:
       - creating-packaging-app/index.md
       - creating-packaging-app/startup-project.md
@@ -147,6 +146,7 @@ nav:
       - creating-packaging-app/adding-program-logic.md
       - creating-packaging-app/packaging-application.md
 
+  # TODO: all else is finished; only this is left along with notes on a few things to edit
   - Testing a Full Software Solution:
       # Use the reference project
       - full-testing/index.md
