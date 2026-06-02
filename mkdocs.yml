@@ -71,7 +71,7 @@ nav:
   - Complexity and Technical Debt:
       - complexity-debt/index.md
       - complexity-debt/managing-complexity.md
-      - complexity-debt/technical-debt-defiinition.md
+      - complexity-debt/technical-debt-definition.md
       - complexity-debt/technical-debt-cost.md
       - complexity-debt/refactoring.md
 
