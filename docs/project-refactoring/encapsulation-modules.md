@@ -98,8 +98,6 @@ internal static class ColorMath
 }
 ```
 
-<!-- TODO: explain how this is used / consumed in the project -->
-
 ```csharp
 public class InvertTransform : IColorTransform
 {
