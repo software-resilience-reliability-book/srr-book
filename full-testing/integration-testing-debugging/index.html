@@ -10,13 +10,13 @@
         <meta name="author" content="Mike Jovanovich">
       
       
-        <link rel="canonical" href="https://software-resilience-reliability-book.github.io/srr-book/full-testing/integration-testing/">
+        <link rel="canonical" href="https://software-resilience-reliability-book.github.io/srr-book/full-testing/integration-testing-debugging/">
       
       
-        <link rel="prev" href="../testing-at-many-levels/">
+        <link rel="prev" href="../integration-testing-viewing/">
       
       
-        <link rel="next" href="../end-to-end-testing/">
+        <link rel="next" href="../integration-testing-value/">
       
       
         
@@ -27,7 +27,7 @@
     
     
       
-        <title>Integration Testing - Software Resilience and Reliability</title>
+        <title>Integration testing debugging - Software Resilience and Reliability</title>
       
     
     
@@ -79,11 +79,6 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
-        
-        <a href="#integration-testing" class="md-skip">
-          Skip to content
-        </a>
-      
     </div>
     <div data-md-component="announce">
       
@@ -116,7 +111,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Integration Testing
+              Integration testing debugging
             
           </span>
         </div>
@@ -2663,6 +2658,12 @@
       
         
       
+        
+      
+        
+      
+        
+      
     
     
     
@@ -2744,37 +2745,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Integration Testing
-  
-
-    
-  </span>
-  
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../integration-testing-example/" class="md-nav__link">
         
   
   
@@ -2790,37 +2764,98 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+    </li>
   
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../integration-testing-viewing/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Integration testing viewing
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
   
   
     
   
   
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#what-is-integration-testing" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        What is Integration Testing?
-      
-    </span>
-  </a>
   
-</li>
+    <li class="md-nav__item md-nav__item--active">
       
-    </ul>
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
   
-</nav>
+  
+  <span class="md-ellipsis">
+    
+  
+    Integration testing debugging
+  
+
+    
+  </span>
+  
+  
+
+      </a>
       
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../integration-testing-value/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Integration testing value
+  
+
+    
+  </span>
+  
+  
+
+      </a>
     </li>
   
 
@@ -2906,27 +2941,6 @@
   
   
   
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#what-is-integration-testing" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        What is Integration Testing?
-      
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
   
 </nav>
                   </div>
@@ -2946,10 +2960,9 @@
   
 
 
-<h1 id="integration-testing">Integration Testing<a class="headerlink" href="#integration-testing" title="Permanent link">&para;</a></h1>
-<h2 id="what-is-integration-testing">What is Integration Testing?<a class="headerlink" href="#what-is-integration-testing" title="Permanent link">&para;</a></h2>
-<p><strong>Integration testing</strong> is the process of testing the interaction between two or more <strong>components</strong> of the application.</p>
-<p>A component may refer to anything from a single class to a whole subsystem of the application (several modules), and there is no hard line between test types.</p>
+  <h1>Integration testing debugging</h1>
+
+
 
 
 
@@ -2985,7 +2998,7 @@
       <nav class="md-footer__inner md-grid" aria-label="Footer" >
         
           
-          <a href="../testing-at-many-levels/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Testing at Many Levels">
+          <a href="../integration-testing-viewing/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Integration testing viewing">
             <div class="md-footer__button md-icon">
               
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
@@ -2995,20 +3008,20 @@
                 Previous
               </span>
               <div class="md-ellipsis">
-                Testing at Many Levels
+                Integration testing viewing
               </div>
             </div>
           </a>
         
         
           
-          <a href="../end-to-end-testing/" class="md-footer__link md-footer__link--next" aria-label="Next: End to end testing">
+          <a href="../integration-testing-value/" class="md-footer__link md-footer__link--next" aria-label="Next: Integration testing value">
             <div class="md-footer__title">
               <span class="md-footer__direction">
                 Next
               </span>
               <div class="md-ellipsis">
-                End to end testing
+                Integration testing value
               </div>
             </div>
             <div class="md-footer__button md-icon">
