@@ -146,7 +146,6 @@ nav:
       - creating-packaging-app/adding-program-logic.md
       - creating-packaging-app/packaging-application.md
 
-  # TODO: all else is finished; only this is left along with notes on a few things to edit
   - Testing a Full Software Solution:
       - full-testing/index.md
       - full-testing/testing-at-many-levels.md
@@ -154,6 +153,5 @@ nav:
       - full-testing/integration-testing-viewing.md
       - full-testing/integration-testing-debugging.md
       - full-testing/integration-testing-value.md
-      # Define and point to example in reference project (needs added)
       - full-testing/end-to-end-testing.md
       - full-testing/balancing-test-efforts.md
