@@ -8,9 +8,11 @@ The prevailing wisdom for a long time was to follow the "test pyramid". This was
 
 ![the test pyramid](../images/test-pyramid.svg){ width="300" }
 
-The test pyramid was based on the idea that the cost of testing increases as you move up the pyramid. Unit tests are the cheapest to write and run, and end-to-end tests are the most expensive.`
+The test pyramid was based on the idea that the cost of testing increases as you move up the pyramid. Unit tests are the cheapest to write and run, and end-to-end tests are the most expensive.
 
-With the advent of technologies like containerization and virtualization, the cost of running tests has decreased significantly. This has made it possible to do things like automate full integration and end-to-end test suites on a build server as part of each build process.
+With the advent of technologies like efficient test frameworks and containerization, the cost of running tests has decreased significantly. This has made it possible to automate full integration and end-to-end test suites on a build server as part of each build process.
+
+Because of this, many leading developers advocate for a more nuanced testing approach.
 
 ## A Modern Approach
 
