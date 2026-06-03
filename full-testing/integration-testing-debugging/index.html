@@ -27,7 +27,7 @@
     
     
       
-        <title>Integration testing debugging - Software Resilience and Reliability</title>
+        <title>Stepping through the Test - Software Resilience and Reliability</title>
       
     
     
@@ -79,6 +79,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#stepping-through-the-test" class="md-skip">
+          Skip to content
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -111,7 +116,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Integration testing debugging
+              Stepping through the Test
             
           </span>
         </div>
@@ -2783,7 +2788,7 @@
   <span class="md-ellipsis">
     
   
-    Integration testing viewing
+    Viewing the Test Code
   
 
     
@@ -2810,6 +2815,8 @@
       <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
       
       
+        
+      
       
       <a href="./" class="md-nav__link md-nav__link--active">
         
@@ -2818,7 +2825,7 @@
   <span class="md-ellipsis">
     
   
-    Integration testing debugging
+    Stepping through the Test
   
 
     
@@ -2847,7 +2854,7 @@
   <span class="md-ellipsis">
     
   
-    Integration testing value
+    Reviewing the Value of the Test
   
 
     
@@ -2875,7 +2882,7 @@
   <span class="md-ellipsis">
     
   
-    End to end testing
+    End-to-End Testing
   
 
     
@@ -2941,6 +2948,8 @@
   
   
   
+    
+  
   
 </nav>
                   </div>
@@ -2960,9 +2969,22 @@
   
 
 
-  <h1>Integration testing debugging</h1>
-
-
+<h1 id="stepping-through-the-test">Stepping through the Test<a class="headerlink" href="#stepping-through-the-test" title="Permanent link">&para;</a></h1>
+<p>In VS Code, set a breakpoint on the line with:</p>
+<div class="language-csharp highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="kt">var</span><span class="w"> </span><span class="n">getResponse</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">await</span><span class="w"> </span><span class="n">_client</span><span class="p">.</span><span class="n">GetAsync</span><span class="p">(</span><span class="s">&quot;/&quot;</span><span class="p">);</span>
+</span></code></pre></div>
+<p>Then right click on the green bubble in the margin near the test name and select "Debug Test". This will allow the breakpoint to be hit. Simply running the tests with the "Run Test" or the 'dotnet test' command will not rig the program up to the debugger.</p>
+<p><img alt="integration test debug step 1" src="../../images/integration-debug1.png" /></p>
+<p>After the breakpoint is hit, use the "Step Over" command in the debugger control panel to move forward a couple of lines.</p>
+<p>You will see that the code did in fact receive an HTTP response from the in-memory server. The HTML from this response is shown in the "html" variable.</p>
+<p><img alt="integration test debug step 2" src="../../images/integration-debug2.png" /></p>
+<p>After a few more lines, the token has been extracted from this HTML, and the form variables have been assembled into a Dictionary. They are ready to be sent to the server using an HTTP POST request.</p>
+<p><img alt="integration test debug step 3" src="../../images/integration-debug3.png" /></p>
+<p>We get another HTTP response back from the server and convert the result HTML into a string.</p>
+<p>After this we are finally ready for our "Assert" step. If you examine the <code>resultHtml</code> string you will see that it contains the hex value of the transformed color.</p>
+<p><img alt="integration test debug step 4" src="../../images/integration-debug4.png" /></p>
+<p>This matches the same expected output color that we would get if we ran the application ourselves, and clicked the "Apply transform" button.</p>
+<p><img alt="integration test debug step 5" src="../../images/integration-debug5.png" /></p>
 
 
 
@@ -2998,7 +3020,7 @@
       <nav class="md-footer__inner md-grid" aria-label="Footer" >
         
           
-          <a href="../integration-testing-viewing/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Integration testing viewing">
+          <a href="../integration-testing-viewing/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Viewing the Test Code">
             <div class="md-footer__button md-icon">
               
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
@@ -3008,20 +3030,20 @@
                 Previous
               </span>
               <div class="md-ellipsis">
-                Integration testing viewing
+                Viewing the Test Code
               </div>
             </div>
           </a>
         
         
           
-          <a href="../integration-testing-value/" class="md-footer__link md-footer__link--next" aria-label="Next: Integration testing value">
+          <a href="../integration-testing-value/" class="md-footer__link md-footer__link--next" aria-label="Next: Reviewing the Value of the Test">
             <div class="md-footer__title">
               <span class="md-footer__direction">
                 Next
               </span>
               <div class="md-ellipsis">
-                Integration testing value
+                Reviewing the Value of the Test
               </div>
             </div>
             <div class="md-footer__button md-icon">

@@ -27,7 +27,7 @@
     
     
       
-        <title>End to end testing - Software Resilience and Reliability</title>
+        <title>End-to-End Testing - Software Resilience and Reliability</title>
       
     
     
@@ -79,6 +79,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#end-to-end-testing" class="md-skip">
+          Skip to content
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -111,7 +116,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              End to end testing
+              End-to-End Testing
             
           </span>
         </div>
@@ -2783,7 +2788,7 @@
   <span class="md-ellipsis">
     
   
-    Integration testing viewing
+    Viewing the Test Code
   
 
     
@@ -2811,7 +2816,7 @@
   <span class="md-ellipsis">
     
   
-    Integration testing debugging
+    Stepping through the Test
   
 
     
@@ -2839,7 +2844,7 @@
   <span class="md-ellipsis">
     
   
-    Integration testing value
+    Reviewing the Value of the Test
   
 
     
@@ -2866,6 +2871,26 @@
       <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
       
       
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    End-to-End Testing
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
       
       <a href="./" class="md-nav__link md-nav__link--active">
         
@@ -2874,7 +2899,7 @@
   <span class="md-ellipsis">
     
   
-    End to end testing
+    End-to-End Testing
   
 
     
@@ -2883,6 +2908,58 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#what-is-end-to-end-testing" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        What is End-to-End Testing?
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#end-to-end-testing-by-example" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        End-to-End Testing by Example
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#reviewing-the-value-of-the-test" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Reviewing the Value of the Test
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -2941,6 +3018,49 @@
   
   
   
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#what-is-end-to-end-testing" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        What is End-to-End Testing?
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#end-to-end-testing-by-example" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        End-to-End Testing by Example
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#reviewing-the-value-of-the-test" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Reviewing the Value of the Test
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
   
 </nav>
                   </div>
@@ -2960,9 +3080,15 @@
   
 
 
-  <h1>End to end testing</h1>
-
-
+<h1 id="end-to-end-testing">End-to-End Testing<a class="headerlink" href="#end-to-end-testing" title="Permanent link">&para;</a></h1>
+<h2 id="what-is-end-to-end-testing">What is End-to-End Testing?<a class="headerlink" href="#what-is-end-to-end-testing" title="Permanent link">&para;</a></h2>
+<p><strong>End-to-end testing</strong> is the process of testing the entire application from start to finish. Rather than focusing on an isolated use case. It is often used to test an entire <strong>user journey</strong> - a full sequence of actions that a user takes to achieve a goal.</p>
+<h2 id="end-to-end-testing-by-example">End-to-End Testing by Example<a class="headerlink" href="#end-to-end-testing-by-example" title="Permanent link">&para;</a></h2>
+<p>The end-to-end test that we will look at is very similar to the integration test that we just ran. The main difference is that it has a larger scope, and starts with the "user".</p>
+<p>Rather than using a "bot" to make HTTP requests...</p>
+<h2 id="reviewing-the-value-of-the-test">Reviewing the Value of the Test<a class="headerlink" href="#reviewing-the-value-of-the-test" title="Permanent link">&para;</a></h2>
+<p>The main benefit of end-to-end testing is that it provides the most confidence that the application works as intended. Both unit and integration tests can pass, but only an end-to-end test automates a real-world scenario in full.</p>
+<p>The downside of end-to-end testing is that it is often the most time and resource intensive test type to run. This has been greatly alleviated in recent years through elegant testing frameworks, tools like headless browsers, and containers that can quickly spin up a full environment, even with a realistic test data set.</p>
 
 
 
@@ -2998,7 +3124,7 @@
       <nav class="md-footer__inner md-grid" aria-label="Footer" >
         
           
-          <a href="../integration-testing-value/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Integration testing value">
+          <a href="../integration-testing-value/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Reviewing the Value of the Test">
             <div class="md-footer__button md-icon">
               
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
@@ -3008,7 +3134,7 @@
                 Previous
               </span>
               <div class="md-ellipsis">
-                Integration testing value
+                Reviewing the Value of the Test
               </div>
             </div>
           </a>

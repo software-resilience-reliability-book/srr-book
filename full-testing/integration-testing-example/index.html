@@ -2832,45 +2832,6 @@
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Integration Testing by Example">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#viewing-the-test-code" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Viewing the Test Code
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#stepping-through-the-test" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Stepping through the Test
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#value-of-integration-testing" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Value of Integration Testing
-      
-    </span>
-  </a>
-  
 </li>
       
     </ul>
@@ -2896,7 +2857,7 @@
   <span class="md-ellipsis">
     
   
-    Integration testing viewing
+    Viewing the Test Code
   
 
     
@@ -2924,7 +2885,7 @@
   <span class="md-ellipsis">
     
   
-    Integration testing debugging
+    Stepping through the Test
   
 
     
@@ -2952,7 +2913,7 @@
   <span class="md-ellipsis">
     
   
-    Integration testing value
+    Reviewing the Value of the Test
   
 
     
@@ -2980,7 +2941,7 @@
   <span class="md-ellipsis">
     
   
-    End to end testing
+    End-to-End Testing
   
 
     
@@ -3075,45 +3036,6 @@
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Integration Testing by Example">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#viewing-the-test-code" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Viewing the Test Code
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#stepping-through-the-test" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Stepping through the Test
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#value-of-integration-testing" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Value of Integration Testing
-      
-    </span>
-  </a>
-  
 </li>
       
     </ul>
@@ -3141,7 +3063,7 @@
 <p><strong>Integration testing</strong> is the process of testing the interaction between two or more <strong>components</strong> of the application.</p>
 <p>A component may refer to anything from a single class to a whole subsystem of the application (several modules), and there is no hard line between test types.</p>
 <h2 id="integration-testing-by-example">Integration Testing by Example<a class="headerlink" href="#integration-testing-by-example" title="Permanent link">&para;</a></h2>
-<p>In this example we will see how multiple components in the reference project work together. The components come from both the Web project (Razor Pages) and the Library project (the core Color Transform Library).</p>
+<p>In the next few pages we will run a test that requires multiple components in the reference project work together. The components come from both the Web project (Razor Pages) and the Library project (the core Color Transform Library).</p>
 <p>If you do not have experience debugging applications that make HTTP requests, this is a great opportunity to follow along and learn the process. Anyone working with web technologies will undoubtedly need to rig up a test server at some point.</p>
 <p>Let's look at the web application again before we dig into the code. This shows the index page of the application, and a snippet of html from the rendered page. We will reference this screenshot later:</p>
 <p><img alt="integration test debug step 0" src="../../images/integration-debug0.png" /></p>
@@ -3154,71 +3076,6 @@
 <li>Open the browser developer tools and view the "Elements" tab. This is usually bound to the <code>F12</code> shortcut key, but you may also find this option in the browser menu.</li>
 </ol>
 </div>
-<h3 id="viewing-the-test-code">Viewing the Test Code<a class="headerlink" href="#viewing-the-test-code" title="Permanent link">&para;</a></h3>
-<p>For this example we will look at the <code>tests/ColorTransform.Tests/Integration/IndexPageTests.cs</code> file. This file contains a single integration test for the <code>Index</code> page of the web application.</p>
-<p>There's a lot of code to unpack here, so let's break it down step by step. Only a snippet is shown here, but you can access the rest of the full version <a href="https://github.com/software-resilience-reliability-book/color-transform/blob/main/tests/ColorTransform.Tests/Integration/IndexPageTests.cs">here</a> :</p>
-<div class="language-csharp highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="na">[Fact]</span>
-</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="k">public</span><span class="w"> </span><span class="k">async</span><span class="w"> </span><span class="n">Task</span><span class="w"> </span><span class="nf">post_with_invert_returns_transformed_color_string_in_returned_html</span><span class="p">()</span>
-</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="p">{</span>
-</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="w">    </span><span class="c1">// The &quot;_client&quot; object is an HttpClient that can be used to send HTTP requests to the test server.</span>
-</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="w">    </span><span class="c1">// Here we get the initial &quot;index&quot; page from the in-memory test server.</span>
-</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a><span class="w">    </span><span class="kt">var</span><span class="w"> </span><span class="n">getResponse</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">await</span><span class="w"> </span><span class="n">_client</span><span class="p">.</span><span class="n">GetAsync</span><span class="p">(</span><span class="s">&quot;/&quot;</span><span class="p">);</span>
-</span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a>
-</span><span id="__span-0-8"><a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a><span class="w">    </span><span class="c1">// Get the HTML response body as a string.</span>
-</span><span id="__span-0-9"><a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a><span class="w">    </span><span class="kt">var</span><span class="w"> </span><span class="n">html</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">await</span><span class="w"> </span><span class="n">getResponse</span><span class="p">.</span><span class="n">Content</span><span class="p">.</span><span class="n">ReadAsStringAsync</span><span class="p">();</span>
-</span><span id="__span-0-10"><a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a>
-</span><span id="__span-0-11"><a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a><span class="w">    </span><span class="c1">// The form submission needs a token to prevent CSRF attacks, so we parse it from the HTML.</span>
-</span><span id="__span-0-12"><a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a><span class="w">    </span><span class="kt">var</span><span class="w"> </span><span class="n">token</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">ParseAntiforgeryToken</span><span class="p">(</span><span class="n">html</span><span class="p">);</span>
-</span><span id="__span-0-13"><a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a>
-</span><span id="__span-0-14"><a id="__codelineno-0-14" name="__codelineno-0-14" href="#__codelineno-0-14"></a><span class="w">    </span><span class="c1">// Here we assemble the form variables for submission.</span>
-</span><span id="__span-0-15"><a id="__codelineno-0-15" name="__codelineno-0-15" href="#__codelineno-0-15"></a><span class="w">    </span><span class="kt">var</span><span class="w"> </span><span class="n">form</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Dictionary</span><span class="o">&lt;</span><span class="kt">string</span><span class="p">,</span><span class="w"> </span><span class="kt">string</span><span class="o">&gt;</span>
-</span><span id="__span-0-16"><a id="__codelineno-0-16" name="__codelineno-0-16" href="#__codelineno-0-16"></a><span class="w">    </span><span class="p">{</span>
-</span><span id="__span-0-17"><a id="__codelineno-0-17" name="__codelineno-0-17" href="#__codelineno-0-17"></a><span class="w">        </span><span class="na">[&quot;TransformType&quot;]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;invert&quot;</span><span class="p">,</span>
-</span><span id="__span-0-18"><a id="__codelineno-0-18" name="__codelineno-0-18" href="#__codelineno-0-18"></a><span class="w">        </span><span class="na">[&quot;InputColor&quot;]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;#336699&quot;</span><span class="p">,</span>
-</span><span id="__span-0-19"><a id="__codelineno-0-19" name="__codelineno-0-19" href="#__codelineno-0-19"></a><span class="w">        </span><span class="na">[&quot;__RequestVerificationToken&quot;]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">token</span><span class="p">,</span>
-</span><span id="__span-0-20"><a id="__codelineno-0-20" name="__codelineno-0-20" href="#__codelineno-0-20"></a><span class="w">    </span><span class="p">};</span>
-</span><span id="__span-0-21"><a id="__codelineno-0-21" name="__codelineno-0-21" href="#__codelineno-0-21"></a>
-</span><span id="__span-0-22"><a id="__codelineno-0-22" name="__codelineno-0-22" href="#__codelineno-0-22"></a><span class="w">    </span><span class="c1">// The &quot;PostAsync&quot; method sends the form variables to the server.</span>
-</span><span id="__span-0-23"><a id="__codelineno-0-23" name="__codelineno-0-23" href="#__codelineno-0-23"></a><span class="w">    </span><span class="c1">// This is what the browser would do, but we&#39;re doing it programmatically.</span>
-</span><span id="__span-0-24"><a id="__codelineno-0-24" name="__codelineno-0-24" href="#__codelineno-0-24"></a><span class="w">    </span><span class="kt">var</span><span class="w"> </span><span class="n">postResponse</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">await</span><span class="w"> </span><span class="n">_client</span><span class="p">.</span><span class="n">PostAsync</span><span class="p">(</span><span class="s">&quot;/&quot;</span><span class="p">,</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">FormUrlEncodedContent</span><span class="p">(</span><span class="n">form</span><span class="p">));</span>
-</span><span id="__span-0-25"><a id="__codelineno-0-25" name="__codelineno-0-25" href="#__codelineno-0-25"></a>
-</span><span id="__span-0-26"><a id="__codelineno-0-26" name="__codelineno-0-26" href="#__codelineno-0-26"></a><span class="w">    </span><span class="c1">// Get the HTML response body as a string.</span>
-</span><span id="__span-0-27"><a id="__codelineno-0-27" name="__codelineno-0-27" href="#__codelineno-0-27"></a><span class="w">    </span><span class="kt">var</span><span class="w"> </span><span class="n">resultHtml</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">await</span><span class="w"> </span><span class="n">postResponse</span><span class="p">.</span><span class="n">Content</span><span class="p">.</span><span class="n">ReadAsStringAsync</span><span class="p">();</span>
-</span><span id="__span-0-28"><a id="__codelineno-0-28" name="__codelineno-0-28" href="#__codelineno-0-28"></a>
-</span><span id="__span-0-29"><a id="__codelineno-0-29" name="__codelineno-0-29" href="#__codelineno-0-29"></a><span class="w">    </span><span class="c1">// Finally, assert that the result HTML string contains the transformed color.</span>
-</span><span id="__span-0-30"><a id="__codelineno-0-30" name="__codelineno-0-30" href="#__codelineno-0-30"></a><span class="w">    </span><span class="n">Assert</span><span class="p">.</span><span class="n">Contains</span><span class="p">(</span><span class="s">&quot;#CC9966&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">resultHtml</span><span class="p">,</span><span class="w"> </span><span class="n">StringComparison</span><span class="p">.</span><span class="n">OrdinalIgnoreCase</span><span class="p">);</span>
-</span><span id="__span-0-31"><a id="__codelineno-0-31" name="__codelineno-0-31" href="#__codelineno-0-31"></a><span class="p">}</span>
-</span></code></pre></div>
-<p>Take a moment to read through the code comments before moving on to the next section.</p>
-<p>The test code starts up a web server in-memory on your local machine, and runs the web application inside of it. We can use this in-memory server to make "fake" HTTP requests to the web application and confirm results that are returned. This simulates what is happening when the live web server is running and the user actually submits the main form.</p>
-<!-- prettier-ignore -->
-<div class="admonition info">
-<p class="admonition-title">Review of Web Forms</p>
-<p>If you have not studied web forms in depth, that's okay. When you submit a web form, the <code>Input</code> HTML elements, which correspond to the form fields, are collected and sent to the web server. It then uses those values to do work on the back end and form a correct response.</p>
-<p>In our case, the Index page needs to know the input color, which transform we want from the dropdown, and an extra value that's hidden from view in the HTML form that is used to prevent CSRF attacks. If you look at the rendered page HTML after runnin the web application, you will see all of these values in the form as <code>Input</code> elements, including the hidden CSRF token:</p>
-<div class="language-html highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="p">&lt;</span><span class="nt">input</span> <span class="na">name</span><span class="o">=</span><span class="s">&quot;__RequestVerificationToken&quot;</span> <span class="na">type</span><span class="o">=</span><span class="s">&quot;hidden&quot;</span> <span class="na">value</span><span class="o">=</span><span class="s">&quot;CfDJ8P-E2Z-Pg0RLrYr5PDlKEihSM_3W1BTSVKIcAD3CI08x3RsiXORxaYAKP1TnqcOEsHFnTXpwVPhqWUyoVm6sulyGtPDIZeRHBPQFzDAWxs7zEzj8vfUhqW1YROULIC6NiTePMIeAq9gx7WDVXEB26IQ&quot;</span> <span class="p">/&gt;</span>
-</span></code></pre></div>
-</div>
-<h3 id="stepping-through-the-test">Stepping through the Test<a class="headerlink" href="#stepping-through-the-test" title="Permanent link">&para;</a></h3>
-<p>In VS Code, set a breakpoint on the line with:</p>
-<div class="language-csharp highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="kt">var</span><span class="w"> </span><span class="n">getResponse</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">await</span><span class="w"> </span><span class="n">_client</span><span class="p">.</span><span class="n">GetAsync</span><span class="p">(</span><span class="s">&quot;/&quot;</span><span class="p">);</span>
-</span></code></pre></div>
-<p>Then right click on the green bubble in the margin near the test name and select "Debug Test". This will allow the breakpoint to be hit. Simply running the tests with the "Run Test" or the 'dotnet test' command will not rig the program up to the debugger.</p>
-<p><img alt="integration test debug step 1" src="../../images/integration-debug1.png" /></p>
-<p>After the breakpoint is hit, use the "Step Over" command in the debugger control panel to move forward a couple of lines.</p>
-<p>You will see that the code did in fact receive an HTTP response from the in-memory server. The HTML from this response is shown in the "html" variable.</p>
-<p><img alt="integration test debug step 2" src="../../images/integration-debug2.png" /></p>
-<p>After a few more lines, the token has been extracted from this HTML, and the form variables have been assembled into a Dictionary. They are ready to be sent to the server using an HTTP POST request.</p>
-<p><img alt="integration test debug step 3" src="../../images/integration-debug3.png" /></p>
-<p>We get another HTTP response back from the server and convert the result HTML into a string.</p>
-<p>After this we are finally ready for our "Assert" step. If you examine the <code>resultHtml</code> string you will see that it contains the hex value of the transformed color.</p>
-<p><img alt="integration test debug step 4" src="../../images/integration-debug4.png" /></p>
-<p>This matches the same expected output color that we would get if we ran the application ourselves, and clicked the "Apply transform" button.</p>
-<p><img alt="integration test debug step 5" src="../../images/integration-debug5.png" /></p>
-<h2 id="value-of-integration-testing">Value of Integration Testing<a class="headerlink" href="#value-of-integration-testing" title="Permanent link">&para;</a></h2>
-<p>The test that we walked through confirmed that all of the components involved in the test worked together to produce the expected HTML value. If any component along the way had failed, the final assertion would have failed.</p>
-<p>It is very possible to have working unit tests for each component, but to find that the system does not work as intended once these components are integrated. Imagine if we changed the method signature on one of the functions in the color library, or decided to throw a new type of exception.</p>
-<p>Integration testing tests communication and coordination between components. It makes sure that the contracts between a unit and its consumers, those parts of the system that interface with it, remain unbroken.</p>
 
 
 
@@ -3271,13 +3128,13 @@
         
         
           
-          <a href="../integration-testing-viewing/" class="md-footer__link md-footer__link--next" aria-label="Next: Integration testing viewing">
+          <a href="../integration-testing-viewing/" class="md-footer__link md-footer__link--next" aria-label="Next: Viewing the Test Code">
             <div class="md-footer__title">
               <span class="md-footer__direction">
                 Next
               </span>
               <div class="md-ellipsis">
-                Integration testing viewing
+                Viewing the Test Code
               </div>
             </div>
             <div class="md-footer__button md-icon">
