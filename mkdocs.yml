@@ -150,8 +150,10 @@ nav:
   - Testing a Full Software Solution:
       - full-testing/index.md
       - full-testing/testing-at-many-levels.md
-      # Define and point to example in reference project (needs added)
-      - full-testing/integration-testing.md
+      - full-testing/integration-testing-example.md
+      - full-testing/integration-testing-viewing.md
+      - full-testing/integration-testing-debugging.md
+      - full-testing/integration-testing-value.md
       # Define and point to example in reference project (needs added)
       - full-testing/end-to-end-testing.md
       - full-testing/balancing-test-efforts.md
