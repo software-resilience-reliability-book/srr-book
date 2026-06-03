@@ -10,31 +10,31 @@
         <meta name="author" content="Mike Jovanovich">
       
       
-        <link rel="canonical" href="https://software-resilience-reliability-book.github.io/srr-book/configuration/types-of-configuration/">
+        <link rel="canonical" href="https://software-resilience-reliability-book.github.io/srr-book/full-testing/">
       
       
-        <link rel="prev" href="../">
+        <link rel="prev" href="../creating-packaging-app/packaging-application/">
       
       
-        <link rel="next" href="../environment-types/">
+        <link rel="next" href="testing-at-many-levels/">
       
       
         
       
       
-      <link rel="icon" href="../../assets/images/favicon.png">
+      <link rel="icon" href="../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
     
     
       
-        <title>Types of Configuration - Software Resilience and Reliability</title>
+        <title>Testing a Full Software Solution - Software Resilience and Reliability</title>
       
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/main.484c7ddc.min.css">
+      <link rel="stylesheet" href="../assets/stylesheets/main.484c7ddc.min.css">
       
         
-        <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
+        <link rel="stylesheet" href="../assets/stylesheets/palette.ab4e12ef.min.css">
       
       
 
@@ -53,9 +53,9 @@
       
     
     
-      <link rel="stylesheet" href="../../css/custom.css">
+      <link rel="stylesheet" href="../css/custom.css">
     
-    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
@@ -80,7 +80,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#types-of-configuration" class="md-skip">
+        <a href="#testing-a-full-software-solution" class="md-skip">
           Skip to content
         </a>
       
@@ -96,7 +96,7 @@
 
 <header class="md-header md-header--shadow" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href="../.." title="Software Resilience and Reliability" class="md-header__button md-logo" aria-label="Software Resilience and Reliability" data-md-component="logo">
+    <a href=".." title="Software Resilience and Reliability" class="md-header__button md-logo" aria-label="Software Resilience and Reliability" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
@@ -116,7 +116,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Types of Configuration
+              Testing a Full Software Solution
             
           </span>
         </div>
@@ -232,7 +232,7 @@
 
 <nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="../.." title="Software Resilience and Reliability" class="md-nav__button md-logo" aria-label="Software Resilience and Reliability" data-md-component="logo">
+    <a href=".." title="Software Resilience and Reliability" class="md-nav__button md-logo" aria-label="Software Resilience and Reliability" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
@@ -262,7 +262,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../.." class="md-nav__link">
+      <a href=".." class="md-nav__link">
         
   
   
@@ -289,7 +289,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../reference-project/" class="md-nav__link">
+      <a href="../reference-project/" class="md-nav__link">
         
   
   
@@ -340,7 +340,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../living-software/" class="md-nav__link ">
+            <a href="../living-software/" class="md-nav__link ">
               
   
   
@@ -384,7 +384,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../living-software/why-software-changes/" class="md-nav__link">
+      <a href="../living-software/why-software-changes/" class="md-nav__link">
         
   
   
@@ -412,7 +412,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../living-software/reliability/" class="md-nav__link">
+      <a href="../living-software/reliability/" class="md-nav__link">
         
   
   
@@ -440,7 +440,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../living-software/resiliency/" class="md-nav__link">
+      <a href="../living-software/resiliency/" class="md-nav__link">
         
   
   
@@ -501,7 +501,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../complexity-debt/" class="md-nav__link ">
+            <a href="../complexity-debt/" class="md-nav__link ">
               
   
   
@@ -545,7 +545,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../complexity-debt/managing-complexity/" class="md-nav__link">
+      <a href="../complexity-debt/managing-complexity/" class="md-nav__link">
         
   
   
@@ -573,7 +573,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../complexity-debt/technical-debt-definition/" class="md-nav__link">
+      <a href="../complexity-debt/technical-debt-definition/" class="md-nav__link">
         
   
   
@@ -601,7 +601,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../complexity-debt/technical-debt-cost/" class="md-nav__link">
+      <a href="../complexity-debt/technical-debt-cost/" class="md-nav__link">
         
   
   
@@ -629,7 +629,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../complexity-debt/refactoring/" class="md-nav__link">
+      <a href="../complexity-debt/refactoring/" class="md-nav__link">
         
   
   
@@ -700,7 +700,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../builds/" class="md-nav__link ">
+            <a href="../builds/" class="md-nav__link ">
               
   
   
@@ -744,7 +744,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../builds/required-software/" class="md-nav__link">
+      <a href="../builds/required-software/" class="md-nav__link">
         
   
   
@@ -772,7 +772,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../builds/creating-empty-project-shell/" class="md-nav__link">
+      <a href="../builds/creating-empty-project-shell/" class="md-nav__link">
         
   
   
@@ -800,7 +800,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../builds/creating-dotnet-project/" class="md-nav__link">
+      <a href="../builds/creating-dotnet-project/" class="md-nav__link">
         
   
   
@@ -828,7 +828,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../builds/compiling/" class="md-nav__link">
+      <a href="../builds/compiling/" class="md-nav__link">
         
   
   
@@ -856,7 +856,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../builds/build-artifacts/" class="md-nav__link">
+      <a href="../builds/build-artifacts/" class="md-nav__link">
         
   
   
@@ -884,7 +884,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../builds/running-the-program/" class="md-nav__link">
+      <a href="../builds/running-the-program/" class="md-nav__link">
         
   
   
@@ -912,7 +912,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../builds/understanding-the-debugger/" class="md-nav__link">
+      <a href="../builds/understanding-the-debugger/" class="md-nav__link">
         
   
   
@@ -940,7 +940,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../builds/adding-a-package/" class="md-nav__link">
+      <a href="../builds/adding-a-package/" class="md-nav__link">
         
   
   
@@ -968,7 +968,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../builds/what-belongs-in-version-control/" class="md-nav__link">
+      <a href="../builds/what-belongs-in-version-control/" class="md-nav__link">
         
   
   
@@ -1041,7 +1041,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../diagnosing-errors/" class="md-nav__link ">
+            <a href="../diagnosing-errors/" class="md-nav__link ">
               
   
   
@@ -1085,7 +1085,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../diagnosing-errors/compile-time/" class="md-nav__link">
+      <a href="../diagnosing-errors/compile-time/" class="md-nav__link">
         
   
   
@@ -1113,7 +1113,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../diagnosing-errors/troubleshooting-failed-build/" class="md-nav__link">
+      <a href="../diagnosing-errors/troubleshooting-failed-build/" class="md-nav__link">
         
   
   
@@ -1141,7 +1141,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../diagnosing-errors/runtime/" class="md-nav__link">
+      <a href="../diagnosing-errors/runtime/" class="md-nav__link">
         
   
   
@@ -1169,7 +1169,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../diagnosing-errors/test-harness/" class="md-nav__link">
+      <a href="../diagnosing-errors/test-harness/" class="md-nav__link">
         
   
   
@@ -1197,7 +1197,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../diagnosing-errors/print-logging/" class="md-nav__link">
+      <a href="../diagnosing-errors/print-logging/" class="md-nav__link">
         
   
   
@@ -1225,7 +1225,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../diagnosing-errors/validating-runtime-input/" class="md-nav__link">
+      <a href="../diagnosing-errors/validating-runtime-input/" class="md-nav__link">
         
   
   
@@ -1253,7 +1253,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../diagnosing-errors/handling-runtime-errors/" class="md-nav__link">
+      <a href="../diagnosing-errors/handling-runtime-errors/" class="md-nav__link">
         
   
   
@@ -1281,7 +1281,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../diagnosing-errors/error-contracts/" class="md-nav__link">
+      <a href="../diagnosing-errors/error-contracts/" class="md-nav__link">
         
   
   
@@ -1309,7 +1309,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../diagnosing-errors/stack-trace/" class="md-nav__link">
+      <a href="../diagnosing-errors/stack-trace/" class="md-nav__link">
         
   
   
@@ -1337,7 +1337,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../diagnosing-errors/logic/" class="md-nav__link">
+      <a href="../diagnosing-errors/logic/" class="md-nav__link">
         
   
   
@@ -1408,7 +1408,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../unit-testing/" class="md-nav__link ">
+            <a href="../unit-testing/" class="md-nav__link ">
               
   
   
@@ -1452,7 +1452,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../unit-testing/why-testing/" class="md-nav__link">
+      <a href="../unit-testing/why-testing/" class="md-nav__link">
         
   
   
@@ -1480,7 +1480,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../unit-testing/unit-testing/" class="md-nav__link">
+      <a href="../unit-testing/unit-testing/" class="md-nav__link">
         
   
   
@@ -1508,7 +1508,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../unit-testing/using-reference-project/" class="md-nav__link">
+      <a href="../unit-testing/using-reference-project/" class="md-nav__link">
         
   
   
@@ -1536,7 +1536,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../unit-testing/arrange-act-assert/" class="md-nav__link">
+      <a href="../unit-testing/arrange-act-assert/" class="md-nav__link">
         
   
   
@@ -1564,7 +1564,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../unit-testing/writing-effective-tests/" class="md-nav__link">
+      <a href="../unit-testing/writing-effective-tests/" class="md-nav__link">
         
   
   
@@ -1592,7 +1592,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../unit-testing/test-segmentation/" class="md-nav__link">
+      <a href="../unit-testing/test-segmentation/" class="md-nav__link">
         
   
   
@@ -1620,7 +1620,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../unit-testing/parameterized-tests/" class="md-nav__link">
+      <a href="../unit-testing/parameterized-tests/" class="md-nav__link">
         
   
   
@@ -1648,7 +1648,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../unit-testing/controlling-test-dependencies/" class="md-nav__link">
+      <a href="../unit-testing/controlling-test-dependencies/" class="md-nav__link">
         
   
   
@@ -1676,7 +1676,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../unit-testing/knowing-what-to-test/" class="md-nav__link">
+      <a href="../unit-testing/knowing-what-to-test/" class="md-nav__link">
         
   
   
@@ -1741,7 +1741,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../type-system/" class="md-nav__link ">
+            <a href="../type-system/" class="md-nav__link ">
               
   
   
@@ -1785,7 +1785,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../type-system/type-implementations/" class="md-nav__link">
+      <a href="../type-system/type-implementations/" class="md-nav__link">
         
   
   
@@ -1813,7 +1813,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../type-system/classes/" class="md-nav__link">
+      <a href="../type-system/classes/" class="md-nav__link">
         
   
   
@@ -1841,7 +1841,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../type-system/protecting-invariants/" class="md-nav__link">
+      <a href="../type-system/protecting-invariants/" class="md-nav__link">
         
   
   
@@ -1869,7 +1869,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../type-system/enums/" class="md-nav__link">
+      <a href="../type-system/enums/" class="md-nav__link">
         
   
   
@@ -1897,7 +1897,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../type-system/interfaces/" class="md-nav__link">
+      <a href="../type-system/interfaces/" class="md-nav__link">
         
   
   
@@ -1925,7 +1925,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../type-system/controlling-test-environment/" class="md-nav__link">
+      <a href="../type-system/controlling-test-environment/" class="md-nav__link">
         
   
   
@@ -1957,8 +1957,6 @@
       
   
   
-    
-  
   
   
     
@@ -1982,15 +1980,15 @@
     
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_9" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_9" >
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../" class="md-nav__link ">
+            <a href="../configuration/" class="md-nav__link ">
               
   
   
@@ -2014,7 +2012,7 @@
             
           </div>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_9_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_9_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_9">
             <span class="md-nav__icon md-icon"></span>
             
@@ -2031,37 +2029,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Types of Configuration
-  
-
-    
-  </span>
-  
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../configuration/types-of-configuration/" class="md-nav__link">
         
   
   
@@ -2077,59 +2048,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#command-line-arguments" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Command Line Arguments
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#environment-settings" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Environment Settings
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#configuration-file-settings" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Configuration File Settings
-      
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -2142,7 +2060,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../environment-types/" class="md-nav__link">
+      <a href="../configuration/environment-types/" class="md-nav__link">
         
   
   
@@ -2170,7 +2088,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../configuring-application/" class="md-nav__link">
+      <a href="../configuration/configuring-application/" class="md-nav__link">
         
   
   
@@ -2198,7 +2116,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../using-environment-settings/" class="md-nav__link">
+      <a href="../configuration/using-environment-settings/" class="md-nav__link">
         
   
   
@@ -2226,7 +2144,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../strongly-typed-configuration/" class="md-nav__link">
+      <a href="../configuration/strongly-typed-configuration/" class="md-nav__link">
         
   
   
@@ -2287,7 +2205,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../project-refactoring/" class="md-nav__link ">
+            <a href="../project-refactoring/" class="md-nav__link ">
               
   
   
@@ -2331,7 +2249,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../project-refactoring/encapsulation-modules/" class="md-nav__link">
+      <a href="../project-refactoring/encapsulation-modules/" class="md-nav__link">
         
   
   
@@ -2359,7 +2277,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../project-refactoring/choosing-module-boundaries/" class="md-nav__link">
+      <a href="../project-refactoring/choosing-module-boundaries/" class="md-nav__link">
         
   
   
@@ -2387,7 +2305,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../project-refactoring/independent-build-units/" class="md-nav__link">
+      <a href="../project-refactoring/independent-build-units/" class="md-nav__link">
         
   
   
@@ -2415,7 +2333,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../project-refactoring/managing-direction-dependencies/" class="md-nav__link">
+      <a href="../project-refactoring/managing-direction-dependencies/" class="md-nav__link">
         
   
   
@@ -2482,7 +2400,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../creating-packaging-app/" class="md-nav__link ">
+            <a href="../creating-packaging-app/" class="md-nav__link ">
               
   
   
@@ -2526,7 +2444,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../creating-packaging-app/startup-project/" class="md-nav__link">
+      <a href="../creating-packaging-app/startup-project/" class="md-nav__link">
         
   
   
@@ -2554,7 +2472,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../creating-packaging-app/establishing-api/" class="md-nav__link">
+      <a href="../creating-packaging-app/establishing-api/" class="md-nav__link">
         
   
   
@@ -2582,7 +2500,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../creating-packaging-app/refactoring-new-module/" class="md-nav__link">
+      <a href="../creating-packaging-app/refactoring-new-module/" class="md-nav__link">
         
   
   
@@ -2610,7 +2528,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../creating-packaging-app/adding-external-package/" class="md-nav__link">
+      <a href="../creating-packaging-app/adding-external-package/" class="md-nav__link">
         
   
   
@@ -2638,7 +2556,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../creating-packaging-app/adding-solution-file/" class="md-nav__link">
+      <a href="../creating-packaging-app/adding-solution-file/" class="md-nav__link">
         
   
   
@@ -2666,7 +2584,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../creating-packaging-app/adding-program-logic/" class="md-nav__link">
+      <a href="../creating-packaging-app/adding-program-logic/" class="md-nav__link">
         
   
   
@@ -2694,7 +2612,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../creating-packaging-app/packaging-application/" class="md-nav__link">
+      <a href="../creating-packaging-app/packaging-application/" class="md-nav__link">
         
   
   
@@ -2726,6 +2644,8 @@
       
   
   
+    
+  
   
   
     
@@ -2747,15 +2667,15 @@
     
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_12" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_12" checked>
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../full-testing/" class="md-nav__link ">
+            <a href="./" class="md-nav__link md-nav__link--active">
               
   
   
@@ -2773,13 +2693,13 @@
             </a>
             
               
-              <label class="md-nav__link " for="__nav_12" id="__nav_12_label" tabindex="0">
+              <label class="md-nav__link md-nav__link--active" for="__nav_12" id="__nav_12_label" tabindex="0">
                 <span class="md-nav__icon md-icon"></span>
               </label>
             
           </div>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_12_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_12_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_12">
             <span class="md-nav__icon md-icon"></span>
             
@@ -2799,7 +2719,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../full-testing/testing-at-many-levels/" class="md-nav__link">
+      <a href="testing-at-many-levels/" class="md-nav__link">
         
   
   
@@ -2827,7 +2747,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../full-testing/integration-testing/" class="md-nav__link">
+      <a href="integration-testing/" class="md-nav__link">
         
   
   
@@ -2855,7 +2775,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../full-testing/end-to-end-testing/" class="md-nav__link">
+      <a href="end-to-end-testing/" class="md-nav__link">
         
   
   
@@ -2883,7 +2803,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../full-testing/balancing-test-efforts/" class="md-nav__link">
+      <a href="balancing-test-efforts/" class="md-nav__link">
         
   
   
@@ -2931,47 +2851,6 @@
     
   
   
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#command-line-arguments" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Command Line Arguments
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#environment-settings" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Environment Settings
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#configuration-file-settings" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Configuration File Settings
-      
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
 </nav>
                   </div>
                 </div>
@@ -2990,81 +2869,8 @@
   
 
 
-<h1 id="types-of-configuration">Types of Configuration<a class="headerlink" href="#types-of-configuration" title="Permanent link">&para;</a></h1>
-<p>"Configuration" may refer to any number of things. Below are a few common sources of configuration values.</p>
-<h2 id="command-line-arguments">Command Line Arguments<a class="headerlink" href="#command-line-arguments" title="Permanent link">&para;</a></h2>
-<p><strong>Command line arguments</strong> are values that are passed to the application at startup via the command line. An example is the <code>--project</code> argument to the <code>dotnet run</code> command, which specifies the project to run.</p>
-<p>By default, the application is launched from the root directory of the project, but we can also launch a specific project by passing the project name as an argument. Here's how we would run the web application included in the reference project if our current working directory in the terminal is the root directory of the project:</p>
-<div class="language-bash highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>dotnet<span class="w"> </span>run<span class="w"> </span>--project<span class="w"> </span>src/ColorTransform.Web
-</span></code></pre></div>
-<p>If we instead wanted to run the test harness, we would pass the <code>ColorTransform.Harness</code> project name:</p>
-<div class="language-bash highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>dotnet<span class="w"> </span>run<span class="w"> </span>--project<span class="w"> </span>tests/ColorTransform.Harness
-</span></code></pre></div>
-<p>Allowing for the project path to be provided provides greater flexibility in how the CLI command can be used.</p>
-<h2 id="environment-settings">Environment Settings<a class="headerlink" href="#environment-settings" title="Permanent link">&para;</a></h2>
-<p>Environment settings are system-level variables that can be read by the application to determine settings or environment. Many modern applications run inside of <strong>containers</strong>, which are isolated environments that are used to run the application - apart from the host operating system. These containers are often configured with environment variables that determine the application's behavior.</p>
-<p>An example docker configuration file might have the following environment variables:</p>
-<div class="language-yaml highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="nt">services</span><span class="p">:</span>
-</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="w">  </span><span class="nt">web</span><span class="p">:</span>
-</span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="w">    </span><span class="nt">image</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">nginx:alpine</span>
-</span><span id="__span-2-4"><a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a><span class="w">    </span><span class="nt">ports</span><span class="p">:</span>
-</span><span id="__span-2-5"><a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a><span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&quot;8080:80&quot;</span>
-</span><span id="__span-2-6"><a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a><span class="w">    </span><span class="nt">environment</span><span class="p">:</span>
-</span><span id="__span-2-7"><a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a><span class="w">      </span><span class="nt">APP_NAME</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;Colorful</span><span class="nv"> </span><span class="s">Solutions</span><span class="nv"> </span><span class="s">LLC&quot;</span>
-</span><span id="__span-2-8"><a id="__codelineno-2-8" name="__codelineno-2-8" href="#__codelineno-2-8"></a><span class="w">      </span><span class="nt">SUPPORT_EMAIL</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;colorfulsolutions@example.com&quot;</span>
-</span><span id="__span-2-9"><a id="__codelineno-2-9" name="__codelineno-2-9" href="#__codelineno-2-9"></a><span class="w">      </span><span class="nt">MAX_UPLOAD_SIZE_MB</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">10</span>
-</span></code></pre></div>
-<p>The same application is often deployed for multiple clients, where each client has their own "version" of the application.</p>
-<p>This configuration file comes from a fictional web application that many clients may use. Configuration settings are set under the "environment" key.</p>
-<p>While this client may prefer a max upload size of 10MB, another client may prefer a max upload size of 20MB. They can do so in their own configuration file:</p>
-<div class="language-yaml highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="nt">services</span><span class="p">:</span>
-</span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="w">  </span><span class="nt">web</span><span class="p">:</span>
-</span><span id="__span-3-3"><a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a><span class="w">    </span><span class="nt">image</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">nginx:alpine</span>
-</span><span id="__span-3-4"><a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a><span class="w">    </span><span class="nt">ports</span><span class="p">:</span>
-</span><span id="__span-3-5"><a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a><span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&quot;8080:80&quot;</span>
-</span><span id="__span-3-6"><a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a><span class="w">    </span><span class="nt">environment</span><span class="p">:</span>
-</span><span id="__span-3-7"><a id="__codelineno-3-7" name="__codelineno-3-7" href="#__codelineno-3-7"></a><span class="w">      </span><span class="nt">APP_NAME</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;The</span><span class="nv"> </span><span class="s">Modern</span><span class="nv"> </span><span class="s">Palette</span><span class="nv"> </span><span class="s">LLC&quot;</span>
-</span><span id="__span-3-8"><a id="__codelineno-3-8" name="__codelineno-3-8" href="#__codelineno-3-8"></a><span class="w">      </span><span class="nt">SUPPORT_EMAIL</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;tmp@example.com&quot;</span>
-</span><span id="__span-3-9"><a id="__codelineno-3-9" name="__codelineno-3-9" href="#__codelineno-3-9"></a><span class="w">      </span><span class="nt">MAX_UPLOAD_SIZE_MB</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">25</span>
-</span></code></pre></div>
-<p>By extracting these client-specific values to configuration settings, each client is able to have an independent application configuration.</p>
-<h2 id="configuration-file-settings">Configuration File Settings<a class="headerlink" href="#configuration-file-settings" title="Permanent link">&para;</a></h2>
-<p>Configuration file settings are key-value settings that are stored in an application specific configuration file format. We are using this term generally to refer to a broad range of configuration file formats, including JSON, XML, and INI files.</p>
-<p>.NET uses a JSON-based configuration file format called <code>appsettings.json</code>. While it can store settings that pertain to the .NET environment generally, it can also be used to store application specific settings such as database connection strings, API keys, and other configuration values.</p>
-<p>Here are some example settings, organized into sections.</p>
-<div class="language-json highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="p">{</span>
-</span><span id="__span-4-2"><a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a><span class="w">  </span><span class="nt">&quot;App&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
-</span><span id="__span-4-3"><a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a><span class="w">    </span><span class="nt">&quot;Name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Colorful Solutions LLC&quot;</span><span class="p">,</span>
-</span><span id="__span-4-4"><a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a><span class="w">    </span><span class="nt">&quot;SupportEmail&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;colorfulsolutions@example.com&quot;</span>
-</span><span id="__span-4-5"><a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a><span class="w">  </span><span class="p">},</span>
-</span><span id="__span-4-6"><a id="__codelineno-4-6" name="__codelineno-4-6" href="#__codelineno-4-6"></a><span class="w">  </span><span class="nt">&quot;Server&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
-</span><span id="__span-4-7"><a id="__codelineno-4-7" name="__codelineno-4-7" href="#__codelineno-4-7"></a><span class="w">    </span><span class="nt">&quot;Port&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">8080</span><span class="p">,</span>
-</span><span id="__span-4-8"><a id="__codelineno-4-8" name="__codelineno-4-8" href="#__codelineno-4-8"></a><span class="w">    </span><span class="nt">&quot;MaxUploadSizeMb&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">10</span><span class="p">,</span>
-</span><span id="__span-4-9"><a id="__codelineno-4-9" name="__codelineno-4-9" href="#__codelineno-4-9"></a><span class="w">    </span><span class="nt">&quot;AllowedHosts&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">&quot;localhost&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;example.com&quot;</span><span class="p">]</span>
-</span><span id="__span-4-10"><a id="__codelineno-4-10" name="__codelineno-4-10" href="#__codelineno-4-10"></a><span class="w">  </span><span class="p">},</span>
-</span><span id="__span-4-11"><a id="__codelineno-4-11" name="__codelineno-4-11" href="#__codelineno-4-11"></a><span class="w">  </span><span class="nt">&quot;Database&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
-</span><span id="__span-4-12"><a id="__codelineno-4-12" name="__codelineno-4-12" href="#__codelineno-4-12"></a><span class="w">    </span><span class="nt">&quot;Host&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;localhost&quot;</span><span class="p">,</span>
-</span><span id="__span-4-13"><a id="__codelineno-4-13" name="__codelineno-4-13" href="#__codelineno-4-13"></a><span class="w">    </span><span class="nt">&quot;Port&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">5432</span><span class="p">,</span>
-</span><span id="__span-4-14"><a id="__codelineno-4-14" name="__codelineno-4-14" href="#__codelineno-4-14"></a><span class="w">    </span><span class="nt">&quot;Name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;myapp_db&quot;</span>
-</span><span id="__span-4-15"><a id="__codelineno-4-15" name="__codelineno-4-15" href="#__codelineno-4-15"></a><span class="w">  </span><span class="p">},</span>
-</span><span id="__span-4-16"><a id="__codelineno-4-16" name="__codelineno-4-16" href="#__codelineno-4-16"></a><span class="w">  </span><span class="nt">&quot;Logging&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
-</span><span id="__span-4-17"><a id="__codelineno-4-17" name="__codelineno-4-17" href="#__codelineno-4-17"></a><span class="w">    </span><span class="nt">&quot;Level&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Debug&quot;</span><span class="p">,</span>
-</span><span id="__span-4-18"><a id="__codelineno-4-18" name="__codelineno-4-18" href="#__codelineno-4-18"></a><span class="w">    </span><span class="nt">&quot;WriteToFile&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span>
-</span><span id="__span-4-19"><a id="__codelineno-4-19" name="__codelineno-4-19" href="#__codelineno-4-19"></a><span class="w">    </span><span class="nt">&quot;LogFilePath&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;/var/log/myapp.log&quot;</span>
-</span><span id="__span-4-20"><a id="__codelineno-4-20" name="__codelineno-4-20" href="#__codelineno-4-20"></a><span class="w">  </span><span class="p">}</span>
-</span><span id="__span-4-21"><a id="__codelineno-4-21" name="__codelineno-4-21" href="#__codelineno-4-21"></a><span class="p">}</span>
-</span></code></pre></div>
-<p>The above settings apply to our development environment. In production, we may want to override some of these settings. One of the most common reasons to do so is to point to a different database server.</p>
-<div class="language-json highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="p">{</span>
-</span><span id="__span-5-2"><a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a><span class="w">  </span><span class="c1">// ...</span>
-</span><span id="__span-5-3"><a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a><span class="w">  </span><span class="nt">&quot;Database&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
-</span><span id="__span-5-4"><a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a><span class="w">    </span><span class="nt">&quot;Host&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;production-db.example.com&quot;</span><span class="p">,</span>
-</span><span id="__span-5-5"><a id="__codelineno-5-5" name="__codelineno-5-5" href="#__codelineno-5-5"></a><span class="w">    </span><span class="nt">&quot;Port&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">5432</span><span class="p">,</span>
-</span><span id="__span-5-6"><a id="__codelineno-5-6" name="__codelineno-5-6" href="#__codelineno-5-6"></a><span class="w">    </span><span class="nt">&quot;Name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;production_db&quot;</span>
-</span><span id="__span-5-7"><a id="__codelineno-5-7" name="__codelineno-5-7" href="#__codelineno-5-7"></a><span class="w">  </span><span class="p">}</span>
-</span><span id="__span-5-8"><a id="__codelineno-5-8" name="__codelineno-5-8" href="#__codelineno-5-8"></a><span class="w">  </span><span class="c1">// ...</span>
-</span><span id="__span-5-9"><a id="__codelineno-5-9" name="__codelineno-5-9" href="#__codelineno-5-9"></a><span class="p">}</span>
-</span></code></pre></div>
+<h1 id="testing-a-full-software-solution">Testing a Full Software Solution<a class="headerlink" href="#testing-a-full-software-solution" title="Permanent link">&para;</a></h1>
+<p>A modular software application has <strong>seams</strong>. These are places where components of the application are connected to each other at the boundaries. Testing at these boundaries can often offer the highest value, as these are common points of failure in an application.</p>
 
 
 
@@ -3100,7 +2906,7 @@
       <nav class="md-footer__inner md-grid" aria-label="Footer" >
         
           
-          <a href="../" class="md-footer__link md-footer__link--prev" aria-label="Previous: Configuration and Environment Management">
+          <a href="../creating-packaging-app/packaging-application/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Packaging the Application">
             <div class="md-footer__button md-icon">
               
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
@@ -3110,20 +2916,20 @@
                 Previous
               </span>
               <div class="md-ellipsis">
-                Configuration and Environment Management
+                Packaging the Application
               </div>
             </div>
           </a>
         
         
           
-          <a href="../environment-types/" class="md-footer__link md-footer__link--next" aria-label="Next: Environment Types">
+          <a href="testing-at-many-levels/" class="md-footer__link md-footer__link--next" aria-label="Next: Testing at Many Levels">
             <div class="md-footer__title">
               <span class="md-footer__direction">
                 Next
               </span>
               <div class="md-ellipsis">
-                Environment Types
+                Testing at Many Levels
               </div>
             </div>
             <div class="md-footer__button md-icon">
@@ -3160,10 +2966,10 @@
     
       
       
-      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["content.code.copy", "navigation.instant", "navigation.footer", "navigation.indexes", "navigation.top"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+      <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": ["content.code.copy", "navigation.instant", "navigation.footer", "navigation.indexes", "navigation.top"], "search": "../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
     
     
-      <script src="../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      <script src="../assets/javascripts/bundle.79ae519e.min.js"></script>
       
     
   </body>
