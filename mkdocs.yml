@@ -148,11 +148,10 @@ nav:
 
   # TODO: all else is finished; only this is left along with notes on a few things to edit
   - Testing a Full Software Solution:
-      # Use the reference project
       - full-testing/index.md
-      # what the three types are for; why use each
-      - full-testing/test-types.md
+      - full-testing/testing-at-many-levels.md
       # Define and point to example in reference project (needs added)
       - full-testing/integration-testing.md
       # Define and point to example in reference project (needs added)
       - full-testing/end-to-end-testing.md
+      - full-testing/balancing-test-efforts.md
