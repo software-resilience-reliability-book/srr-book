@@ -24,4 +24,6 @@ Rather than applying rigid constraints about test coverage, it is better to look
 
 Different types of applications require different testing profiles. A text parsing library may only require unit tests. What matters most for a library is that the exposed public API is correct.
 
-A "CRUD" web application with very simple domain logic may have mostly end-to-end tests. These applications often involve a many orchestration steps to rig all of the components together, so tests should focus on making sure this has been done correctly. Even one end-to-end test that models a "golden path" user journey - a typical workflow that a user takes through the application - can go a long way towards detecting issues before an application is released.
+A "CRUD" web application with very simple domain logic may have mostly end-to-end tests. These applications often involve a many orchestration steps to rig all of the components together, so tests should focus on making sure this has been done correctly. This type of application calls for an inverted test pyramid!
+
+Even one end-to-end test that models a "golden path" user journey - a typical workflow that a user takes through the application - can go a long way towards detecting issues before an application is released.
