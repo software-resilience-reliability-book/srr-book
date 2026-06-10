@@ -20,7 +20,7 @@ This book uses **.NET** and the **C#** programming language to illustrate concep
 - The language and platform afford the ability to demonstrate the concepts for this book.
 - The .NET ecosystem tends toward a "one right way to do it" philosophy than other more divergent technologies.
 
-It is not expected that the reader have any C# experience. With the volume of high-quality, low-cost, accessible resources available at our disposible - it has never been easier to learn new programming languages and technologies.
+It is not expected that the reader have any C# experience. With the volume of high-quality, low-cost, accessible resources available at our disposible, it has never been easier to learn new programming languages and technologies.
 
 This book uses **application software** as opposed to **system software** do demonstrate concepts. Application software is typically more accessible for new learners, and examples are easier to understand.
 
