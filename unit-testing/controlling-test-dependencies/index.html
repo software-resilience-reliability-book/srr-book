@@ -3140,7 +3140,7 @@
 </span><span id="__span-0-12"><a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a><span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="s">&quot;Good morning&quot;</span><span class="p">;</span>
 </span><span id="__span-0-13"><a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a><span class="p">}</span>
 </span></code></pre></div>
-<p>What happens when we try to test this function? If we test it in the morning, it will return "Good morning". If we test it in the afternoon, it will return "Good afternoon". What would we assert the result against?</p>
+<p>What happens when we try to test this function? If we test it in the morning, it will return "Good morning". If we test it in the afternoon, it will return "Good afternoon". What would we assert for the result of the test?</p>
 <p><strong>After Refactoring</strong></p>
 <div class="language-csharp highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="k">public</span><span class="w"> </span><span class="kt">string</span><span class="w"> </span><span class="nf">GetGreeting</span><span class="p">(</span><span class="n">DateTime</span><span class="w"> </span><span class="n">currentDate</span><span class="p">)</span>
 </span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="p">{</span>
