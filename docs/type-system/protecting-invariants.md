@@ -2,7 +2,7 @@
 
 ## What are Invariants?
 
-An **invariant** is a condition that must be true throughout the execution of a program. As containers for **state**, classes and other types can be designed to protect invariants through access control and error contracts.
+An **invariant** is a condition that must be true throughout the execution of a program. As containers for state, classes and other types can be designed to protect invariants through access control and error contracts.
 
 ## Guaranteeing Invariants
 
