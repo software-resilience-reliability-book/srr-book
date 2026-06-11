@@ -1,3 +1,5 @@
+<!-- This content was considered, but did not end up in the published book. -->
+
 # Using Exceptions Effectively
 
 For this section we have provided a list of readings from the Microsoft docs, which cover the topic in depth:
