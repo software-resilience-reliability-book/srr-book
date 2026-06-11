@@ -41,6 +41,6 @@ These errors often manifest themselves as intermittent bugs, where the program a
 !!! info "Ephemeral Bugs"
     Systems that involve parallel processing, asynchronous operations, or other complex behaviors are particularly susceptible to silent failures.
 
-    In one case we worked on a system that intermittently calculated a forecast as all zeroes - reporting to the client that they had thousands of dollars more than they actually did!
+    In one case we worked on a system that intermittently calculated expected expenses as all zeroes - reporting to the client that they had thousands of dollars more than they actually did!
 
     We ended up adding extensive trace logging, and after more than two weeks of scrutinizing the output found that it was due to a **race condition** in the code. One process zeroed out some of the values needed for a calculation that the other process was performing, while this other process was in the middle of its own calculation. The bug only occured when the two processes "stepped on each other" at just the right time.
