@@ -3116,7 +3116,7 @@
 
 <h1 id="protecting-invariants">Protecting Invariants<a class="headerlink" href="#protecting-invariants" title="Permanent link">&para;</a></h1>
 <h2 id="what-are-invariants">What are Invariants?<a class="headerlink" href="#what-are-invariants" title="Permanent link">&para;</a></h2>
-<p>An <strong>invariant</strong> is a condition that must be true throughout the execution of a program. As containers for <strong>state</strong>, classes and other types can be designed to protect invariants through access control and error contracts.</p>
+<p>An <strong>invariant</strong> is a condition that must be true throughout the execution of a program. As containers for state, classes and other types can be designed to protect invariants through access control and error contracts.</p>
 <h2 id="guaranteeing-invariants">Guaranteeing Invariants<a class="headerlink" href="#guaranteeing-invariants" title="Permanent link">&para;</a></h2>
 <p>A natural place to place invariant checks is in the constructor of a class. Classes should take a fail fast approach when guaranteeing valid state. Let's look at two ways that we might implement a simple <code>Name</code> class:</p>
 <h3 id="version-1-no-constructor-checks">Version 1: No Constructor Checks<a class="headerlink" href="#version-1-no-constructor-checks" title="Permanent link">&para;</a></h3>
