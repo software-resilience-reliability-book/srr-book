@@ -33,7 +33,7 @@ public string GetGreeting()
 }
 ```
 
-What happens when we try to test this function? If we test it in the morning, it will return "Good morning". If we test it in the afternoon, it will return "Good afternoon". What would we assert the result against?
+What happens when we try to test this function? If we test it in the morning, it will return "Good morning". If we test it in the afternoon, it will return "Good afternoon". What would we assert for the result of the test?
 
 **After Refactoring**
 
